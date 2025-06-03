@@ -1,8 +1,8 @@
 ---
-title: URL Parameters/Hidden fields
+title: "URL Parameters/Hidden fields"
 description: "URL parameters are a powerful way to pass information to a Fillout form to support pre-filling and personalizing the form."
-sidebarTitle: URL Parameters/Hidden Fields
-icon: brackets-curly
+sidebarTitle: "URL Parameters/Hidden Fields"
+icon: "brackets-curly"
 ---
 
 ## Overview
@@ -10,7 +10,7 @@ icon: brackets-curly
 **URL parameters**, also known as “hidden fields”, can be used to customize your form with information you already know when you’re sharing it with respondents. For example:
 
 - Pre-filling fields with the email of the respondent
-- Recording where your form was shared via a **utm\_source** parameter (e.g. Facebook, Google, Instagram, etc.)
+- Recording where your form was shared via a **utm_source** parameter (e.g. Facebook, Google, Instagram, etc.)
 - Displaying the respondent's name in the form to welcome them
 
 ## How to add a URL parameter or hidden field
@@ -29,7 +29,7 @@ Note that you can optionally provide a sample value for the parameter, if you’
 
 ### 2. Use the parameter in your form
 
-You’re all set to start using your new URL parameter now! We can now use it to:
+You’re all set to start using your new URL parameter now\! We can now use it to:
 
 - [Pre-fill a field](/prefill-fields), by pressing the `+` icon on a **Default value** property of any field
 - Write to any integration, by heading to the **Integrations** at the top and creating a new connection or editing an existing one, and mapping this URL Parameter to some field like in Airtable or Notion.
@@ -41,7 +41,6 @@ To make the URL parameter active in your form, you need to set its value in the 
 
 Say we know that the respondent's name that we’re sending our form to, Jane. We'll type her name at the end of the link like this: https://forms.fillout.com/t/9ofaEF4d54us?name=jane
 
-
 <Check>
   **Important:** When you have multiple URL parameters for one form, you’ll need to separate them using an ampersand (&), like so: https://forms.fillout.com/t/your_form_id?email=jane@gmail.com&name=jane
 </Check>
@@ -52,7 +51,7 @@ Say we know that the respondent's name that we’re sending our form to, Jane. W
 
 Type `@` in any question or field to reference information from your form. Click the `link` icon on the left side of the pop-up followed by the parameter.
 
-<Frame style={{ width: '432px' , height: '277px' }}>
+<Frame>
   ![](/images/advanced/image-6.png)
 </Frame>
 
@@ -70,7 +69,7 @@ If you're using an integration, and want to write your URL parameters there as w
 
 a. Create a **Fillout** field and pre-fill it with a URL parameter under **Default value**. Then, set it to `Hide always` through the right-hand settings panel. If this field is synced to an integration already, then it will automatically write to your integration without it ever being visible to the respondent:
 
-<Frame style={{ width: '528px' , height: '263px' }}>
+<Frame>
   ![](/images/advanced/image-8.png)
 </Frame>
 
@@ -79,10 +78,10 @@ b. Head to your integration settings, and map the URL parameter directly. E.g. f
 ## Other advanced features
 
 <CardGroup cols={3}>
-    <Card title="Pre-fill fields" href="/prefill-fields" icon="fill" iconType="regular" color="#FFC738">
-    Set a default value to pre-populate form fields based on previous inputs, URL parameters, and more.
+  <Card title="Pre-fill fields" icon="fill" iconType="regular" color="#FFC738" href="/prefill-fields">
+    Pre-populate form fields based on previous inputs, URL parameters, and more.
   </Card>
-    <Card title="Answer piping" href="/answer-piping" icon="wand-magic-sparkles" iconType="regular" color="#FFC738">
-    Insert respondents' previous answers into form fields or text fields for a personalized experience.
+  <Card title="Answer piping" icon="wand-magic-sparkles" iconType="regular" color="#FFC738" href="/answer-piping">
+    Insert respondents' prior input into fields for a personalized experience.
   </Card>
 </CardGroup>

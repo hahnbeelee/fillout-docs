@@ -1,8 +1,8 @@
 ---
 title: "Custom CSS"
 description: "Customize any part of your form's appearance with custom CSS. This feature is shared across all forms with the same theme."
-sidebarTitle: Custom CSS
-icon: paint-roller
+sidebarTitle: "Custom CSS"
+icon: "paint-roller"
 ---
 
 ## What is Custom CSS
@@ -11,7 +11,7 @@ icon: paint-roller
 
 Most parts of your form’s appearance can be modified without code using [themes](/themes). But if you need a more custom look, you can use **custom CSS** to make a fully custom look & feel.
 
-<Frame style={{ width: '528px' , height: '256px' }}>
+<Frame>
   ![](/images/advanced/image-14.png)
 </Frame>
 
@@ -22,9 +22,10 @@ Most parts of your form’s appearance can be modified without code using [theme
 ## How to add a custom CSS
 
 ### 1. Open the advanced designer
-  Click `Theme` in the upper left side of your form and scroll down to `Advanced designer` in the left-hand panel.
 
-<Frame style={{ width: '384px' , height: '173px' }}>
+Click `Theme` in the upper left side of your form and scroll down to `Advanced designer` in the left-hand panel.
+
+<Frame>
   ![](/images/advanced/image-15.png)
 </Frame>
 
@@ -32,7 +33,7 @@ Most parts of your form’s appearance can be modified without code using [theme
 
 Once you click `Apply CSS`, you’ll see the CSS applied to your form. Go to **Preview** mode to confirm your form looks as you expect it to.
 
-<Frame style={{ width: '528px' , height: '351px' }}>
+<Frame>
   ![](/images/advanced/image-16.png)
 </Frame>
 
@@ -40,25 +41,25 @@ Once you click `Apply CSS`, you’ll see the CSS applied to your form. Go to **P
 
 These classes make it easier to target elements in your form. In general, these are the class names you should rely on (as opposed to other internal class names which may be subject to change).
 
-| CSS Class | Element | Example |
-| --- | --- | --- |
-| `.fillout-field-container` | The container for all the fields on each page | `.fillout-field-container { // Add a thicker shadow box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); // Decrease width of form max-width: 450px; }` |
-| `.fillout-field-[field-type] Examples: .fillout-field-short-answer .fillout-field-dropdown` | Target specific field types | `// Change the width of short answer fields .fillout-field-short-answer input { max-width: 350px; } `|
-| `.fillout-field-button` | “Next” button | `// Make the “next” button rounded .fillout-field-button button { border-radius: 100px }` |
-| `.fillout-back-button` | Back button | `// Change the back button background color .fillout-back-button { background: blue; }` |
-| `.fillout-skip-button` | Skip button | `.fillout-skip-button button { background: black; border-radius: 10px; color: white; }` |
-| `.fillout-field-label` | Field labels | `// Change question labels to green .fillout-field-label p { color: green; }` |
-| `.fillout-caption` | All field captions | `// Change captions to red .fillout-caption p { color: red; }` |
-| `.fillout-field-text (Heading) or .fillout-field-paragraph (paragraph)` | Heading and paragraph fields | `// Make h1 size text in paragraph field have different font .fillout-field-paragraph h1 { font-family: 'Brush Script MT', cursive; }` |
-| `input[type="text"]::placeholder` | Placeholder text | `// Change placeholder color input[type="text"]::placeholder { color: gray; }` |
-| `.fillout-edit-mode .fillout-live-mode` | Target edit or live (preview + published) mode of your forms | `// Hides all field labels in live mode of the form .fillout-live-mode .fillout-field-label p { display: none; }` |
-| `.fillout-required-asterisk` | Required asterisk \* | `// Only changes in preview/live mode, not in the editor .fillout-required-asterisk { color: black; }` |
-| `.fillout-login-profile` | The profile icon in the top right corner that lets users logout of “login” forms. | `.fillout-login-profile { display: none; }` |
-| `.fillout-theme-logo` | Your logo, added via theme | `.fillout-theme-logo { display: none; }` |
-| `.fillout-error-validation-message` | Validation error message | `.fillout-error-validation-message { color: black; }` |
+| CSS Class                                                                                   | Element                                                                           | Example                                                                                                                                        |
+| ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `.fillout-field-container`                                                                  | The container for all the fields on each page                                     | `.fillout-field-container { // Add a thicker shadow box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); // Decrease width of form max-width: 450px; }` |
+| `.fillout-field-[field-type] Examples: .fillout-field-short-answer .fillout-field-dropdown` | Target specific field types                                                       | `// Change the width of short answer fields .fillout-field-short-answer input { max-width: 350px; } `                                          |
+| `.fillout-field-button`                                                                     | “Next” button                                                                     | `// Make the “next” button rounded .fillout-field-button button { border-radius: 100px }`                                                      |
+| `.fillout-back-button`                                                                      | Back button                                                                       | `// Change the back button background color .fillout-back-button { background: blue; }`                                                        |
+| `.fillout-skip-button`                                                                      | Skip button                                                                       | `.fillout-skip-button button { background: black; border-radius: 10px; color: white; }`                                                        |
+| `.fillout-field-label`                                                                      | Field labels                                                                      | `// Change question labels to green .fillout-field-label p { color: green; }`                                                                  |
+| `.fillout-caption`                                                                          | All field captions                                                                | `// Change captions to red .fillout-caption p { color: red; }`                                                                                 |
+| `.fillout-field-text (Heading) or .fillout-field-paragraph (paragraph)`                     | Heading and paragraph fields                                                      | `// Make h1 size text in paragraph field have different font .fillout-field-paragraph h1 { font-family: 'Brush Script MT', cursive; }`         |
+| `input[type="text"]::placeholder`                                                           | Placeholder text                                                                  | `// Change placeholder color input[type="text"]::placeholder { color: gray; }`                                                                 |
+| `.fillout-edit-mode .fillout-live-mode`                                                     | Target edit or live (preview \+ published) mode of your forms                     | `// Hides all field labels in live mode of the form .fillout-live-mode .fillout-field-label p { display: none; }`                              |
+| `.fillout-required-asterisk`                                                                | Required asterisk \*                                                              | `// Only changes in preview/live mode, not in the editor .fillout-required-asterisk { color: black; }`                                         |
+| `.fillout-login-profile`                                                                    | The profile icon in the top right corner that lets users logout of “login” forms. | `.fillout-login-profile { display: none; }`                                                                                                    |
+| `.fillout-theme-logo`                                                                       | Your logo, added via theme                                                        | `.fillout-theme-logo { display: none; }`                                                                                                       |
+| `.fillout-error-validation-message`                                                         | Validation error message                                                          | `.fillout-error-validation-message { color: black; }`                                                                                          |
 
 <Check>
-  **Can’t find the class you need?** Let us know at support@fillout.com and we’ll add it!
+  **Can’t find the class you need?** Let us know at [support@fillout.com](mailto:support@fillout.com) and we’ll add it\!
 </Check>
 
 ## Adding multiple fonts with Custom CSS
@@ -93,9 +94,9 @@ If you want to add custom code to your form, like a JavaScript snippet or HTML d
 
 <CardGroup cols={3}>
   <Card title="HTML and CSS form field" icon="display-code" iconType="regular" color="#FFC738" href="/html-css">
-  Display testimonials, banners, or any static object.
+    Display testimonials, banners, or any static object.
   </Card>
- <Card title="Custom code" icon="rectangle-code" iconType="regular" color="#FFC738" href="/custom-code">
-  Add custom code into your Fillout forms to inject analytics tracking scripts like Google Tag Manager.
+  <Card title="Custom code" icon="rectangle-code" iconType="regular" color="#FFC738" href="/custom-code">
+    Add custom code to inject analytics tracking scripts like Google Tag Manager.
   </Card>
 </CardGroup>
