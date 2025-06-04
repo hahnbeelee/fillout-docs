@@ -1,7 +1,7 @@
 ---
 title: "Update existing Salesforce records with a form"
 description: "Make a form that lets users edits existing records from Salesforce, and pre-fills fields with data from the record."
-sidebarTitle: "Update Existing Salesforce Records with a Form"
+sidebarTitle: "Update"
 icon: "cloud"
 ---
 
@@ -9,7 +9,7 @@ If you don’t already have a Fillout account, you can [create one here](https:/
 
 ## How it works
 
-### **1. Set your form to update mode**
+### 1. Set your form to update mode
 
 First, navigate to the **Integrate** tab and select `Salesforce`.
 
@@ -23,7 +23,7 @@ Then, click `Update record`.
   ![Screenshot of the Integrate tab of a form](/images/sfra.png)
 </Frame>
 
-### **2. Create a custom update link per record**
+### 2. Create a custom update link per record
 
 You'll now get a formula that defines a unique link for every record in your object. Add this new formula to your Salesforce object.
 
@@ -51,7 +51,7 @@ Go to `Fields & Relationships` and create a `New` field.
 
 Select **Formula** from the list. Then, copy and paste the formula from your Fillout form into Salesforce.
 
-### **3. Preview your form**
+### 3. Preview your form
 
 Complete your setup by clicking `Finish setup`. You can test your form in `Preview` mode or use one of the unique links to update a record once your form is live.
 
@@ -61,7 +61,7 @@ Your form will **automatically pre-fill** the data for the record it is updating
   **Note:** If you don’t provide an **id** in the unique URL, the form will create a new record instead.
 </Note>
 
-## **Advanced next steps (optional)**
+## Advanced next steps (optional)
 
 You can also enhance your update forms by integrating them with platforms like Salesforce App Builder or Lightning Experience. Instead of the formula in Step 3, you might consider using a `Button` field.
 

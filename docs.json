@@ -53,12 +53,18 @@
                 "group": "Field Types",
                 "icon": "question",
                 "pages": [
-                  "question-types",
-                  "captcha",
-                  "rating",
-                  "banners",
-                  "esignatures",
-                  "table"
+                  "address",
+                  "date-range",
+                  "voice-recording",
+                  "section-collapse",
+                  "video",
+                  "social-media",
+                  "currency",
+                  "file-upload",
+                  "fill-again-button",
+                  "matrix",
+                  "submission-picker",
+                  "subforms"
                 ]
               },
               "view-responses"
@@ -91,11 +97,41 @@
             "pages": [
               "integrations",
               "monday-update",
-              "salesforce-update-form",
-              "notion-embed",
-              "google-docs",
-              "microsoft-excel",
-              "google-tag-manager",
+              {
+                "group": "Salesforce",
+                "icon": "cloud",
+                "pages": [
+                  "salesforce",
+                  "salesforce-update-form"
+                ]
+              },
+              {
+                "group": "Notion",
+                "icon": "cube",
+                "pages": [
+                  "notion-embed",
+                  "notion"
+                ]
+              },
+              {
+                "group": "Google",
+                "icon": "google",
+                "pages": [
+                  "google-docs",
+                  "google-tag-manager",
+                  "google-sheets",
+                  "google-drive"
+                ]
+              },
+              {
+                "group": "Microsoft",
+                "icon": "microsoft",
+                "pages": [
+                  "microsoft-excel",
+                  "microsoft-onedrive",
+                  "microsoft-teams"
+                ]
+              },
               "clickup",
               "trello",
               "twilio",
@@ -106,19 +142,14 @@
               "pdfs",
               "airtable",
               "hubspot",
-              "notion",
-              "google-sheets",
               "smartsuite",
               "slack",
               "attio",
-              "salesforce",
               "monday",
               "fetch-dynamic-data",
               "webhook",
-              "google-drive",
               "update-database-schema",
               "additional-integration-mappings",
-              "microsoft-onedrive",
               "update-forms",
               "form-submission-id",
               "integration-static-values",
@@ -134,7 +165,6 @@
               "klaviyo",
               "zapier",
               "make",
-              "microsoft-teams",
               "intercom",
               "zendesk",
               "stripe-payments-to-airtable"
@@ -251,12 +281,17 @@
               "email-form",
               "edit-submissions",
               "edit-form-submissions",
+              "captcha",
+              "rating",
               "location-coordinates",
+              "banners",
               "ranking",
+              "esignatures",
               "skip-logic",
               "dynamic-payment",
               "auto-jump",
               "create-a-lead-quiz",
+              "table",
               "partner-made-resources",
               "make-a-free-quiz",
               "copy-paste-fields",
@@ -514,13 +549,11 @@
   "fonts": {
     "heading": {
       "family": "Your Heading Font",
-      "weight": 700,
       "source": "https://static.fillout.com/fillout-fonts/BLMelody-Bold.woff2",
       "format": "woff2"
     },
     "body": {
       "family": "Your Body Font",
-      "weight": 400,
       "source": "https://static.fillout.com/fillout-fonts/BLMelody-Regular.woff2",
       "format": "woff2"
     }
