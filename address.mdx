@@ -14,7 +14,7 @@ Let respondents enter their physical mailing address with separate input boxes f
 
 Optionally allow users to choose a **Country**. Click the `settings icon` to open the right-hand panel and turn off the `Fixed country` switch.
 
-<Frame style={{ width: '576px', height: '189px' }}>
+<Frame>
   ![Screenshot of the Form designer tab of a form](/images/question-types/image-2.png)
 </Frame>
 
@@ -22,7 +22,7 @@ Optionally allow users to choose a **Country**. Click the `settings icon` to ope
 
 Increase conversion rates and address accuracy by enabling Google Maps Autocomplete. Click the address field followed by the `settings icon` and toggle the `Address autocomplete` switch in the right-hand panel at the bottom.
 
-<Frame style={{ width: '432px', height: '234px' }}>
+<Frame>
   ![Screenshot of the Form designer tab of a form](/images/question-types/image-3.gif)
 </Frame>
 
@@ -32,9 +32,17 @@ Increase conversion rates and address accuracy by enabling Google Maps Autocompl
 
 ## Mapping to Airtable, Notion and other databases
 
-1. First, add an `Address` field type from left-hand panel under **Other**.
-2. Next, click **Integrate** in top menu and choose Airtable, Notion or your integration of choice. In this example, we'll use Airtable.
-3. Under **Mappings**, reference Airtable column fields from the left to Fillout form fields in the right.
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/question-types/image-4.png)
-</Frame>
+<Steps>
+  <Step title="Add an Address field">
+    This can be found in the left-hand panel under **Other**.
+  </Step>
+  <Step title="Select an integration.">
+    Click **Integrate** in top menu and choose Airtable, Notion or your integration of choice. In this example, we'll use Airtable.
+  </Step>
+  <Step title="Map fields">
+    Under **Mappings**, reference Airtable column fields from the left to Fillout form fields in the right.
+    <Frame>
+    ![Image 4 Pn](/images/question-types/image-4.png)
+    </Frame>
+  </Step>
+</Steps>
