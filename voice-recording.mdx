@@ -25,7 +25,7 @@ That's it\! `Publish` your form and share the link to your respondents.
 
 Click the `settings icon` of your question to open the right-hand panel. Under **AI Transcription**, toggle the `Enable transcription` switch.
 
-<Frame style={{ width: '528px', height: '134px' }}>
+<Frame>
   ![Screenshot of the Form designer tab of a form](/images/images/image-2.png)
 </Frame>
 
@@ -43,10 +43,18 @@ Both audio files and written transcriptions can be used in your preferred [integ
 
 ## Mapping to Airtable, Notion and other databases
 
-After adding a `Voice recording` field, head over to the **Integrate** page through the top menu. Then, select a database. In this example, we'll use Airtable.
+<Steps>
+  <Step title="Select an integration">
+    Click **Integrate** in top menu and choose Airtable, Notion or another [database](/integrations).
+  </Step>
+  <Step title="Add a Voice recording field">
+    Click **Edit** in the top menu. In the left-hand panel under **Other**, click `Voice recording`.
+  </Step>
+  <Step title="Map fields">
+    Go back to the **Integrate** page. Under **Mappings**, reference your integration column fields from the left to Fillout form fields in the right. Look for your voice recording question, and choose between **Audio file** or **Transcription**.
 
-Under **Mappings**, reference Airtable column fields from the left to Fillout form fields in the right. Look for your voice recording question, and choose between **Audio file** or **Transcription**.
-
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/images/image-3.png)
-</Frame>
+    <Frame>
+      ![Screenshot of the Form designer tab of a form](/images/images/image-3.png)
+    </Frame>
+  </Step>
+</Steps>
