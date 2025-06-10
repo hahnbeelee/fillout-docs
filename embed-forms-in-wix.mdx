@@ -17,67 +17,86 @@ sidebarTitle: "Wix"
 
 ## How embed your form in Wix
 
-Start by clicking `Publish` in the upper right corner of the Fillout form editor. Next, open the **Share** tab from the top menu.
+<Steps>
+  <Step title="Choose an embed style">
+    Start by clicking `Publish` in the upper right corner of the Fillout form editor. Next, open the **Share** tab from the top menu.
 
-<Frame>
-  ![Screenshot of the Share tab of a form](/images/sharing-and-embedding/image-38.png)
-</Frame>
+    <Frame>
+      ![Screenshot of the Share tab of a form](/images/sharing-and-embedding/image-38.png)
+    </Frame>
+    Select your preferred embed style and click `Use this embed`. Adjust your embed style settings to fit your use case (more info [here]()) and click `Get the code`.
+  </Step>
+  <Step title="Choose the Embed HTML element">
+    In Wix’s drag-and-drop editor, embedded elements live inside containers drawn on the page. Click on `+` from the left sidebar to open the **Embed code** menu, and click the `+` next to **Embed HTML.**
 
-Select your preferred embed style and click `Use this embed`. Adjust your embed style settings to fit your use case (more info [here]()) and click `Get the code`.
+    <Frame>
+      ![Screenshot of the Share tab of a form](/images/sharing-and-embedding/image-39.png)
+    </Frame>
+  </Step>
+  <Step title="Paste Fillout embed code">
+    Paste the copied **embed code** below **Add your code here (HTTPS only):** and click the `Update` button below the textbox.
 
-<Frame>
-  ![Screenshot of the Share tab of a form](/images/sharing-and-embedding/image-39.png)
-</Frame>
-
-In Wix’s drag-and-drop editor, embedded elements live inside containers drawn on the page. Click on `+` from the left sidebar to open the **Embed code** menu, and click the `+` next to **Embed HTML.**
-
-<Frame>
-  ![Screenshot of the Share tab of a form](/images/sharing-and-embedding/image-40.png)
-</Frame>
-
-Paste the copied **embed code** below **Add your code here (HTTPS only):** and click the `Update` button below the textbox.
-
-After you see your form inside the Embed HTML container, click and drag the element to wherever you want it on the page. Resize the container by clicking and dragging on any of the white circles lining the border of the element.
+    <Frame>
+      ![Screenshot of the Share tab of a form](/images/sharing-and-embedding/image-40.png)
+    </Frame>
+    After you see your form inside the Embed HTML container, click and drag the element to wherever you want it on the page. Resize the container by clicking and dragging on any of the white circles lining the border of the element.
+  </Step>
+</Steps>
 
 ## Add a lightbox in Wix to get around embed container limitations
 
-<Frame>
-  ![Screenshot of the Share tab of a form](/images/sharing-and-embedding/image-41.png)
-</Frame>
-
 Although you can add custom code to create popup forms that render outside the bounds of an embed element’s borders, there’s an easier solution.
 
-Click on `+` from the left sidebar to open the **Interactive** menu, and choose a template from the **Lightboxes** submenu. That will open a new page editor for a popup.
+<Steps>
+  <Step title="Choose a template">
+    Click on `+` from the left sidebar to open the **Interactive** menu, and choose a template from the **Lightboxes** submenu. That will open a new page editor for a popup.
 
-Add an **Embed HTML** element inside the lightbox section (using the steps above) and resize the element as needed.
+    <Frame>
+      ![Screenshot of the Share tab of a form](/images/sharing-and-embedding/image-41.png)
+    </Frame>
+  </Step>
+  <Step title="Add an Embed HTML element">
+    Add an **Embed HTML** element inside the lightbox section (using the steps above) and resize the element as needed.
 
-<Frame>
-  ![Screenshot of the Share tab of a form](/images/sharing-and-embedding/image-42.png)
-</Frame>
+    <Frame>
+      ![Screenshot of the Share tab of a form](/images/sharing-and-embedding/image-42.png)
+    </Frame>
+    Click `Exit Mode` next to **Lightbox Mode** or click the dropdown menu in the upper left corner of the screen to return to editing to the previous page.
+  </Step>
+  <Step title="Choose lightbox">
+    To link a button element or URL text to the lightbox popup, click the link icon, choose the **Lightbox** option, and select the lightbox page with your Fillout form from the dropdown list.
 
-Click `Exit Mode` next to **Lightbox Mode** or click the dropdown menu in the upper left corner of the screen to return to editing to the previous page.
-
-<Frame>
-  ![Screenshot of the Share tab of a form](/images/sharing-and-embedding/image-43.png)
-</Frame>
-
-To link a button element or URL text to the lightbox popup, click the link icon, choose the **Lightbox** option, and select the lightbox page with your Fillout form from the dropdown list.
+    <Frame>
+      ![Screenshot of the Share tab of a form](/images/sharing-and-embedding/image-43.png)
+    </Frame>
+  </Step>
+</Steps>
 
 ## Add custom code to a Wix website for embeds outside the iframe
+
+If you have a premium Wix account and your site is on a custom domain, you can use Wix’s custom code feature to embed your form anywhere, without the limitations of the iframe embed.
 
 <Frame>
   ![Screenshot of the Share tab of a form](/images/sharing-and-embedding/image-44.png)
 </Frame>
 
-If you have a premium Wix account and your site is on a custom domain, you can use Wix’s custom code feature to embed your form anywhere, without the limitations of the iframe embed.
 
-From your Wix account dashboard, open the `Settings` menu from the left sidebar. Scroll to the bottom of the page and click **Custom code**.
-
-<Frame>
+<Steps>
+  <Step title="Create custom code">
+    From your Wix account dashboard, open the `Settings` menu from the left sidebar. Scroll to the bottom of the page and click **Custom code**.
+    <Frame>
   ![Screenshot of the Share tab of a form](/images/sharing-and-embedding/image-45.png)
 </Frame>
+  </Step>
+  <Step title="Paste the Fillout embed code">
+    Paste a Fillout **Popup**, **Slider**, or **Full screen embed code** into the text box. Choose which pages should use the code snippet and select **Body - start** from the **Place Code in:** list. Click `Apply` and preview your site to confirm the changes.
+  </Step>
+</Steps>
 
-Paste a Fillout **Popup**, **Slider**, or **Full screen embed code** into the text box. Choose which pages should use the code snippet and select **Body - start** from the **Place Code in:** list. Click `Apply` and preview your site to confirm the changes.
+
+
+
+
 
 ## Related article
 

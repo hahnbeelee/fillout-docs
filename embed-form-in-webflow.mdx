@@ -17,31 +17,39 @@ While [Webflow](https://webflow.com) has some built-in form features, they have 
 
 ## How to embed your form in Webflow
 
-Start by clicking `Publish` in the upper right corner of the Fillout form editor. Next, open the **Share** tab from the top menu.
+<Steps>
+  <Step title="Choose an embed style">
+    Start by clicking `Publish` in the upper right corner of the Fillout form editor. Next, open the **Share** tab from the top menu.
 
-<Frame>
-  ![](/images/sharing-and-embedding/image-25.png)
-</Frame>
+    <Frame>
+      ![](/images/sharing-and-embedding/image-25.png)
+    </Frame>
+    Select your preferred embed style and click `Use this embed`. Adjust your embed style settings to fit your use case (more info [here]()) and click `Get the code`.
+  </Step>
+  <Step title="Add elements">
+    Open your Webflow visual editor, click the `+` symbol on the upper left corner (or press `A`) to open the **Add Elements** sidebar.
 
-Select your preferred embed style and click `Use this embed`. Adjust your embed style settings to fit your use case (more info [here]()) and click `Get the code`.
+    Select the **Elements** tab, scroll to the **Advanced** section at the bottom of the list, and drag and drop the `Embed` to a spot on the page.
 
-<Frame>
-  ![](/images/sharing-and-embedding/image-26.png)
-</Frame>
+    <Frame>
+      ![](/images/sharing-and-embedding/image-26.png)
+    </Frame>
+  </Step>
+  <Step title="Paste Fillout embed code">
+    Paste your **embed code** from Fillout into the code editor and click `Save & Close`.
 
-Open your Webflow visual editor, click the `+` symbol on the upper left corner (or press `A`) to open the **Add Elements** sidebar.
-
-Select the **Elements** tab, scroll to the **Advanced** section at the bottom of the list, and drag and drop the `Embed` to a spot on the page.
-
-<Frame>
-  ![](/images/sharing-and-embedding/image-27.png)
-</Frame>
-
-Paste your **embed code** from Fillout into the code editor and click `Save & Close`.
-
-The Webflow visual editor doesn’t display scripts, so you need to open the **Publish** menu in the upper right corner of the screen and click `Publish to selected domains`. After publishing the changes, click the `external link icon` next to your site URL (an arrow pointing to the upper right corner) to confirm that the embed works as intended.
+    <Frame>
+      ![](/images/sharing-and-embedding/image-27.png)
+    </Frame>
+  </Step>
+  <Step title="Publish and preview">
+    The Webflow visual editor doesn’t display scripts, so you need to open the **Publish** menu in the upper right corner of the screen and click `Publish to selected domains`. After publishing the changes, click the `external link icon` next to your site URL (an arrow pointing to the upper right corner) to confirm that the embed works as intended.
+  </Step>
+</Steps>
 
 ## Troubleshooting common issues
+
+**Narrow embeds**
 
 <Frame>
   ![](/images/sharing-and-embedding/image-28.png)
@@ -54,6 +62,8 @@ Increase the `Min W` value, publish the changes, and keep adjusting until you fi
 <Frame>
   ![](/images/sharing-and-embedding/image-29.png)
 </Frame>
+
+**Out of place floating buttons**
 
 Floating buttons (available in the **Popup** and **Slider** embed settings) may float behind certain elements and styles, like image sliders.
 
