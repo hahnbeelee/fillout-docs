@@ -19,79 +19,70 @@ Check out this tutorial on using Fillout to create or update an Airtable base.
 
 ## How it works
 
-### 1. Create your database in Airtable
+<Steps>
+  <Step title="Create your database in Airtable">
+    <Note>
+      **Note:** If you already have your base created in Airtable, you can skip this step.
+    </Note>
+    Log in to [Airtable](https://airtable.com/), and click `Add a base`.
 
-<Note>
-  **Note:** If you already have your base created in Airtable, you can skip this step.
-</Note>
+    <Frame>
+      ![Screenshot of the Airtable base creation page](/images/base.png)
+    </Frame>
+    Give your base a **name**, and create the **fields** you need. You’ll need one field for every question in your form (eg. Single line text for a short answer, Single select for radio buttons, Multi-select, etc).
 
-Log in to [Airtable](https://airtable.com/), and click `Add a base`.
+    <Frame>
+      ![Screenshot of the Airtable base creation page](/images/ats.png)
+    </Frame>
+    If you are using the Select and Multi-select properties, make sure to type in the options you’d like people to choose from.
 
-<Frame>
-  ![Screenshot of the Airtable base creation page](/images/base.png)
-</Frame>
+    Once you’ve added a **field** (and options, when needed) for every response field in your form, 90% of your work is now done.
 
-Give your base a **name**, and create the **fields** you need. You’ll need one field for every question in your form (eg. Single line text for a short answer, Single select for radio buttons, Multi-select, etc).
+    <Frame>
+      ![Screenshot of the Airtable base creation page](/images/ats2.png)
+    </Frame>
+    Nice work\! Now you’re ready to sync it easily with a new or existing Fillout form.
+  </Step>
+  <Step title="Connect your database to your form">
+    In your [Fillout](https://build.fillout.com/home) dashboard, click `+ Make a Fillout` followed by `Connect` and choose Airtable.
 
-<Frame>
-  ![Screenshot of the Airtable base creation page](/images/ats.png)
-</Frame>
+    <Frame>
+      ![Screenshot of the Airtable base creation page](/images/Screenshot2025-02-11at1.14.21PM.png)
+    </Frame>
+    Select your theme (don’t worry, you can always change this later). Then, enter your **Account name** and `Connect to Airtable`.
 
-If you are using the Select and Multi-select properties, make sure to type in the options you’d like people to choose from.
+    <Note>
+      **Note:** After connecting, you can switch to use [personal access tokens](https://support.airtable.com/docs/creating-and-using-api-keys-and-access-tokens), as well, on the dashboard integrations tab.
+    </Note>
+    After making the selections, click `+ Create form`.
 
-Once you’ve added a **field** (and options, when needed) for every response field in your form, 90% of your work is now done.
+    <Frame>
+      ![Screenshot of the Airtable base creation page](/images/Screenshot2025-02-11at1.38.54PM.png)
+    </Frame>
+    <Note>
+      **Troubleshooting:** Don’t see your table in the dropdown list? Check you have connected to the correct base, and try refreshing the page or hitting the refresh icon.
+    </Note>
+  </Step>
+  <Step title="Map your questions">
+    Fillout pulls questions and answer options from your Airtable base. Your `Airtable fields` now appear in the left sidebar. Simply drag & drop to build your form.
 
-<Frame>
-  ![Screenshot of the Airtable base creation page](/images/ats2.png)
-</Frame>
+    <Frame>
+      ![Screenshot of the Airtable base creation page](/images/Airtable-ezgif.com-video-to-gif-converter.gif)
+    </Frame>
+    To connect a new question to your Airtable database, or check an existing connection, go to the dropdown menu inside **Connected \> Column to connect to** in the right sidebar. 
 
-Nice work\! Now you’re ready to sync it easily with a new or existing Fillout form.
+    <Tip>
+      **Tip:** If you make changes in your Airtable base that you want to reflect in your Fillout form, hit the Refresh icon <Icon icon="arrows-rotate" color="#064e3b" /> , or refresh the Fillout page
+    </Tip>
+  </Step>
+  <Step title="Publish & Share">
+    Once you’ve finished creating your form, you’re ready to go\! Simply `Publish` and share. Form responses will now automatically populate inside your Airtable database.
 
-### 2. Connect your database to your form
-
-In your [Fillout](https://build.fillout.com/home) dashboard, click `+ Make a Fillout` followed by `Connect` and choose Airtable.
-
-<Frame>
-  ![Screenshot of the Airtable base creation page](/images/Screenshot2025-02-11at1.14.21PM.png)
-</Frame>
-
-Select your theme (don’t worry, you can always change this later). Then, enter your **Account name** and `Connect to Airtable`.
-
-<Note>
-  **Note:** After connecting, you can switch to use [personal access tokens](https://support.airtable.com/docs/creating-and-using-api-keys-and-access-tokens), as well, on the dashboard integrations tab.
-</Note>
-
-After making the selections, click `+ Create form`.
-
-<Frame>
-  ![Screenshot of the Airtable base creation page](/images/Screenshot2025-02-11at1.38.54PM.png)
-</Frame>
-
-<Note>
-  **Troubleshooting:** Don’t see your table in the dropdown list? Check you have connected to the correct base, and try refreshing the page or hitting the refresh icon.
-</Note>
-
-### 3. Map your questions
-
-Fillout pulls questions and answer options from your Airtable base. Your `Airtable fields` now appear in the left sidebar. Simply drag & drop to build your form.
-
-<Frame>
-  ![Screenshot of the Airtable base creation page](/images/Airtable-ezgif.com-video-to-gif-converter.gif)
-</Frame>
-
-To connect a new question to your Airtable database, or check an existing connection, go to the dropdown menu inside **Connected \> Column to connect to** in the right sidebar.
-
-<Tip>
-  **Tip:** If you make changes in your Airtable base that you want to reflect in your Fillout form, hit the Refresh icon 🔄 , or refresh the Fillout page
-</Tip>
-
-### 4. Publish & Share
-
-Once you’ve finished creating your form, you’re ready to go\! Simply `Publish` and share. Form responses will now automatically populate inside your Airtable database.
-
-<Check>
-  **Good to know:** Fillout has many powerful features like [branching](/page-logic) and [conditional hide/appear logic](/conditional-hiding). No matter how complex your needs are, there’s a way to build it in Fillout.
-</Check>
+    <Check>
+      **Good to know:** Fillout has many powerful features like [branching](/page-logic) and [conditional hide/appear logic](/conditional-hiding). No matter how complex your needs are, there’s a way to build it in Fillout.
+    </Check>
+  </Step>
+</Steps>
 
 ## Specify a condition
 

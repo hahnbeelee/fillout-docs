@@ -11,27 +11,25 @@ Fillout lets you [create update forms](/airtable-update-form) to update existing
 
 ## How it works
 
-### 1. Create an “update” form
-
-Follow the steps [here](/airtable-update-form) to create an “update” form. Make sure to select `Update record` on the integration and to publish the form.
+<Steps>
+  <Step title="Create an “update” form">
+   Follow the steps [here](/airtable-update-form) to create an “update” form. Make sure to select `Update record` on the integration and to publish the form.
 
 <Frame style={{ width: '624px', height: '133px' }}>
   ![Screenshot of the Form designer tab of a form](/images/Screenshot2025-05-16at3.14.57PM.png)
-</Frame>
-
-### 2. Create another form to choose the record
-
-Create another form. This is the main form you will send your respondents to so that they can choose the record to update.
+</Frame> 
+  </Step>
+  <Step title="Create another form to choose the record">
+   Create another form. This is the main form you will send your respondents to so that they can choose the record to update.
 
 In the form, add a linked record picker that links to the Airtable you would like to update. For example, if your first form updates a Product Inventory table, create this form tied to a different table that has a linked relation with Product Inventory. In this form, add a record picker to choose from those products:
 
 <Frame style={{ width: '528px', height: '195px' }}>
   ![Screenshot of the Form designer tab of a form](/images/Screenshot2025-05-16at3.15.06PM.png)
-</Frame>
-
-### 3. Connect the forms together
-
-Navigate to the [ending page](/ending-page) of your record chooser form and set your update form as the **New form to redirect to**.
+</Frame> 
+  </Step>
+  <Step title="Connect the forms together">
+  Navigate to the [ending page](/ending-page) of your record chooser form and set your update form as the **New form to redirect to**.
 
 <Frame>
   ![Screenshot of the Form designer tab of a form](/images/Screenshot2025-05-16at3.15.30PM.png)
@@ -47,7 +45,9 @@ Finally, pass the record ID to update the update form. Click `Set URL parameters
   **Tip:** If you don’t want to create records in your first form, you can always [set a condition](/conditional-integration) for when the integration is run (set a condition that is never true).
 </Tip>
 
-That’s it\! You can now send respondents to your picker form to choose a record. Once they submit that form, they’ll be automatically redirected to the update form, which will be pre-filled with the record they chose.
+That’s it\! You can now send respondents to your picker form to choose a record. Once they submit that form, they’ll be automatically redirected to the update form, which will be pre-filled with the record they chose.  
+  </Step>
+</Steps>
 
 ## Airtable specific guides
 

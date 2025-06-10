@@ -15,9 +15,9 @@ Check out [Gareth](https://www.garethpronovost.com/)’s tutorial on using Fillo
 
 ## How it works
 
-### 1. Switch your form to update mode
-
-First, choose `Airtable` on the **Integrate** tab.
+<Steps>
+  <Step title="Switch your form to update mode">
+    First, choose `Airtable` on the **Integrate** tab.
 
 <Frame>
   ![Screenshot of the Form designer tab of a form](/images/Screenshot2025-02-11at4.24.42PM.png)
@@ -25,23 +25,21 @@ First, choose `Airtable` on the **Integrate** tab.
 
 Then specify that you want to `Update record`.
 
-<Frame style={{ width: '576px', height: '123px' }}>
+<Frame>
   ![Screenshot of the Form designer tab of a form](/images/updateairtableinventory.png)
 </Frame>
-
-## 2. Use a formula to specify the record to update
-
-You'll now get a formula that defines a **unique link** for every record in your table.
+  </Step>
+  <Step title="Use a formula to specify the record to update">
+   You'll now get a formula that defines a **unique link** for every record in your table.
 
 Create a new `formula` field and copy the formula Fillout provides on the **Integrate** page.
 
-<Frame style={{ width: '373px', height: '320px' }}>
+<Frame>
   ![Screenshot of the Form designer tab of a form](/images/uat2.png)
-</Frame>
-
-## 3. Preview your form
-
-That's it\! `Finish setup`. Try out your form in `Preview` mode, or click one of your unique links to update a record after you’ve published your form\!
+</Frame> 
+  </Step>
+  <Step title="Preview your form">
+   That's it\! `Finish setup`. Try out your form in `Preview` mode, or click one of your unique links to update a record after you’ve published your form\!
 
 Your form is **automatically pre-filled** for whichever record it is updating. This can be changed in the top left area.
 
@@ -51,7 +49,9 @@ Your form is **automatically pre-filled** for whichever record it is updating. T
 
 <Note>
   **Note:** If you don’t provide an **id** in the unique URL, the form will create a new record instead.
-</Note>
+</Note> 
+  </Step>
+</Steps>
 
 ## Let users choose a record to update
 
@@ -61,13 +61,13 @@ Use [this approach](/choose-record-to-update) if you prefer to let users choose 
 
 You can use update forms in combination with products like Airtable interfaces, Softr, or Stacker. For example, instead of adding a formula in Step 2 above, we could add a `Button` field.
 
-<Frame style={{ width: '303px', height: '319px' }}>
+<Frame>
   ![Screenshot of the Form designer tab of a form](/images/uat4.png)
 </Frame>
 
 Then, we can display this button in an Airtable interface, for users to easily edit the record.
 
-<Frame style={{ width: '576px', height: '339px' }}>
+<Frame>
   ![Screenshot of the Form designer tab of a form](/images/uat5.png)
 </Frame>
 
