@@ -17,51 +17,62 @@ sidebarTitle: "Squarespace"
 
 ## How to embed your form in Squarespace
 
-Start by clicking `Publish` in the upper right corner of the Fillout form editor. Next, open the **Share** tab from the top menu.
+<Steps>
+  <Step title="Choose an embed style">
+    Start by clicking `Publish` in the upper right corner of the Fillout form editor. Next, open the **Share** tab from the top menu.
 
-<Frame>
-  ![Screenshot of the Share tab of a form](/images/sharing-and-embedding/image-6.png)
-</Frame>
+    <Frame>
+      ![Screenshot of the Share tab of a form](/images/sharing-and-embedding/image-6.png)
+    </Frame>
+    Select your preferred embed style and click `Use this embed`. Adjust your embed style settings to fit your use case (more info [here]()) and click `Get the code`.
+  </Step>
+  <Step title="Add an embed block">
+    Inside the Squarespace drag-and-drop editor, hover your mouse over the section where you want to embed your form and click `+ Add Block`. Scroll to or search for the `Embed` block and click and drag it onto the page.
 
-Select your preferred embed style and click `Use this embed`. Adjust your embed style settings to fit your use case (more info [here]()) and click `Get the code`.
+    <Frame>
+      ![Screenshot of the Embed block in Squarespace](/images/sharing-and-embedding/image-7.png)
+    </Frame>
+  </Step>
+  <Step title="Paste Fillout embed code">
+    Double-click the `Embed` block, open the **Code Snippet** tab from the block editor, and click the `Embed data` button. Paste your Fillout **embed code** into the code editor and click `Back`.
 
-<Frame>
-  ![Screenshot of the Embed block in Squarespace](/images/sharing-and-embedding/image-7.png)
-</Frame>
+    <Frame>
+      ![Screenshot of the Embed block in Squarespace](/images/sharing-and-embedding/image-8.png)
+    </Frame>
+  </Step>
+  <Step title="Save and preview">
+    Hit `Save` in the upper left corner of the page editor and press Ctrl \+ Shift \+ P to preview the updated page (or click the `↗` button from the site’s Home Menu).
 
-Inside the Squarespace drag-and-drop editor, hover your mouse over the section where you want to embed your form and click `+ Add Block`. Scroll to or search for the `Embed` block and click and drag it onto the page.
+    <Frame>
+      ![Screenshot of the Embed block in Squarespace](/images/sharing-and-embedding/image-9.png)
+    </Frame>
+    You can also paste your Fillout **embed code** into a **Code** block if you’re on a Squarespace Business plan or higher.
+  </Step>
+</Steps>
 
-<Frame>
-  ![Screenshot of the Embed block in Squarespace](/images/sharing-and-embedding/image-8.png)
-</Frame>
-
-Double-click the `Embed` block, open the **Code Snippet** tab from the block editor, and click the `Embed data` button. Paste your Fillout **embed code** into the code editor and click `Back`.
-
-Hit `Save` in the upper left corner of the page editor and press Ctrl \+ Shift \+ P to preview the updated page (or click the `↗` button from the site’s Home Menu).
-
-<Frame>
-  ![Screenshot of the Embed block in Squarespace](/images/sharing-and-embedding/image-9.png)
-</Frame>
-
-You can also paste your Fillout **embed code** into a **Code** block if you’re on a Squarespace Business plan or higher.
-
-## Create a blank page (with no header or footer) for full screen embeds
+## Add a full screen embed
 
 If you’re adding a **Full screen** Fillout embed to a Squarespace site, you may need to use code injection to prevent the sitewide header and footer from rendering on top of your form.
 
-From your site’s Home Menu, open the **Website** tab. Click the `+` icon next to either **Main Navigation** or **Not Linked** and choose `Blank Page`.
+<Steps>
+  <Step title="Create a blank page">
+  From your site’s Home Menu, open the **Website** tab. Click the `+` icon next to either **Main Navigation** or **Not Linked** and choose `Blank Page`.
 
 <Frame>
   ![Screenshot of the Embed block in Squarespace](/images/sharing-and-embedding/image-10.png)
-</Frame>
-
-After giving the page a name, click the `gear icon` next to it and open the **Advanced** tab. Paste `<style>.header, #footer-sections {display:none!important;}</style>` into the **Page Header Code Injection** textbox and click `Save`.
+</Frame>  
+  </Step>
+  <Step title="Remove header and footer">
+  After giving the page a name, click the `gear icon` next to it and open the **Advanced** tab. Paste `<style>.header, #footer-sections {display:none!important;}</style>` into the **Page Header Code Injection** textbox and click `Save`.
 
 <Frame>
   ![Screenshot of the Embed block in Squarespace](/images/sharing-and-embedding/image-11.png)
-</Frame>
-
-Now that the header and footer are removed, add a **blank section** to the page, then add an `Embed` block with your **Full screen embed code,** anywhere on the page.
+</Frame>  
+  </Step>
+  <Step title="Paste Fillout embed code">
+  Now that the header and footer are removed, add a **blank section** to the page, then add an `Embed` block with your **Full screen embed code,** anywhere on the page.  
+  </Step>
+</Steps>
 
 ## Related article
 

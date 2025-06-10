@@ -17,41 +17,45 @@ sidebarTitle: "Page Logic"
 
 ## Edit page branching
 
-To modify your form's flow, click `Logic`.
+<Steps>
+  <Step title="Modify your form's flow">
+    After adding the necessary pages to your form, click `Logic`.
 
-<Frame>
-  ![Screenshot of the Logic tab of a form](/images/logic/image-4.png)
-</Frame>
+    <Frame>
+      ![Screenshot of the Logic tab of a form](/images/logic/image-4.png)
+    </Frame>
+    Let's say you want to go to different pages depending on the result of a respondent's input. For example, we'll ask respondents what kind of company they work at.
 
-Let's say you want to go to different pages depending on the result of a respondent's input. For example, we'll ask respondents what kind of company they work at.
+    In this example, we want respondents to see different pages based on discount eligibility. With this, we’ll create two different **ending** pages (accepted and rejected). If they work at a non-profit, they'll also have to describe the organization.
 
-In this example, we want respondents to see different pages based on discount eligibility. With this, we’ll create two different **ending** pages (accepted and rejected). If they work at a non-profit, they'll also have to describe the organization.
+    What we want to do is:
 
-What we want to do is:
+    - If they qualify for a discount right away (e.g. student), show them the accepted ending page
+    - If they work at a non-profit, show them the non-profit page
+    - If they don’t qualify (e.g. private company), show them the rejected ending page
 
-- If they qualify for a discount right away (e.g. student), show them the accepted ending page
-- If they work at a non-profit, show them the non-profit page
-- If they don’t qualify (e.g. private company), show them the rejected ending page
+    <Frame>
+      ![Screenshot of the Logic tab of a form](/images/logic/image-5.png)
+    </Frame>
+  </Step>
+  <Step title="Connect pages">
+    First, click and drag from the `+` symbol on the right side of the page you want to connect, then drop it onto the target page. For example, we'll click the plus symbol on **Info** and route it to **Rejected**.
 
-<Frame>
-  ![Screenshot of the Logic tab of a form](/images/logic/image-5.png)
-</Frame>
+    `Set condition` to define when it will redirect to **Rejected**. In this case, if it’s a **private company**.
 
-First, click and drag from the `+` symbol on the right side of the page you want to connect, then drop it onto the target page. For example, we'll click the plus symbol on **Info** and route it to **Rejected**.
+    <Frame>
+      ![Screenshot of the Logic tab of a form](/images/logic/image-6.png)
+    </Frame>
+  </Step>
+  <Step title="Repeat step 2 for other scenarios">
+    Finally, we also want to route respondents to the success page right away if they’re a student. `+ Add branch` to `Set condition`.
 
-`Set condition` to define when it will redirect to **Rejected**. In this case, if it’s a **private company**.
-
-<Frame>
-  ![Screenshot of the Logic tab of a form](/images/logic/image-6.png)
-</Frame>
-
-Finally, we also want to route respondents to the success page right away if they’re a student. `+ Add branch` to `Set condition`.
-
-<Frame>
-  ![Screenshot of the Logic tab of a form](/images/logic/image-7.png)
-</Frame>
-
-We’re done\! Now, respondents will get redirected to different pages depending on their answer.
+    <Frame>
+      ![Screenshot of the Logic tab of a form](/images/logic/image-7.png)
+    </Frame>
+    We’re done\! Now, respondents will get redirected to different pages depending on their answer.
+  </Step>
+</Steps>
 
 ## Related articles
 

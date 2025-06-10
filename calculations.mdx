@@ -8,50 +8,54 @@ icon: "calculator-simple"
 ## Video tutorial
 
 <Frame>
-  <iframe width="720" height="420" src="https://www.youtube.com/embed/51JXFjaZF6k" title="How to add calculations to your form" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="720" height="420" src="https://www.youtube.com/embed/51JXFjaZF6k" title="How to add calculations to your form" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />
 </Frame>
 
 ## Add a calculation
 
-Open the `Logic` modal in the bottom-right of your form editor.
+<Steps>
+  <Step title="Create a new calculation">
+    Open the `Logic` modal in the bottom-right of your form editor.
 
-<Frame>
-  ![Screenshot of the Logic tab of a form](/images/logic/image-8.png)
-</Frame>
+    <Frame>
+      ![Screenshot of the Logic tab of a form](/images/logic/image-8.png)
+    </Frame>
+    Click `Calculations` followed by `+ New calculation`. Here, you'll be able to add, edit, and delete calculations in your form.
 
-Click `Calculations` followed by `+ New calculation`. Here, you’ll be able to add, edit, and delete calculations in your form.
+    <Frame>
+      ![Screenshot of the Logic tab of a form](/images/logic/image-9.png)
+    </Frame>
+  </Step>
+  <Step title="Enter the necessary details">
+    Add your calculation by giving it a **Name** and **Type**. The name refers to how you'll refer to it in-app, whereas the type can either be one of these:
 
-<Frame style={{ width: '528px' , height: '283px' }}>
-  ![Screenshot of the Logic tab of a form](/images/logic/image-9.png)
-</Frame>
+    - **Number** - if you want to compute some numerical result, like a price or a score
+    - **Text** - if you want to compute some dynamic text, e.g. some text that depends on a user's selections in the form.
+    - **Duration** - if you want to compute the interval between two dates, e.g. age or term period
 
-Add your calculation by giving it a **Name** and **Type**. The name refers to how you’ll refer to it in-app, whereas the type can either be one of these:
+    Then, provide an **Initial value** for your calculation.
 
-- **Number** - if you want to compute some numerical result, like a price or a score
-- **Text** - if you want to compute some dynamic text, e.g. some text that depends on a user’s selections in the form.
-- **Duration** - if you want to compute the interval between two dates, e.g. age or term period
+    Every calculation has some value that it starts with, e.g. defining what a variable starts out as. Some common examples:
 
-Then, provide an **Initial value** for your calculation.
+    - **0** - if you want to add to a price variable over time as the respondent picks options
+    - **100** - if you want to deduct points for wrong answers on a quiz from 100
+    - **Any arbitrary text** - for a **text** calculation (or leaving it empty)
+  </Step>
+  <Step title="Define rules">
+    Specify the rules that determine how the calculated value changes.
 
-Every calculation has some value that it starts with, e.g. defining what a variable starts out as. Some common examples:
+    <Frame>
+      ![Screenshot of the Logic tab of a form](/images/logic/image-10.png)
+    </Frame>
+    A rule is made up of 3 main parts:
 
-- **0** - if you want to add to a price variable over time as the respondent picks options
-- **100** - if you want to deduct points for wrong answers on a quiz from 100
-- **Any arbitrary text** - for a **text** calculation (or leaving it empty)
+    - **Operation** - this is what you want to do to your calculation, e.g. Add a number to it
+    - **Operation value** - this is the value that interacts with the operation, e.g. Add whatever number you provide
+    - **Condition** - this defines **when** you should perform that operation. This is similar to how you might [hide/show a question depending on user input](/conditional-hiding)
 
-**Define Rules** for how the value of your calculation changes.
-
-<Frame style={{ width: '576px' , height: '243px' }}>
-  ![Screenshot of the Logic tab of a form](/images/logic/image-10.png)
-</Frame>
-
-A rule is made up of 3 main parts:
-
-- **Operation** - this is what you want to do to your calculation, e.g. Add a number to it
-- **Operation value** - this is the value that interacts with the operation, e.g. Add whatever number you provide
-- **Condition** - this defines **when** you should perform that operation. This is similar to how you might [hide/show a question depending on user input](/conditional-hiding)
-
-You can **drag and drop conditions** using the handle on the right-hand side to reorder them. Rules will take effect in the order that they appear on this screen. For example, you can add 5, and then multiply by 2, instead of doing it vice versa.
+    You can **drag and drop conditions** using the handle on the right-hand side to reorder them. Rules will take effect in the order that they appear on this screen. For example, you can add 5, and then multiply by 2, instead of doing it vice versa.
+  </Step>
+</Steps>
 
 ## Common ways to use your calculations effectively
 
@@ -59,17 +63,17 @@ You can **drag and drop conditions** using the handle on the right-hand side to 
 
 After adding a payment page, type `@` or click the `+` icon to reference a calculation instead of a static price for your payment page.
 
-<Frame style={{ width: '528px' , height: '492px' }}>
+<Frame>
   ![Screenshot of the Logic tab of a form](/images/logic/image-11.png)
 </Frame>
 
-Now, the price will change depending on the customer’s order.
+Now, the price will change depending on the customer's order.
 
 ### Display the calculation in your form
 
 Anywhere in Fillout, you can type `@` to [reference previous answers or calculations](/answer-piping). You can [style this text](/themes) by highlighting it and changing the font size, weight, or color.
 
-<Frame style={{ width: '528px' , height: '321px' }}>
+<Frame>
   ![Screenshot of the Logic tab of a form](/images/logic/image-12.png)
 </Frame>
 
@@ -77,7 +81,7 @@ Anywhere in Fillout, you can type `@` to [reference previous answers or calculat
 
 When making a new calculation, choose `duration` as the type. Select **Start** and **End** dates in your calculation followed by the measurement for **Units**.
 
-<Frame style={{ width: '528px' , height: '316px' }}>
+<Frame>
   ![Screenshot of the Logic tab of a form](/images/logic/image-13.png)
 </Frame>
 
