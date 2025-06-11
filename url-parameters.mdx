@@ -7,7 +7,7 @@ icon: "brackets-curly"
 
 ## Overview
 
-**URL parameters**, also known as “hidden fields”, can be used to customize your form with information you already know when you’re sharing it with respondents. For example:
+**URL parameters**, also known as "hidden fields", can be used to customize your form with information you already know when you're sharing it with respondents. For example:
 
 - Pre-filling fields with the email of the respondent
 - Recording where your form was shared via a **utm_source** parameter (e.g. Facebook, Google, Instagram, etc.)
@@ -15,39 +15,38 @@ icon: "brackets-curly"
 
 ## How to add a URL parameter or hidden field
 
-### 1. Register a new parameter
+<Steps>
+  <Step title="Register a new parameter">
+    Go to **Settings** and click `URL parameters`. Then, click `+ Add new`
 
-Go to **Settings** and click `URL parameters`. Then, click `+ Add new`
+    <Frame>
+      ![](/images/advanced/image-5.png)
+    </Frame>
+    Enter a **Parameter name**. Here, we can tell Fillout to expect a URL Parameter with a certain name.
 
-<Frame>
-  ![](/images/advanced/image-5.png)
-</Frame>
+    Note that you can optionally provide a sample value for the parameter, if you'd like to see what your form looks like with that value being used (e.g. if you have some [hide/show logic](/conditional-hiding) based on it).
+  </Step>
+  <Step title="Use the parameter in your form">
+    You're all set to start using your new URL parameter now\! We can now use it to:
 
-Enter a **Parameter name**. Here, we can tell Fillout to expect a URL Parameter with a certain name.
+    - [Pre-fill a field](/prefill-fields), by pressing the `+` icon on a **Default value** property of any field
+    - Write to any integration, by heading to the **Integrations** at the top and creating a new connection or editing an existing one, and mapping this URL Parameter to some field like in Airtable or Notion.
+    - Display in plaintext in the form
+  </Step>
+  <Step title="Share your form link">
+    To make the URL parameter active in your form, you need to set its value in the form link you share with respondents. For example, if we have a parameter called **name** registered, the default link would look like: https://forms.fillout.com/t/9ofaEF4d54us?name=xxxxx
 
-Note that you can optionally provide a sample value for the parameter, if you’d like to see what your form looks like with that value being used (e.g. if you have some [hide/show logic](/conditional-hiding) based on it).
+    Say we know that the respondent's name that we're sending our form to, Jane. We'll type her name at the end of the link like this: https://forms.fillout.com/t/9ofaEF4d54us?name=jane
 
-### 2. Use the parameter in your form
-
-You’re all set to start using your new URL parameter now\! We can now use it to:
-
-- [Pre-fill a field](/prefill-fields), by pressing the `+` icon on a **Default value** property of any field
-- Write to any integration, by heading to the **Integrations** at the top and creating a new connection or editing an existing one, and mapping this URL Parameter to some field like in Airtable or Notion.
-- Display in plaintext in the form
-
-### 3. Share your form link
-
-To make the URL parameter active in your form, you need to set its value in the form link you share with respondents. For example, if we have a parameter called **name** registered, the default link would look like: https://forms.fillout.com/t/9ofaEF4d54us?name=xxxxx
-
-Say we know that the respondent's name that we’re sending our form to, Jane. We'll type her name at the end of the link like this: https://forms.fillout.com/t/9ofaEF4d54us?name=jane
-
-<Check>
-  **Important:** When you have multiple URL parameters for one form, you’ll need to separate them using an ampersand (&), like so: https://forms.fillout.com/t/your_form_id?email=jane@gmail.com&name=jane
-</Check>
+    <Check>
+      **Important:** When you have multiple URL parameters for one form, you'll need to separate them using an ampersand (&), like so: https://forms.fillout.com/t/your_form_id?email=jane@gmail.com&name=jane
+    </Check>
+  </Step>
+</Steps>
 
 ## Sample use cases
 
-### Personalize a form with URL parameters
+**Personalize a form with URL parameters**
 
 Type `@` in any question or field to reference information from your form. Click the `link` icon on the left side of the pop-up followed by the parameter.
 
@@ -61,7 +60,7 @@ Type `@` in any question or field to reference information from your form. Click
   ![](/images/advanced/image-7.png)
 </Frame>
 
-### Recording URL parameters in submissions
+**Recording URL parameters in submissions**
 
 You may want to track URL parameters in form submissions, like links shared on Facebook, Instagram, or LinkedIn to compare traffic. Fillout stores these by default on the Results page.
 
