@@ -7,33 +7,37 @@ sidebarTitle: "Use Skip Logic"
 
 ## How to set up skip logic
 
-On your form builder, go to `Logic`. For example, let’s ask respondents which specific services they would like to avail.
+<Steps>
+  <Step title="Navigate to Logic">
+    On your form builder, go to `Logic`. For example, let’s ask respondents which specific services they would like to avail.
 
-<Frame>
-  ![PDF Viewer](/images/guides/image-25.png)
-</Frame>
+    <Frame>
+      ![PDF Viewer](/images/guides/image-25.png)
+    </Frame>
+  </Step>
+  <Step title="Connect pages">
+    By default, each page connects to a single page, until the **Ending page**. We want to create a dynamic form that will only show pages relevant to previous answers.
 
-By default, each page connects to a single page, until the **Ending page**. We want to create a dynamic form that will only show pages relevant to previous answers.
+    First, drag and drop the `+` connector of the page containing the question to the connector of the relevant page. Then, `Set condition`.
 
-First, drag and drop the `+` connector of the page containing the question to the connector of the relevant page. Then, `Set condition`.
+    <Frame>
+      ![PDF Viewer](/images/guides/image-26.png)
+    </Frame>
+  </Step>
+  <Step title="Set conditions">
+    Say, the respondent selects Solutions and Training only. In this case, we’ll have them skip the page(/s) that come before it, Consultation.
 
-<Frame>
-  ![PDF Viewer](/images/guides/image-26.png)
-</Frame>
+    <Frame>
+      ![PDF Viewer](/images/guides/image-27.png)
+    </Frame>
+    Now, let’s make a path for when they select only one option like Solutions. We’ll add `+ Add branch` to skip the page(/s) after it, Training.
 
-Say, the respondent selects Solutions and Training only. In this case, we’ll have them skip the page(/s) that come before it, Consultation.
-
-<Frame>
-  ![PDF Viewer](/images/guides/image-27.png)
-</Frame>
-
-Now, let’s make a path for when they select only one option like Solutions. We’ll add `+ Add branch` to skip the page(/s) after it, Training.
-
-<Frame>
-  ![PDF Viewer](/images/guides/image-28.png)
-</Frame>
-
-For the remaining options, `+ Add branch` and repeat the same process. Configure the branches as you see fit.
+    <Frame>
+      ![PDF Viewer](/images/guides/image-28.png)
+    </Frame>
+    For the remaining options, `+ Add branch` and repeat the same process. Configure the branches as you see fit.
+  </Step>
+</Steps>
 
 ## Relevant articles
 

@@ -22,54 +22,54 @@ Embedding a Fillout form in a Softr **list details block** lets you define diffe
   **Note:** If you aren’t using a list details block, skip ahead to Method 2.
 </Note>
 
-### 1. In Softr, create a list details block
+<Steps>
+  <Step title="Create a list details block">
+    In Softr, choose a **List Details** block template.
 
-<Frame>
-  ![In Softr, create a list details block](/images/guides/image-73.png)
-</Frame>
+    <Frame>
+      ![In Softr, create a list details block](/images/guides/image-73.png)
+    </Frame>
+  </Step>
+  <Step title="Add an embed field">
+    In your **List Item Fields**, add an embed.
 
-### 2. Add an embed field to your list item fields
+    <Frame>
+      ![Add an embed field to your list item fields](/images/guides/image-74.png)
+    </Frame>
+  </Step>
+  <Step title=" Copy an embed snippet for a Fillout form">
+    You can get embedding options for Fillout forms in the **Share** tab for your form. Choose an embed option and click `Use this embed`.
 
-<Frame>
-  ![Add an embed field to your list item fields](/images/guides/image-74.png)
-</Frame>
+    <Frame>
+      ![Copy an embed snippet for a Fillout form](/images/guides/image-75.png)
+    </Frame>
+    <Check>
+      **Important:** You should publish your Fillout form before trying it in Softr.
+    </Check>
+  </Step>
+  <Step title="Paste the embed snippet into a new field in Airtable, and display it">
+    Create a new field in Airtable, which will contain the embedding snippets from Fillout. Paste your snippet (optionally customized) into that field. You can use a formula field, or simply a long text field.
 
-### 3. Copy an embed snippet for a Fillout form
+    <CardGroup cols={2}>
+      <Frame>
+        ![Paste the embed snippet into a new field in Airtable, and display it](/images/guides/image-76.png)
+      </Frame>
+      <Frame>
+        ![Paste the embed snippet into a new field in Airtable, and display it](/images/guides/image-77.png)
+      </Frame>
+    </CardGroup>
+    <Check>
+      **Good to know:** If you’re using a formula as the link to your Fillout form, you can pass in parameters to the form from Airtable. More details at the end of this article.
+    </Check>
+  </Step>
+  <Step title="Publish your app">
+    Publish your softr app and view your form.
 
-You can get embedding options for Fillout forms in the **Share** tab for your form. Choose an embed option and click `Use this embed`.
-
-<Frame>
-  ![Copy an embed snippet for a Fillout form](/images/guides/image-75.png)
-</Frame>
-
-<Check>
-  **Important:** You should publish your Fillout form before trying it in Softr.
-</Check>
-
-### 4. Paste the embed snippet into a new field in Airtable, and display it
-
-Create a new field in Airtable, which will contain the embedding snippets from Fillout. Paste your snippet (optionally customized) into that field. You can use a formula field, or simply a long text field.
-
-<CardGroup cols={2}>
-  <Frame>
-    ![Paste the embed snippet into a new field in Airtable, and display it](/images/guides/image-76.png)
-  </Frame>
-  <Frame>
-    ![Paste the embed snippet into a new field in Airtable, and display it](/images/guides/image-77.png)
-  </Frame>
-</CardGroup>
-
-<Check>
-  **Good to know:** If you’re using a formula as the link to your Fillout form, you can pass in parameters to the form from Airtable. More details at the end of this article.
-</Check>
-
-### 5. That’s it\! Publish your Softr app and view your form
-
-<Frame>
-  ![That’s it\! Publish your Softr app and view your form](/images/guides/image-78.png)
-</Frame>
-
-Fillout form embedded in a Softr list details block
+    <Frame>
+      ![That’s it\! Publish your Softr app and view your form](/images/guides/image-78.png)
+    </Frame>
+  </Step>
+</Steps>
 
 ## Method 2: Custom code block
 
@@ -77,35 +77,34 @@ Fillout form embedded in a Softr list details block
   **Note:** You’ll need a paid Softr account to use this method.
 </Note>
 
-### 1. In Softr, create a custom code block
+<Steps>
+  <Step title="Create a custom code block">
+    In Softr, Add a custom code block.
 
-<Frame>
-  ![In Softr, create a custom code block](/images/guides/image-79.png)
-</Frame>
+    <Frame>
+      ![In Softr, create a custom code block](/images/guides/image-79.png)
+    </Frame>
+    For more details, click [here](https://docs.softr.io/basic-building-blocks/faLmrJmdo6e3EsGyNHYQ6V/custom-code-block-overview/6XNrxFopUEiwbWipq81Eq1) to view Softr's documentation.
+  </Step>
+  <Step title="Copy an embed snippet for a Fillout form">
+    You can get embedding options for Fillout forms in the **Share** tab for your form. Choose an embed option and click `Use this embed`.
 
-For more details, click [here](https://docs.softr.io/basic-building-blocks/faLmrJmdo6e3EsGyNHYQ6V/custom-code-block-overview/6XNrxFopUEiwbWipq81Eq1) to view Softr's documentation.
-
-### 2. Copy an embed snippet for a Fillout form
-
-You can get embedding options for Fillout forms in the **Share** tab for your form. Choose an embed option and click `Use this embed`.
-
-<Frame>
-  ![Copy an embed snippet for a Fillout form](/images/guides/image-80.png)
-</Frame>
-
-<Check>
-  **Important:** You should publish your Fillout form before trying it in Softr.
-</Check>
-
-### 3. Paste the embed snippet into the Softr code block
-
-<Frame>
-  ![Paste the embed snippet into the Softr code block](/images/guides/image-81.png)
-</Frame>
-
-### 4. That’s it\! Publish your Softr application and try your Fillout form\!
-
-At this point, you should be ready to try your embed\! See below for more advanced instructions.
+    <Frame>
+      ![Copy an embed snippet for a Fillout form](/images/guides/image-80.png)
+    </Frame>
+    <Check>
+      **Important:** You should publish your Fillout form before trying it in Softr.
+    </Check>
+  </Step>
+  <Step title="Paste the embed snippet into the Softr code block">
+    <Frame>
+      ![Paste the embed snippet into the Softr code block](/images/guides/image-81.png)
+    </Frame>
+  </Step>
+  <Step title="Publish your Softr app">
+    That’s it\! Publish your Softr application and try your Fillout form\! At this point, you should be ready to try your embed\! See below for more advanced instructions.
+  </Step>
+</Steps>
 
 ## Advanced: filtering records and accessing the logged in Softr user
 

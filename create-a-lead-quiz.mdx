@@ -10,87 +10,89 @@ Lead quizzes are a reliable way to collect relevant contacts for your sales or m
 
 ## How to build a lead quiz
 
-### 1. Switch to Quiz mode
+<Steps>
+  <Step title="Switch to Quiz mode">
+    Open an existing form or create a [new one](https://build.fillout.com/home/quizzes). From the Fillout dashboard `+ Make a Fillout`. Go to the **Settings** tab of your form followed by `Quiz mode` and enable this.
 
-Open an existing form or create a [new one](https://build.fillout.com/home/quizzes). From the Fillout dashboard `+ Make a Fillout`. Go to the **Settings** tab of your form followed by `Quiz mode` and enable this.
+    <Frame>
+      ![PDF Viewer](/images/guides/image-35.png)
+    </Frame>
+    Make sure to turn off `Show correct answers after each page` to ensure results are only accessible via respondent emails and custom end pages.
+  </Step>
+  <Step title="Add an email field and quiz questions">
+    Back in the **Edit** tab of the form, scroll down to click `Email input` from the left-hand panel. Then, add your preferred quiz question fields.
 
-<Frame>
-  ![PDF Viewer](/images/guides/image-35.png)
-</Frame>
+    <Frame>
+      ![PDF Viewer](/images/guides/image-36.png)
+    </Frame>
+    <Tip>
+      **Tip:** Rename each page as you add fields to make it easier to find them when setting up conditions.
+    </Tip>
+  </Step>
+  <Step title="Choose correct answers and score values">
+    After adding a quiz question or field to a page, click it followed by the `Quiz` icon to open the answer key window.
 
-Make sure to turn off `Show correct answers after each page` to ensure results are only accessible via respondent emails and custom end pages.
+    <Frame>
+      ![PDF Viewer](/images/guides/image-37.png)
+    </Frame>
+    Add a checkmark next to each correct answer and provide a **Score** value.
 
-### 2. Add an email field and quiz questions
+    <Frame>
+      ![PDF Viewer](/images/guides/image-38.png)
+    </Frame>
+  </Step>
+  <Step title="Customize a quiz’s ending page(s)">
+    By default, [ending pages](/ending-page) for quizzes will calculate and display each respondent’s total score. To hide this, go to your ending page from bottom of the screen. Click the score field, and turn off `Show quiz score` from the right-hand settings menu.
 
-Back in the **Edit** tab of the form, scroll down to click `Email input` from the left-hand panel. Then, add your preferred quiz question fields.
+    <Frame>
+      ![PDF Viewer](/images/guides/image-39.png)
+    </Frame>
+    For lead quizzes that don’t have correct/incorrect answers (e.g. Find out which workout routine is best for your body type), add text and media that is shown only when specific answers were provided throughout the quiz.
 
-<Frame>
-  ![PDF Viewer](/images/guides/image-36.png)
-</Frame>
+    Click on any field on an ending page followed by the **Logic** settings in the right-hand panel. Choose the `Show when` option, and click `Edit conditional logic` to configure when text or media should be shown or hidden.
 
-<Tip>
-  **Tip:** Rename each page as you add fields to make it easier to find them when setting up conditions.
-</Tip>
+    <Frame>
+      ![PDF Viewer](/images/guides/image-40.png)
+    </Frame>
+  </Step>
+  <Step title="Add more ending pages (Optional)">
+    Sometimes, multiple ending pages are easier to manage than one with too many hidden fields.
 
-### 3. Choose correct answers and score values
+    Click `+ Add page` at the bottom to add more **Ending** pages, and set up conditions that lead to these pages by opening `Logic`. Click the `+` icon and drag the connector to the corresponding end page.
 
-After adding a quiz question or field to a page, click it followed by the `Quiz` icon to open the answer key window.
-
-<Frame>
-  ![PDF Viewer](/images/guides/image-37.png)
-</Frame>
-
-Add a checkmark next to each correct answer and provide a **Score** value.
-
-<Frame>
-  ![PDF Viewer](/images/guides/image-38.png)
-</Frame>
-
-### 4. Customize a quiz’s ending page(s)
-
-By default, [ending pages](/ending-page) for quizzes will calculate and display each respondent’s total score. To hide this, go to your ending page from bottom of the screen. Click the score field, and turn off `Show quiz score` from the right-hand settings menu.
-
-<Frame>
-  ![PDF Viewer](/images/guides/image-39.png)
-</Frame>
-
-For lead quizzes that don’t have correct/incorrect answers (e.g. Find out which workout routine is best for your body type), add text and media that is shown only when specific answers were provided throughout the quiz.
-
-Click on any field on an ending page followed by the **Logic** settings in the right-hand panel. Choose the `Show when` option, and click `Edit conditional logic` to configure when text or media should be shown or hidden.
-
-<Frame>
-  ![PDF Viewer](/images/guides/image-40.png)
-</Frame>
-
-Sometimes, multiple ending pages are easier to manage than one with too many hidden fields.
-
-Click `+ Add page` at the bottom to add more **Ending** pages, and set up conditions that lead to these pages by opening `Logic`. Click the `+` icon and drag the connector to the corresponding end page.
-
-<Frame>
-  ![PDF Viewer](/images/guides/image-41.png)
-</Frame>
+    <Frame>
+      ![PDF Viewer](/images/guides/image-41.png)
+    </Frame>
+  </Step>
+</Steps>
 
 ## Set up custom respondent emails
 
-Go to **Settings**, and click **Custom emails** to choose an [email workflow](/custom-emails). The quickest one to create would be the **Thank you email** option. `Create workflow` to `Edit` the content of your email.
+<Steps>
+  <Step title="Choose a workflow template">
+    Go to **Settings**, and click **Custom emails** to choose an [email workflow](/custom-emails). The quickest one to create would be the **Thank you email** option. `Create workflow` to `Edit` the content of your email.
 
 <Frame>
   ![PDF Viewer](/images/guides/image-42.png)
 </Frame>
-
-You can edit the default **Subject** and reference fields like score or name by clicking the `+` icon.
+  </Step>
+  <Step title="Edit email contents">
+   You can edit the default **Subject** and reference fields like score or name by clicking the `+` icon.
 
 <Frame>
   ![PDF Viewer](/images/guides/image-43.png)
 </Frame>
-
-Go to `Email` to edit the default message and reference fields. You can also [customize its style](/custom-emails#c6872760d8cb46d382efc4089b770e9a).
+ 
+  </Step>
+  <Step title="Reference fields (Optional)">
+    Go to `Email` to edit the default message and reference fields. You can also [customize its style](/custom-emails#c6872760d8cb46d382efc4089b770e9a).
 
 <Frame>
   ![PDF Viewer](/images/guides/image-44.png)
 </Frame>
-
-You can [personalize lead quiz notifications](/filter-branch-workflows#1530ee47667b80b5a331cff31ed5c22a) by sending custom emails depending on the score. First, add a `Branch` action to your workflow. `Edit` to set up conditional logic.
+  </Step>
+  <Step title="Add branches (Optional)">
+   You can [personalize lead quiz notifications](/filter-branch-workflows#1530ee47667b80b5a331cff31ed5c22a) by sending custom emails depending on the score. First, add a `Branch` action to your workflow. `Edit` to set up conditional logic.
 
 <Frame>
   ![PDF Viewer](/images/guides/image-45.png)
@@ -101,6 +103,15 @@ For example, if a lead scores less than 5, we’ll send them an email that inclu
 <Tip>
   **Tip:** If you prefer to send formatted emails with custom styles, use Fillout’s [Sendgrid](/sendgrid) or [Mailchimp](/mailchimp) integrations.
 </Tip>
+ 
+  </Step>
+</Steps>
+
+
+
+
+
+
 
 ## Add calculations to ending pages and custom emails
 
