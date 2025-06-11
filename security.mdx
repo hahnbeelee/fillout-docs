@@ -1,7 +1,7 @@
 ---
-title: Security at Fillout
-description: This page describes the administrative, technical and physical safeguards in place at Fillout as well as SOC 2 Type 2 compliance.
-icon: shield-halved
+title: "Security at Fillout"
+description: "This page describes the administrative, technical and physical safeguards in place at Fillout as well as SOC 2 Type 2 compliance."
+icon: "shield-halved"
 ---
 
 Fillout is designed for intaking data securely. We follow industry best practices to keep your responses secure and are `SOC 2 Type 2 compliant`. This certification verifies that Fillout meets rigorous standards for security, availability, and confidentiality in our data handling and processing systems.
@@ -23,19 +23,19 @@ See our [privacy policy](/privacy-policy).
 
 Security is a non-negotiable priority at Fillout. We take the following measures to keep your data and account secure.
 
-### Hosting
+**Hosting**
 
 Fillout is hosted on Amazon Web Services (AWS, via Render.com) and our AWS/Render servers are located in the United States and in the European Union (EU). EU servers are only used if requested by the customer. AWS data centers have state-of-the-art physical access controls, logical access controls, and frequent third-party independent audits. AWS has published a detailed security whitepaper outlining these measures.
 
 Fillout employees have as-needed access to infrastructure on Render. All employees have dedicated user accounts and access infrastructure via two-factor authentication.
 
-### Encryption
+**Encryption**
 
 All `data in transit is encrypted` over HTTPS/TLS between you and Fillout's servers. All data is `encrypted at rest` and replicated for durability.
 
 ## Application security
 
-### Two-factor authentication and single sign-on
+**Two-factor authentication and single sign-on**
 
 Fillout supports G Suite SSO, allowing customers to enforce that users sign in using customer-managed identity providers. Two-factor authentication for application login can be enforced at the identity provider level (e.g. by turning it on within G Suite).
 
@@ -43,14 +43,14 @@ Fillout supports G Suite SSO, allowing customers to enforce that users sign in u
 
 ## Business continuity and disaster recovery
 
-### Business Continuity
+**Business Continuity**
 
 Fillout keeps daily and point-in-time encrypted backups of data on render.com. While never expected, in the case of production data loss, we are able to restore customer data from these backups.
 
-### Disaster Recovery
+**Disaster Recovery**
 
 In the event of a region-wide outage, Fillout will bring up a duplicate environment in a different AWS Platform region. Fillout infrastructure is designed to be portable and restorable under different regions.
 
-### How to report vulnerabilities
+## How to report vulnerabilities
 
 You can email [security@fillout.com](/) with details on any security vulnerabilities you discover. Fillout operates a security bug bounty program. Security researchers around the world continuously test the security of the Fillout services, and report issues via the program.
