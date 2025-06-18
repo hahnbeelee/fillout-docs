@@ -107,13 +107,6 @@
                 ]
               },
               {
-                "group": "HubSpot",
-                "icon": "hubspot",
-                "pages": [
-                  "hubspot",
-                  "HubSpot-companies-deals"
-                ]
-              {
                 "group": "Notion",
                 "icon": "cube",
                 "pages": [
@@ -176,7 +169,6 @@
               "intercom",
               "zendesk",
               "stripe-payments-to-airtable",
-              "advanced-designer"
             ]
           },
           {
