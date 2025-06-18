@@ -98,12 +98,12 @@
               "integrations",
               "airtable",
               "monday-update",
-              {
-                "group": "Testing",
-                "icon": "cloud",
+               {
+                "group": "Monday",
+                "icon": "columns-3",
                 "pages": [
-                  "salesforce",
-                  "salesforce-update-form"
+                  "monday",
+                  "monday-update"
                 ]
               },
               {
