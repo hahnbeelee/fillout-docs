@@ -175,7 +175,8 @@
               "make",
               "intercom",
               "zendesk",
-              "stripe-payments-to-airtable"
+              "stripe-payments-to-airtable",
+              "advanced-designer"
             ]
           },
           {
