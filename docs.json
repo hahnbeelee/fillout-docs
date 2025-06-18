@@ -40,12 +40,12 @@
                 "pages": [
                   "page-types",
                   "form-page",
-                  "cover-page",
-                  "ending-page",
+                  "cover-page",                  
                   "review-page",
                   "payment-page",
                   "login-page",
                   "scheduling-page"
+                  "ending-page"
                 ]
               },
               "email-notifications",
