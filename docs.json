@@ -96,6 +96,7 @@
             "group": "Integrations",
             "pages": [
               "integrations",
+              "airtable",
               "monday-update",
               {
                 "group": "Salesforce",
@@ -149,7 +150,6 @@
               "relay-app",
               "discord",
               "pdfs",
-              "airtable",
               "smartsuite",
               "slack",
               "attio",
