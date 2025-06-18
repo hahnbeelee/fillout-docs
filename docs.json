@@ -109,8 +109,10 @@
                 "group": "Notion",
                 "icon": "cube",
                 "pages": [
+                  "notion",
+                  "notion-update-form",
                   "notion-embed",
-                  "notion"
+                  "notion-add-page-content"
                 ]
               },
               {
