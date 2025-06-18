@@ -99,6 +99,14 @@
               "airtable",
               "monday-update",
               {
+                "group": "Test",
+                "icon": "cloud",
+                "pages": [
+                  "salesforce",
+                  "salesforce-update-form"
+                ]
+              },
+              {
                 "group": "Salesforce",
                 "icon": "cloud",
                 "pages": [
