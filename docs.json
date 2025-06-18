@@ -99,7 +99,7 @@
               "airtable",
               "monday-update",
               {
-                "group": "Test",
+                "group": "Testing",
                 "icon": "cloud",
                 "pages": [
                   "salesforce",
