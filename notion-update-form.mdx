@@ -7,9 +7,9 @@ icon: "arrow-rotate-right"
 
 ## How it works
 
-### 1. Switch your form to update mode
-
-First, choose `Notion` in the **Integrate** page.
+<Steps>
+  <Step title="Switch your form to update mode">
+    First, choose `Notion` in the **Integrate** page.
 
 <Frame>
   ![Screenshot of the Form designer tab of a form](/images/Screenshot2025-02-12at4.40.20PM.png)
@@ -20,10 +20,9 @@ Then specify that you want to `Update page`.
 <Frame style={{ width: '624px', height: '133px' }}>
   ![Screenshot of the Form designer tab of a form](/images/notionupdate.png)
 </Frame>
-
-### 2. Use a formula to specify the page to update
-
-You'll now get a formula in Fillout that defines a **unique link** for every page in your table. Create a new `formula`property in Notion and copy the formula provided by Fillout.
+  </Step>
+  <Step title="Use a formula to specify the page to update">
+   You'll now get a formula in Fillout that defines a **unique link** for every page in your table. Create a new `formula`property in Notion and copy the formula provided by Fillout.
 
 <Frame style={{ width: '624px', height: '166px' }}>
   ![Screenshot of the Form designer tab of a form](/images/notionupdate2.png)
@@ -34,10 +33,10 @@ Adding a formula property is mostly for your convenience. If you already know th
 <Note>
   **Note:** If you don’t provide an **id** in the unique URL, the form will create a new page instead.
 </Note>
-
-### 3. Preview your form
-
-That's it\! Click `Finish setup`. Preview your form or use a unique link to update a page. The form auto-fills for the page it's updating, and you can select the **Record to update** in the top left.
+ 
+  </Step>
+  <Step title="Preview your form">
+   That's it\! Click `Finish setup`. Preview your form or use a unique link to update a page. The form auto-fills for the page it's updating, and you can select the **Record to update** in the top left.
 
 <Frame>
   ![Screenshot of the Form designer tab of a form](/images/notionupdate3.png)
@@ -45,7 +44,9 @@ That's it\! Click `Finish setup`. Preview your form or use a unique link to upda
 
 <Note>
   **Note:** In Notion, the formulas with the links to update the records are most easily clickable when using a Table view.
-</Note>
+</Note> 
+  </Step>
+</Steps>
 
 ## Notion specific guides
 
