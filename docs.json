@@ -106,6 +106,13 @@
                 ]
               },
               {
+                "group": "HubSpot",
+                "icon": "hubspot",
+                "pages": [
+                  "hubspot",
+                  "HubSpot-companies-deals"
+                ]
+              {
                 "group": "Notion",
                 "icon": "cube",
                 "pages": [
@@ -143,7 +150,6 @@
               "discord",
               "pdfs",
               "airtable",
-              "hubspot",
               "smartsuite",
               "slack",
               "attio",
