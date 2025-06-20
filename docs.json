@@ -308,13 +308,22 @@
             "group": "Fillout Workflows",
             "pages": [
               "workflows",
-              "filter-branch-workflows",
-              "custom-emails",
-              "ai-workflows",
-              "scheduling-workflows",
-              "delay-workflows",
-              "approval-workflows",
-              "conversion-kit-workflows"
+              {
+                "group": "Workflow Types",
+                "icon": "code-branch",
+                "pages": [
+                  "ai-workflows",
+                  "custom-emails",
+                  "scheduling-workflows",
+                  "approval-workflows",
+                  "conversion-kit-workflows"
+                ]
+              },
+              {
+                "group": "Workflow Actions",
+                "icon": "bolt",
+                "pages": ["filter-branch-workflows", "delay-workflows"]
+              }
             ]
           },
           {
@@ -326,43 +335,6 @@
               "form-abandonment",
               "email-validation",
               "lead-enrichment"
-            ]
-          },
-          {
-            "group": "Account",
-            "pages": [
-              "account",
-              {
-                "group": "Account Management",
-                "pages": [
-                  "reset-password",
-                  "delete-user-account",
-                  "billing-and-payments",
-                  "pricing-discounts"
-                ]
-              },
-              {
-                "group": "Team & Collaboration",
-                "pages": [
-                  "organizations",
-                  "workspaces",
-                  "invite-collaborators",
-                  "granular-permissions",
-                  "comment"
-                ]
-              },
-              {
-                "group": "Partners",
-                "pages": ["affiliate-program", "startup-discount"]
-              },
-              {
-                "group": "Advanced",
-                "pages": [
-                  "form-portal",
-                  "deployment-region",
-                  "internal-storage"
-                ]
-              }
             ]
           },
           {
@@ -392,6 +364,7 @@
                   "make-a-form-in-any-language",
                   "email-form",
                   "duplicate-a-form",
+                  "form-portal",
                   "restore-previous-version",
                   "delete-a-form-submission",
                   "copy-paste-fields",
@@ -403,20 +376,6 @@
                   "concierge"
                 ]
               }
-            ]
-          },
-          {
-            "group": "Security & Legal",
-            "pages": [
-              "security-and-legal",
-              "security",
-              "privacy-policy",
-              "terms-of-service",
-              "gdpr",
-              "subprocessors",
-              "fair-use-policy",
-              "saml-sso",
-              "encrypted-forms"
             ]
           },
           {
@@ -447,6 +406,67 @@
                   "add-links-to-form",
                   "collaborative-forms",
                   "form-dependencies"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Account",
+            "pages": [
+              "account",
+              {
+                "group": "Account Management",
+                "icon": "user-gear",
+                "pages": [
+                  "reset-password",
+                  "delete-user-account",
+                  "billing-and-payments",
+                  "pricing-discounts"
+                ]
+              },
+              {
+                "group": "Team & Collaboration",
+                "icon": "users",
+                "pages": [
+                  "organizations",
+                  "workspaces",
+                  "invite-collaborators",
+                  "granular-permissions",
+                  "comment"
+                ]
+              },
+              {
+                "group": "Partners",
+                "icon": "handshake",
+                "pages": ["affiliate-program", "startup-discount"]
+              }
+            ]
+          },
+          {
+            "group": "Security & Legal",
+            "pages": [
+              "security-and-legal",
+              {
+                "group": "Security",
+                "icon": "shield-halved",
+                "pages": ["security", "encrypted-forms", "saml-sso", "gdpr"]
+              },
+              {
+                "group": "Legal",
+                "icon": "file-contract",
+                "pages": [
+                  "privacy-policy",
+                  "terms-of-service",
+                  "fair-use-policy"
+                ]
+              },
+              {
+                "group": "Data & Infrastructure",
+                "icon": "database",
+                "pages": [
+                  "subprocessors",
+                  "deployment-region",
+                  "internal-storage"
                 ]
               }
             ]
