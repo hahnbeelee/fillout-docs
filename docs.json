@@ -24,15 +24,12 @@
         "groups": [
           {
             "group": " ",
-            "pages": [
-              "help"
-            ]
+            "pages": ["help"]
           },
           {
             "group": "Getting Started",
             "pages": [
               "getting-started",
-              "button-types",
               "make-a-form",
               {
                 "group": "Page Types",
@@ -40,7 +37,7 @@
                 "pages": [
                   "page-types",
                   "form-page",
-                  "cover-page",                  
+                  "cover-page",
                   "review-page",
                   "payment-page",
                   "login-page",
@@ -48,23 +45,40 @@
                   "ending-page"
                 ]
               },
-              "email-notifications",
               {
                 "group": "Field Types",
                 "icon": "question",
                 "pages": [
+                  "question-types",
                   "address",
-                  "date-range",
-                  "voice-recording",
-                  "section-collapse",
-                  "video",
-                  "social-media",
+                  "banners",
+                  "button-types",
+                  "captcha",
                   "currency",
+                  "date-range",
+                  "esignatures",
                   "file-upload",
                   "fill-again-button",
+                  "html-css",
                   "matrix",
+                  "ranking",
+                  "rating",
+                  "section-collapse",
+                  "social-media",
                   "submission-picker",
-                  "subforms"
+                  "subforms",
+                  "table",
+                  "video",
+                  "voice-recording"
+                ]
+              },
+              {
+                "group": "Notifications",
+                "icon": "bell",
+                "pages": [
+                  "email-notifications",
+                  "respondent-emails",
+                  "custom-emails"
                 ]
               },
               "view-responses"
@@ -74,116 +88,148 @@
             "group": "Styling & Branding",
             "pages": [
               "styling",
-              "themes",
-              "make-a-form-template",
-              "custom-link",
-              "favicon",
-              "progress-bar",
-              "heading",
-              "confetti",
-              "form-templates",
-              "advanced-designer",
-              "layout",
-              "image-gif",
-              "logo",
-              "form-fonts",
-              "custom-domains",
-              "remove-fillout-branding",
-              "multi-column-forms"
+              {
+                "group": "Design",
+                "icon": "palette",
+                "pages": [
+                  "themes",
+                  "form-fonts",
+                  "layout",
+                  "multi-column-forms",
+                  "image-gif",
+                  "logo",
+                  "heading",
+                  "progress-bar",
+                  "confetti",
+                  "advanced-designer",
+                  "custom-css"
+                ]
+              },
+              {
+                "group": "Branding",
+                "icon": "globe",
+                "pages": [
+                  "custom-domains",
+                  "custom-link",
+                  "remove-fillout-branding",
+                  "favicon"
+                ]
+              },
+              {
+                "group": "Templates",
+                "icon": "file-image",
+                "pages": ["form-templates", "make-a-form-template"]
+              }
             ]
           },
           {
             "group": "Integrations",
             "pages": [
               "integrations",
-              "airtable",
-              "monday-update",
-               {
-                "group": "Monday",
-                "icon": "columns-3",
+              {
+                "group": "All Integrations",
+                "icon": "plug",
                 "pages": [
-                  "monday",
-                  "monday-update"
+                  {
+                    "group": "Airtable",
+                    "icon": "table-layout",
+                    "pages": [
+                      "airtable",
+                      "airtable-update-form",
+                      "airtable-scheduling",
+                      "airtable-signature-form",
+                      "select-linked-airtable-records",
+                      "create-new-linked-records",
+                      "create-multiple-records-with-form",
+                      "stripe-payments-to-airtable"
+                    ]
+                  },
+                  {
+                    "group": "Monday",
+                    "icon": "columns-3",
+                    "pages": ["monday", "monday-update"]
+                  },
+                  {
+                    "group": "Salesforce",
+                    "icon": "cloud",
+                    "pages": ["salesforce", "salesforce-update-form"]
+                  },
+                  {
+                    "group": "Notion",
+                    "icon": "cube",
+                    "pages": [
+                      "notion",
+                      "notion-update-form",
+                      "notion-embed",
+                      "notion-add-page-content"
+                    ]
+                  },
+                  {
+                    "group": "Google",
+                    "icon": "google",
+                    "pages": [
+                      "google-docs",
+                      "google-tag-manager",
+                      "google-sheets",
+                      "google-drive"
+                    ]
+                  },
+                  {
+                    "group": "Microsoft",
+                    "icon": "microsoft",
+                    "pages": [
+                      "microsoft-excel",
+                      "microsoft-onedrive",
+                      "microsoft-teams"
+                    ]
+                  },
+                  "clickup",
+                  "trello",
+                  "twilio",
+                  "pipedrive",
+                  "brevo",
+                  "relay-app",
+                  "discord",
+                  "pdfs",
+                  "smartsuite",
+                  "slack",
+                  "attio",
+                  "amazon-s3",
+                  "dropbox",
+                  "sendgrid",
+                  "activecampaign",
+                  "meta-pixel",
+                  "linear",
+                  "zoom",
+                  "mailchimp",
+                  "klaviyo",
+                  "zapier",
+                  "make",
+                  "intercom",
+                  "zendesk"
                 ]
               },
               {
-                "group": "Salesforce",
-                "icon": "cloud",
+                "group": "Guides",
+                "icon": "book-open",
                 "pages": [
-                  "salesforce",
-                  "salesforce-update-form"
+                  "fetch-dynamic-data",
+                  "webhook",
+                  "update-database-schema",
+                  "additional-integration-mappings",
+                  "update-forms",
+                  "form-submission-id",
+                  "integration-static-values",
+                  "pre-fetch-data",
+                  "conditional-integration"
                 ]
-              },
-              {
-                "group": "Notion",
-                "icon": "cube",
-                "pages": [
-                  "notion",
-                  "notion-update-form",
-                  "notion-embed",
-                  "notion-add-page-content"
-                ]
-              },
-              {
-                "group": "Google",
-                "icon": "google",
-                "pages": [
-                  "google-docs",
-                  "google-tag-manager",
-                  "google-sheets",
-                  "google-drive"
-                ]
-              },
-              {
-                "group": "Microsoft",
-                "icon": "microsoft",
-                "pages": [
-                  "microsoft-excel",
-                  "microsoft-onedrive",
-                  "microsoft-teams"
-                ]
-              },
-              "clickup",
-              "trello",
-              "twilio",
-              "pipedrive",
-              "brevo",
-              "relay-app",
-              "discord",
-              "pdfs",
-              "smartsuite",
-              "slack",
-              "attio",
-              "monday",
-              "fetch-dynamic-data",
-              "webhook",
-              "update-database-schema",
-              "additional-integration-mappings",
-              "update-forms",
-              "form-submission-id",
-              "integration-static-values",
-              "pre-fetch-data",
-              "amazon-s3",
-              "dropbox",
-              "sendgrid",
-              "activecampaign",
-              "meta-pixel",
-              "linear",
-              "zoom",
-              "mailchimp",
-              "klaviyo",
-              "zapier",
-              "make",
-              "intercom",
-              "zendesk",
-              "stripe-payments-to-airtable",
+              }
             ]
           },
           {
             "group": "Logic",
             "pages": [
               "logic",
-              "conditional-integration",
               "page-logic",
               "calculations",
               "input-validation",
@@ -198,14 +244,20 @@
             "pages": [
               "sharing",
               "embedded-url-parameters",
-              "embed-form-in-squarespace",
-              "shopify",
-              "embed-form-in-wordpress",
-              "embed-form-in-webflow",
+              {
+                "group": "Embed Guides",
+                "icon": "code",
+                "pages": [
+                  "embed-form-in-squarespace",
+                  "shopify",
+                  "embed-form-in-wordpress",
+                  "embed-form-in-webflow",
+                  "embed-forms-in-wix",
+                  "embed-forms-react"
+                ]
+              },
               "qr",
               "manage-form-access",
-              "embed-forms-in-wix",
-              "embed-forms-react",
               "customize-form-share-link",
               "importing-and-exporting-forms"
             ]
@@ -224,19 +276,32 @@
             "group": "Fillout Scheduling",
             "pages": [
               "scheduling",
-              "collective-meeting-scheduling",
-              "fillout-scheduling-email",
-              "reschedule-fillout-scheduling",
-              "fillout-scheduling-availability",
-              "fillout-google-calendar",
-              "customize-fillout-scheduling",
               "fillout-scheduling-intro",
-              "how-to-create-scheduling-form",
-              "limit-bookings",
-              "round-robin",
-              "email-reminder",
-              "event-types",
-              "group-meeting"
+              {
+                "group": "Event Types",
+                "icon": "calendar-users",
+                "pages": [
+                  "event-types",
+                  "round-robin",
+                  "collective-meeting-scheduling",
+                  "group-meeting"
+                ]
+              },
+              {
+                "group": "Guides",
+                "icon": "book-open",
+                "pages": [
+                  "how-to-create-scheduling-form",
+                  "customize-fillout-scheduling",
+                  "fillout-google-calendar",
+                  "fillout-scheduling-availability",
+                  "reschedule-fillout-scheduling",
+                  "limit-bookings",
+                  "fillout-scheduling-email",
+                  "email-reminder",
+                  "airtable-scheduling"
+                ]
+              }
             ]
           },
           {
@@ -267,52 +332,77 @@
             "group": "Account",
             "pages": [
               "account",
-              "internal-storage",
-              "form-portal",
-              "billing-and-payments",
-              "pricing-discounts",
-              "invite-collaborators",
-              "granular-permissions",
-              "deployment-region",
-              "workspaces",
-              "affiliate-program",
-              "reset-password",
-              "delete-user-account",
-              "comment",
-              "organizations"
+              {
+                "group": "Account Management",
+                "pages": [
+                  "reset-password",
+                  "delete-user-account",
+                  "billing-and-payments",
+                  "pricing-discounts"
+                ]
+              },
+              {
+                "group": "Team & Collaboration",
+                "pages": [
+                  "organizations",
+                  "workspaces",
+                  "invite-collaborators",
+                  "granular-permissions",
+                  "comment"
+                ]
+              },
+              {
+                "group": "Partners",
+                "pages": ["affiliate-program", "startup-discount"]
+              },
+              {
+                "group": "Advanced",
+                "pages": [
+                  "form-portal",
+                  "deployment-region",
+                  "internal-storage"
+                ]
+              }
             ]
           },
           {
             "group": "Guides",
             "pages": [
               "guides",
-              "embed-pdfs",
-              "email-form",
-              "edit-submissions",
-              "edit-form-submissions",
-              "captcha",
-              "rating",
-              "location-coordinates",
-              "banners",
-              "ranking",
-              "esignatures",
-              "skip-logic",
-              "dynamic-payment",
-              "auto-jump",
-              "create-a-lead-quiz",
-              "table",
-              "partner-made-resources",
-              "make-a-free-quiz",
-              "copy-paste-fields",
-              "restore-previous-version",
-              "duplicate-a-form",
-              "delete-a-form-submission",
-              "duplicate-fields",
-              "embed-fillout-softr",
-              "make-a-form-in-any-language",
-              "forms-accessibility",
-              "reorder-with-drag-and-drop",
-              "concierge"
+              {
+                "group": "Quizzes",
+                "icon": "comments-question-check",
+                "pages": ["make-a-free-quiz", "create-a-lead-quiz"]
+              },
+              {
+                "group": "Partner Resources",
+                "icon": "book",
+                "pages": ["partner-made-resources"]
+              },
+              {
+                "group": "Tips & Tricks",
+                "icon": "lightbulb",
+                "pages": [
+                  "auto-jump",
+                  "reorder-with-drag-and-drop",
+                  "edit-submissions",
+                  "edit-form-submissions",
+                  "forms-accessibility",
+                  "dynamic-payment",
+                  "make-a-form-in-any-language",
+                  "email-form",
+                  "duplicate-a-form",
+                  "restore-previous-version",
+                  "delete-a-form-submission",
+                  "copy-paste-fields",
+                  "duplicate-fields",
+                  "embed-fillout-softr",
+                  "embed-pdfs",
+                  "location-coordinates",
+                  "skip-logic",
+                  "concierge"
+                ]
+              }
             ]
           },
           {
@@ -333,21 +423,32 @@
             "group": "Advanced",
             "pages": [
               "advanced",
-              "collaborative-forms",
-              "url-parameters",
-              "pre-fill-dates",
-              "sso-form-login",
-              "custom-css",
-              "custom-code",
-              "respondent-emails",
-              "right-to-left-forms",
-              "form-dependencies",
-              "custom-values",
-              "dynamic-form-dropdowns",
-              "add-links-to-form",
-              "prefill-fields",
-              "html-css",
-              "oauth-applications"
+              {
+                "group": "Pre-filling",
+                "icon": "fill",
+                "pages": [
+                  "prefill-fields",
+                  "dynamic-form-dropdowns",
+                  "url-parameters"
+                ]
+              },
+              {
+                "group": "API",
+                "icon": "code",
+                "pages": ["fillout-rest-api", "oauth-applications"]
+              },
+              {
+                "group": "Other",
+                "icon": "ellipsis",
+                "pages": [
+                  "custom-code",
+                  "custom-values",
+                  "right-to-left-forms",
+                  "add-links-to-form",
+                  "collaborative-forms",
+                  "form-dependencies"
+                ]
+              }
             ]
           }
         ]
@@ -377,9 +478,7 @@
         "groups": [
           {
             "group": " ",
-            "pages": [
-              "whats-new"
-            ]
+            "pages": ["whats-new"]
           }
         ]
       }
@@ -403,10 +502,7 @@
     }
   },
   "contextual": {
-    "options": [
-      "chatgpt",
-      "claude"
-    ]
+    "options": ["chatgpt", "claude"]
   },
   "footer": {
     "links": [
