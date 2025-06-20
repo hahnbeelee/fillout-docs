@@ -7,15 +7,13 @@ sidebarTitle: "Payment"
 
 ## How to add a payment page
 
-Click `+ Add page` and choose `Payment`.
+<Steps>
+  <Step title="Select a payment type">
+    Click `+ Add page` and choose `Payment`.
 
 <Frame>
   ![Add a payment page](/images/p1.webp)
 </Frame>
-
-<Check>
-  **Good to know:** Payment pages are available on all plans with **no additional fees** charged to use the feature. However, usual Stripe fees such as transaction costs still apply.
-</Check>
 
 Select between the following types:
 
@@ -23,7 +21,12 @@ Select between the following types:
 - **Subscriptions** - for recurring transactions usually with a fixed price
 - **Pay what you want** - leave the amount up to the customer
 
-Add the details of your payment page and `Connect to Stripe`. From here you can choose the currency, and make the **price** and **product name** [dynamic](/fetch-dynamic-data) by clicking the blue `+` icon or typing `@` to reference a specific field.
+<Check>
+  **Good to know:** Payment pages are available on all plans with **no additional fees** charged to use the feature. However, usual Stripe fees such as transaction costs still apply.
+</Check>
+  </Step>
+  <Step title="Enter details">
+    Add the details of your payment page and `Connect to Stripe`. From here you can choose the currency, and make the **price** and **product name** [dynamic](/fetch-dynamic-data) by clicking the blue `+` icon or typing `@` to reference a specific field.
 
 <Frame>
   ![Add a payment page](/images/p2.webp)
@@ -32,8 +35,11 @@ Add the details of your payment page and `Connect to Stripe`. From here you can 
 In this example, the product name and price will change per customer depending on their order.
 
 The default payment method in new forms is through a credit **card**. You can give more options to your customers by adding more **Payment methods** through the left-hand panel.
-
-That’s it\! Press `Preview` to try out your form. Payments will only be collected when you `Publish` the form and send its link.
+  </Step>
+  <Step title="Publish and share your form">
+    That’s it\! Press `Preview` to try out your form. Payments will only be collected when you `Publish` the form and send its link.
+  </Step>
+</Steps>
 
 ## Add discount codes
 
