@@ -184,12 +184,11 @@
                     ]
                   },
                   {
-                    "group": "Microsoft",
-                    "icon": "microsoft",
+                    "group": "Smartsuite",
+                    "icon": "table-list",
                     "pages": [
-                      "microsoft-excel",
-                      "microsoft-onedrive",
-                      "microsoft-teams"
+                      "smartsuite",
+                      "update-smartsuite"
                     ]
                   },
                   "clickup",
