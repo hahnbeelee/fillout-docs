@@ -254,8 +254,8 @@
               "sharing",
               "embedded-url-parameters",
               {
-                "group": "Embed Guides",
-                "icon": "code",
+                "group": "Embeds",
+                "icon": "display-arrow-down",
                 "pages": [
                   "embed-form-in-squarespace",
                   "shopify",
