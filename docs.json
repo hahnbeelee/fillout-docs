@@ -74,7 +74,7 @@
               },
               {
                 "group": "Notifications",
-                "icon": "bell",
+                "icon": "bell-ring",
                 "pages": [
                   "email-notifications",
                   "respondent-emails",
@@ -90,7 +90,7 @@
               "styling",
               {
                 "group": "Design",
-                "icon": "palette",
+                "icon": "paintbrush-fine",
                 "pages": [
                   "themes",
                   "form-fonts",
@@ -107,7 +107,7 @@
               },
               {
                 "group": "Branding",
-                "icon": "globe",
+                "icon": "cup-togo",
                 "pages": [
                   "custom-domains",
                   "custom-link",
@@ -117,7 +117,7 @@
               },
               {
                 "group": "Templates",
-                "icon": "file-image",
+                "icon": "folder-image",
                 "pages": ["form-templates", "make-a-form-template"]
               }
             ]
@@ -344,7 +344,7 @@
               "guides",
               {
                 "group": "Quizzes",
-                "icon": "comments-question-check",
+                "icon": "pencil",
                 "pages": ["make-a-free-quiz", "create-a-lead-quiz"]
               },
               {
@@ -384,7 +384,7 @@
               "advanced",
               {
                 "group": "Pre-filling",
-                "icon": "fill",
+                "icon": "fill-drip",
                 "pages": [
                   "prefill-fields",
                   "dynamic-form-dropdowns",
@@ -393,7 +393,7 @@
               },
               {
                 "group": "API",
-                "icon": "code",
+                "icon": "code-simple",
                 "pages": ["fillout-rest-api", "oauth-applications"]
               },
               {
@@ -425,8 +425,8 @@
                 ]
               },
               {
-                "group": "Team & Collaboration",
-                "icon": "users",
+                "group": "Team Collaboration",
+                "icon": "users-line",
                 "pages": [
                   "organizations",
                   "workspaces",
@@ -448,12 +448,12 @@
               "security-and-legal",
               {
                 "group": "Security",
-                "icon": "shield-halved",
+                "icon": "shield",
                 "pages": ["security", "encrypted-forms", "saml-sso", "gdpr"]
               },
               {
                 "group": "Legal",
-                "icon": "file-contract",
+                "icon": "scale-balanced",
                 "pages": [
                   "privacy-policy",
                   "terms-of-service",
@@ -462,7 +462,7 @@
               },
               {
                 "group": "Data & Infrastructure",
-                "icon": "database",
+                "icon": "server",
                 "pages": [
                   "subprocessors",
                   "deployment-region",
