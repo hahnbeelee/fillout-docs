@@ -183,6 +183,15 @@
                       "microsoft-teams"
                     ]
                   },
+                  {
+                    "group": "Microsoft",
+                    "icon": "microsoft",
+                    "pages": [
+                      "microsoft-excel",
+                      "microsoft-onedrive",
+                      "microsoft-teams"
+                    ]
+                  },
                   "clickup",
                   "trello",
                   "twilio",
