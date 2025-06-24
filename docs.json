@@ -60,6 +60,7 @@
                   "file-upload",
                   "fill-again-button",
                   "html-css",
+                  "location-coordinates",
                   "matrix",
                   "ranking",
                   "rating",
@@ -380,7 +381,6 @@
                   "duplicate-fields",
                   "embed-fillout-softr",
                   "embed-pdfs",
-                  "location-coordinates",
                   "skip-logic"
                 ]
               }
