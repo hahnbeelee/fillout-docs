@@ -410,6 +410,7 @@
                 "pages": [
                   "custom-code",
                   "custom-values",
+                  "randomize-options",
                   "right-to-left-forms",
                   "add-links-to-form",
                   "collaborative-forms",
