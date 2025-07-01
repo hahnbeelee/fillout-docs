@@ -413,7 +413,8 @@
                   "right-to-left-forms",
                   "add-links-to-form",
                   "collaborative-forms",
-                  "form-dependencies"
+                  "form-dependencies",
+                  "smtp"
                 ]
               }
             ]
