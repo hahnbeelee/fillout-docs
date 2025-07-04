@@ -187,10 +187,7 @@
                   {
                     "group": "Smartsuite",
                     "icon": "table-list",
-                    "pages": [
-                      "smartsuite",
-                      "update-smartsuite"
-                    ]
+                    "pages": ["smartsuite", "update-smartsuite"]
                   },
                   "clickup",
                   "trello",
@@ -387,6 +384,28 @@
             ]
           },
           {
+            "group": "API Reference",
+            "icon": "code",
+            "pages": [
+              {
+                "group": "Fillout REST API",
+                "icon": "code-simple",
+                "pages": [
+                  "fillout-rest-api",
+                  "api-reference/get-forms",
+                  "api-reference/get-form-metadata",
+                  "api-reference/get-all-submissions",
+                  "api-reference/get-submission-by-id",
+                  "api-reference/delete-submission-by-id",
+                  "api-reference/create-a-webhook",
+                  "api-reference/remove-a-webhook",
+                  "api-reference/create-submissions"
+                ]
+              },
+              "oauth-applications"
+            ]
+          },
+          {
             "group": "Advanced",
             "pages": [
               "advanced",
@@ -398,11 +417,6 @@
                   "dynamic-form-dropdowns",
                   "url-parameters"
                 ]
-              },
-              {
-                "group": "API",
-                "icon": "code-simple",
-                "pages": ["fillout-rest-api", "oauth-applications"]
               },
               {
                 "group": "Other",
@@ -479,25 +493,6 @@
                   "internal-storage"
                 ]
               }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "groups": [
-          {
-            "group": " ",
-            "pages": [
-              "fillout-rest-api",
-              "api-reference/get-forms",
-              "api-reference/get-form-metadata",
-              "api-reference/get-all-submissions",
-              "api-reference/get-submission-by-id",
-              "api-reference/delete-submission-by-id",
-              "api-reference/create-a-webhook",
-              "api-reference/remove-a-webhook",
-              "api-reference/create-submissions"
             ]
           }
         ]
