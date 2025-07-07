@@ -24,7 +24,7 @@
         "groups": [
           {
             "group": " ",
-            "pages": ["index"]
+            "pages": ["help"]
           },
           {
             "group": "Getting Started",
