@@ -498,6 +498,22 @@
         ]
       },
       {
+        "tab": "Zite",
+        "icon": "list-timeline",
+        "groups": [
+          {
+            "group": " ",
+            "pages": [
+              "zite",
+              "zite-getting-started",
+              {
+                "group": "Authentication",
+                "pages": ["Add-user-login"]
+              }]
+          }
+        ]
+      },
+      {
         "tab": "What's New",
         "icon": "list-timeline",
         "groups": [
