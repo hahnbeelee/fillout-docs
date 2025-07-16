@@ -37,3 +37,13 @@ code {
 .card {
     word-break: break-word !important;
 }
+
+/* Target p tags within search results */
+.rounded-search p {
+    font-size: 13px !important;
+}
+
+/* Highlight search result matches */
+.rounded-search b {
+    color: rgb(212 152 0) !important;
+}
