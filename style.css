@@ -44,6 +44,6 @@ code {
 }
 
 /* Highlight search result matches */
-.rounded-search b {
+.rounded-search .\[\&_mark_b\]\:text-primary mark b {
     color: rgb(212 152 0) !important;
 }
