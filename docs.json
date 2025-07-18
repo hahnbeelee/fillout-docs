@@ -361,7 +361,7 @@
               {
                 "group": "AI",
                 "icon": "book",
-                "pages": ["ai-forms","ai-surveys"]
+                "pages": ["ai-forms","ai-surveys","ai-quizzes"]
               },
               {
                 "group": "Tips & Tricks",
