@@ -359,6 +359,11 @@
                 "pages": ["partner-made-resources"]
               },
               {
+                "group": "AI",
+                "icon": "book",
+                "pages": ["ai-forms"]
+              },
+              {
                 "group": "Tips & Tricks",
                 "icon": "lightbulb",
                 "pages": [
