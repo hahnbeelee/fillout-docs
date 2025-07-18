@@ -359,7 +359,7 @@
                 "pages": ["partner-made-resources"]
               },
               {
-                "group": "AI",
+                "group": "AI Builders",
                 "icon": "hat-wizard",
                 "pages": ["ai-forms","ai-surveys","ai-quizzes"]
               },
