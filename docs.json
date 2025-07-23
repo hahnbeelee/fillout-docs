@@ -9,13 +9,16 @@
   },
   "favicon": "/favicon.svg",
   "api": {
-    "mdx": {
-      "server": [
-        "https://api.fillout.com/v1/api",
-        "https://eu-api.fillout.com/v1/api"
-      ]
+    "baseUrl": [
+      "https://api.fillout.com/v1/api",
+      "https://eu-api.fillout.com/v1/api"
+    ],
+    "auth": {
+      "method": "bearer",
+      "name": "Authorization"
     }
   },
+  "openapi": "/openapi.json",
   "navigation": {
     "tabs": [
       {
@@ -361,7 +364,7 @@
               {
                 "group": "AI Builders",
                 "icon": "hat-wizard",
-                "pages": ["ai-forms","ai-surveys","ai-quizzes"]
+                "pages": ["ai-forms", "ai-surveys", "ai-quizzes"]
               },
               {
                 "group": "Tips & Tricks",

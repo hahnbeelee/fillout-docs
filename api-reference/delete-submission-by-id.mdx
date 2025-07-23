@@ -1,18 +1,4 @@
 ---
 title: Delete submission by id
-api: DELETE /forms/{formId}/submissions/{submissionId}
-description: "Deletes a submission by its ID"
-contentType: application/json
+openapi: "DELETE /forms/{formId}/submissions/{submissionId}"
 ---
-
-## Request
-
-### URL parameters
-
-<ParamField path="formId" type="string" required>
-  The public identifier of the form for which you want to retrieve submissions. This should be a string. If your form’s URL is https://form.fillout.com/t/gHretr3UKYus, the form ID is gHretr3UKYus
-</ParamField>
-
-<ParamField path="submissionId" type="string" required>
-  The identifier of the submission
-</ParamField>

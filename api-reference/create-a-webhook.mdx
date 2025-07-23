@@ -1,28 +1,6 @@
 ---
 title: Create a webhook
-api: POST /webhook/create
-description: "Creates a webhook for a given form"
-contentType: application/json
+openapi: "POST /webhook/create"
 ---
 
-## Request
-
-### Body parameters
-
-<ParamField body="formId" type="string" required>
-  The public identifier of the form for which you want to retrieve submissions. This should be a string.
-</ParamField>
-
-<ParamField body="url" type="string" required>
-  The endpoint where you’d like to listen for submissions
-</ParamField>
-
-<ResponseExample>
-```json Response
-{
-	"id": 12345
-}
-```
-</ResponseExample>
-
-Once subscribed, your webhook will receive submissions in the same format as the entries in the `responses` list from the `/submissions` endpoint above.
+Once subscribed, your webhook will receive submissions in the same format as the entries in the `responses` list from the `/submissions` endpoint.
