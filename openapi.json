@@ -8,7 +8,11 @@
   "servers": [
     {
       "url": "https://api.fillout.com/v1/api",
-      "description": "Production server"
+      "description": "US server"
+    },
+    {
+      "url": "https://eu-api.fillout.com/v1/api",
+      "description": "EU server"
     }
   ],
   "security": [
@@ -443,12 +447,44 @@
           "type": {
             "type": "string",
             "enum": [
-              "Address", "AudioRecording", "Calcom", "Calendly", "Captcha", "Checkbox", "Checkboxes", 
-              "ColorPicker", "CurrencyInput", "DatePicker", "DateRange", "DateTimePicker", "Dropdown", 
-              "EmailInput", "FileUpload", "ImagePicker", "LocationCoordinates", "LongAnswer", "Matrix", 
-              "MultiSelect", "MultipleChoice", "NumberInput", "OpinionScale", "Password", "Payment", 
-              "PhoneNumber", "Ranking", "RecordPicker", "ShortAnswer", "Signature", "Slider", 
-              "StarRating", "Subform", "SubmissionPicker", "Switch", "Table", "TimePicker", "URLInput"
+              "Address",
+              "AudioRecording",
+              "Calcom",
+              "Calendly",
+              "Captcha",
+              "Checkbox",
+              "Checkboxes",
+              "ColorPicker",
+              "CurrencyInput",
+              "DatePicker",
+              "DateRange",
+              "DateTimePicker",
+              "Dropdown",
+              "EmailInput",
+              "FileUpload",
+              "ImagePicker",
+              "LocationCoordinates",
+              "LongAnswer",
+              "Matrix",
+              "MultiSelect",
+              "MultipleChoice",
+              "NumberInput",
+              "OpinionScale",
+              "Password",
+              "Payment",
+              "PhoneNumber",
+              "Ranking",
+              "RecordPicker",
+              "ShortAnswer",
+              "Signature",
+              "Slider",
+              "StarRating",
+              "Subform",
+              "SubmissionPicker",
+              "Switch",
+              "Table",
+              "TimePicker",
+              "URLInput"
             ],
             "description": "The type of the question"
           }
@@ -744,7 +780,13 @@
             "description": "Meeting notes (optional)"
           }
         },
-        "required": ["fullName", "email", "timezone", "eventStartTime", "eventEndTime"]
+        "required": [
+          "fullName",
+          "email",
+          "timezone",
+          "eventStartTime",
+          "eventEndTime"
+        ]
       },
       "PaymentResponse": {
         "type": "object",
@@ -991,7 +1033,13 @@
             "description": "Meeting notes (optional)"
           }
         },
-        "required": ["fullName", "email", "eventStartTime", "eventEndTime", "timezone"]
+        "required": [
+          "fullName",
+          "email",
+          "eventStartTime",
+          "eventEndTime",
+          "timezone"
+        ]
       },
       "CreatePaymentResponse": {
         "type": "object",
