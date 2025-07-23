@@ -362,7 +362,8 @@
     "securitySchemes": {
       "bearerAuth": {
         "type": "http",
-        "scheme": "bearer"
+        "scheme": "bearer",
+        "description": "Enter your [Fillout API key](https://build.fillout.com/home/settings/developer). Format: Bearer <api_key>"
       }
     },
     "schemas": {
