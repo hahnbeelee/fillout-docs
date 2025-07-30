@@ -678,10 +678,12 @@
     ]
   },
   "seo": {
+    "indexing": "all"
     "metatags": {
       "og:site_name": "Fillout Help Center",
       "og:title": "Fillout | Help Center",
       "og:description": "Browse help articles and customer support for Fillout. Build any form in minutes."
+    }
     }
   },
   "fonts": {
