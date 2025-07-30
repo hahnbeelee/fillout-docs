@@ -145,9 +145,8 @@
                       "select-linked-airtable-records",
                       "create-new-linked-records",
                       "create-multiple-records-with-form",
+                      "prevent-duplicate-submissions",
                       "stripe-payments-to-airtable",
-                      "prevent-duplicate-submissions"
-
                     ]
                   },
                   {
