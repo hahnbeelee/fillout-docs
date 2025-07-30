@@ -146,7 +146,7 @@
                       "create-new-linked-records",
                       "create-multiple-records-with-form",
                       "prevent-duplicate-submissions",
-                      "stripe-payments-to-airtable",
+                      "stripe-payments-to-airtable"
                     ]
                   },
                   {
@@ -679,12 +679,11 @@
     ]
   },
   "seo": {
-    "indexing": "all"
+    "indexing": "all",
     "metatags": {
       "og:site_name": "Fillout Help Center",
       "og:title": "Fillout | Help Center",
       "og:description": "Browse help articles and customer support for Fillout. Build any form in minutes."
-    }
     }
   },
   "fonts": {
