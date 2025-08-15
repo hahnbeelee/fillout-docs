@@ -374,6 +374,7 @@
                   "auto-jump",
                   "placeholder",
                   "reorder-with-drag-and-drop",
+                  "multiple-answers",
                   "edit-submissions",
                   "edit-form-submissions",
                   "forms-accessibility",
