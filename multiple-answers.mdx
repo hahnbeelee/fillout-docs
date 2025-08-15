@@ -1,0 +1,89 @@
+---
+title: "Get multiple answers from a single question"
+description: "Let respondents enter multiple sets of information for one question, such as registering several guests or listing items in an order."
+icon: "diagram-next"
+sidebarTitle: "Get Multiple Answers"
+---
+
+Questions usually call for a single answer, but some questions can have more. For example, you might ask respondents to:
+
+- Add multiple contact people or team members
+- Provide several dates/times they’re available
+- Enter multiple addresses or delivery locations
+- Upload several files or images in one go
+- List several items in an order (e.g., products, services, menu items)
+- Register multiple participants for an event or workshop
+- Submit several project ideas or proposals
+- List multiple preferences (e.g., meal options, shirt sizes, topics of interest)
+
+## How to request multiple answers
+
+<Steps>
+  <Step title="Enter your question">
+    Choose the appropriate field from the left side bar. In our example, we'll ask if they'll be bringing guests.
+
+    ![Screenshot 2025-08-15 at 5.26.27 PM.png](/images/Screenshot2025-08-15at5.26.27PM.png)
+  </Step>
+  <Step title="Add supporting fields">
+    Here, we'll collect the names and emails of their guests. [Duplicate](/duplicate-fields) the fields as many times as you need.
+
+    <img
+      src="/images/Screenshot2025-08-15at5.27.17PM.png"
+      alt="Screenshot 2025-08-15 at 5.27.17 PM.png"
+      title="Screenshot 2025-08-15 at 5.27.17 PM.png"
+      style={{ width:"85%" }}
+    />
+
+    <Note>
+      \*\*Note: \*\*For questions that require many fields per person or item, we recommend using a [subform](/subforms).
+    </Note>
+  </Step>
+  <Step title="Use logic">
+    Now, we'll make the form adapt based on their answer. Click a supporting field followed by its `gear icon`, then go to **Logic** in the right sidebar.
+
+    <img
+      src="/images/Screenshot2025-08-15at5.29.41PM.png"
+      alt="Screenshot 2025-08-15 at 5.29.41 PM.png"
+      title="Screenshot 2025-08-15 at 5.29.41 PM.png"
+      style={{ width:"91%" }}
+    />
+
+    Let's start with the name field. We'll make this field **Show when** they answer "Yes" to bringing guests. Do the same for the email field.
+
+    <img
+      src="/images/Screenshot2025-08-15at5.29.55PM.png"
+      alt="Screenshot 2025-08-15 at 5.29.55 PM.png"
+      title="Screenshot 2025-08-15 at 5.29.55 PM.png"
+      style={{ width:"46%" }}
+    />
+
+    As for the fields for guests 2 and onward, you can also set them to only **Show when** the previous guest field (name or email) "is not empty".
+
+    <img
+      src="/images/Screenshot2025-08-15at5.31.59PM.png"
+      alt="Screenshot 2025-08-15 at 5.31.59 PM.png"
+      title="Screenshot 2025-08-15 at 5.31.59 PM.png"
+      style={{ width:"47%" }}
+    />
+  </Step>
+  <Step title="Publish and share">
+    That's it\! `Publish` and share your form link, or embed it on your website.
+
+    ![Screenshare-2025-08-155_35_39PM-ezgif.com-optimize.gif](/images/Screenshare-2025-08-155_35_39PM-ezgif.com-optimize.gif)
+  </Step>
+</Steps>
+
+## Let respondents select multiple choices
+
+For questions where respondents choose from a set list of options rather than typing their answers, use a multi-select or checkbox field.
+
+## Related articles
+
+<CardGroup cols={3}>
+  <Card title="Hide fields" icon="eye-slash" iconType="regular" color="#FFC738">
+Hide or show fields based on prior inputs, URL parameters or external data.
+  </Card>
+  <Card title="Subforms" icon="diagram-nested" iconType="regular" color="#FFC738">
+Create nested forms and collect repeated data, like multiple individuals or products.
+  </Card>
+</CardGroup>
