@@ -509,6 +509,25 @@
         ]
       },
       {
+        "tab": "Zite",
+        "icon": "list-timeline",
+        "groups": [
+          {
+            "group": " ",
+            "pages": [
+              "zite/overview", 
+              "zite/getting-started", 
+              {
+                "group": "Guides",
+                "icon": "book-open",
+                "pages": ["zite/guides/google-sheets"]
+              },
+              "zite/faq"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "What's New",
         "icon": "list-timeline",
         "groups": [
