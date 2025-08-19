@@ -504,12 +504,15 @@
           {
             "group": " ",
             "pages": [
-              "zite",
-              "zite-getting-started",
+              "zite/overview", 
+              "zite/getting-started", 
               {
-                "group": "Authentication",
-                "pages": ["Add-user-login"]
-              }]
+                "group": "Guides",
+                "icon": "book-open",
+                "pages": ["zite/guides/google-sheets"]
+              },
+              "zite/faq"
+            ]
           }
         ]
       },
