@@ -518,6 +518,9 @@
               "zite/overview", 
               "zite/getting-started", 
               "zite/style-elements", 
+              "zite/sharing",
+              "zite/embedding",
+              "zite/customize-links",
               {
                 "group": "Guides",
                 "icon": "book-open",
