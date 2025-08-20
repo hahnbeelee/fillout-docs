@@ -517,6 +517,7 @@
             "pages": [
               "zite/overview", 
               "zite/getting-started", 
+              "zite/style-elements", 
               {
                 "group": "Guides",
                 "icon": "book-open",
