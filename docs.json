@@ -518,6 +518,7 @@
               "zite/overview", 
               "zite/getting-started", 
               "zite/style-elemets"
+              ]
               {
                 "group": "Guides",
                 "icon": "book-open",
