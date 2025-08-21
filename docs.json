@@ -514,20 +514,25 @@
         "groups": [
           {
             "group": " ",
+            "pages": ["zite/overview"]
+          },
+          {
+            "group": "Getting Started",
+            "pages": ["zite/getting-started", "zite/faq"]
+          },
+          {
+            "group": "Basics",
             "pages": [
-              "zite/overview", 
-              "zite/getting-started", 
-              "zite/style-elements", 
+              "zite/selective-edits",
               "zite/sharing",
               "zite/embedding",
-              "zite/customize-links",
-              {
-                "group": "Guides",
-                "icon": "book-open",
-                "pages": ["zite/guides/google-sheets"]
-              },
-              "zite/faq"
+              "zite/customize-links"
             ]
+          },
+          {
+            "group": "Guides",
+            "icon": "book-open",
+            "pages": ["zite/guides/google-sheets"]
           }
         ]
       },
