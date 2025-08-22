@@ -15,46 +15,39 @@ icon: "game-board-simple"
   <Step title="Link your Fillout form to SendGrid">
     Open your form. Go to **Integrate** and click `SendGrid`.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.31.05PM.png)
-</Frame>
+    <Frame>
+      ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.31.05PM.png)
+    </Frame>
+    Enter your **API Key** in Fillout. You can find this in the **Settings** section of your SendGrid dashboard. `Create API Key` on the upper right corner. Enter a **name**, then go with the default `Full Access` permission.
 
-Enter your **API Key** in Fillout. You can find this in the **Settings** section of your SendGrid dashboard. `Create API Key` on the upper right corner. Enter a **name**, then go with the default `Full Access` permission.
-
-<Frame style={{ width: '576px', height: '403px' }}>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.35.31PM.png)
-</Frame>
-
+    <Frame>
+      ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.35.31PM.png)
+    </Frame>
   </Step>
   <Step title="Choose a template">
-  If you don’t have a template in SendGrid yet, select `Email API` on the left-hand panel followed by `Dynamic Templates`.
+    If you don’t have a template in SendGrid yet, select `Email API` on the left-hand panel followed by `Dynamic Templates`.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.41.23PM.png)
-</Frame>
-
-Click `Add Version` and start with a **blank template** or choose a **SendGrid Email Design**. Customize your email template as you see fit.  
+    <Frame>
+      ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.41.23PM.png)
+    </Frame>
+    Click `Add Version` and start with a **blank template** or choose a **SendGrid Email Design**. Customize your email template as you see fit.
   </Step>
   <Step title="Map your form fields on Fillout">
-  Match the fields in your Fillout form to the corresponding fields in your SendGrid contacts. For example, link the email address to its respective field. Then, fill out the **Sender identity** section.
+    Match the fields in your Fillout form to the corresponding fields in your SendGrid contacts. For example, link the email address to its respective field. Then, fill out the **Sender identity** section.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.45.33PM.png)
-</Frame>
-
-You can personalize emails, by inserting dynamic data under **Template variables**. For example, we want the name to change depending on the customer’s name. Once everything is set, click `Finish setup` on the upper right corner.  
+    <Frame>
+      ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.45.33PM.png)
+    </Frame>
+    You can personalize emails, by inserting dynamic data under **Template variables**. For example, we want the name to change depending on the customer’s name. Once everything is set, click `Finish setup` on the upper right corner.
   </Step>
   <Step title="Publish and share">
-  Once you’ve finished creating your form, you’re ready to go\! Simply `Publish` and share the link. Respondents will now receive the email template.
+    Once you’ve finished creating your form, you’re ready to go\! Simply `Publish` and share the link. Respondents will now receive the email template.
 
-<Check>
-  **Good to know:** SendGrid's Free plan lets you send up to 100 emails per day, while the Essentials paid plan lets you send up to 100,000 emails per month.
-</Check>
-  
+    <Check>
+      **Good to know:** SendGrid's Free plan lets you send up to 100 emails per day, while the Essentials paid plan lets you send up to 100,000 emails per month.
+    </Check>
   </Step>
 </Steps>
-
-
 
 ## Send a freeform email
 
@@ -76,9 +69,9 @@ Skip sending an email and simply `Add or update contact`. Choose a **List** in y
 
 If necessary, you can run your integration only when a specific condition is met. Click [here](/conditional-integration) to learn how to.
 
-## Personalize your email
+## Personalize your email in Sendgrid
 
-You can use **handlebars** to [pipe a respondent's information](https://docs.sendgrid.com/for-developers/sending-email/using-handlebars) in the notification email. For example, we'll personalize the email by adding the respondent's name. Simply type `{{ name }}` anywhere on your email.
+You can use **handlebars** in Sendgrid to [pipe a respondent's information](https://docs.sendgrid.com/for-developers/sending-email/using-handlebars) in the notification email. For example, we'll personalize the email by adding the respondent's name. Simply type `{{ name }}` anywhere on your email.
 
 <Frame>
   ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at2.02.23PM.png)
@@ -86,7 +79,7 @@ You can use **handlebars** to [pipe a respondent's information](https://docs.sen
 
 When a respondent completes your form, they will be receiving a personalized email like the one below.
 
-<Frame style={{ width: '576px', height: '337px' }}>
+<Frame>
   ![Screenshot of the Fillout form creation page](/images/ScreenShot2023-10-09at4.51.44PM.png)
 </Frame>
 
