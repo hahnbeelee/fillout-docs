@@ -11,33 +11,35 @@ sidebarTitle: "Payment"
   <Step title="Select a payment type">
     Click `+ Add page` and choose `Payment`.
 
-<Frame>
-  ![Add a payment page](/images/p1.webp)
-</Frame>
+    <Frame>
+      ![Add a payment page](/images/p1.webp)
+    </Frame>
+    Select between the following types:
 
-Select between the following types:
+    - **One-time** - for single, non-recurring transactions
+    - **Subscriptions** - for recurring transactions usually with a fixed price
+    - **Pay what you want** - leave the amount up to the customer
 
-- **One-time** - for single, non-recurring transactions
-- **Subscriptions** - for recurring transactions usually with a fixed price
-- **Pay what you want** - leave the amount up to the customer
-
-<Check>
-  **Good to know:** Payment pages are available on all plans with **no additional fees** charged to use the feature. However, usual Stripe fees such as transaction costs still apply.
-</Check>
+    <Check>
+      **Good to know:** Payment pages are available on all plans with **no additional fees** charged to use the feature. However, usual Stripe fees such as transaction costs still apply.
+    </Check>
   </Step>
   <Step title="Enter details">
     Add the details of your payment page and `Connect to Stripe`. From here you can choose the currency, and make the **price** and **product name** [dynamic](/fetch-dynamic-data) by clicking the blue `+` icon or typing `@` to reference a specific field.
 
-<Frame>
-  ![Add a payment page](/images/p2.webp)
-</Frame>
+    <Frame>
+      ![Add a payment page](/images/p2.webp)
+    </Frame>
+    In this example, the product name and price will change per customer depending on their order.
 
-In this example, the product name and price will change per customer depending on their order.
-
-The default payment method in new forms is through a credit **card**. You can give more options to your customers by adding more **Payment methods** through the left-hand panel.
+    The default payment method in new forms is through a credit **card**. You can give more options to your customers by adding more **Payment methods** through the left-hand panel.
   </Step>
   <Step title="Publish and share">
     That’s it\! Press `Preview` to try out your form. Payments will only be collected when you `Publish` the form and send its link.
+
+    <Tip>
+      **Good to know:** You can test your live form without getting charged. Create a 100% off coupon in Stripe, then enable the "[Discount Codes](https://www.fillout.com/help/payment-page#add-discount-codes)" option to apply it during checkout. Once testing is done, just toggle the discount codes back off.
+    </Tip>
   </Step>
 </Steps>
 
