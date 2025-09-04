@@ -537,6 +537,55 @@
             ]
           },
           {
+            "group": "Built-in database",
+            "icon": "database",
+            "pages": [
+              {
+                "group": "REST API",
+                "icon": "code-simple",
+                "pages": [
+                  "zite/database/api",
+                  {
+                    "group": "Record Management",
+                    "pages": [
+                      "zite/database/create-record",
+                      "zite/database/get-record-by-id",
+                      "zite/database/update-record",
+                      "zite/database/list-records",
+                      "zite/database/delete-record"
+                    ]
+                  },
+                  {
+                    "group": "Field Management",
+                    "pages": [
+                      "zite/database/create-field",
+                      "zite/database/update-field",
+                      "zite/database/delete-field",
+                      "zite/database/field-types"
+                    ]
+                  },
+                  {
+                    "group": "Table Management",
+                    "pages": [
+                      "zite/database/create-table",
+                      "zite/database/update-table",
+                      "zite/database/delete-table"
+                    ]
+                  },
+                  {
+                    "group": "Database Management",
+                    "pages": [
+                      "zite/database/create-database",
+                      "zite/database/get-databases",
+                      "zite/database/get-database-by-id",
+                      "zite/database/delete-database"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "group": "Guides",
             "icon": "book-open",
             "pages": ["zite/guides/google-sheets","zite/guides/import-data"]

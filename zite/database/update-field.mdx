@@ -1,0 +1,144 @@
+---
+title: Update Field
+description: Updates field properties and configuration.
+api: PATCH /api/v1/bases/{basePublicId}/tables/{tableId}/fields/{fieldId}
+---
+
+Updates field properties and configuration.
+
+## Path Parameters
+
+<ParamField path="basePublicId" type="string" required>
+  The unique identifier of the database
+</ParamField>
+
+<ParamField path="tableId" type="string" required>
+  The unique identifier of the table
+</ParamField>
+
+<ParamField path="fieldId" type="string" required>
+  The unique identifier of the field to update
+</ParamField>
+
+## Headers
+
+<ParamField header="Authorization" type="string" required>
+  Bearer token for authentication
+</ParamField>
+
+<ParamField header="Content-Type" type="string" required>
+  Must be `application/json`
+</ParamField>
+
+## Request Body
+
+<ParamField body="name" type="string">
+  New field name. Only include if you want to change the field name.
+</ParamField>
+
+<ParamField body="template" type="object">
+  Updated field configuration. Only include the properties you want to change.
+
+  <Expandable title="Template updates">
+    The template object structure depends on the field type. For example:
+    - `single_select`: update `options` array to modify available choices
+    - `number`: update `format` or `precision` settings
+    - `linked_record`: update `tableId` to change the target table
+    
+    You can provide partial template updates - only the specified properties will be changed.
+  </Expandable>
+</ParamField>
+
+<RequestExample>
+
+```bash cURL
+curl -X PATCH https://api.fillout.com/api/v1/bases/base_abc123/tables/tbl_xyz789/fields/fld_def456 \
+  -H "Authorization: Bearer your_api_key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Updated Field Name"
+  }'
+```
+
+```javascript JavaScript
+const response = await fetch('https://api.fillout.com/api/v1/bases/base_abc123/tables/tbl_xyz789/fields/fld_def456', {
+  method: 'PATCH',
+  headers: {
+    'Authorization': 'Bearer your_api_key',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    name: "Updated Field Name"
+  })
+});
+```
+
+```python Python
+import requests
+
+response = requests.patch(
+    'https://api.fillout.com/api/v1/bases/base_abc123/tables/tbl_xyz789/fields/fld_def456',
+    headers={
+        'Authorization': 'Bearer your_api_key',
+        'Content-Type': 'application/json'
+    },
+    json={
+        'name': 'Updated Field Name'
+    }
+)
+```
+
+</RequestExample>
+
+## Response
+
+Returns the updated field with all current properties and new timestamp.
+
+<ResponseField name="id" type="string">
+  The unique identifier of the field
+</ResponseField>
+
+<ResponseField name="type" type="string">
+  The field type (cannot be changed via updates)
+</ResponseField>
+
+<ResponseField name="name" type="string">
+  The current field name (updated if provided in request)
+</ResponseField>
+
+<ResponseField name="template" type="object">
+  The current field configuration (updated with any changes from request)
+</ResponseField>
+
+<ResponseField name="createdAt" type="string">
+  ISO timestamp of when the field was originally created
+</ResponseField>
+
+<ResponseField name="updatedAt" type="string">
+  ISO timestamp of when the field was last updated (reflects the update time)
+</ResponseField>
+
+<ResponseExample>
+
+```json Response
+{
+  "id": "fld_def456",
+  "type": "single_select",
+  "name": "Updated Field Name",
+  "template": {
+    "options": [
+      {"value": "high", "label": "High", "color": "#ef4444"},
+      {"value": "medium", "label": "Medium", "color": "#f59e0b"},
+      {"value": "low", "label": "Low", "color": "#10b981"}
+    ]
+  },
+  "createdAt": "2024-01-01T00:00:00.000Z",
+  "updatedAt": "2024-01-01T00:00:00.000Z"
+}
+```
+
+</ResponseExample>
+
+<Note>
+  Field type cannot be changed after creation. Only the name and template configuration can be updated.
+</Note>

@@ -1,0 +1,140 @@
+---
+title: Get Database by ID
+description: Retrieves a specific database by ID with complete table definitions.
+api: GET /api/v1/bases/{basePublicId}
+---
+
+Retrieves a specific database by ID with complete table definitions.
+
+## Path Parameters
+
+<ParamField path="basePublicId" type="string" required>
+  The unique identifier of the database to retrieve
+</ParamField>
+
+## Headers
+
+<ParamField header="Authorization" type="string" required>
+  Bearer token for authentication
+</ParamField>
+
+<RequestExample>
+
+```bash cURL
+curl -X GET https://api.fillout.com/api/v1/bases/base_abc123 \
+  -H "Authorization: Bearer your_api_key"
+```
+
+```javascript JavaScript
+const response = await fetch('https://api.fillout.com/api/v1/bases/base_abc123', {
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer your_api_key'
+  }
+});
+```
+
+```python Python
+import requests
+
+response = requests.get(
+    'https://api.fillout.com/api/v1/bases/base_abc123',
+    headers={
+        'Authorization': 'Bearer your_api_key'
+    }
+)
+```
+
+</RequestExample>
+
+## Response
+
+Returns the requested database with complete structure including all tables, fields, and views.
+
+<ResponseField name="id" type="string">
+  The unique identifier of the database
+</ResponseField>
+
+<ResponseField name="name" type="string">
+  The database name
+</ResponseField>
+
+<ResponseField name="workspaceId" type="number">
+  The workspace ID where the database belongs
+</ResponseField>
+
+<ResponseField name="createdAt" type="string">
+  ISO timestamp of when the database was created
+</ResponseField>
+
+<ResponseField name="updatedAt" type="string">
+  ISO timestamp of when the database was last updated
+</ResponseField>
+
+<ResponseField name="tables" type="array">
+  Array of table objects with complete structure including fields and views
+  
+  <Expandable title="Table object structure">
+    <ResponseField name="id" type="string">
+      The unique identifier of the table
+    </ResponseField>
+    <ResponseField name="name" type="string">
+      The table name
+    </ResponseField>
+    <ResponseField name="order" type="number">
+      The display order of the table within the database
+    </ResponseField>
+    <ResponseField name="primaryFieldId" type="string">
+      The ID of the primary field
+    </ResponseField>
+    <ResponseField name="fields" type="array">
+      Array of field objects with their complete configuration
+    </ResponseField>
+    <ResponseField name="views" type="array">
+      Array of view objects for the table
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseExample>
+
+```json Response
+{
+  "id": "base_abc123",
+  "name": "Customer CRM",
+  "workspaceId": 123,
+  "createdAt": "2024-01-01T00:00:00.000Z",
+  "updatedAt": "2024-01-01T00:00:00.000Z",
+  "tables": [
+    {
+      "id": "tbl_xyz789",
+      "name": "Customers",
+      "order": 0,
+      "primaryFieldId": "fld_def456",
+      "fields": [
+        {
+          "id": "fld_def456",
+          "type": "single_line_text",
+          "name": "Name",
+          "template": {}
+        },
+        {
+          "id": "fld_ghi789",
+          "type": "email",
+          "name": "Email",
+          "template": {}
+        }
+      ],
+      "views": [
+        {
+          "id": "viw_grid123",
+          "name": "Grid view",
+          "type": "grid"
+        }
+      ]
+    }
+  ]
+}
+```
+
+</ResponseExample>

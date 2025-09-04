@@ -1,0 +1,128 @@
+---
+title: Update Table
+description: Updates table properties like name and order.
+api: PATCH /api/v1/bases/{basePublicId}/tables/{tableId}
+---
+
+Updates table properties like name and order.
+
+## Path Parameters
+
+<ParamField path="basePublicId" type="string" required>
+  The unique identifier of the database
+</ParamField>
+
+<ParamField path="tableId" type="string" required>
+  The unique identifier of the table to update
+</ParamField>
+
+## Headers
+
+<ParamField header="Authorization" type="string" required>
+  Bearer token for authentication
+</ParamField>
+
+<ParamField header="Content-Type" type="string" required>
+  Must be `application/json`
+</ParamField>
+
+## Request Body
+
+<ParamField body="name" type="string">
+  New table name. Only include if you want to change the table name.
+</ParamField>
+
+<ParamField body="order" type="number">
+  Display order for the table within the database. Only include if you want to change the order.
+</ParamField>
+
+<RequestExample>
+
+```bash cURL
+curl -X PATCH https://api.fillout.com/api/v1/bases/base_abc123/tables/tbl_xyz789 \
+  -H "Authorization: Bearer your_api_key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Updated Table Name",
+    "order": 1
+  }'
+```
+
+```javascript JavaScript
+const response = await fetch('https://api.fillout.com/api/v1/bases/base_abc123/tables/tbl_xyz789', {
+  method: 'PATCH',
+  headers: {
+    'Authorization': 'Bearer your_api_key',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    name: "Updated Table Name",
+    order: 1
+  })
+});
+```
+
+```python Python
+import requests
+
+response = requests.patch(
+    'https://api.fillout.com/api/v1/bases/base_abc123/tables/tbl_xyz789',
+    headers={
+        'Authorization': 'Bearer your_api_key',
+        'Content-Type': 'application/json'
+    },
+    json={
+        'name': 'Updated Table Name',
+        'order': 1
+    }
+)
+```
+
+</RequestExample>
+
+## Response
+
+Returns the updated table with current properties and new timestamp.
+
+<ResponseField name="id" type="string">
+  The unique identifier of the table
+</ResponseField>
+
+<ResponseField name="name" type="string">
+  The current table name (updated if provided in request)
+</ResponseField>
+
+<ResponseField name="order" type="number">
+  The current display order (updated if provided in request)
+</ResponseField>
+
+<ResponseField name="primaryFieldId" type="string">
+  The ID of the primary field (unchanged)
+</ResponseField>
+
+<ResponseField name="createdAt" type="string">
+  ISO timestamp of when the table was originally created
+</ResponseField>
+
+<ResponseField name="updatedAt" type="string">
+  ISO timestamp of when the table was last updated (reflects the update time)
+</ResponseField>
+
+<ResponseExample>
+
+```json Response
+{
+  "id": "tbl_xyz789",
+  "name": "Updated Table Name",
+  "order": 1,
+  "primaryFieldId": "fld_abc123",
+  "createdAt": "2024-01-01T00:00:00.000Z",
+  "updatedAt": "2024-01-01T00:00:00.000Z"
+}
+```
+
+</ResponseExample>
+
+<Note>
+  Only the provided fields will be updated. Omitted fields will retain their current values.
+</Note>

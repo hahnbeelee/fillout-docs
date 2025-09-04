@@ -1,0 +1,134 @@
+---
+title: Update Record
+description: Updates an existing record's field values.
+api: PATCH /api/v1/bases/{basePublicId}/tables/{tableId}/records/{recordId}
+---
+
+Updates specific fields of an existing record.
+
+## Path Parameters
+
+<ParamField path="basePublicId" type="string" required>
+  The unique identifier of the database
+</ParamField>
+
+<ParamField path="tableId" type="string" required>
+  The unique identifier of the table
+</ParamField>
+
+<ParamField path="recordId" type="string" required>
+  The UUID of the record to update
+</ParamField>
+
+## Headers
+
+<ParamField header="Authorization" type="string" required>
+  Bearer token for authentication
+</ParamField>
+
+<ParamField header="Content-Type" type="string" required>
+  Must be `application/json`
+</ParamField>
+
+## Request Body
+
+<ParamField body="record" type="object" required>
+  Fields to update with their new values. Only include fields you want to change.
+
+  <Expandable title="Record object structure">
+    <ParamField body="[fieldName]" type="any">
+      Updated field values should match the field types defined in your table schema
+    </ParamField>
+  </Expandable>
+</ParamField>
+
+<RequestExample>
+
+```bash cURL
+curl -X PATCH https://api.fillout.com/api/v1/bases/base_abc123/tables/tbl_xyz789/records/rec_uuid123 \
+  -H "Authorization: Bearer your_api_key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "record": {
+      "Priority": "low",
+      "Email": "john.doe@example.com"
+    }
+  }'
+```
+
+```javascript JavaScript
+const response = await fetch('https://api.fillout.com/api/v1/bases/base_abc123/tables/tbl_xyz789/records/rec_uuid123', {
+  method: 'PATCH',
+  headers: {
+    'Authorization': 'Bearer your_api_key',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    record: {
+      "Priority": "low",
+      "Email": "john.doe@example.com"
+    }
+  })
+});
+```
+
+```python Python
+import requests
+
+response = requests.patch(
+    'https://api.fillout.com/api/v1/bases/base_abc123/tables/tbl_xyz789/records/rec_uuid123',
+    headers={
+        'Authorization': 'Bearer your_api_key',
+        'Content-Type': 'application/json'
+    },
+    json={
+        'record': {
+            'Priority': 'low',
+            'Email': 'john.doe@example.com'
+        }
+    }
+)
+```
+
+</RequestExample>
+
+## Response
+
+Returns the updated record with all field data and new timestamp.
+
+<ResponseField name="id" type="string">
+  The unique UUID of the record
+</ResponseField>
+
+<ResponseField name="data" type="object">
+  The complete record data with updated field values
+</ResponseField>
+
+<ResponseField name="createdAt" type="string">
+  ISO timestamp of when the record was created
+</ResponseField>
+
+<ResponseField name="updatedAt" type="string">
+  ISO timestamp of when the record was last updated (reflects the update time)
+</ResponseField>
+
+<ResponseExample>
+
+```json Response
+{
+  "id": "rec_uuid123",
+  "data": {
+    "Name": "John Doe",
+    "Email": "john.doe@example.com",
+    "Priority": "low"
+  },
+  "createdAt": "2024-01-01T00:00:00.000Z",
+  "updatedAt": "2024-01-01T00:00:00.000Z"
+}
+```
+
+</ResponseExample>
+
+<Warning>
+  Record ID must be in valid UUID format. Invalid formats will return a 400 error.
+</Warning>

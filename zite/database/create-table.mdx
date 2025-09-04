@@ -1,0 +1,210 @@
+---
+title: Create Table
+description: Adds a new table to an existing database.
+api: POST /api/v1/bases/{basePublicId}/tables
+---
+
+Adds a new table to an existing database.
+
+## Path Parameters
+
+<ParamField path="basePublicId" type="string" required>
+  The unique identifier of the database
+</ParamField>
+
+## Headers
+
+<ParamField header="Authorization" type="string" required>
+  Bearer token for authentication
+</ParamField>
+
+<ParamField header="Content-Type" type="string" required>
+  Must be `application/json`
+</ParamField>
+
+## Request Body
+
+<ParamField body="name" type="string" required>
+  Table name (minimum 1 character)
+</ParamField>
+
+<ParamField body="fields" type="array" required>
+  Array of field definitions to create with the table (at least one field required)
+
+  <Expandable title="Field definition structure">
+    <ParamField body="type" type="string" required>
+      Field type (see [Field Types Reference](/zite/database/field-types))
+    </ParamField>
+    <ParamField body="name" type="string" required>
+      Field name (minimum 1 character)
+    </ParamField>
+    <ParamField body="template" type="object" required>
+      Field-specific configuration options that vary by field type
+    </ParamField>
+  </Expandable>
+</ParamField>
+
+<RequestExample>
+
+```bash cURL
+curl -X POST https://api.fillout.com/api/v1/bases/base_abc123/tables \
+  -H "Authorization: Bearer your_api_key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Orders",
+    "fields": [
+      {
+        "type": "single_line_text",
+        "name": "Order Number",
+        "template": {}
+      },
+      {
+        "type": "currency",
+        "name": "Total",
+        "template": {
+          "currencySymbol": "$",
+          "decimalPlaces": 2
+        }
+      }
+    ]
+  }'
+```
+
+```javascript JavaScript
+const response = await fetch('https://api.fillout.com/api/v1/bases/base_abc123/tables', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'Bearer your_api_key',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    name: "Orders",
+    fields: [
+      {
+        type: "single_line_text",
+        name: "Order Number",
+        template: {}
+      },
+      {
+        type: "currency",
+        name: "Total",
+        template: {
+          currencySymbol: "$",
+          decimalPlaces: 2
+        }
+      }
+    ]
+  })
+});
+```
+
+```python Python
+import requests
+
+response = requests.post(
+    'https://api.fillout.com/api/v1/bases/base_abc123/tables',
+    headers={
+        'Authorization': 'Bearer your_api_key',
+        'Content-Type': 'application/json'
+    },
+    json={
+        'name': 'Orders',
+        'fields': [
+            {
+                'type': 'single_line_text',
+                'name': 'Order Number',
+                'template': {}
+            },
+            {
+                'type': 'currency',
+                'name': 'Total',
+                'template': {
+                    'currencySymbol': '$',
+                    'decimalPlaces': 2
+                }
+            }
+        ]
+    }
+)
+```
+
+</RequestExample>
+
+## Response
+
+Returns the newly created table with generated ID, field definitions, and views.
+
+<ResponseField name="id" type="string">
+  Auto-generated unique identifier for the table (starts with `tbl_`)
+</ResponseField>
+
+<ResponseField name="name" type="string">
+  The table name that was specified in the request
+</ResponseField>
+
+<ResponseField name="order" type="number">
+  The display order of the table within the database
+</ResponseField>
+
+<ResponseField name="primaryFieldId" type="string">
+  The ID of the first field, which serves as the primary field
+</ResponseField>
+
+<ResponseField name="fields" type="array">
+  Array of created field objects with their generated IDs and configurations
+</ResponseField>
+
+<ResponseField name="views" type="array">
+  Array of default views created for the table (typically includes a grid view)
+</ResponseField>
+
+<ResponseField name="createdAt" type="string">
+  ISO timestamp of when the table was created
+</ResponseField>
+
+<ResponseField name="updatedAt" type="string">
+  ISO timestamp of when the table was last updated
+</ResponseField>
+
+<ResponseExample>
+
+```json Response
+{
+  "id": "tbl_xyz789",
+  "name": "Orders",
+  "order": 1,
+  "primaryFieldId": "fld_abc123",
+  "fields": [
+    {
+      "id": "fld_abc123",
+      "type": "single_line_text",
+      "name": "Order Number",
+      "template": {}
+    },
+    {
+      "id": "fld_def456",
+      "type": "currency",
+      "name": "Total",
+      "template": {
+        "currencySymbol": "$",
+        "decimalPlaces": 2
+      }
+    }
+  ],
+  "views": [
+    {
+      "id": "viw_grid123",
+      "name": "Grid view",
+      "type": "grid"
+    }
+  ],
+  "createdAt": "2024-01-01T00:00:00.000Z",
+  "updatedAt": "2024-01-01T00:00:00.000Z"
+}
+```
+
+</ResponseExample>
+
+<Note>
+  The first field in the fields array automatically becomes the primary field for the table.
+</Note>

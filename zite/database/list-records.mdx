@@ -1,0 +1,190 @@
+---
+title: List Records
+description: Retrieves records from a table with filtering, sorting, and pagination.
+api: POST /api/v1/bases/{basePublicId}/tables/{tableId}/records/list
+---
+
+Retrieves records from a table with filtering, sorting, and pagination.
+
+## Path Parameters
+
+<ParamField path="basePublicId" type="string" required>
+  The unique identifier of the database
+</ParamField>
+
+<ParamField path="tableId" type="string" required>
+  The unique identifier of the table
+</ParamField>
+
+## Headers
+
+<ParamField header="Authorization" type="string" required>
+  Bearer token for authentication
+</ParamField>
+
+<ParamField header="Content-Type" type="string" required>
+  Must be `application/json`
+</ParamField>
+
+## Request Body
+
+<ParamField body="limit" type="number">
+  Number of records to return (1-10,000, default: 50)
+</ParamField>
+
+<ParamField body="offset" type="number">
+  Number of records to skip for pagination
+</ParamField>
+
+<ParamField body="cursor" type="string">
+  Cursor for cursor-based pagination (alternative to offset)
+</ParamField>
+
+<ParamField body="sort" type="string">
+  Field ID to sort results by
+</ParamField>
+
+<ParamField body="filters" type="object">
+  Record filtering criteria with support for various operators
+
+  <Expandable title="Filter operators">
+    <ParamField body="contains" type="string">
+      Text contains substring
+    </ParamField>
+    <ParamField body="not" type="any">
+      Not equal to value
+    </ParamField>
+    <ParamField body="in" type="array">
+      Value in list
+    </ParamField>
+    <ParamField body="notIn" type="array">
+      Value not in list
+    </ParamField>
+    <ParamField body="lt" type="number">
+      Less than
+    </ParamField>
+    <ParamField body="lte" type="number">
+      Less than or equal
+    </ParamField>
+    <ParamField body="gt" type="number">
+      Greater than
+    </ParamField>
+    <ParamField body="gte" type="number">
+      Greater than or equal
+    </ParamField>
+  </Expandable>
+</ParamField>
+
+<RequestExample>
+
+```bash cURL
+curl -X POST https://api.fillout.com/api/v1/bases/base_abc123/tables/tbl_xyz789/records/list \
+  -H "Authorization: Bearer your_api_key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "limit": 50,
+    "offset": 0,
+    "filters": {
+      "Priority": "high",
+      "Email": {"contains": "@example.com"}
+    },
+    "sort": "fld_created_date"
+  }'
+```
+
+```javascript JavaScript
+const response = await fetch('https://api.fillout.com/api/v1/bases/base_abc123/tables/tbl_xyz789/records/list', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'Bearer your_api_key',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    limit: 50,
+    offset: 0,
+    filters: {
+      "Priority": "high",
+      "Email": {"contains": "@example.com"}
+    },
+    sort: "fld_created_date"
+  })
+});
+```
+
+```python Python
+import requests
+
+response = requests.post(
+    'https://api.fillout.com/api/v1/bases/base_abc123/tables/tbl_xyz789/records/list',
+    headers={
+        'Authorization': 'Bearer your_api_key',
+        'Content-Type': 'application/json'
+    },
+    json={
+        'limit': 50,
+        'offset': 0,
+        'filters': {
+            'Priority': 'high',
+            'Email': {'contains': '@example.com'}
+        },
+        'sort': 'fld_created_date'
+    }
+)
+```
+
+</RequestExample>
+
+## Response
+
+Returns an array of matching records with pagination information.
+
+<ResponseField name="records" type="array">
+  Array of record objects matching the query criteria
+  
+  <Expandable title="Record object">
+    <ResponseField name="id" type="string">
+      The unique UUID of the record
+    </ResponseField>
+    <ResponseField name="data" type="object">
+      The record data containing all field values
+    </ResponseField>
+    <ResponseField name="createdAt" type="string">
+      ISO timestamp of when the record was created
+    </ResponseField>
+    <ResponseField name="updatedAt" type="string">
+      ISO timestamp of when the record was last updated
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="total" type="number">
+  Total number of records matching the query (without pagination limits)
+</ResponseField>
+
+<ResponseField name="offset" type="number">
+  The offset used in the request for pagination
+</ResponseField>
+
+<ResponseExample>
+
+```json Response
+{
+  "records": [
+    {
+      "id": "rec_uuid123",
+      "data": {
+        "Name": "John Doe",
+        "Email": "john@example.com",
+        "Priority": "high"
+      },
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z"
+    }
+  ],
+  "total": 150,
+  "offset": 50
+}
+```
+
+</ResponseExample>
+

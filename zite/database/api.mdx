@@ -1,0 +1,94 @@
+---
+title: Zite DB REST API
+description: Interact with Zite DB via a REST API. Build database-driven applications with programmatic access to your databases, tables, and records.
+icon: circle-info
+sidebarTitle: Overview
+---
+
+### What is REST API
+
+A **REST API** simplifies interaction with your database data, allowing for automation and integration. Following RESTful principles, it seamlessly connects to retrieve, create, and modify database data.
+
+### Introduction
+
+The **Zite DB API** lets you access and manage your Zite databases programmatically, without using the Zite interface. The API is designed for developers building database-driven applications like CRMs, project management tools, inventory systems, and any application requiring structured data storage.
+
+You can create databases, manage table schemas, define field types, and perform CRUD operations on records via the API.
+
+**Zite DB** is a built-in database solution for your Zite apps that provides automatic schema management, real-time data operations, and a complete REST API for programmatic access.
+
+### Field Types
+
+Zite DB supports over 20 different field types to handle various data structures - from simple text and numbers to complex relationships. Each field type has specific configuration options and validation rules. See the complete [Field Types](/zite/database/field-types) for detailed information on:
+
+- **Text Fields**: Single line text, long text, email, URL, phone numbers
+- **Number Fields**: Numbers, currency, percentages, ratings, durations  
+- **Selection Fields**: Single select, multiple select, checkboxes
+- **Date & Time Fields**: Dates and datetimes with timezone support
+- **Relationship Fields**: Linked records and lookup fields
+
+Each field type includes template configuration options and record data structure specifications.
+
+### Authentication
+
+Generate and view your API key in the `Developer` [settings tab of your account](https://build.fillout.com/home/settings/developer). You can revoke or regenerate your API key at any time via the dashboard.
+
+<Frame>
+  ![Screenshot of the Developer tab of a form](/images/advanced/image-1.png)
+</Frame>
+
+To authenticate your requests, you need to provide your API key in the `Authorization` header in the following format:
+
+```bash
+Authorization: Bearer <your-api-key>
+```
+
+Replace `<your-api-key>` with the **API key** obtained from your Fillout account.
+
+You can obtain your API base URL in the API dashboard. Typically, it will be [https://api.fillout.com](https://api.fillout.com/).
+
+<Check>
+  **Important:** If you're self-hosting Fillout or using the EU agent, a different URL will appear in the dashboard.
+</Check>
+
+<Info>
+  **Note:** The same API key used for Fillout forms also works with Zite DB endpoints.
+</Info>
+
+
+## Rate limits
+
+All endpoints are limited to being called no more than 5 times per second, per Account/API key.
+
+## Error handling
+
+All API errors return a consistent response format:
+
+```json
+{
+  "error": {
+    "code": "ERROR_CODE",
+    "message": "Human readable error message"
+  }
+}
+```
+
+### Common error codes
+
+| Code | Description |
+|------|-------------|
+| `INVALID_RECORD_ID` | Record ID is not in valid UUID format |
+| `NOT_FOUND` | Requested resource does not exist |
+| `BAD_REQUEST` | Invalid request data or validation failure |
+| `UNAUTHORIZED` | Invalid or missing API key |
+| `INTERNAL_SERVER_ERROR` | Server-side error occurred |
+| `NOT_IMPLEMENTED` | Feature not yet implemented |
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Field Types" icon="table-columns" iconType="regular" color="#3b82f6" href="/zite/database/field-types">
+    Complete reference of all supported field types and their configurations.
+  </Card>
+</CardGroup>
+
