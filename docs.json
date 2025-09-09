@@ -518,7 +518,7 @@
           },
           {
             "group": "Getting Started",
-            "pages": ["zite/getting-started", "zite/faq"]
+            "pages": ["zite/getting-started", "zite/design", "zite/faq"]
           },
           {
             "group": "Basics",
@@ -526,7 +526,8 @@
               "zite/selective-edits",
               "zite/sharing",
               "zite/embedding",
-              "zite/customize-links"
+              "zite/customize-links",
+              "history"
             ]
           },
           {
