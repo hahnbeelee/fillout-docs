@@ -29,7 +29,6 @@
             "group": " ",
             "pages": ["index"]
           },
-          "faqs"
           {
             "group": "Getting Started",
             "pages": [
@@ -86,7 +85,8 @@
                   "custom-emails"
                 ]
               },
-              "view-responses"
+              "view-responses",
+              "faqs"
             ]
           },
           {
