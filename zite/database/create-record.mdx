@@ -1,14 +1,14 @@
 ---
 title: Create Record
 description: Creates a new record in a table.
-api: POST /api/v1/bases/{basePublicId}/tables/{tableId}/records
+api: POST /api/v1/bases/{databaseId}/tables/{tableId}/records
 ---
 
 Creates a new record in a table with the provided field data.
 
 ## Path Parameters
 
-<ParamField path="basePublicId" type="string" required>
+<ParamField path="databaseId" type="string" required>
   The unique identifier of the database
 </ParamField>
 
@@ -19,12 +19,9 @@ Creates a new record in a table with the provided field data.
 ## Headers
 
 <ParamField header="Authorization" type="string" required>
-  Bearer token for authentication
+  Enter your Fillout API key. Format: Bearer &lt;api_key&gt;
 </ParamField>
 
-<ParamField header="Content-Type" type="string" required>
-  Must be `application/json`
-</ParamField>
 
 ## Request Body
 

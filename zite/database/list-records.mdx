@@ -1,14 +1,14 @@
 ---
 title: List Records
 description: Retrieves records from a table with filtering, sorting, and pagination.
-api: POST /api/v1/bases/{basePublicId}/tables/{tableId}/records/list
+api: POST /api/v1/bases/{databaseId}/tables/{tableId}/records/list
 ---
 
 Retrieves records from a table with filtering, sorting, and pagination.
 
 ## Path Parameters
 
-<ParamField path="basePublicId" type="string" required>
+<ParamField path="databaseId" type="string" required>
   The unique identifier of the database
 </ParamField>
 
@@ -19,11 +19,7 @@ Retrieves records from a table with filtering, sorting, and pagination.
 ## Headers
 
 <ParamField header="Authorization" type="string" required>
-  Bearer token for authentication
-</ParamField>
-
-<ParamField header="Content-Type" type="string" required>
-  Must be `application/json`
+  Enter your Fillout API key. Format: Bearer &lt;api_key&gt;
 </ParamField>
 
 ## Request Body

@@ -1,0 +1,1316 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Zite DB REST API",
+    "description": "A REST API for managing Zite databases, tables, fields, and records. Build database-driven applications with programmatic access to your structured data.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.fillout.com/api/v1",
+      "description": "US server"
+    },
+    {
+      "url": "https://eu-api.fillout.com/api/v1",
+      "description": "EU server"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "paths": {
+    "/bases": {
+      "get": {
+        "summary": "List databases",
+        "description": "Returns a list of all databases in your account",
+        "operationId": "getDatabases",
+        "tags": ["Databases"],
+        "parameters": [
+          {
+            "name": "workspaceId",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Filter by workspace ID (optional)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of databases",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Database"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create database",
+        "description": "Creates a new database with tables and fields",
+        "operationId": "createDatabase",
+        "tags": ["Databases"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateDatabaseRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Database created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Database"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/bases/{databaseId}": {
+      "get": {
+        "summary": "Get database by ID",
+        "description": "Returns detailed information about a specific database including all tables and fields",
+        "operationId": "getDatabaseById",
+        "tags": ["Databases"],
+        "parameters": [
+          {
+            "name": "databaseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the database"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Database details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DatabaseWithTables"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete database",
+        "description": "Permanently deletes a database and all its data",
+        "operationId": "deleteDatabase",
+        "tags": ["Databases"],
+        "parameters": [
+          {
+            "name": "databaseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the database"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Database deleted successfully"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/bases/{databaseId}/tables": {
+      "post": {
+        "summary": "Create table",
+        "description": "Adds a new table to an existing database",
+        "operationId": "createTable",
+        "tags": ["Tables"],
+        "parameters": [
+          {
+            "name": "databaseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the database"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTableRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Table created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Table"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/bases/{databaseId}/tables/{tableId}": {
+      "patch": {
+        "summary": "Update table",
+        "description": "Updates table properties like name and order",
+        "operationId": "updateTable",
+        "tags": ["Tables"],
+        "parameters": [
+          {
+            "name": "databaseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the database"
+          },
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the table"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTableRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Table updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Table"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete table",
+        "description": "Permanently deletes a table and all its data",
+        "operationId": "deleteTable",
+        "tags": ["Tables"],
+        "parameters": [
+          {
+            "name": "databaseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the database"
+          },
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the table"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Table deleted successfully"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/bases/{databaseId}/tables/{tableId}/fields": {
+      "post": {
+        "summary": "Create field",
+        "description": "Adds a new field to an existing table",
+        "operationId": "createField",
+        "tags": ["Fields"],
+        "parameters": [
+          {
+            "name": "databaseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the database"
+          },
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the table"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFieldRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Field created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Field"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/bases/{databaseId}/tables/{tableId}/fields/{fieldId}": {
+      "patch": {
+        "summary": "Update field",
+        "description": "Updates field properties and configuration",
+        "operationId": "updateField",
+        "tags": ["Fields"],
+        "parameters": [
+          {
+            "name": "databaseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the database"
+          },
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the table"
+          },
+          {
+            "name": "fieldId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the field"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateFieldRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Field updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Field"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete field",
+        "description": "Permanently deletes a field from a table",
+        "operationId": "deleteField",
+        "tags": ["Fields"],
+        "parameters": [
+          {
+            "name": "databaseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the database"
+          },
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the table"
+          },
+          {
+            "name": "fieldId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the field"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Field deleted successfully"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/bases/{databaseId}/tables/{tableId}/records": {
+      "post": {
+        "summary": "Create record",
+        "description": "Creates a new record in a table with the provided field data",
+        "operationId": "createRecord",
+        "tags": ["Records"],
+        "parameters": [
+          {
+            "name": "databaseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the database"
+          },
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the table"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRecordRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Record created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Record"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/bases/{databaseId}/tables/{tableId}/records/list": {
+      "post": {
+        "summary": "List records",
+        "description": "Retrieves records from a table with filtering, sorting, and pagination",
+        "operationId": "listRecords",
+        "tags": ["Records"],
+        "parameters": [
+          {
+            "name": "databaseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the database"
+          },
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the table"
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ListRecordsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "List of records",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListRecordsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/bases/{databaseId}/tables/{tableId}/records/{recordId}": {
+      "get": {
+        "summary": "Get record by ID",
+        "description": "Returns a single record by its UUID",
+        "operationId": "getRecordById",
+        "tags": ["Records"],
+        "parameters": [
+          {
+            "name": "databaseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the database"
+          },
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the table"
+          },
+          {
+            "name": "recordId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "The UUID of the record"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Record details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Record"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      },
+      "patch": {
+        "summary": "Update record",
+        "description": "Updates specific fields of an existing record",
+        "operationId": "updateRecord",
+        "tags": ["Records"],
+        "parameters": [
+          {
+            "name": "databaseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the database"
+          },
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the table"
+          },
+          {
+            "name": "recordId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "The UUID of the record to update"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRecordRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Record updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Record"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete record",
+        "description": "Permanently deletes a record from a table",
+        "operationId": "deleteRecord",
+        "tags": ["Records"],
+        "parameters": [
+          {
+            "name": "databaseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the database"
+          },
+          {
+            "name": "tableId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the table"
+          },
+          {
+            "name": "recordId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "The UUID of the record to delete"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Record deleted successfully"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Enter your Fillout API key. Format: Bearer <api_key>"
+      }
+    },
+    "schemas": {
+      "Database": {
+        "type": "object",
+        "properties": {
+          "publicId": {
+            "type": "string",
+            "description": "Unique identifier for the database"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the database"
+          },
+          "workspaceId": {
+            "type": "integer",
+            "description": "ID of the workspace this database belongs to"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO timestamp of when the database was created"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO timestamp of when the database was last updated"
+          }
+        },
+        "required": ["publicId", "name", "createdAt", "updatedAt"]
+      },
+      "DatabaseWithTables": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Database"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "tables": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/TableWithFields"
+                },
+                "description": "List of tables in the database"
+              }
+            },
+            "required": ["tables"]
+          }
+        ]
+      },
+      "Table": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the table"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the table"
+          },
+          "order": {
+            "type": "integer",
+            "description": "Display order of the table"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO timestamp of when the table was created"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO timestamp of when the table was last updated"
+          }
+        },
+        "required": ["id", "name", "order", "createdAt", "updatedAt"]
+      },
+      "TableWithFields": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Table"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "fields": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Field"
+                },
+                "description": "List of fields in the table"
+              }
+            },
+            "required": ["fields"]
+          }
+        ]
+      },
+      "Field": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the field"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the field"
+          },
+          "type": {
+            "type": "string",
+            "description": "Field type (e.g., text, number, select, date)",
+            "enum": [
+              "text",
+              "long_text",
+              "number",
+              "currency",
+              "percent",
+              "rating",
+              "duration",
+              "select",
+              "multiselect",
+              "checkbox",
+              "date",
+              "datetime",
+              "email",
+              "phone",
+              "url",
+              "linked_record",
+              "lookup",
+              "barcode",
+              "button",
+              "collaborator",
+              "created_time",
+              "last_modified_time",
+              "created_by",
+              "last_modified_by",
+              "autonumber",
+              "formula",
+              "rollup",
+              "count"
+            ]
+          },
+          "template": {
+            "type": "object",
+            "description": "Field-specific configuration options",
+            "additionalProperties": true
+          },
+          "order": {
+            "type": "integer",
+            "description": "Display order of the field"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO timestamp of when the field was created"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO timestamp of when the field was last updated"
+          }
+        },
+        "required": ["id", "name", "type", "template", "order", "createdAt", "updatedAt"]
+      },
+      "Record": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Unique UUID identifier for the record"
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": true,
+            "description": "Record data with field names as keys"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO timestamp of when the record was created"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO timestamp of when the record was last updated"
+          }
+        },
+        "required": ["id", "data", "createdAt", "updatedAt"]
+      },
+      "CreateDatabaseRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Database name"
+          },
+          "tables": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/components/schemas/CreateTableInDatabase"
+            },
+            "description": "Array of table definitions to create with the database"
+          },
+          "workspaceId": {
+            "type": "integer",
+            "description": "ID of the workspace to create the database in (optional)"
+          }
+        },
+        "required": ["name", "tables"]
+      },
+      "CreateTableInDatabase": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Table name"
+          },
+          "fields": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/components/schemas/CreateFieldInTable"
+            },
+            "description": "Array of field definitions to create with the table"
+          }
+        },
+        "required": ["name", "fields"]
+      },
+      "CreateFieldInTable": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Field type"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Field name"
+          },
+          "template": {
+            "type": "object",
+            "additionalProperties": true,
+            "description": "Field-specific configuration options"
+          }
+        },
+        "required": ["type", "name", "template"]
+      },
+      "CreateTableRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Table name"
+          },
+          "fields": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/components/schemas/CreateFieldInTable"
+            },
+            "description": "Array of field definitions to create with the table"
+          }
+        },
+        "required": ["name", "fields"]
+      },
+      "UpdateTableRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "New table name"
+          },
+          "order": {
+            "type": "integer",
+            "description": "New display order for the table"
+          }
+        }
+      },
+      "CreateFieldRequest": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Field type"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Field name"
+          },
+          "template": {
+            "type": "object",
+            "additionalProperties": true,
+            "description": "Field-specific configuration options"
+          }
+        },
+        "required": ["type", "name", "template"]
+      },
+      "UpdateFieldRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "New field name"
+          },
+          "template": {
+            "type": "object",
+            "additionalProperties": true,
+            "description": "Updated field configuration"
+          },
+          "order": {
+            "type": "integer",
+            "description": "New display order for the field"
+          }
+        }
+      },
+      "CreateRecordRequest": {
+        "type": "object",
+        "properties": {
+          "record": {
+            "type": "object",
+            "additionalProperties": true,
+            "description": "Record data with field names as keys and their corresponding values"
+          }
+        },
+        "required": ["record"]
+      },
+      "UpdateRecordRequest": {
+        "type": "object",
+        "properties": {
+          "record": {
+            "type": "object",
+            "additionalProperties": true,
+            "description": "Fields to update with their new values. Only include fields you want to change."
+          }
+        },
+        "required": ["record"]
+      },
+      "ListRecordsRequest": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100,
+            "default": 20,
+            "description": "Maximum number of records to return"
+          },
+          "offset": {
+            "type": "integer",
+            "minimum": 0,
+            "default": 0,
+            "description": "Number of records to skip for pagination"
+          },
+          "sort": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SortOption"
+            },
+            "description": "Array of sort options"
+          },
+          "filter": {
+            "type": "object",
+            "additionalProperties": true,
+            "description": "Filter conditions for records"
+          }
+        }
+      },
+      "ListRecordsResponse": {
+        "type": "object",
+        "properties": {
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Record"
+            },
+            "description": "Array of records"
+          },
+          "total": {
+            "type": "integer",
+            "description": "Total number of records matching the filter"
+          },
+          "offset": {
+            "type": "integer",
+            "description": "Current offset for pagination"
+          },
+          "limit": {
+            "type": "integer",
+            "description": "Maximum number of records returned"
+          }
+        },
+        "required": ["records", "total", "offset", "limit"]
+      },
+      "SortOption": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string",
+            "description": "Field name to sort by"
+          },
+          "direction": {
+            "type": "string",
+            "enum": ["asc", "desc"],
+            "default": "asc",
+            "description": "Sort direction"
+          }
+        },
+        "required": ["field"]
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "description": "Error code"
+              },
+              "message": {
+                "type": "string",
+                "description": "Human-readable error message"
+              }
+            },
+            "required": ["code", "message"]
+          }
+        },
+        "required": ["error"]
+      }
+    },
+    "responses": {
+      "BadRequest": {
+        "description": "Invalid request data or validation failure",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "examples": {
+              "invalidRecordId": {
+                "value": {
+                  "error": {
+                    "code": "INVALID_RECORD_ID",
+                    "message": "Record ID is not in valid UUID format"
+                  }
+                }
+              },
+              "validationError": {
+                "value": {
+                  "error": {
+                    "code": "BAD_REQUEST",
+                    "message": "Invalid request data or validation failure"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "Unauthorized": {
+        "description": "Invalid or missing API key",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "example": {
+              "error": {
+                "code": "UNAUTHORIZED",
+                "message": "Invalid or missing API key"
+              }
+            }
+          }
+        }
+      },
+      "NotFound": {
+        "description": "Requested resource does not exist",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "example": {
+              "error": {
+                "code": "NOT_FOUND",
+                "message": "Requested resource does not exist"
+              }
+            }
+          }
+        }
+      },
+      "InternalServerError": {
+        "description": "Server-side error occurred",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "example": {
+              "error": {
+                "code": "INTERNAL_SERVER_ERROR",
+                "message": "Server-side error occurred"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Databases",
+      "description": "Operations for managing databases"
+    },
+    {
+      "name": "Tables",
+      "description": "Operations for managing tables within databases"
+    },
+    {
+      "name": "Fields",
+      "description": "Operations for managing fields within tables"
+    },
+    {
+      "name": "Records",
+      "description": "Operations for managing records within tables"
+    }
+  ]
+}

@@ -1,14 +1,14 @@
 ---
 title: Get Record by ID
 description: Retrieves a specific record by UUID.
-api: GET /api/v1/bases/{basePublicId}/tables/{tableId}/records/{recordId}
+api: GET /api/v1/bases/{databaseId}/tables/{tableId}/records/{recordId}
 ---
 
 Retrieves a specific record by its unique identifier.
 
 ## Path Parameters
 
-<ParamField path="basePublicId" type="string" required>
+<ParamField path="databaseId" type="string" required>
   The unique identifier of the database
 </ParamField>
 
@@ -23,7 +23,7 @@ Retrieves a specific record by its unique identifier.
 ## Headers
 
 <ParamField header="Authorization" type="string" required>
-  Bearer token for authentication
+  Enter your Fillout API key. Format: Bearer &lt;api_key&gt;
 </ParamField>
 
 <RequestExample>

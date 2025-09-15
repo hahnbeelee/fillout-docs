@@ -1,14 +1,14 @@
 ---
 title: Update Record
 description: Updates an existing record's field values.
-api: PATCH /api/v1/bases/{basePublicId}/tables/{tableId}/records/{recordId}
+api: PATCH /api/v1/bases/{databaseId}/tables/{tableId}/records/{recordId}
 ---
 
 Updates specific fields of an existing record.
 
 ## Path Parameters
 
-<ParamField path="basePublicId" type="string" required>
+<ParamField path="databaseId" type="string" required>
   The unique identifier of the database
 </ParamField>
 
@@ -23,11 +23,7 @@ Updates specific fields of an existing record.
 ## Headers
 
 <ParamField header="Authorization" type="string" required>
-  Bearer token for authentication
-</ParamField>
-
-<ParamField header="Content-Type" type="string" required>
-  Must be `application/json`
+  Enter your Fillout API key. Format: Bearer &lt;api_key&gt;
 </ParamField>
 
 ## Request Body

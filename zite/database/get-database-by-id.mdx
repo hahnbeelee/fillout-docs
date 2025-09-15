@@ -1,21 +1,21 @@
 ---
 title: Get Database by ID
 description: Retrieves a specific database by ID with complete table definitions.
-api: GET /api/v1/bases/{basePublicId}
+api: GET /api/v1/bases/{databaseId}
 ---
 
 Retrieves a specific database by ID with complete table definitions.
 
 ## Path Parameters
 
-<ParamField path="basePublicId" type="string" required>
+<ParamField path="databaseId" type="string" required>
   The unique identifier of the database to retrieve
 </ParamField>
 
 ## Headers
 
 <ParamField header="Authorization" type="string" required>
-  Bearer token for authentication
+  Enter your Fillout API key. Format: Bearer &lt;api_key&gt;
 </ParamField>
 
 <RequestExample>

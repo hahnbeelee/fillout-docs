@@ -1,14 +1,14 @@
 ---
 title: Delete Record
 description: Permanently removes a record from a table.
-api: DELETE /api/v1/bases/{basePublicId}/tables/{tableId}/records/{recordId}
+api: DELETE /api/v1/bases/{databaseId}/tables/{tableId}/records/{recordId}
 ---
 
 Permanently removes a record from a table.
 
 ## Path Parameters
 
-<ParamField path="basePublicId" type="string" required>
+<ParamField path="databaseId" type="string" required>
   The unique identifier of the database
 </ParamField>
 
@@ -23,7 +23,7 @@ Permanently removes a record from a table.
 ## Headers
 
 <ParamField header="Authorization" type="string" required>
-  Bearer token for authentication
+  Enter your Fillout API key. Format: Bearer &lt;api_key&gt;
 </ParamField>
 
 <RequestExample>

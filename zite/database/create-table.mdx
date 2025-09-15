@@ -1,25 +1,21 @@
 ---
 title: Create Table
 description: Adds a new table to an existing database.
-api: POST /api/v1/bases/{basePublicId}/tables
+api: POST /api/v1/bases/{databaseId}/tables
 ---
 
 Adds a new table to an existing database.
 
 ## Path Parameters
 
-<ParamField path="basePublicId" type="string" required>
+<ParamField path="databaseId" type="string" required>
   The unique identifier of the database
 </ParamField>
 
 ## Headers
 
 <ParamField header="Authorization" type="string" required>
-  Bearer token for authentication
-</ParamField>
-
-<ParamField header="Content-Type" type="string" required>
-  Must be `application/json`
+  Enter your Fillout API key. Format: Bearer &lt;api_key&gt;
 </ParamField>
 
 ## Request Body

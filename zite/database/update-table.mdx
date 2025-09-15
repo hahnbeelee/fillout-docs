@@ -1,14 +1,14 @@
 ---
 title: Update Table
 description: Updates table properties like name and order.
-api: PATCH /api/v1/bases/{basePublicId}/tables/{tableId}
+api: PATCH /api/v1/bases/{databaseId}/tables/{tableId}
 ---
 
 Updates table properties like name and order.
 
 ## Path Parameters
 
-<ParamField path="basePublicId" type="string" required>
+<ParamField path="databaseId" type="string" required>
   The unique identifier of the database
 </ParamField>
 
@@ -19,11 +19,7 @@ Updates table properties like name and order.
 ## Headers
 
 <ParamField header="Authorization" type="string" required>
-  Bearer token for authentication
-</ParamField>
-
-<ParamField header="Content-Type" type="string" required>
-  Must be `application/json`
+  Enter your Fillout API key. Format: Bearer &lt;api_key&gt;
 </ParamField>
 
 ## Request Body
