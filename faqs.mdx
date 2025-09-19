@@ -1,10 +1,10 @@
 ---
 title: "FAQs"
 description: "Common questions about Fillout"
-icon: "question"
+icon: "circle-question"
 ---
 
-## <Icon icon="lightbulb" size={24} /> Getting Started
+## Form Building
 
 <AccordionGroup>
   <Accordion title="What kinds of forms can I build with Fillout?">
@@ -21,16 +21,87 @@ icon: "question"
   </Accordion>
 </AccordionGroup>
 
-## <Icon icon="message-pen" size={24} /> User Experience
+## Styling
+
+<AccordionGroup>
+  <Accordion title="Can I change the style of my button and shape of input fields?">
+    Yes, our [Advanced Designer](https://www.fillout.com/help/advanced-designer) quickly lets you customize the look of your buttons, input fields, padding, and more.
+  </Accordion>
+  <Accordion title="Can I use custom CSS to style my form?">
+    Yes, Fillout allows custom CSS for more advanced styling. More info [here](https://www.fillout.com/help/custom-css). 
+  </Accordion>
+  <Accordion title="Can I remove the form builder’s branding from my form?">
+    Yes, branding can be removed on paid plans. Check your ending page settings to disable the Fillout button that shows up on pages. More info [here](https://www.fillout.com/help/remove-fillout-branding).**Can I use my own fonts in the form?**
+  </Accordion>
+  <Accordion title="Can I use my own fonts in the form?">
+    Yes, our form builder lets you [upload your own font](https://www.fillout.com/help/form-fonts#how-to-upload-a-custom-font).
+  </Accordion>
+  <Accordion title="Can I put fields side-by-side?">
+    Yes, you can create [multi-column forms](https://www.fillout.com/help/multi-column-forms) or even use a [table](https://www.fillout.com/help/table).
+  </Accordion>
+</AccordionGroup>
+
+## Integration & Automation
+
+<AccordionGroup>
+  <Accordion title="Why is my integration only sending partial data or failing?">
+    Check your [integration mappings](https://www.fillout.com/help/additional-integration-mappings) and make respective fields are included. Also, confirm hidden or conditional fields are actually shown during submission.
+  </Accordion>
+  <Accordion title="Can I send different follow-up or confirmation emails based on user responses?">
+    Yes, you can do this with Fillout's native email workflows. Check [this quide](https://www.fillout.com/help/custom-emails#send-different-messages-based-on-responses).
+  </Accordion>
+</AccordionGroup>
+
+## Advanced
+
+<AccordionGroup>
+  <Accordion title="Can I conditionally show or hide sections or pages based on multiple field inputs?">
+    Yes, you can use condition groups to show or hide [fields](https://www.fillout.com/help/condition-logic-groups#condition-groups) or [pages](https://www.fillout.com/help/page-logic#edit-page-branching).
+  </Accordion>
+  <Accordion title="How do I pre-fill form fields dynamically from a respondent's previous answer?">
+    You can use logic to [reference answers](https://www.fillout.com/help/answer-piping#referencing-in-field-labels) in previous fields and even [URL parameters](https://www.fillout.com/help/url-parameters) like their name or email.
+  </Accordion>
+  <Accordion title="Can I build a calculator or score-based form?">
+    Yes, use [calculations](https://www.fillout.com/help/calculations) or [set up scoring](https://www.fillout.com/help/make-a-free-quiz#how-to-create-a-quiz-in-fillout) to create quizzes, price estimators, risk assessment forms, and more.
+  </Accordion>
+</AccordionGroup>
+
+## User Experience
 
 <AccordionGroup>
   <Accordion title="Can respondents save progress and complete later?">
     Fillout automatically saves a respondent's progress on the same browser and device, allowing them to continue where they left off. More info [here](https://www.fillout.com/help/partial-submissions).
   </Accordion>
+  <Accordion title="Can respondents edit submissions after completing forms?">
+    Yes, [respondents](https://www.fillout.com/help/edit-form-submissions) can update or change their responses or you can [edit it yourself](https://www.fillout.com/help/edit-submissions#how-to-edit-responses).
+  </Accordion>
   <Accordion title="What happens when I close a form?">
     This prevents new submissions from coming in. More info [here](https://www.fillout.com/help/manage-form-access#close-form).
   </Accordion>
-  <Accordion title="Can I edit submissions or responses after they’re submitted?">
-    Yes, you can [edit or update responses yourself](https://www.fillout.com/help/edit-submissions#how-to-edit-responses), or [allow respondents](https://www.fillout.com/help/edit-form-submissions) to do it.
+  <Accordion title="Can I show a different ending page based on a respondent's answers?">
+    Yes, you can use [logic](https://www.fillout.com/help/page-logic) to send respondents to different ending pages.
+  </Accordion>
+  <Accordion title="Can I collect percentages and fractions?">
+    Yes, you can use text fields to allow respondents to enter percentages (with the `%` symbol) and fractions. They can also enter percentages in decimal form (e.g., `0.5` instead of `50%`) when using number fields.
+  </Accordion>
+  <Accordion title="Can respondents input negative numbers?">
+    Yes, negative numbers can be entered in number, text, or even currency fields.
+  </Accordion>
+</AccordionGroup>
+
+## Form Security
+
+<AccordionGroup>
+  <Accordion title="How do I restrict form access to valid users only?">
+    Add an email, password, or SSO (Single Sign-On) [login](https://www.fillout.com/help/login-page) step to your form to authenticate users before they can access it.
+  </Accordion>
+  <Accordion title="Can I collect passwords with Fillout?">
+    No, Fillout takes data privacy seriously, and collecting passwords or other sensitive personal information is strictly prohibited. Doing so may result in the suspension of your account.
+  </Accordion>
+  <Accordion title="Does Fillout support OTPs?">
+    Yes, you can enable this via [email or SMS verification](https://www.fillout.com/help/email-sms-otp).
+  </Accordion>
+  <Accordion title="Is Fillout GDPR-compliant?">
+    Yes, Fillout offers EU-based hosting and data storage options to support compliant data collection. Learn more [here](https://www.fillout.com/help/gdpr).
   </Accordion>
 </AccordionGroup>
