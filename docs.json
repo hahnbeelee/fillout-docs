@@ -458,7 +458,8 @@
                   "reset-password",
                   "delete-user-account",
                   "billing-and-payments",
-                  "pricing-discounts"
+                  "pricing-discounts",
+                  "2fa"
                 ]
               },
               {
