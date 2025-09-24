@@ -224,7 +224,6 @@
                 "group": "Guides",
                 "icon": "book-open",
                 "pages": [
-                  "linked-records-update",
                   "linked-record-update",
                   "fetch-dynamic-data",
                   "webhook",
