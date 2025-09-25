@@ -1,160 +1,30 @@
 ---
 title: Create Field
-description: Adds a new field to an existing table.
-api: POST /api/v1/bases/{databaseId}/tables/{tableId}/fields
+description: Adds a new field to an existing table using either table ID or table name.
+openapi: "/zite/database/openapi.json POST /bases/{databaseId}/tables/{tableId}/fields"
 ---
 
-Adds a new field to an existing table.
+Adds a new field to an existing table using either the table ID or table name.
 
-## Path Parameters
+<Note>
+Both `type` and `name` are required. The `template` object structure varies by field type - see [Field Types Reference](/zite/database/field-types) for complete details
+</Note>
 
-<ParamField path="databaseId" type="string" required>
-  The unique identifier of the database
-</ParamField>
+## Example Field Creation
 
-<ParamField path="tableId" type="string" required>
-  The unique identifier of the table
-</ParamField>
+Here's how to create a single select field:
 
-## Headers
-
-<ParamField header="Authorization" type="string" required>
-  Enter your Fillout API key. Format: Bearer &lt;api_key&gt;
-</ParamField>
-
-## Request Body
-
-<ParamField body="type" type="string" required>
-  Field type (see [Field Types Reference](/zite/database/field-types))
-</ParamField>
-
-<ParamField body="name" type="string" required>
-  Field name (minimum 1 character)
-</ParamField>
-
-<ParamField body="template" type="object" required>
-  Field-specific configuration options that vary by field type
-
-  <Expandable title="Template structure">
-    The template object structure depends on the field type. For example:
-    - `single_select`: requires `options` array with `value`, `label`, and `color`
-    - `number`: requires `format` and optional `precision`
-    - `linked_record`: requires `tableId` for the target table
-    
-    See the [Field Types Reference](/zite/database/field-types) for complete template structures.
-  </Expandable>
-</ParamField>
-
-<RequestExample>
-
-```bash cURL
-curl -X POST https://api.fillout.com/api/v1/bases/base_abc123/tables/tbl_xyz789/fields \
-  -H "Authorization: Bearer your_api_key" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "type": "single_select",
-    "name": "Priority",
-    "template": {
-      "options": [
-        {"value": "high", "label": "High", "color": "#ef4444"},
-        {"value": "medium", "label": "Medium", "color": "#f59e0b"},
-        {"value": "low", "label": "Low", "color": "#10b981"}
-      ]
-    }
-  }'
-```
-
-```javascript JavaScript
-const response = await fetch('https://api.fillout.com/api/v1/bases/base_abc123/tables/tbl_xyz789/fields', {
-  method: 'POST',
-  headers: {
-    'Authorization': 'Bearer your_api_key',
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    type: "single_select",
-    name: "Priority",
-    template: {
-      options: [
-        {value: "high", label: "High", color: "#ef4444"},
-        {value: "medium", label: "Medium", color: "#f59e0b"},
-        {value: "low", label: "Low", color: "#10b981"}
-      ]
-    }
-  })
-});
-```
-
-```python Python
-import requests
-
-response = requests.post(
-    'https://api.fillout.com/api/v1/bases/base_abc123/tables/tbl_xyz789/fields',
-    headers={
-        'Authorization': 'Bearer your_api_key',
-        'Content-Type': 'application/json'
-    },
-    json={
-        'type': 'single_select',
-        'name': 'Priority',
-        'template': {
-            'options': [
-                {'value': 'high', 'label': 'High', 'color': '#ef4444'},
-                {'value': 'medium', 'label': 'Medium', 'color': '#f59e0b'},
-                {'value': 'low', 'label': 'Low', 'color': '#10b981'}
-            ]
-        }
-    }
-)
-```
-
-</RequestExample>
-
-## Response
-
-Returns the created field with its generated ID and configuration.
-
-<ResponseField name="id" type="string">
-  Auto-generated unique identifier for the field (starts with `fld_`)
-</ResponseField>
-
-<ResponseField name="type" type="string">
-  The field type that was specified in the request
-</ResponseField>
-
-<ResponseField name="name" type="string">
-  The field name that was specified in the request
-</ResponseField>
-
-<ResponseField name="template" type="object">
-  The field configuration options that were specified in the request
-</ResponseField>
-
-<ResponseField name="createdAt" type="string">
-  ISO timestamp of when the field was created
-</ResponseField>
-
-<ResponseField name="updatedAt" type="string">
-  ISO timestamp of when the field was last updated
-</ResponseField>
-
-<ResponseExample>
-
-```json Response
+```json
 {
-  "id": "fld_abc123",
   "type": "single_select",
-  "name": "Priority",
+  "name": "Status",
   "template": {
     "options": [
-      {"value": "high", "label": "High", "color": "#ef4444"},
-      {"value": "medium", "label": "Medium", "color": "#f59e0b"},
-      {"value": "low", "label": "Low", "color": "#10b981"}
+      {"label": "Active", "color": "#10b981"},
+      {"label": "Inactive", "color": "#6b7280"},
+      {"label": "Pending", "color": "#f59e0b"},
+      {"label": "Archived", "color": "#ef4444"}
     ]
-  },
-  "createdAt": "2024-01-01T00:00:00.000Z",
-  "updatedAt": "2024-01-01T00:00:00.000Z"
+  }
 }
 ```
-
-</ResponseExample>

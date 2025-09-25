@@ -2,16 +2,20 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Zite DB REST API",
-    "description": "A REST API for managing Zite databases, tables, fields, and records. Build database-driven applications with programmatic access to your structured data.",
+    "description": "A REST API for managing Zite databases, tables, fields, and records. Build database-driven applications with programmatic access to your structured data.\n\n## What is REST API\n\nA **REST API** simplifies interaction with your database data, allowing for automation and integration. Following RESTful principles, it seamlessly connects to retrieve, create, and modify database data.\n\n## Getting Started\n\n### Authentication\nAll API requests require authentication using your Fillout API key in the Authorization header:\n```\nAuthorization: Bearer YOUR_API_KEY\n```\n\n### Base URLs\n- **US**: https://tables.fillout.com/api/v1\n- **EU**: https://eu-tables.fillout.com/api/v1\n\n### Rate Limits\nAPI requests are rate limited to ensure service quality. Standard rate limits apply to all endpoints.\n\n### Error Handling\nThe API returns standard HTTP status codes and JSON error responses with detailed error messages.",
     "version": "1.0.0"
   },
   "servers": [
     {
-      "url": "https://api.fillout.com/api/v1",
+      "url": "https://fdd8d296a9b3.ngrok-free.app/api/v1",
+      "description": "Testing (ngrok)"
+    },
+    {
+      "url": "https://tables.fillout.com/api/v1",
       "description": "US server"
     },
     {
-      "url": "https://eu-api.fillout.com/api/v1",
+      "url": "https://eu-tables.fillout.com/api/v1",
       "description": "EU server"
     }
   ],
@@ -22,40 +26,6 @@
   ],
   "paths": {
     "/bases": {
-      "get": {
-        "summary": "List databases",
-        "description": "Returns a list of all databases in your account",
-        "operationId": "getDatabases",
-        "tags": ["Databases"],
-        "parameters": [
-          {
-            "name": "workspaceId",
-            "in": "query",
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Filter by workspace ID (optional)"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "List of databases",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Database"
-                  }
-                }
-              }
-            }
-          },
-          "401": {
-            "$ref": "#/components/responses/Unauthorized"
-          }
-        }
-      },
       "post": {
         "summary": "Create database",
         "description": "Creates a new database with tables and fields",
@@ -209,7 +179,7 @@
     "/bases/{databaseId}/tables/{tableId}": {
       "patch": {
         "summary": "Update table",
-        "description": "Updates table properties like name and order",
+        "description": "Updates table properties like name",
         "operationId": "updateTable",
         "tags": ["Tables"],
         "parameters": [
@@ -229,7 +199,7 @@
             "schema": {
               "type": "string"
             },
-            "description": "The unique identifier of the table"
+            "description": "The unique identifier or name of the table"
           }
         ],
         "requestBody": {
@@ -393,7 +363,7 @@
             "schema": {
               "type": "string"
             },
-            "description": "The unique identifier of the field"
+            "description": "The unique identifier or name of the field to update"
           }
         ],
         "requestBody": {
@@ -459,7 +429,7 @@
             "schema": {
               "type": "string"
             },
-            "description": "The unique identifier of the field"
+            "description": "The unique identifier or name of the field. You cannot delete the primary field (the first field in a table)."
           }
         ],
         "responses": {
@@ -782,30 +752,16 @@
       "Database": {
         "type": "object",
         "properties": {
-          "publicId": {
+          "id": {
             "type": "string",
             "description": "Unique identifier for the database"
           },
           "name": {
             "type": "string",
             "description": "Name of the database"
-          },
-          "workspaceId": {
-            "type": "integer",
-            "description": "ID of the workspace this database belongs to"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "description": "ISO timestamp of when the database was created"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "description": "ISO timestamp of when the database was last updated"
           }
         },
-        "required": ["publicId", "name", "createdAt", "updatedAt"]
+        "required": ["id", "name"]
       },
       "DatabaseWithTables": {
         "allOf": [
@@ -818,7 +774,7 @@
               "tables": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/TableWithFields"
+                  "$ref": "#/components/schemas/Table"
                 },
                 "description": "List of tables in the database"
               }
@@ -842,38 +798,26 @@
             "type": "integer",
             "description": "Display order of the table"
           },
-          "createdAt": {
+          "primaryFieldId": {
             "type": "string",
-            "format": "date-time",
-            "description": "ISO timestamp of when the table was created"
+            "description": "ID of the primary field in the table"
           },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "description": "ISO timestamp of when the table was last updated"
+          "fields": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Field"
+            },
+            "description": "List of fields in the table"
+          },
+          "views": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/View"
+            },
+            "description": "List of views in the table"
           }
         },
-        "required": ["id", "name", "order", "createdAt", "updatedAt"]
-      },
-      "TableWithFields": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Table"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "fields": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Field"
-                },
-                "description": "List of fields in the table"
-              }
-            },
-            "required": ["fields"]
-          }
-        ]
+        "required": ["id", "name", "order", "primaryFieldId", "fields", "views"]
       },
       "Field": {
         "type": "object",
@@ -888,59 +832,76 @@
           },
           "type": {
             "type": "string",
-            "description": "Field type (e.g., text, number, select, date)",
-            "enum": [
-              "text",
-              "long_text",
-              "number",
-              "currency",
-              "percent",
-              "rating",
-              "duration",
-              "select",
-              "multiselect",
-              "checkbox",
-              "date",
-              "datetime",
-              "email",
-              "phone",
-              "url",
-              "linked_record",
-              "lookup",
-              "barcode",
-              "button",
-              "collaborator",
-              "created_time",
-              "last_modified_time",
-              "created_by",
-              "last_modified_by",
-              "autonumber",
-              "formula",
-              "rollup",
-              "count"
-            ]
+            "description": "Field type - see [Field Types Reference](/zite/database/field-types) for complete list of available types and their configurations"
           },
           "template": {
             "type": "object",
-            "description": "Field-specific configuration options",
+            "description": "Field-specific configuration options. See [Field Types Reference](/zite/database/field-types) for detailed template structure by field type.",
             "additionalProperties": true
           },
           "order": {
             "type": "integer",
             "description": "Display order of the field"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "description": "ISO timestamp of when the field was created"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "description": "ISO timestamp of when the field was last updated"
           }
         },
-        "required": ["id", "name", "type", "template", "order", "createdAt", "updatedAt"]
+        "required": [
+          "id",
+          "name",
+          "type",
+          "template",
+          "order"
+        ]
+      },
+      "View": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the view"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the view"
+          },
+          "type": {
+            "type": "string",
+            "description": "Type of the view (e.g., 'grid')"
+          },
+          "config": {
+            "type": "object",
+            "properties": {
+              "sorts": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                },
+                "description": "Sort configuration for the view"
+              },
+              "hiddenFieldIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Array of field IDs that are hidden in this view"
+              },
+              "fieldWidths": {
+                "type": "object",
+                "additionalProperties": true,
+                "description": "Field width configuration for the view"
+              },
+              "orderedFieldIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Array of field IDs in the order they appear in this view"
+              }
+            },
+            "required": ["sorts", "hiddenFieldIds", "fieldWidths", "orderedFieldIds"],
+            "description": "Configuration object for the view"
+          }
+        },
+        "required": ["id", "name", "type", "config"]
       },
       "Record": {
         "type": "object",
@@ -950,10 +911,25 @@
             "format": "uuid",
             "description": "Unique UUID identifier for the record"
           },
-          "data": {
+          "fields": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Record data with field names as keys"
+            "description": "Record data with field names as keys",
+            "example": {
+              "Name": "John Doe",
+              "Email": "john.doe@newcompany.com",
+              "Priority": "low"
+            }
+          },
+          "record": {
+            "type": "object",
+            "additionalProperties": true,
+            "description": "Record data with field IDs as keys",
+            "example": {
+              "fwtJyga6dso": "John Doe",
+              "k8mNp2xQ9rL": "john.doe@newcompany.com",
+              "vB3zXc7Hf2w": "low"
+            }
           },
           "createdAt": {
             "type": "string",
@@ -966,7 +942,7 @@
             "description": "ISO timestamp of when the record was last updated"
           }
         },
-        "required": ["id", "data", "createdAt", "updatedAt"]
+        "required": ["id", "fields", "record", "createdAt", "updatedAt"]
       },
       "CreateDatabaseRequest": {
         "type": "object",
@@ -983,10 +959,6 @@
               "$ref": "#/components/schemas/CreateTableInDatabase"
             },
             "description": "Array of table definitions to create with the database"
-          },
-          "workspaceId": {
-            "type": "integer",
-            "description": "ID of the workspace to create the database in (optional)"
           }
         },
         "required": ["name", "tables"]
@@ -1025,7 +997,7 @@
           "template": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Field-specific configuration options"
+            "description": "Field-specific configuration options. See [Field Types Reference](/zite/database/field-types) for detailed template structure by field type."
           }
         },
         "required": ["type", "name", "template"]
@@ -1056,10 +1028,6 @@
             "type": "string",
             "minLength": 1,
             "description": "New table name"
-          },
-          "order": {
-            "type": "integer",
-            "description": "New display order for the table"
           }
         }
       },
@@ -1068,7 +1036,7 @@
         "properties": {
           "type": {
             "type": "string",
-            "description": "Field type"
+            "description": "Field type - see [Field Types Reference](/zite/database/field-types) for available options"
           },
           "name": {
             "type": "string",
@@ -1078,10 +1046,20 @@
           "template": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Field-specific configuration options"
+            "description": "Field-specific configuration options (optional - uses defaults if not provided). See [Field Types Reference](/zite/database/field-types) for detailed template structure by field type."
           }
         },
-        "required": ["type", "name", "template"]
+        "required": ["type", "name"],
+        "example": {
+          "type": "single_select",
+          "name": "Status",
+          "template": {
+            "options": [
+              { "label": "Active", "color": "#10b981" },
+              { "label": "Inactive", "color": "#6b7280" }
+            ]
+          }
+        }
       },
       "UpdateFieldRequest": {
         "type": "object",
@@ -1094,11 +1072,7 @@
           "template": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Updated field configuration"
-          },
-          "order": {
-            "type": "integer",
-            "description": "New display order for the field"
+            "description": "Updated field configuration. See [Field Types Reference](/zite/database/field-types) for detailed template structure by field type."
           }
         }
       },
@@ -1108,10 +1082,22 @@
           "record": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Record data with field names as keys and their corresponding values"
+            "description": "Record data with field names or field IDs as keys and their corresponding values",
+            "example": {
+              "Name": "John Doe",
+              "Email": "john@example.com",
+              "Priority": "high"
+            }
           }
         },
-        "required": ["record"]
+        "required": ["record"],
+        "example": {
+          "record": {
+            "Name": "John Doe",
+            "Email": "john@example.com",
+            "Priority": "high"
+          }
+        }
       },
       "UpdateRecordRequest": {
         "type": "object",
@@ -1119,10 +1105,20 @@
           "record": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Fields to update with their new values. Only include fields you want to change."
+            "description": "Fields to update with their new values (using field names or field IDs as keys). Only include fields you want to change.",
+            "example": {
+              "Email": "john.doe@newcompany.com",
+              "Priority": "low"
+            }
           }
         },
-        "required": ["record"]
+        "required": ["record"],
+        "example": {
+          "record": {
+            "Email": "john.doe@newcompany.com",
+            "Priority": "low"
+          }
+        }
       },
       "ListRecordsRequest": {
         "type": "object",
@@ -1130,9 +1126,9 @@
           "limit": {
             "type": "integer",
             "minimum": 1,
-            "maximum": 100,
-            "default": 20,
-            "description": "Maximum number of records to return"
+            "maximum": 2000,
+            "default": 500,
+            "description": "Number of records to return (1-2000, default: 500)"
           },
           "offset": {
             "type": "integer",
@@ -1140,18 +1136,21 @@
             "default": 0,
             "description": "Number of records to skip for pagination"
           },
-          "sort": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/SortOption"
-            },
-            "description": "Array of sort options"
-          },
-          "filter": {
+          "filters": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Filter conditions for records"
+            "description": "Filter conditions using field IDs or field names as keys. Supports exact matches, operators (contains, not, in, notIn, lt, lte, gt, gte), and select field filtering"
           }
+        },
+        "example": {
+          "filters": {
+            "Name": { "contains": "John" },
+            "Age": { "gte": 18, "lt": 65 },
+            "Status": { "in": ["Active", "Pending"] },
+            "Department": { "not": "Admin" }
+          },
+          "limit": 100,
+          "offset": 0
         }
       },
       "ListRecordsResponse": {
@@ -1164,20 +1163,38 @@
             },
             "description": "Array of records"
           },
-          "total": {
-            "type": "integer",
-            "description": "Total number of records matching the filter"
+          "hasMore": {
+            "type": "boolean",
+            "description": "Whether there are more records available beyond this page"
           },
           "offset": {
-            "type": "integer",
-            "description": "Current offset for pagination"
-          },
-          "limit": {
-            "type": "integer",
-            "description": "Maximum number of records returned"
+            "type": "string",
+            "nullable": true,
+            "description": "Offset string for next page of results, or null if no more pages"
           }
         },
-        "required": ["records", "total", "offset", "limit"]
+        "required": ["records", "hasMore", "offset"],
+        "example": {
+          "records": [
+            {
+              "id": "rec_abc123",
+              "fields": {
+                "Name": "John Doe",
+                "Email": "john.doe@newcompany.com",
+                "Priority": "low"
+              },
+              "record": {
+                "fwtJyga6dso": "John Doe",
+                "k8mNp2xQ9rL": "john.doe@newcompany.com",
+                "vB3zXc7Hf2w": "low"
+              },
+              "createdAt": "2024-01-01T00:00:00.000Z",
+              "updatedAt": "2024-01-01T00:00:00.000Z"
+            }
+          ],
+          "hasMore": true,
+          "offset": "eyJpZCI6InJlY19hYmMxMjMifQ=="
+        }
       },
       "SortOption": {
         "type": "object",

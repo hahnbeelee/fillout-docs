@@ -11,14 +11,16 @@
   "api": {
     "baseUrl": [
       "https://api.fillout.com/v1/api",
-      "https://eu-api.fillout.com/v1/api"
+      "https://eu-api.fillout.com/v1/api",
+      "https://tables.fillout.com/api/v1",
+      "https://eu-tables.fillout.com/api/v1"
     ],
     "auth": {
       "method": "bearer",
       "name": "Authorization"
     }
   },
-  "openapi": "/openapi.json",
+  "openapi": ["/openapi.json", "/zite/database/openapi.json"],
   "navigation": {
     "tabs": [
       {
@@ -540,47 +542,41 @@
             "group": "Built-in database",
             "icon": "database",
             "pages": [
+              "zite/database/api",
+              "zite/database/field-types",
               {
-                "group": "REST API",
-                "icon": "code-simple",
+                "group": "Records",
                 "pages": [
-                  "zite/database/api",
-                  {
-                    "group": "Record Management",
-                    "pages": [
-                      "zite/database/create-record",
-                      "zite/database/get-record-by-id",
-                      "zite/database/update-record",
-                      "zite/database/list-records",
-                      "zite/database/delete-record"
-                    ]
-                  },
-                  {
-                    "group": "Field Management",
-                    "pages": [
-                      "zite/database/create-field",
-                      "zite/database/update-field",
-                      "zite/database/delete-field",
-                      "zite/database/field-types"
-                    ]
-                  },
-                  {
-                    "group": "Table Management",
-                    "pages": [
-                      "zite/database/create-table",
-                      "zite/database/update-table",
-                      "zite/database/delete-table"
-                    ]
-                  },
-                  {
-                    "group": "Database Management",
-                    "pages": [
-                      "zite/database/create-database",
-                      "zite/database/get-databases",
-                      "zite/database/get-database-by-id",
-                      "zite/database/delete-database"
-                    ]
-                  }
+                  "zite/database/create-record",
+                  "zite/database/get-record-by-id",
+                  "zite/database/update-record",
+                  "zite/database/list-records",
+                  "zite/database/delete-record"
+                ]
+              },
+              {
+                "group": "Fields",
+                "pages": [
+                  "zite/database/create-field",
+                  "zite/database/update-field",
+                  "zite/database/delete-field"
+                ]
+              },
+              {
+                "group": "Tables",
+                "pages": [
+                  "zite/database/create-table",
+                  "zite/database/update-table",
+                  "zite/database/delete-table"
+                ]
+              },
+              {
+                "group": "Databases",
+                "pages": [
+                  "zite/database/create-database",
+                  "zite/database/get-databases",
+                  "zite/database/get-database-by-id",
+                  "zite/database/delete-database"
                 ]
               }
             ]

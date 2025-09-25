@@ -1,71 +1,10 @@
 ---
 title: Delete Field
 description: Permanently removes a field from a table.
-api: DELETE /api/v1/bases/{databaseId}/tables/{tableId}/fields/{fieldId}
+openapi: "/zite/database/openapi.json DELETE /bases/{databaseId}/tables/{tableId}/fields/{fieldId}"
 ---
 
-Permanently removes a field from a table.
-
-## Path Parameters
-
-<ParamField path="databaseId" type="string" required>
-  The unique identifier of the database
-</ParamField>
-
-<ParamField path="tableId" type="string" required>
-  The unique identifier of the table
-</ParamField>
-
-<ParamField path="fieldId" type="string" required>
-  The unique identifier of the field to delete
-</ParamField>
-
-## Headers
-
-<ParamField header="Authorization" type="string" required>
-  Enter your Fillout API key. Format: Bearer &lt;api_key&gt;
-</ParamField>
-
-<RequestExample>
-
-```bash cURL
-curl -X DELETE https://api.fillout.com/api/v1/bases/base_abc123/tables/tbl_xyz789/fields/fld_def456 \
-  -H "Authorization: Bearer your_api_key"
-```
-
-```javascript JavaScript
-const response = await fetch('https://api.fillout.com/api/v1/bases/base_abc123/tables/tbl_xyz789/fields/fld_def456', {
-  method: 'DELETE',
-  headers: {
-    'Authorization': 'Bearer your_api_key'
-  }
-});
-```
-
-```python Python
-import requests
-
-response = requests.delete(
-    'https://api.fillout.com/api/v1/bases/base_abc123/tables/tbl_xyz789/fields/fld_def456',
-    headers={
-        'Authorization': 'Bearer your_api_key'
-    }
-)
-```
-
-</RequestExample>
-
-## Response
-
-Returns a 204 No Content response when the field is successfully deleted.
-
-<ResponseExample>
-
-```json Response
-204 No Content
-```
-
-</ResponseExample>
+Permanently removes a field from the specified table using either the field ID or field name.
 
 <Warning>
   Deleting a field will permanently remove all data stored in that field across all records. This action cannot be undone.

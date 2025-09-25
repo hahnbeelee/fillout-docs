@@ -4,119 +4,88 @@ description: Complete reference for all available field types and their configur
 icon: table-columns
 ---
 
-Zite DB supports a wide variety of field types to handle different data structures and validation requirements. Each field type has specific configuration options defined in the template property.
-
-## Field Types Overview
-
-Each field type consists of:
-
-1. **Template Structure** - Configuration options for the field (appearance, validation, etc.)
-2. **Record Data Structure** - How data is stored when adding/updating records for this field
-
-Fields can be created using the Public API with their input template schemas, which have optional properties with sensible defaults.
+Reference for all supported field types, their value formats, and configuration settings.
 
 ---
 
 ## Text Fields
 
-### Single Line Text
+### Text
 
-Use cases: Names, titles, short descriptions
-Template: No configuration required
+Short text input for names, titles, and brief descriptions.
 
-```json
-{
-  "name": "Full Name",
-  "type": "single_line_text",
-  "template": {}
-}
+**Value**
+```typescript
+string // e.g., "John Doe", "Product Name"
 ```
 
-**Record Data Structure:**
-```typescript
-string; // e.g., "John Doe", "Product Name"
+**Type**
+```json
+"single_line_text"
 ```
 
 ---
 
 ### Long Text
 
-Use cases: Comments, descriptions, notes
-Template: No configuration required
+Multi-line text for comments, descriptions, and notes.
 
-```json
-{
-  "name": "Description", 
-  "type": "long_text",
-  "template": {}
-}
+**Value**
+```typescript
+string // Multi-line text, e.g., "This is a long description\nwith multiple lines"
 ```
 
-**Record Data Structure:**
-```typescript
-string; // Multi-line text, e.g., "This is a long description\nwith multiple lines"
+**Type**
+```json
+"long_text"
 ```
 
 ---
 
 ### Email
 
-Use cases: Email addresses with validation
-Template: No configuration required
-Validation: Automatic email format validation
+Email addresses with automatic format validation.
 
-```json
-{
-  "name": "Contact Email",
-  "type": "email", 
-  "template": {}
-}
+**Value**
+```typescript
+string // Valid email address, e.g., "user@example.com"
 ```
 
-**Record Data Structure:**
-```typescript
-string; // Valid email address, e.g., "user@example.com"
+**Type**
+```json
+"email"
 ```
 
 ---
 
 ### URL
 
-Use cases: Website links, portfolio URLs
-Template: No configuration required
-Validation: Automatic URL format validation
+Website links with automatic URL validation.
 
-```json
-{
-  "name": "Website",
-  "type": "url",
-  "template": {}
-}
+**Value**
+```typescript
+string // Valid URL, e.g., "https://example.com"
 ```
 
-**Record Data Structure:**
-```typescript
-string; // Valid URL, e.g., "https://example.com"
+**Type**
+```json
+"url"
 ```
 
 ---
 
 ### Phone Number
 
-Use cases: Phone numbers with formatting
-Template: No configuration required
+Phone numbers with flexible formatting.
 
-```json
-{
-  "name": "Contact Phone",
-  "type": "phone_number",
-  "template": {}
-}
+**Value**
+```typescript
+string // Phone number with any formatting, e.g., "+1 (555) 123-4567"
 ```
 
-**Record Data Structure:**
-```typescript
-string; // Phone number with any formatting, e.g., "+1 (555) 123-4567"
+**Type**
+```json
+"phone_number"
 ```
 
 ---
@@ -125,121 +94,136 @@ string; // Phone number with any formatting, e.g., "+1 (555) 123-4567"
 
 ### Number
 
+Numeric values with customizable decimal places and formatting.
+
+**Value**
+```typescript
+number | null // e.g., 42.5, 1000, null
+```
+
+**Type**
+```json
+"number"
+```
+
+**Settings**
 ```json
 {
   "name": "Quantity",
-  "type": "number",
   "template": {
-    "decimalPlaces": 2,
-    "numberFormat": "local"
+    "decimalPlaces": 2,        // 0-10, default: 1
+    "numberFormat": "local"     // "local" | "comma_period" | "period_comma" | "space_comma" | "space_period", default: "local"
   }
 }
-```
-
-**Template Structure (Input):**
-- `decimalPlaces` (number, optional): 0-10, default: 1
-- `numberFormat` (string, optional): "local" | "comma_period" | "period_comma" | "space_comma" | "space_period", default: "local"
-
-**Record Data Structure:**
-```typescript
-number | null; // e.g., 42.5, 1000, null
 ```
 
 ---
 
 ### Currency
 
+Monetary values with currency symbol and formatting.
+
+**Value**
+```typescript
+number | null // Stored as raw number, e.g., 99.99, 1000.00, null
+```
+
+**Type**
+```json
+"currency"
+```
+
+**Settings**
 ```json
 {
   "name": "Price",
-  "type": "currency", 
   "template": {
-    "currencySymbol": "$",
-    "decimalPlaces": 2,
-    "numberFormat": "comma_period"
+    "currencySymbol": "$",      // default: "$"
+    "decimalPlaces": 2,         // 0-10, default: 2
+    "numberFormat": "local"     // "local" | "comma_period" | "period_comma" | "space_comma" | "space_period", default: "local"
   }
 }
-```
-
-**Template Structure (Input):**
-- `currencySymbol` (string, optional): default: "$"
-- `decimalPlaces` (number, optional): 0-10, default: 2
-- `numberFormat` (string, optional): "local" | "comma_period" | "period_comma" | "space_comma" | "space_period", default: "local"
-
-**Record Data Structure:**
-```typescript
-number | null; // Stored as raw number, e.g., 99.99, 1000.00, null
 ```
 
 ---
 
 ### Percent
 
+Percentage values with optional progress bar display.
+
+**Value**
+```typescript
+number | null // Stored as decimal (0.5 = 50%), e.g., 0.85, 1.0, null
+```
+
+**Type**
+```json
+"percent"
+```
+
+**Settings**
 ```json
 {
   "name": "Completion Rate",
-  "type": "percent",
   "template": {
-    "decimalPlaces": 1,
-    "showProgressBar": true,
-    "allowNegative": false
+    "decimalPlaces": 1,         // 0+, default: 0
+    "numberFormat": "local",    // default: "local"
+    "showProgressBar": true,    // default: false
+    "allowNegative": false      // default: false
   }
 }
-```
-
-**Template Structure (Input):**
-- `decimalPlaces` (number, optional): 0+, default: 0
-- `numberFormat` (string, optional): default: "local"
-- `showProgressBar` (boolean, optional): default: false
-- `allowNegative` (boolean, optional): default: false
-
-**Record Data Structure:**
-```typescript
-number | null; // Stored as decimal (0.5 = 50%), e.g., 0.85, 1.0, null
 ```
 
 ---
 
 ### Rating
 
+Star rating system with customizable maximum value.
+
+**Value**
+```typescript
+number | null // Integer from 0 to maxRating, e.g., 4, 5, null
+```
+
+**Type**
+```json
+"rating"
+```
+
+**Settings**
 ```json
 {
   "name": "Customer Rating",
-  "type": "rating",
   "template": {
-    "maxRating": 5
+    "maxRating": 5              // 1-10, default: 5
   }
 }
-```
-
-**Template Structure (Input):**
-- `maxRating` (number, optional): 1-10, default: 5
-
-**Record Data Structure:**
-```typescript
-number | null; // Integer from 0 to maxRating, e.g., 4, 5, null
 ```
 
 ---
 
 ### Duration
 
+Time duration with customizable display format.
+
+**Value**
+```typescript
+number | null // Stored as total seconds, e.g., 3600 (1 hour), 7260 (2:01:00), null
+```
+
+**Type**
+```json
+"duration"
+```
+
+**Settings**
 ```json
 {
   "name": "Meeting Length",
-  "type": "duration",
   "template": {
-    "format": "h:mm:ss"
+    "format": "h:mm:ss"         // "h:mm" | "h:mm:ss" | "h:mm:ss.s" | "h:mm:ss.ss" | "h:mm:ss.sss", default: "h:mm"
   }
 }
-```
-
-**Template Structure (Input):**
-- `format` (string, optional): "h:mm" | "h:mm:ss" | "h:mm:ss.s" | "h:mm:ss.ss" | "h:mm:ss.sss", default: "h:mm"
-
-**Record Data Structure:**
-```typescript
-number | null; // Stored as total seconds, e.g., 3600 (1 hour), 7260 (2:01:00), null
 ```
 
 ---
@@ -248,92 +232,78 @@ number | null; // Stored as total seconds, e.g., 3600 (1 hour), 7260 (2:01:00), 
 
 ### Single Select
 
+Choose one option from a predefined list.
+
+**Value**
+```typescript
+string | null // Option label, e.g., "Active", "Pending", null
+```
+
+**Type**
+```json
+"single_select"
+```
+
+**Settings**
 ```json
 {
   "name": "Status",
-  "type": "single_select",
   "template": {
-    "options": [
-      {
-        "value": "active",
-        "label": "Active", 
-        "color": "#10b981"
-      },
-      {
-        "value": "pending",
-        "label": "Pending",
-        "color": "#f59e0b"
-      },
-      {
-        "value": "inactive", 
-        "label": "Inactive",
-        "color": "#ef4444"
-      }
-    ],
-    "disableColors": false
+    "options": ["Active", "Inactive", "Pending"]  // Array of option labels
   }
 }
-```
-
-**Template Structure (Input):**
-- `options` (array, optional): Array of option objects, default: []
-  - `value` (string, required): Option value (min length: 1)
-  - `label` (string, required): Display label (min length: 1)
-  - `color` (string, optional): Color for the option
-- `disableColors` (boolean, optional): default: false
-
-**Record Data Structure:**
-```typescript
-string | null; // Option value, e.g., "active", "pending", null
 ```
 
 ---
 
 ### Multiple Select
 
+Choose multiple options from a predefined list.
+
+**Value**
+```typescript
+string[] // Array of option labels, e.g., ["Urgent", "Bug"], []
+```
+
+**Type**
+```json
+"multiple_select"
+```
+
+**Settings**
 ```json
 {
   "name": "Tags",
-  "type": "multiple_select",
   "template": {
-    "options": [
-      {"value": "urgent", "label": "Urgent", "color": "#ef4444"},
-      {"value": "feature", "label": "Feature", "color": "#3b82f6"},
-      {"value": "bug", "label": "Bug", "color": "#f59e0b"}
-    ],
-    "disableColors": false
+    "options": ["Urgent", "Bug", "Feature", "Enhancement"]  // Array of option labels
   }
 }
-```
-
-**Template Structure (Input):**
-Same as single_select
-
-**Record Data Structure:**
-```typescript
-string[]; // Array of option values, e.g., ["urgent", "bug"], []
 ```
 
 ---
 
 ### Checkbox
 
+Boolean true/false toggle.
+
+**Value**
+```typescript
+boolean // true or false
+```
+
+**Type**
+```json
+"checkbox"
+```
+
+**Settings**
 ```json
 {
   "name": "Is Complete",
-  "type": "checkbox",
   "template": {
-    "color": "#10b981"
+    "color": "#10b981"          // default: "#a8a4ac"
   }
 }
-```
-
-**Template Structure (Input):**
-- `color` (string, optional): default: "#a8a4ac"
-
-**Record Data Structure:**
-```typescript
-boolean; // true or false
 ```
 
 ---
@@ -342,52 +312,81 @@ boolean; // true or false
 
 ### Date
 
+Calendar date without time component.
+
+**Value**
+```typescript
+string | null // ISO date string (UTC), e.g., "2024-03-15T00:00:00.000Z", null
+```
+
+**Type**
+```json
+"date"
+```
+
+**Settings**
 ```json
 {
   "name": "Due Date",
-  "type": "date",
   "template": {
-    "dateFormat": "us"
+    "dateFormat": "us"          // "local" | "long" | "us" | "european" | "iso", default: "local"
   }
 }
-```
-
-**Template Structure (Input):**
-- `dateFormat` (string, optional): "local" | "long" | "us" | "european" | "iso", default: "local"
-
-**Record Data Structure:**
-```typescript
-string | null; // ISO date string (UTC), e.g., "2024-03-15T00:00:00.000Z", null
 ```
 
 ---
 
 ### DateTime
 
+Date and time with timezone support.
+
+**Value**
+```typescript
+string | null // ISO datetime string, e.g., "2024-03-15T14:30:00.000Z", null
+```
+
+**Type**
+```json
+"datetime"
+```
+
+**Settings**
 ```json
 {
   "name": "Meeting Time",
-  "type": "datetime",
   "template": {
-    "displayTimeZone": true,
-    "dateFormat": "us",
-    "timeFormat": "24h",
-    "timezone": "America/New_York"
+    "displayTimeZone": true,    // default: false
+    "dateFormat": "us",         // "local" | "long" | "us" | "european" | "iso", default: "local"
+    "timeFormat": "24h",        // "12h" | "24h", default: "12h"
+    "timezone": "America/New_York" // default: "" (browser timezone)
   }
 }
 ```
 
-**Template Structure (Input):**
-- `displayTimeZone` (boolean, optional): default: false
-- `dateFormat` (string, optional): "local" | "long" | "us" | "european" | "iso", default: "local"
-- `timeFormat` (string, optional): "12h" | "24h", default: "12h"
-- `timezone` (string, optional): default: "" (browser timezone)
+---
 
-**Record Data Structure:**
+## File Fields
+
+### Attachment
+
+File attachments with URL and optional filename.
+
+**Value**
 ```typescript
-string | null; // ISO datetime string, e.g., "2024-03-15T14:30:00.000Z", null
+{
+  url: string,          // Required: URL to the file
+  filename?: string     // Optional: Display name for the file
+} | null
 ```
 
+**Type**
+```json
+"attachment"
+```
+
+<Note>
+When providing attachment values, the URL must be accessible. The filename is optional and used for display purposes only.
+</Note>
 
 ---
 
@@ -395,68 +394,72 @@ string | null; // ISO datetime string, e.g., "2024-03-15T14:30:00.000Z", null
 
 ### Linked Record
 
+Create relationships between records in different tables.
+
+**Value**
+```typescript
+string[] | string | null
+// Array of record IDs if allowMultiple: true, e.g., ["rec123", "rec456"]
+// Single record ID if allowMultiple: false, e.g., "rec123"
+// null if no links
+```
+
+**Type**
+```json
+"linked_record"
+```
+
+**Settings**
 ```json
 {
   "name": "Related Tasks",
-  "type": "linked_record",
   "template": {
-    "tableId": "tbl789",
-    "allowMultiple": true
+    "tableId": "tbl789",        // required: ID of table to link to
+    "allowMultiple": true,      // default: true
+    "inverseFieldId": "fld456", // optional: ID of inverse field
+    "isInverse": false          // optional: flag for inverse fields
   }
 }
 ```
 
-**Template Structure (Input):**
-- `tableId` (string, required): ID of table to link to
-- `allowMultiple` (boolean, optional): default: true
-- `inverseFieldId` (string, optional): ID of inverse field
-- `isInverse` (boolean, optional): flag for inverse fields
-
-**Record Data Structure:**
-```typescript
-string[] | string | null
-// - Array of record IDs if allowMultiple: true, e.g., ["rec123", "rec456"]
-// - Single record ID if allowMultiple: false, e.g., "rec123"
-// - null if no links
-```
-
 <Note>
-  - `tableId` can be either a table ID or table name during base creation
-  - Creating linked record fields automatically connects tables in both directions
+- `tableId` can be either a table ID or table name during base creation
+- Creating linked record fields automatically connects tables in both directions
 </Note>
 
 ---
 
 ### Lookup
 
+Display values from linked records.
+
+**Value**
+```typescript
+any | any[] | null
+// Returns the actual values from the looked-up field
+// Single value if linked record field has allowMultiple: false
+// Array of values if linked record field has allowMultiple: true
+// Type depends on the field being looked up (string, number, boolean, etc.)
+```
+
+**Type**
+```json
+"lookup"
+```
+
+**Settings**
 ```json
 {
   "name": "Task Names",
-  "type": "lookup",
   "template": {
-    "linkedRecordFieldId": "fld123",
-    "lookupFieldId": "fld456"
+    "linkedRecordFieldId": "fld123", // required: ID of linked record field in same table
+    "lookupFieldId": "fld456"        // required: ID of field to lookup in linked table
   }
 }
 ```
 
-**Template Structure (Input):**
-- `linkedRecordFieldId` (string, required): ID of linked record field in same table
-- `lookupFieldId` (string, required): ID of field to lookup in linked table
-
-**Record Data Structure:**
-```typescript
-any | any[] | null
-// Returns the actual values from the looked-up field
-// - Single value if linked record field has allowMultiple: false
-// - Array of values if linked record field has allowMultiple: true
-// - Type depends on the field being looked up (string, number, boolean, etc.)
-```
-
-Lookup fields automatically display values from linked records and update when the source data changes.
-
 <Warning>
-  Lookup fields cannot be created during initial base setup. Add them later using the field creation endpoint.
+Lookup fields cannot be created during initial base setup. Add them later using the field creation endpoint.
 </Warning>
 
 ---
@@ -485,13 +488,9 @@ The first field in each table becomes the **primary field** and must be one of t
    - Number fields: `null`
    - Boolean fields: `false`
    - Array fields: `[]` (empty array)
+   - Object fields: `null`
 
-2. **Required Fields**: When creating fields via API, only `type` and `name` are required. Template properties are optional and will use sensible defaults.
-
-3. **Data Validation**: All record data is validated according to the field type and template configuration when storing/updating records.
-
-4. **Field IDs**: Field IDs are auto-generated if not provided during creation. For API consistency, you can optionally provide your own IDs.
 
 <Warning>
-  Changing field types after data has been added may result in data loss if the new type is incompatible with existing values.
+Changing field types after data has been added may result in data loss if the new type is incompatible with existing values.
 </Warning>
