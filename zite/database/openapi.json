@@ -7,10 +7,6 @@
   },
   "servers": [
     {
-      "url": "https://fdd8d296a9b3.ngrok-free.app/api/v1",
-      "description": "Testing (ngrok)"
-    },
-    {
       "url": "https://tables.fillout.com/api/v1",
       "description": "US server"
     },
@@ -844,13 +840,7 @@
             "description": "Display order of the field"
           }
         },
-        "required": [
-          "id",
-          "name",
-          "type",
-          "template",
-          "order"
-        ]
+        "required": ["id", "name", "type", "template", "order"]
       },
       "View": {
         "type": "object",
@@ -897,7 +887,12 @@
                 "description": "Array of field IDs in the order they appear in this view"
               }
             },
-            "required": ["sorts", "hiddenFieldIds", "fieldWidths", "orderedFieldIds"],
+            "required": [
+              "sorts",
+              "hiddenFieldIds",
+              "fieldWidths",
+              "orderedFieldIds"
+            ],
             "description": "Configuration object for the view"
           }
         },
