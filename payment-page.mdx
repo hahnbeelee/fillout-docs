@@ -1,6 +1,6 @@
 ---
 title: "Payment page"
-description: "Collect one-time, subscription payments, and user-defined amount via card, link wallet, US bank account, or Affirm with a Stripe-powered payment page. Set a dynamic product name and purchase amount based on user input, and optionally send a receipt."
+description: "Collect one-time, subscription payments, and user-defined amount via credit card, link wallet, US bank account, or Affirm with a Stripe-powered payment page. Set a dynamic product name and purchase amount based on user input, and optionally send a receipt."
 icon: "credit-card"
 sidebarTitle: "Payment"
 ---
@@ -9,97 +9,124 @@ sidebarTitle: "Payment"
 
 <Steps>
   <Step title="Select a payment type">
-    Click `+ Add page` and choose `Payment`.
+    Click `+ Add page` and choose **Payment**.
 
-    <Frame>
-      ![Add a payment page](/images/p1.webp)
-    </Frame>
+    ![Screenshot 2025-10-01 at 5.52.03 PM.png](/images/Screenshot2025-10-01at5.52.03PM.png)
+
     Select between the following types:
 
     - **One-time** - for single, non-recurring transactions
-    - **Subscriptions** - for recurring transactions usually with a fixed price
+    - **Subscription** - for recurring transactions usually with a fixed price
     - **Pay what you want** - leave the amount up to the customer
 
     <Check>
-      **Good to know:** Payment pages are available on all plans with **no additional fees** charged to use the feature. However, usual Stripe fees such as transaction costs still apply.
+      Payment pages are available on all plans with no additional fees charged to use the feature. However, usual Stripe fees such as transaction costs still apply.
     </Check>
   </Step>
   <Step title="Enter details">
-    Add the details of your payment page and `Connect to Stripe`. From here you can choose the currency, and make the **price** and **product name** [dynamic](/fetch-dynamic-data) by clicking the blue `+` icon or typing `@` to reference a specific field.
+    Add the details of your payment page and `Connect to Stripe`. From here you can choose the currency, and make the price and product name [dynamic](/fetch-dynamic-data) by clicking the **\+** or typing **@** to reference a specific field.
 
-    <Frame>
-      ![Add a payment page](/images/p2.webp)
-    </Frame>
+    <img
+      src="/images/Screenshot2025-10-01at5.31.36PM.png"
+      alt="Screenshot 2025-10-01 at 5.31.36 PM.png"
+      title="Screenshot 2025-10-01 at 5.31.36 PM.png"
+      style={{ width:"72%" }}
+    />
+
     In this example, the product name and price will change per customer depending on their order.
 
-    The default payment method in new forms is through a credit **card**. You can give more options to your customers by adding more **Payment methods** through the left-hand panel.
+    The default payment method in new forms is through a credit **card**. You can give more options to your customers by adding more **Payment** methods through the left-hand panel.
   </Step>
   <Step title="Publish and share">
-    That’s it! Press `Preview` to try out your form. Payments will only be collected when you `Publish` the form and send its link.
+    That’s it! Click `Preview` to try out your form. Payments will only be collected when you `Publish` the form and send its link.
 
     <Tip>
-      **Good to know:** You can test your live form without getting charged. Create a 100% off coupon in Stripe, then enable the "[Discount Codes](https://www.fillout.com/help/payment-page#add-discount-codes)" option to apply it during checkout. Once testing is done, just toggle the discount codes back off.
+      You can test your live form without getting charged. Create a 100% off coupon in Stripe, then enable the "[Discount Codes](https://www.fillout.com/help/payment-page#add-discount-codes)" option to apply it during checkout. Once testing is done, just toggle the discount codes back off.
     </Tip>
   </Step>
 </Steps>
 
 ## Add discount codes
 
-`Allow discount codes` in the left-hand panel and click `Manage discount codes in Stripe` to add a code or link an existing one to your form.
+In the left-hand panel, `Allow discount codes` and click **Manage discount codes in Stripe** to add a code or link an existing one to your form.
 
-<Frame>
-  ![](/images/image-7.png)
-</Frame>
+<img
+  src="/images/Screenshot2025-10-01at5.58.46PM.png"
+  alt="Screenshot 2025-10-01 at 5.58.46 PM.png"
+  title="Screenshot 2025-10-01 at 5.58.46 PM.png"
+  style={{ width:"55%" }}
+/>
 
-You can also choose a URL parameter or field as the **Discount code** when you scroll down to `Pre-fill fields`.
+You can also choose a URL parameter or field as the discount code when you scroll down to [Pre-fill fields](https://www.fillout.com/help/payment-page#pre-fill-fields).
 
 ## Create a new Stripe customer
 
-`Collect email` under **Payment**. This will automatically add an **email** field to your payment page and create a new customer on Stripe.
+`Collect email` under **Payment**. This will automatically add an **email** field to your payment page and create a new customer on your Stripe account.
 
-<Frame>
-  ![](/images/image-8.png)
-</Frame>
+<img
+  src="/images/Screenshot2025-10-01at5.59.25PM.png"
+  alt="Screenshot 2025-10-01 at 5.59.25 PM.png"
+  title="Screenshot 2025-10-01 at 5.59.25 PM.png"
+  style={{ width:"58%" }}
+/>
 
 ## Pre-fill fields
 
 You can automatically fill out the fields of the payment form by toggling the `Pre-fill fields` switch. Then, select the corresponding fields below.
 
-<Frame>
-  ![Pre-fill fields](/images/p5.webp)
-</Frame>
+<img
+  src="/images/Screenshot2025-10-01at6.00.35PM.png"
+  alt="Screenshot 2025-10-01 at 6.00.35 PM.png"
+  title="Screenshot 2025-10-01 at 6.00.35 PM.png"
+  style={{ width:"59%" }}
+/>
 
 ## Reference the payment intent ID in integrations
 
-You can save the Stripe payment ID to the integration of your choice by referencing it. Go to **Integrate** and choose a platform. Under **Mappings**, look for **Stripe Payment ID.**
+You can save the Stripe payment ID to the integration of your choice by referencing it. Go to `Integrate` from the top menu and choose a platform.
 
-<Frame>
-  ![Reference the payment intent ID in integrations](/images/p6.webp)
-</Frame>
+Under **Mappings**, look for **Stripe Payment ID.**
 
-Stripe payment ids will look like pi_3MKECGFiethEjGwr1TWmQ0rN and allow you to tie a form submission to an actual payment in Stripe.
+<img
+  src="/images/Screenshot2025-10-01at6.02.44PM.png"
+  alt="Screenshot 2025-10-01 at 6.02.44 PM.png"
+  title="Screenshot 2025-10-01 at 6.02.44 PM.png"
+  style={{ width:"58%" }}
+/>
+
+Stripe payment ids will look like "pi_3MKECGFiethEjGwr1TWmQ0rN" and allow you to tie a form submission to an actual payment in Stripe.
 
 ## Send a receipt upon successful purchase
 
 Toggle `Send receipt` in the left-hand panel to automatically send the customer a receipt once they make a purchase.
 
-<Frame>
-  ![](/images/image-9.png)
-</Frame>
+<img
+  src="/images/Screenshot2025-10-01at6.06.11PM.png"
+  alt="Screenshot 2025-10-01 at 6.06.11 PM.png"
+  title="Screenshot 2025-10-01 at 6.06.11 PM.png"
+  style={{ width:"62%" }}
+/>
 
-The receipt will only be sent if you enable the `Collect email` switch as described above. Note that receipts are not sent in Fillout preview mode.
+The receipt will only be sent if you enable the [collect email](https://www.fillout.com/help/payment-page#create-a-new-stripe-customer) switch as described above. Note that receipts are not sent in Fillout preview mode.
 
-<Frame>
-  ![Send a receipt upon successful purchase](/images/p8.webp)
-</Frame>
+  <img
+    src="/images/p8.webp"
+    alt="Send a receipt upon successful purchase"
+    style={{ width:"82%" }}
+  />
 
 ## Add a testimonial
 
-You can increase checkout rates by putting a testimonial from a customer. Go to **Appearance i**n the left-hand panel and turn on the `Show testimonial` switch.
+You can increase checkout rates by putting a testimonial from a customer. Simply toggle the `Show testimonial` switch to add one.
 
-<Frame>
-  ![](/images/image-10.png)
-</Frame>
+<img
+  src="/images/Screenshot2025-10-01at6.05.08PM.png"
+  alt="Screenshot 2025-10-01 at 6.05.08 PM.png"
+  title="Screenshot 2025-10-01 at 6.05.08 PM.png"
+  style={{ width:"60%" }}
+/>
+
+From here, you can also `Show disclaimer` if necessary.
 
 ## Related articles
 
