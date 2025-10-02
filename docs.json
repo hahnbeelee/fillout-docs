@@ -428,6 +428,7 @@
                 "icon": "fill-drip",
                 "pages": [
                   "prefill-fields",
+                  "pre-fill-dates",
                   "dynamic-form-dropdowns",
                   "url-parameters"
                 ]
