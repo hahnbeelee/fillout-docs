@@ -1,50 +1,54 @@
 ---
-title: File uploads
-description: "Add a file upload field type to your Fillout form to collect files or attachments of any kind. Restrict to certain file types or maximum file sizes."
-icon: upload
-sidebarTitle: File Uploads
+title: "File uploads"
+description: "Collect files or attachments of any kind. Optionally restrict to certain file types or maximum file sizes."
+icon: "upload"
+sidebarTitle: "File Uploads"
 ---
-
-Add a file upload field type to your Fillout form to collect files or attachments of any kind. Restrict to certain file types or maximum file sizes.
 
 ## How to add a file upload field
 
-First, [create a new form](https://build.fillout.com/) or choose an existing Fillout form. Then, drag the `File uploader` field onto your form.
+Drag and drop the `File uploader` field onto your form.
 
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/images/image-23.png)
-</Frame>
+![Screenshot 2025-10-02 at 6.54.40 PM.png](/images/Screenshot2025-10-02at6.54.40PM.png)
 
-## Size limitations
+The size limitations per individual file uploads vary per plan, however there is no restriction on total files uploaded, as long as usage is within our [**fair use policy**](https://www.fillout.com/help/fair-use-policy).
 
-On the **Free, Starter,** and **Pro** plans, individual file uploads can be `up to 20 MB per file` and there is no restriction on total files uploaded, as long as usage is within our [fair use policy](/fair-use-policy). On the **Business** plan, file uploads can be `up to 1 GB per file`. All plans allow unlimited file uploads.
+|                             | **Free**    | **Starter** | **Pro**     | **Business** | Enterprise |
+| --------------------------- | ----------- | ----------- | ----------- | ------------ | ---------- |
+| Max size per file upload    | Up to 20 MB | Up to 20 MB | Up to 20 MB | Up to 1 GB   | Up to 5 GB |
+| No. of file uploads allowed | Unlimited   | Unlimited   | Unlimited   | Unlimited    | Unlimited  |
 
-## Restrict file types and number of files
+## Set file restrictions
 
-Click the field type followed by its `settings icon` to open the right-hand panel . Here you can restrict the number of files your respondents can upload.
+Click your file upload question followed by <Icon icon="gear" iconType="solid" />. In the right-hand panel, you can:
 
-<Frame style={{ width: '288px', height: '634px' }}>
-  ![Screenshot of the Form designer tab of a form](/images/images/image-24.png)
-</Frame>
+- Set the min and max no. of files allowed per submission
+- Limit file size
+- Limit accepted file types
 
-You can also restrict uploads to certain file types under the **Advanced** section, like PDF, mp4, png, and other types.
+<img
+  src="/images/Screenshot2025-10-02at7.10.18PM.png"
+  alt="Screenshot 2025-10-02 at 7.10.18 PM.png"
+  title="Screenshot 2025-10-02 at 7.10.18 PM.png"
+  style={{ width:"34%" }}
+/>
 
 ## Viewing uploaded files
 
-You can view uploaded files from any submission on the Fillout [results tab](/results).
+You can view uploaded files from any submission on the `Results` page from the top menu.
 
-If you prefer, integrate your form with [Dropbox](/dropbox) or [Google Drive](/google-drive) to send all file uploads to a specific directory in Dropbox/Google Drive.
+If you prefer, integrate your form with [Dropbox](/dropbox) or [Google Drive](/google-drive) to send all file uploads to a specific external directory.
 
 ## Related articles
 
 <CardGroup cols={3}>
- <Card title="Sync file uploads to Dropbox with a form" href="/dropbox" icon="box-open" iconType="regular" color="#FFC738">
-Upload file submissions automatically to a Dropbox folder with your form.
+  <Card title="Sync file uploads to Dropbox" icon="box-open" iconType="regular" color="#FFC738" href="/dropbox">
+    Automatically upload files with a form.
   </Card>
-  <Card title="Upload files to Google Drive with a form" href="/google-drive" icon="google-drive" iconType="regular" color="#FFC738">
-  Automatically upload files in a Google Drive folder through a Fillout form.
+  <Card title="Upload files to Google Drive with a form" icon="google-drive" iconType="regular" color="#FFC738" href="/google-drive">
+    Automatically upload files with a form.
   </Card>
   <Card title="Results" icon="clipboard" iconType="regular" color="#FFC738" href="/results">
-    Review individual submissions and gain access to analytics, along with a summary.
+    Review individual submissions, summary, and analytics.
   </Card>
 </CardGroup>
