@@ -523,7 +523,7 @@
           },
           {
             "group": "Getting Started",
-            "pages": ["zite/getting-started", "zite/design", "zite/faq"]
+            "pages": ["zite/getting-started", "zite/design", "zite/integrations", "zite/faq"]
           },
           {
             "group": "Basics",
