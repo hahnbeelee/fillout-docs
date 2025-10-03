@@ -515,7 +515,7 @@
       },
       {
         "tab": "Zite",
-        "icon": "list-timeline",
+        "icon": "cube",
         "groups": [
           {
             "group": " ",
@@ -539,7 +539,7 @@
           {
             "group": "Guides",
             "icon": "book-open",
-            "pages": ["zite/guides/google-sheets"]
+            "pages": ["zite/guides/google-sheets","zite/guides/import-data"]
           }
         ]
       },
