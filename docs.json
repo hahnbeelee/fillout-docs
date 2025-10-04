@@ -539,13 +539,14 @@
             ]
           },
           {
-            "group": "Built-in database",
+            "group": "Zite Database",
             "icon": "database",
             "pages": [
               "zite/database/api",
               "zite/database/field-types",
               {
                 "group": "Records",
+                "icon": "code-simple",
                 "pages": [
                   "zite/database/create-record",
                   "zite/database/get-record-by-id",
@@ -556,6 +557,7 @@
               },
               {
                 "group": "Fields",
+                "icon": "code-simple",
                 "pages": [
                   "zite/database/create-field",
                   "zite/database/update-field",
@@ -564,6 +566,7 @@
               },
               {
                 "group": "Tables",
+                "icon": "code-simple",
                 "pages": [
                   "zite/database/create-table",
                   "zite/database/update-table",
@@ -572,6 +575,7 @@
               },
               {
                 "group": "Databases",
+                "icon": "code-simple",
                 "pages": [
                   "zite/database/create-database",
                   "zite/database/get-databases",
@@ -613,8 +617,8 @@
   "navbar": {
     "primary": {
       "type": "button",
-      "label": "Make a form",
-      "href": "https://fillout.com"
+      "label": "Get started",
+      "href": "https://build.fillout.com/"
     }
   },
   "contextual": {
