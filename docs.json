@@ -11,14 +11,16 @@
   "api": {
     "baseUrl": [
       "https://api.fillout.com/v1/api",
-      "https://eu-api.fillout.com/v1/api"
+      "https://eu-api.fillout.com/v1/api",
+      "https://tables.fillout.com/api/v1",
+      "https://eu-tables.fillout.com/api/v1"
     ],
     "auth": {
       "method": "bearer",
       "name": "Authorization"
     }
   },
-  "openapi": "/openapi.json",
+  "openapi": ["/openapi.json", "/zite/database/openapi.json"],
   "navigation": {
     "tabs": [
       {
@@ -537,6 +539,53 @@
             ]
           },
           {
+            "group": "Zite Database",
+            "icon": "database",
+            "pages": [
+              "zite/database/api",
+              "zite/database/field-types",
+              {
+                "group": "Records",
+                "icon": "code-simple",
+                "pages": [
+                  "zite/database/create-record",
+                  "zite/database/get-record-by-id",
+                  "zite/database/update-record",
+                  "zite/database/list-records",
+                  "zite/database/delete-record"
+                ]
+              },
+              {
+                "group": "Fields",
+                "icon": "code-simple",
+                "pages": [
+                  "zite/database/create-field",
+                  "zite/database/update-field",
+                  "zite/database/delete-field"
+                ]
+              },
+              {
+                "group": "Tables",
+                "icon": "code-simple",
+                "pages": [
+                  "zite/database/create-table",
+                  "zite/database/update-table",
+                  "zite/database/delete-table"
+                ]
+              },
+              {
+                "group": "Databases",
+                "icon": "code-simple",
+                "pages": [
+                  "zite/database/create-database",
+                  "zite/database/get-databases",
+                  "zite/database/get-database-by-id",
+                  "zite/database/delete-database"
+                ]
+              }
+            ]
+          },
+          {
             "group": "Guides",
             "icon": "book-open",
             "pages": ["zite/guides/google-sheets","zite/guides/import-data"]
@@ -568,8 +617,8 @@
   "navbar": {
     "primary": {
       "type": "button",
-      "label": "Make a form",
-      "href": "https://fillout.com"
+      "label": "Get started",
+      "href": "https://build.fillout.com/"
     }
   },
   "contextual": {

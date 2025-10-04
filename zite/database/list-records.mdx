@@ -1,0 +1,15 @@
+---
+title: List Records
+description: Retrieves records from a table with filtering, sorting, and pagination.
+openapi: "/zite/database/openapi.json POST /bases/{databaseId}/tables/{tableId}/records/list"
+---
+
+Fetches records from a table with advanced filtering, sorting, and pagination options.
+
+<Note>
+- Supports various filter operators (contains, in, not, lt, gt, etc.)
+- Results can be sorted by any field ID
+- Pagination available with offset/limit or cursor-based approach
+</Note>
+
+

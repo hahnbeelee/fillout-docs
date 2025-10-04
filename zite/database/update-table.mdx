@@ -1,0 +1,14 @@
+---
+title: Update Table
+description: Updates table properties like name and order.
+openapi: "/zite/database/openapi.json PATCH /bases/{databaseId}/tables/{tableId}"
+---
+
+Modifies table properties including name and display order within the database.
+
+<Note>
+- Only provided fields will be updated
+- Omitted fields retain their current values
+- Order determines table position in database navigation
+</Note>
+
