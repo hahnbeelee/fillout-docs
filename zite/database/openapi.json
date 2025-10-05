@@ -195,7 +195,7 @@
             "schema": {
               "type": "string"
             },
-            "description": "The unique identifier or name of the table"
+            "description": "The unique identifier of the table. You can also use the table name instead of the ID."
           }
         ],
         "requestBody": {
@@ -252,7 +252,7 @@
             "schema": {
               "type": "string"
             },
-            "description": "The unique identifier of the table"
+            "description": "The unique identifier of the table. You can also use the table name instead of the ID."
           }
         ],
         "responses": {
@@ -291,7 +291,7 @@
             "schema": {
               "type": "string"
             },
-            "description": "The unique identifier of the table"
+            "description": "The unique identifier of the table. You can also use the table name instead of the ID."
           }
         ],
         "requestBody": {
@@ -350,7 +350,7 @@
             "schema": {
               "type": "string"
             },
-            "description": "The unique identifier of the table"
+            "description": "The unique identifier of the table. You can also use the table name instead of the ID."
           },
           {
             "name": "fieldId",
@@ -359,7 +359,7 @@
             "schema": {
               "type": "string"
             },
-            "description": "The unique identifier or name of the field to update"
+            "description": "The unique identifier of the field. You can also use the field name instead of the ID."
           }
         ],
         "requestBody": {
@@ -416,7 +416,7 @@
             "schema": {
               "type": "string"
             },
-            "description": "The unique identifier of the table"
+            "description": "The unique identifier of the table. You can also use the table name instead of the ID."
           },
           {
             "name": "fieldId",
@@ -425,7 +425,7 @@
             "schema": {
               "type": "string"
             },
-            "description": "The unique identifier or name of the field. You cannot delete the primary field (the first field in a table)."
+            "description": "The unique identifier of the field. You can also use the field name instead of the ID. Note: You cannot delete the primary field (the first field in a table)."
           }
         ],
         "responses": {
@@ -464,7 +464,7 @@
             "schema": {
               "type": "string"
             },
-            "description": "The unique identifier of the table"
+            "description": "The unique identifier of the table. You can also use the table name instead of the ID."
           }
         ],
         "requestBody": {
@@ -523,7 +523,7 @@
             "schema": {
               "type": "string"
             },
-            "description": "The unique identifier of the table"
+            "description": "The unique identifier of the table. You can also use the table name instead of the ID."
           }
         ],
         "requestBody": {
@@ -582,7 +582,7 @@
             "schema": {
               "type": "string"
             },
-            "description": "The unique identifier of the table"
+            "description": "The unique identifier of the table. You can also use the table name instead of the ID."
           },
           {
             "name": "recordId",
@@ -639,7 +639,7 @@
             "schema": {
               "type": "string"
             },
-            "description": "The unique identifier of the table"
+            "description": "The unique identifier of the table. You can also use the table name instead of the ID."
           },
           {
             "name": "recordId",
@@ -706,7 +706,7 @@
             "schema": {
               "type": "string"
             },
-            "description": "The unique identifier of the table"
+            "description": "The unique identifier of the table. You can also use the table name instead of the ID."
           },
           {
             "name": "recordId",
@@ -1050,11 +1050,54 @@
           "name": "Status",
           "template": {
             "options": [
-              { "label": "Active", "color": "#10b981" },
-              { "label": "Inactive", "color": "#6b7280" }
+              {
+                "label": "Active",
+                "color": "green"
+              },
+              {
+                "label": "Inactive",
+                "color": "gray"
+              }
             ]
           }
         }
+      },
+      "FieldOption": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "description": "The display text for the option"
+          },
+          "color": {
+            "type": "string",
+            "description": "Color key for the option. If not specified, a color will be auto-assigned. Available colors: purple, orange, blue, gray, red, yellow, green, pink, lime, tangerine, emerald, sky, teal, indigo, cyan, violet, fuchsia. Each color has a specific background and text color combination (e.g., purple uses #EEE6F3 background with #401DB3 text).",
+            "enum": [
+              "purple",
+              "orange",
+              "blue",
+              "gray",
+              "red",
+              "yellow",
+              "green",
+              "pink",
+              "lime",
+              "tangerine",
+              "emerald",
+              "sky",
+              "teal",
+              "indigo",
+              "cyan",
+              "violet",
+              "fuchsia"
+            ]
+          },
+          "value": {
+            "type": "string",
+            "description": "Unique identifier for the option. Not specified when creating new options. Useful in write operations when specifying existing options (e.g., reordering options, keeping old options and adding new ones)."
+          }
+        },
+        "required": ["label"]
       },
       "UpdateFieldRequest": {
         "type": "object",

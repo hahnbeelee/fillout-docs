@@ -249,10 +249,20 @@ string | null // Option label, e.g., "Active", "Pending", null
 {
   "name": "Status",
   "template": {
-    "options": ["Active", "Inactive", "Pending"]  // Array of option labels
+    "options": [
+      { "label": "Active", "color": "green" },
+      { "label": "Inactive", "color": "gray" },
+      { "label": "Pending", "color": "yellow" }
+    ]
   }
 }
 ```
+
+<Note>
+- `label` (required): The display text for the option
+- `color` (optional): Color key for the option. If not specified, a color will be auto-assigned. Available colors: purple, orange, blue, gray, red, yellow, green, pink, lime, tangerine, emerald, sky, teal, indigo, cyan, violet, fuchsia
+- `value` (optional): Not specified when creating new options. Useful in write operations when specifying existing options (e.g., reordering options, keeping old options and adding new ones)
+</Note>
 
 ---
 
@@ -275,10 +285,21 @@ string[] // Array of option labels, e.g., ["Urgent", "Bug"], []
 {
   "name": "Tags",
   "template": {
-    "options": ["Urgent", "Bug", "Feature", "Enhancement"]  // Array of option labels
+    "options": [
+      { "label": "Urgent", "color": "red" },
+      { "label": "Bug", "color": "orange" },
+      { "label": "Feature", "color": "blue" },
+      { "label": "Enhancement", "color": "purple" }
+    ]
   }
 }
 ```
+
+<Note>
+- `label` (required): The display text for the option
+- `color` (optional): Color key for the option. If not specified, a color will be auto-assigned. Available colors: purple, orange, blue, gray, red, yellow, green, pink, lime, tangerine, emerald, sky, teal, indigo, cyan, violet, fuchsia
+- `value` (optional): Not specified when creating new options. Useful in write operations when specifying existing options (e.g., reordering options, keeping old options and adding new ones)
+</Note>
 
 ---
 
