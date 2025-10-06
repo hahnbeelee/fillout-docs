@@ -1,45 +1,50 @@
 ---
 title: "Submission picker"
-description: "Allow respondents to pre-fill forms with responses from another form. Connect an existing form to another to provide them with a list of form submissions."
+description: "Allow respondents pre-fill a form using responses from another connected form."
 icon: "file-magnifying-glass"
 sidebarTitle: "Submission Picker"
 ---
 
-## Use the submission picker
+## How to put a submission picker
 
 <Steps>
   <Step title="Add a submission picker field">
     On the left-hand panel, click `Submission picker`. Then, key in your question or instruction.
 
-    <Frame>
-      ![Screenshot of the Form designer tab of a form](/images/images/image-8.png)
-    </Frame>
+    ![Screenshot 2025-10-06 at 5.22.37 PM.png](/images/Screenshot2025-10-06at5.22.37PM.png)
   </Step>
   <Step title="Link forms">
-    Click the field's `settings icon` to open the right-hand panel. Under **Select submissions from**, choose an existing form you would like to link your new form to.
+    Click the field's <Icon icon="gear" iconType="solid" /> to open the right-hand panel. Under **Select submissions from**, choose an existing form you would like to link your new form to.
 
-    <Frame>
-      ![Screenshot of the Form designer tab of a form](/images/images/image-9.png)
-    </Frame>
-    Then, choose a **Main field**. This main field is the label displayed for each submission from the list of records respondents can choose from. Be sure to choose a field that contains unique input like names and emails.
+    <img
+      src="/images/images/image-9.png"
+      alt="Screenshot of the Form designer tab of a form"
+      style={{ width:"34%" }}
+    />
 
-    <Frame>
-      ![Screenshot of the Form designer tab of a form](/images/images/image-10.png)
-    </Frame>
+    Then, choose a **Main field**. This the label displayed for each submission from the list of records respondents can choose from. Be sure to choose a field that contains unique input like names and emails.
+
+    <img
+      src="/images/images/image-10.png"
+      alt="Screenshot of the Form designer tab of a form"
+      style={{ width:"70%" }}
+    />
   </Step>
   <Step title="Let respondents add entries (Optional)">
-    You can also let respondents create new entries even when this feature is enabled. Simply toggle the `Can create new entries?` switch.
+    You can also give respondents the option to fill out the subform from scratch, without selecting an existing submission, by enabling the `Can create new entries?` toggle on the right-hand panel.
 
-    <Frame>
-      ![Screenshot of the Form designer tab of a form](/images/images/image-11.png)
-    </Frame>
+    <img
+      src="/images/images/image-11.png"
+      alt="Screenshot of the Form designer tab of a form"
+      style={{ width:"33%" }}
+    />
   </Step>
   <Step title="Publish and share">
-    That's it\! `Preview` your form to test it. Then,`Publish` and share your form.
+    That's it! `Preview` your form to test it. Then,`Publish` and share your form.
 
-    <Check>
-      **Important:** Adding a submission picker to your form will grant public access to the submissions from whichever form you select. To restrict who can access the submissions, protect your form with a [login page](/login-page).
-    </Check>
+    <Warning>
+      Adding a submission picker to your form will grant public access to the submissions from whichever form you select. To restrict who can access the submissions, protect your form with a [login page](/login-page).
+    </Warning>
   </Step>
 </Steps>
 
@@ -47,9 +52,9 @@ sidebarTitle: "Submission Picker"
 
 <CardGroup cols={3}>
   <Card title="Subforms" icon="diagram-nested" iconType="regular" color="#FFC738" href="/subforms">
-    Create nested forms and collect repeated data, like multiple individuals or products.
+    Use nested forms to capture repeated data in organized, smaller forms.
   </Card>
   <Card title="Login page" icon="key" iconType="regular" color="#FFC738" href="/login-page">
-    Require respondents to verify their email, enter a password, or use Single Sign-On (SSO).
+    Require respondents to verify their email, key in a password, or use SSO.
   </Card>
 </CardGroup>
