@@ -10,33 +10,33 @@ sidebarTitle: "Choice Matrix"
 The **choice matrix** field type can be used to collect data organized in a grid or table, where users need to select one or multiple options per row. Some common use cases include:
 
 - Selecting dates and corresponding slots or appointment times
-- Ranking multiple options in a grid on a likert scale (e.g. unlikely to likely)
+- Ranking multiple options in a grid on a likert scale (e.g., unlikely to likely)
+- Compare several products or features across multiple dimensions (e.g., performance, cost, reliability)
 
-## Use a choice matrix
+## How to put a choice matrix
 
 <Steps>
   <Step title="Add a choice matrix field">
     Simply drag and drop the `Choice matrix` field from the left-hand panel.
 
-    <Frame>
-      ![Screenshot of the Form designer tab of a form](/images/images/image-12.png)
-    </Frame>
+    ![Screenshot 2025-10-06 at 4.23.17 PM.png](/images/Screenshot2025-10-06at4.23.17PM.png)
   </Step>
   <Step title="Add titles for the rows and columns">
     The rows of your matrix will typically define the options or questions you want to have choices chosen for. In the example above, we’ve added item categories for the rows, and frequencies as the columns.
   </Step>
   <Step title="Turn radio buttons into checkboxes (Optional)">
-    You can configure the choice matrix to allow single or multiple selections. Click the choice matrix followed by its `settings` icon, and toggle **Can select multiple?** in the right-hand panel.
+    You can configure the choice matrix to allow single or multiple selections. Click the choice matrix followed by its `GEAR`, and toggle `Can select multiple?`  in the right-hand panel.
 
-    <Frame>
-      ![Screenshot of the Form designer tab of a form](/images/images/image-13.png)
-    </Frame>
-  </Step>
-</Steps>
-
-<Info>
-  For single questions that may have multiple answers, use checkboxes, a multi-select or a picture choice field. More info [**here**](https://www.fillout.com/help/multiple-option-answers). 
+    <img
+      src="/images/images/image-13.png"
+      alt="Screenshot of the Form designer tab of a form"
+      style={{ width:"52%" }}
+    />
+  <Info>
+  For single questions that may have multiple answers, use checkboxes, a multi-select or a picture choice field. More info [**here**](https://www.fillout.com/help/multiple-option-answers).
 </Info>
+</Step>
+</Steps>
 
 ## Connect a choice matrix to integrations
 
@@ -44,28 +44,31 @@ When integrating the choice matrix (e.g., with Airtable, Notion, or HubSpot), yo
 
 <Steps>
   <Step title="Select an integration">
-    Click **Integrate** in top menu and choose Airtable, Notion or another [integration](/integrations).
+    Click `Integrate` in top menu and choose Airtable, Notion or another [integration](/integrations).
   </Step>
   <Step title="Add a Choice matrix field">
-    Click **Edit** in the top menu. In the left-hand panel under **Other**, click `Choice matrix`.
+    Click `Edit` in the top menu. In the left-hand panel under **Other**, click `Choice matrix`.
   </Step>
   <Step title="Map fields">
-    Go back to the **Integrate** page. Under **Mappings**, look for the question followed by a row in your choice matrix to the fields in your chosen integration. Repeat this process for any of the other rows you need to send to your integration.
+    Go back to the `Integrate` page. Under **Mappings**, look for the question followed by a row in your choice matrix to the fields in your chosen integration. Repeat this process for any other rows you need to send to your integration.
 
-    <Frame>
-      ![Screenshot of the Form designer tab of a form](/images/images/image-14.png)
-    </Frame>
+    <img
+      src="/images/images/image-14.png"
+      alt="Screenshot of the Form designer tab of a form"
+      style={{ width:"97%" }}
+    />
+
+  <Warning>
+  If your choice matrix is set to **select** **multiple**, you should make sure to pick a property/field in your integration which allows multiple selections.
+</Warning>
+
   </Step>
 </Steps>
 
-<Check>
-  **Important:** If your choice matrix is set to **select** **multiple**, you should make sure to pick a property/field in your integration which expects multiple answers.
-</Check>
-
-## Related articles
+## Related article
 
 <CardGroup cols={3}>
   <Card title="Enable multiselect" icon="list-check" iconType="regular" color="#FFC738" href="/multiple-option-answers">
-Create choice questions that support multiple selections or answers.
+    Create choice questions that support multiple selections or answers.
   </Card>
 </CardGroup>
