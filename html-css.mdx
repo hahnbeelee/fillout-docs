@@ -5,23 +5,21 @@ icon: "display-code"
 sidebarTitle: "HTML & CSS Field"
 ---
 
-<Check>
-  Looking to customize your form’s theme with CSS? Use [Custom CSS](/custom-css) instead.
-</Check>
+<Tip>
+  Looking to customize your form’s theme with CSS? Use Custom CSS instead.
+</Tip>
 
 ## How to use the HTML field
 
 The HTML field lets you add a custom HTML block to any part of your form, including custom CSS and custom Javascript code.
 
-<Note>
-  **Note:** This feature is available on the **Business** and **Enterprise** plans. Learn more about our pricing plans and advanced features [**here**](https://www.fillout.com/pricing).
-</Note>
+<Info>
+  This feature is available on the **Business** and **Enterprise** plans. Learn more about our pricing plans and advanced features [**here**](https://www.fillout.com/pricing).
+</Info>
 
-Scroll down on the left-hand panel of your form and click the `HTML` field. Then, click the `settings icon` to open the right-hand panel so you can `Edit HTML` and `Edit CSS`.
+Scroll down on the left-hand panel of your form and click the `HTML` field. Then, click its <Icon icon="gear" iconType="solid" /> to `Edit HTML` and `Edit CSS` in the right-hand panel.
 
-<Frame>
-  ![](/images/advanced/image-38.png)
-</Frame>
+![Screenshot 2025-10-06 at 3.55.52 PM.png](/images/Screenshot2025-10-06at3.55.52PM.png)
 
 The HTML will render within the field of your form. You can reposition it within your form just like any other field. Note that CSS will only be applied to the field itself.
 
@@ -31,13 +29,13 @@ You can also use [logic](/conditional-hiding) to make HTML and CSS blocks appear
 
 The HTML block also supports scripts and iFrames. To support these, enable the `Allow scripts and iFrames` toggle in the right-hand panel.
 
-Important: Scripts **only run your published form**, not in preview mode or in the editor. Go to the live mode of your form to test it out.
+Note that scripts only run your published form, not in preview mode or in the editor. Go to the live mode of your form to test it out.
 
-Furthermore, you will need to **connect a** [**custom domain**](/custom-domains) **for the scripts to run and for iFrames to render.**
+Furthermore, you will need to connect a [custom domain](/custom-domains) for the scripts to run and for iFrames to render.
 
-<Note>
-  **Note:** Currently, the HTML block is not easily suitable for adding form inputs. For example, it can’t be used to create custom input fields.
-</Note>
+<Warning>
+  Currently, the HTML block is not easily suitable for adding form inputs. For example, it can’t be used to create custom input fields.
+</Warning>
 
 ## HTML vs. CSS
 
@@ -49,9 +47,9 @@ On the other hand, **CSS** is the language used to style HTML content. By writin
 
 <CardGroup cols={3}>
   <Card title="Hide fields" icon="eye-slash" iconType="regular" color="#FFC738" href="/conditional-hiding">
-    Hide or show fields based on prior inputs, URL parameters or external data.
+    Hide/show fields based on answers, URL parameters or external data.
   </Card>
   <Card title="Condition groups" icon="table-tree" iconType="regular" color="#FFC738" href="/condition-logic-groups">
-    Use nested logic to show, hide and validate fields based on multiple conditions.
+    Show/hide and validate fields based on multiple conditions at once.
   </Card>
 </CardGroup>
