@@ -7,28 +7,27 @@ icon: "universal-access"
 
 ## Manage team members with granular permissions
 
-You can limit the access given to any user in your Fillout organization. [Invite](/invite-collaborators) them to have `Limited Access`.
+You can limit the access given to any user in your Fillout organization. First, [invite](/invite-collaborators) them as a member.
 
-<Frame>
-  ![Manage team members with granular permissions](/images/account/image-11.png)
-</Frame>
+<img
+  src="/images/Screenshot2025-10-09at4.55.55PM.png"
+  alt="Screenshot 2025-10-09 at 4.55.55 PM.png"
+  style={{ width:"79%" }}
+/>
 
-`+ Add workspace` along with their respective access level:
+Then, `+ Select workspace` along with their respective access level:
 
-- **Full access** - allows a user to view and edit forms and responses
-- **Read-only** - lets users view forms and submissions, but not edit the forms
+- Edit forms and view results
+- View results only
 
-<Note>
-  **Note:** Granular permissions are available on the **Enterprise Tier 1 and 2** plans. Learn more [here](https://www.fillout.com/enterprise).
-</Note>
+<Warning>
+ Granular permissions are available on the **Enterprise Tier 1 and 2** plans. Learn more [here](https://www.fillout.com/enterprise).
+</Warning>
 
 ## View existing permissions
 
-Click your **account name** in the bottom right corner followed by `Settings & Members`.
+Click your `Account name` in the bottom right corner followed by `Manage members`.
 
-<Frame>
-  ![View existing permissions](/images/account/image-12.png)
-</Frame>
 
 ## Admin vs non-admins
 
@@ -36,23 +35,20 @@ Click your **account name** in the bottom right corner followed by `Settings & M
 
 ## Limit access to integrations (connected accounts)
 
-To limit which team members can access which integrations, log in as an admin and head to `Integrations`.
+To limit which team members can access which integrations, log in as an admin. From your dashboard, click your `Account name` and head to `Integrations`.
 
-<Frame>
-  ![Limit access to integrations (connected accounts)](/images/account/image-13.png)
-</Frame>
+Integrations are shared with all workspaces by default. To restrict access, click `All` next to the app you want to limit.
 
-By default, [integrations](/integrations) are accessible to all workspaces. To limit access to a connected account, hover over an integration and click `All`.
-
-<Frame>
-  ![Limit access to integrations (connected accounts)](/images/account/image-14.png)
-</Frame>
+![Screenshot 2025-10-09 at 5.02.26 PM.png](/images/Screenshot2025-10-09at5.02.26PM.png)
 
 Next, select `Limited workspaces` and choose the workspaces that you would like to share the integration connection with.
 
-<Frame>
-  ![Limit access to integrations (connected accounts)](/images/account/image-15.png)
-</Frame>
+<img
+  src="/images/Screenshot2025-10-09at5.04.11PM.png"
+  alt="Screenshot 2025-10-09 at 5.04.11 PM.png"
+  title="Screenshot 2025-10-09 at 5.04.11 PM.png"
+  style={{ width:"66%" }}
+/>
 
 Users who are part of of the allowed workspaces will be able to create new forms and edit existing ones that use that integration. Users who do not have access will not be able to use the integration.
 
@@ -60,7 +56,7 @@ Users who are part of of the allowed workspaces will be able to create new forms
 
 **Only applies if using Zapier/Make**
 
-Zapier and Make integrations currently don't support granular permissions. Therefore, **only an admin can connect Zapier or Make** to Fillout (Fillout doesn’t allow non-admins to connect to Zapier or Make). Once connected by an admin, ensure that Fillout integration access is granted exclusively to users who should have permission to add webhooks to **all forms across all workspaces**.
+Zapier and Make integrations don’t support granular permissions, so only admins can connect them to Fillout. Once connected, make sure only authorized users who should have permission to add webhooks to **all forms across all workspaces **have access.
 
 If you need granular permissions for Zapier/Make, we instead recommend using the per-form [webhook integration](/webhook) to trigger external automations.
 
@@ -68,10 +64,10 @@ If you need granular permissions for Zapier/Make, we instead recommend using the
 
 <CardGroup cols={3}>
   <Card title="Invite team members to your forms" icon="user-plus" iconType="regular" color="#FFC738" href="/invite-collaborators">
-    View results, and edit surveys by adding free seats to your account.
+    View results, and edit surveys with free seats.
   </Card>
   <Card title="Organizations" icon="building" iconType="regular" color="#FFC738" href="/organizations">
-    Create multiple organizations for different companies with the same email.
+    Create organizations for different companies with the same email.
   </Card>
   <Card title="Workspaces" icon="folders" iconType="regular" color="#FFC738" href="/workspaces">
     Store forms in different folders and manage access across user types.
