@@ -47,3 +47,37 @@ code {
 .rounded-search .\[\&_mark_b\]\:text-primary mark b {
     color: rgb(212 152 0) !important;
 }
+
+
+
+/* Start tags for "what's new" page */
+
+/* Style the filter tag spans */
+div.px-1.flex.flex-wrap.gap-2.text-secondary span.inline-block.rounded-lg.text-sm.font-medium {
+    background: #f9fafb !important;
+    color: #374151 !important;
+    border: 1px solid #e5e7eb !important;
+    padding: 0.25rem 0.5rem !important;
+    border-radius: 0.5rem !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    font-size: 0.875rem !important;
+    margin: 0 !important;
+}
+
+/* Blue styling for Forms tags */
+div.px-1.flex.flex-wrap.gap-2.text-secondary span.inline-block.rounded-lg.text-sm.font-medium.forms-tag {
+    background: #eff6ff !important;
+    color: #1d4ed8 !important;
+    border: 1px solid #bfdbfe !important;
+}
+
+/* Styling for Zite tags based on the image */
+div.px-1.flex.flex-wrap.gap-2.text-secondary span.inline-block.rounded-lg.text-sm.font-medium.zite-tag {
+    background: #FEF4E4 !important; /* Light cream color as seen in the image */
+    color: #b57600 !important; /* Orange color as seen in the image */
+    border: 1px solid #efe1d2 !important; /* Light beige border as seen in the image */
+}
+
+/* end tags for "what's new" page */

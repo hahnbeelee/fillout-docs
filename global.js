@@ -12,6 +12,41 @@ function replaceMintlifyLink() {
     }
   });
 }
-
-// Call the function to replace the link
 replaceMintlifyLink();
+
+/**
+ * Below is to make "Forms" and "Zite" tags blue and red respectively.
+ */
+
+// Function to add classes to tags based on their text content
+function addTagClasses() {
+  const tagSpans = document.querySelectorAll(
+    "div.px-1.flex.flex-wrap.gap-2.text-secondary span.inline-block.rounded-lg.text-sm.font-medium"
+  );
+  tagSpans.forEach((span) => {
+    const text = span.textContent.trim();
+    if (text === "Forms") {
+      span.classList.add("forms-tag");
+    } else if (text === "Zite") {
+      span.classList.add("zite-tag");
+    }
+  });
+}
+
+// Call the functions
+addTagClasses();
+
+// Also run addTagClasses when DOM changes (for dynamic content)
+const observer = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
+      addTagClasses();
+    }
+  });
+});
+
+// Start observing
+observer.observe(document.body, {
+  childList: true,
+  subtree: true,
+});
