@@ -1,6 +1,6 @@
 ---
 title: "URL Parameters/Hidden fields"
-description: "URL parameters are a powerful way to pass information to a Fillout form to support pre-filling and personalizing the form."
+description: "Pass information to a Fillout form to support pre-filling and personalize form filling experience."
 sidebarTitle: "URL Parameters"
 icon: "brackets-curly"
 ---
@@ -10,67 +10,72 @@ icon: "brackets-curly"
 **URL parameters**, also known as "hidden fields", can be used to customize your form with information you already know when you're sharing it with respondents. For example:
 
 - Pre-filling fields with the email of the respondent
-- Recording where your form was shared via a **utm_source** parameter (e.g. Facebook, Google, Instagram, etc.)
+- Recording where your form was shared via a **utm_source** parameter (e.g., Facebook, Google, Instagram, etc.)
 - Displaying the respondent's name in the form to welcome them
 
 ## How to add a URL parameter or hidden field
 
 <Steps>
-  <Step title="Register a new parameter">
-    Go to **Settings** and click `URL parameters`. Then, click `+ Add new`
+  <Step title="Open form settings">
+    Click <Icon icon="gear-complex" /> followed by `URL parameters `.
 
-    <Frame>
-      ![](/images/advanced/image-5.png)
-    </Frame>
-    Enter a **Parameter name**. Here, we can tell Fillout to expect a URL Parameter with a certain name.
-
-    Note that you can optionally provide a sample value for the parameter, if you'd like to see what your form looks like with that value being used (e.g. if you have some [hide/show logic](/conditional-hiding) based on it).
+    ![Screenshot 2025-10-10 at 3.15.52 PM.png](/images/Screenshot2025-10-10at3.15.52PM.png)
   </Step>
-  <Step title="Use the parameter in your form">
-    You're all set to start using your new URL parameter now\! We can now use it to:
+  <Step title="Register a new parameter">
+    `+ Add new` and enter a name for your parameter. In this example, we'll choose "name".
 
-    - [Pre-fill a field](/prefill-fields), by pressing the `+` icon on a **Default value** property of any field
-    - Write to any integration, by heading to the **Integrations** at the top and creating a new connection or editing an existing one, and mapping this URL Parameter to some field like in Airtable or Notion.
-    - Display in plaintext in the form
+    <img
+      src="/images/Screenshot2025-10-10at3.16.35PM.png"
+      alt="Screenshot 2025-10-10 at 3.16.35 PM.png"
+      title="Screenshot 2025-10-10 at 3.16.35 PM.png"
+      style={{ width:"72%" }}
+    />
+
+    You can optionally provide a sample value for the parameter, if you'd like to see what your form looks like with that value being used (e.g. if you have some [hide/show logic](/conditional-hiding) based on it).
+  </Step>
+  <Step title="Reference the parameter in your form">
+    You're all set! We can now use it to:
+
+    - [Pre-fill a field](/prefill-fields), by pressing referencing a value
+    - [Write to any integration](/integration-static-values), by mapping this URL Parameter to some field like in Airtable or Notion
+    - Display in plaintext in the form by typing **@** and choosing your <Icon icon="link" iconType="solid" /> parameter.
+
+    <img
+      src="/images/advanced/image-6.png"
+      alt={true}
+      style={{ width:"81%" }}
+    />
   </Step>
   <Step title="Share your form link">
-    To make the URL parameter active in your form, you need to set its value in the form link you share with respondents. For example, if we have a parameter called **name** registered, the default link would look like: https://forms.fillout.com/t/9ofaEF4d54us?name=xxxxx
+    To make the URL parameter active in your form, you need to set its value in the form link. Here, we have a parameter called **name** registered, the default share link would look like: https://forms.fillout.com/t/9ofaEF4d54us?name=xxxxx
 
     Say we know that the respondent's name that we're sending our form to, Jane. We'll type her name at the end of the link like this: https://forms.fillout.com/t/9ofaEF4d54us?name=jane
 
-    <Check>
-      **Important:** When you have multiple URL parameters for one form, you'll need to separate them using an ampersand (&), like so: https://forms.fillout.com/t/your_form_id?email=jane@gmail.com&name=jane
-    </Check>
+    <img
+      src="/images/advanced/image-7.png"
+      alt=""
+      style={{ width:"86%" }}
+    />
+
+    <Warning>
+      When you have multiple URL parameters for one form, you'll need to separate them using an ampersand (&), like so: https://forms.fillout.com/t/your_form_id?email=jane@gmail.com&name=jane
+    </Warning>
   </Step>
 </Steps>
 
-## Sample use cases
-
-**Personalize a form with URL parameters**
-
-Type `@` in any question or field to reference information from your form. Click the `link` icon on the left side of the pop-up followed by the parameter.
-
-<Frame>
-  ![](/images/advanced/image-6.png)
-</Frame>
-
-`Publish` your form and share it to your respondents.
-
-<Frame>
-  ![](/images/advanced/image-7.png)
-</Frame>
-
-**Recording URL parameters in submissions**
+## Record URL parameters in submissions
 
 You may want to track URL parameters in form submissions, like links shared on Facebook, Instagram, or LinkedIn to compare traffic. Fillout stores these by default on the Results page.
 
 If you're using an integration, and want to write your URL parameters there as well, you can either:
 
-a. Create a **Fillout** field and pre-fill it with a URL parameter under **Default value**. Then, set it to `Hide always` through the right-hand settings panel. If this field is synced to an integration already, then it will automatically write to your integration without it ever being visible to the respondent:
+a. Create a Fillout field, set its **Default value** using a URL parameter, and `Hide always`. If it's linked to an integration, it will send the data without being shown to the respondent.
 
-<Frame>
-  ![](/images/advanced/image-8.png)
-</Frame>
+  <img
+    src="/images/advanced/image-8.png"
+    alt=""
+    style={{ width:"89%" }}
+  />
 
 b. Head to your integration settings, and map the URL parameter directly. E.g. for Airtable, there is a **Mappings** section which you can use for this purpose. See [this article](/additional-integration-mappings) for more information.
 

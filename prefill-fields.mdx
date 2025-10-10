@@ -1,43 +1,32 @@
 ---
 title: "Pre-fill fields"
-description: "Set a default value to pre-populate form fields, based on previous answers, URL parameters or even information from 3rd party integrations."
+description: "Set a default value to pre-populate form fields based on previous answers, URL parameters, or even information from 3rd party integrations."
 icon: "fill"
 sidebarTitle: "Pre-fill Fields"
 ---
 
 ## How to pre-fill a field
 
-You can pre-fill Fillout questions with either static or dynamic data from integrations like Airtable and Notion. Click a field followed by the `settings icon`. In the right-hand panel, click `+` to look for a default value.
-
-<Frame>
-  ![](/images/advanced/image-36.png)
-</Frame>
-
-## **Pre-fill basics**
-
-You can set a fixed value as the pre-fill by just typing some text under **Default value**.
-
-If you click the blue `+` icon, you can pre-fill the field with:
+Click a field followed by its <Icon icon="gear" iconType="solid" />. In the right-hand panel, fill out the **Default value** with a text or hover and click <Icon icon="square-plus" iconType="solid" /> to reference a value. You can choose:
 
 - [URL Parameters](/url-parameters)
 - [User information from a Login step](/login-page)
-- Answer to another **Fillout** field
+- [Answer to another Fillout field](/answer-piping)
+- [Custom date](/prefill-dates)
 
-## Pre-fill with external data like Airtable or Notion
+![Screenshot 2025-10-10 at 2.04.03 PM.png](/images/Screenshot2025-10-10at2.04.03PM.png)
 
-See [reading and referencing external data](/fetch-dynamic-data). Here's an example of referencing data from the Airtable record the form is editing.
+## Pre-fill with external data
 
-<Frame>
-  ![](/images/advanced/image-41.png)
-</Frame>
+You can also pre-fill fields with data from external sources like Airtable and Notion. Here's an example of referencing data from the Airtable record the form is editing. Check this [guide](/fetch-dynamic-data).
 
-## Pre-fill an integration with a fixed/static value
+<img
+  src="/images/advanced/image-41.png"
+  alt=""
+  style={{ width:"54%" }}
+/>
 
-Read our guide on [writing a static value to an integration](/integration-static-values).
-
-## Pre-fill using a custom date
-
-See our guide to [pre-filling dates for your respondents](/pre-fill-dates).
+You can also use [write a static value to an integration](/integration-static-values).
 
 ## Other advanced features
 
@@ -45,10 +34,10 @@ See our guide to [pre-filling dates for your respondents](/pre-fill-dates).
   <Card title="URL Parameters" icon="brackets-curly" iconType="regular" color="#FFC738" href="/url-parameters">
     Pass information to a form to support pre-filling and personalization.
   </Card>
-  <Card title="Add custom values" icon="quote-left" iconType="regular" color="#FFC738" href="/custom-values">
-    Set distinct values for options, separate from the labels visible to respondents.
+  <Card title="Use dynamic data" icon="arrow-down-right" iconType="regular" color="#FFC738" href="fetch-dynamic-data">
+    Display dynamic content in your form to hide, validate and pre-fill fields.
   </Card>
-  <Card title="Pre-fill dates for your respondents" icon="calendar-pen" iconType="regular" color="#FFC738" href="/pre-fill-dates">
-    Set the default value to today, tomorrow, and more.
+  <Card title="Integration Static Value" icon="pencil" iconType="regular" color="#FFC738" href="integration-static-values">
+    Send a fixed value to Airtable, Notion or another integration for any field.
   </Card>
 </CardGroup>
