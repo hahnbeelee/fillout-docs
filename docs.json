@@ -25,6 +25,10 @@
     {
       "source": "/zite/database/:path*",
       "destination": "/database/:path*"
+    },
+    {
+      "source": "/zite/guides/import-data",
+      "destination": "/database/import-data"
     }
   ],
   "navigation": {
@@ -614,7 +618,7 @@
           {
             "group": "Guides",
             "icon": "book-open",
-            "pages": ["zite/guides/import-data"]
+            "pages": ["database/import-data"]
           }
         ]
       },
