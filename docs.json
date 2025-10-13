@@ -20,7 +20,13 @@
       "name": "Authorization"
     }
   },
-  "openapi": ["/openapi.json", "/zite/database/openapi.json"],
+  "openapi": ["/openapi.json", "/database/openapi.json"],
+  "redirects": [
+    {
+      "source": "/zite/database/:path*",
+      "destination": "/database/:path*"
+    }
+  ],
   "navigation": {
     "tabs": [
       {
@@ -525,7 +531,12 @@
           },
           {
             "group": "Getting Started",
-            "pages": ["zite/getting-started", "zite/design", "zite/integrations", "zite/faq"]
+            "pages": [
+              "zite/getting-started",
+              "zite/design",
+              "zite/integrations",
+              "zite/faq"
+            ]
           },
           {
             "group": "Basics",
@@ -539,48 +550,63 @@
             ]
           },
           {
-            "group": "Zite Database",
-            "icon": "database",
+            "group": "Guides",
+            "icon": "book-open",
+            "pages": ["zite/guides/google-sheets"]
+          }
+        ]
+      },
+      {
+        "tab": "Database",
+        "icon": "database",
+        "groups": [
+          {
+            "group": " ",
+            "pages": ["database/overview"]
+          },
+          {
+            "group": "API Reference",
+            "icon": "code",
             "pages": [
-              "zite/database/api",
-              "zite/database/field-types",
+              "database/api",
+              "database/field-types",
               {
                 "group": "Records",
                 "icon": "code-simple",
                 "pages": [
-                  "zite/database/create-record",
-                  "zite/database/get-record-by-id",
-                  "zite/database/update-record",
-                  "zite/database/list-records",
-                  "zite/database/delete-record"
+                  "database/create-record",
+                  "database/get-record-by-id",
+                  "database/update-record",
+                  "database/list-records",
+                  "database/delete-record"
                 ]
               },
               {
                 "group": "Fields",
                 "icon": "code-simple",
                 "pages": [
-                  "zite/database/create-field",
-                  "zite/database/update-field",
-                  "zite/database/delete-field"
+                  "database/create-field",
+                  "database/update-field",
+                  "database/delete-field"
                 ]
               },
               {
                 "group": "Tables",
                 "icon": "code-simple",
                 "pages": [
-                  "zite/database/create-table",
-                  "zite/database/update-table",
-                  "zite/database/delete-table"
+                  "database/create-table",
+                  "database/update-table",
+                  "database/delete-table"
                 ]
               },
               {
                 "group": "Databases",
                 "icon": "code-simple",
                 "pages": [
-                  "zite/database/create-database",
-                  "zite/database/get-databases",
-                  "zite/database/get-database-by-id",
-                  "zite/database/delete-database"
+                  "database/create-database",
+                  "database/get-databases",
+                  "database/get-database-by-id",
+                  "database/delete-database"
                 ]
               }
             ]
@@ -588,7 +614,7 @@
           {
             "group": "Guides",
             "icon": "book-open",
-            "pages": ["zite/guides/google-sheets","zite/guides/import-data"]
+            "pages": ["zite/guides/import-data"]
           }
         ]
       },
