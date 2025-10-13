@@ -828,11 +828,11 @@
           },
           "type": {
             "type": "string",
-            "description": "Field type - see [Field Types Reference](/zite/database/field-types) for complete list of available types and their configurations"
+            "description": "Field type - see [Field Types Reference](/database/field-types) for complete list of available types and their configurations"
           },
           "template": {
             "type": "object",
-            "description": "Field-specific configuration options. See [Field Types Reference](/zite/database/field-types) for detailed template structure by field type.",
+            "description": "Field-specific configuration options. See [Field Types Reference](/database/field-types) for detailed template structure by field type.",
             "additionalProperties": true
           },
           "order": {
@@ -992,7 +992,7 @@
           "template": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Field-specific configuration options. See [Field Types Reference](/zite/database/field-types) for detailed template structure by field type."
+            "description": "Field-specific configuration options. See [Field Types Reference](/database/field-types) for detailed template structure by field type."
           }
         },
         "required": ["type", "name", "template"]
@@ -1031,7 +1031,7 @@
         "properties": {
           "type": {
             "type": "string",
-            "description": "Field type - see [Field Types Reference](/zite/database/field-types) for available options"
+            "description": "Field type - see [Field Types Reference](/database/field-types) for available options"
           },
           "name": {
             "type": "string",
@@ -1041,7 +1041,7 @@
           "template": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Field-specific configuration options (optional - uses defaults if not provided). See [Field Types Reference](/zite/database/field-types) for detailed template structure by field type."
+            "description": "Field-specific configuration options (optional - uses defaults if not provided). See [Field Types Reference](/database/field-types) for detailed template structure by field type."
           }
         },
         "required": ["type", "name"],
@@ -1110,7 +1110,7 @@
           "template": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Updated field configuration. See [Field Types Reference](/zite/database/field-types) for detailed template structure by field type."
+            "description": "Updated field configuration. See [Field Types Reference](/database/field-types) for detailed template structure by field type."
           }
         }
       },
