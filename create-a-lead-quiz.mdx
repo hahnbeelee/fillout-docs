@@ -1,6 +1,6 @@
 ---
 title: "Create a Lead Quiz"
-description: "Fillout’s advanced logic and email notification features help you generate fun and personalized form outputs, like outcome quizzes. sidebarTitle: Create a Lead Quiz"
+description: "Fillout’s advanced logic and email notification features make it possible for you to make fun and personalized form outputs, like outcome quizzes. "
 icon: "star"
 ---
 
@@ -12,59 +12,68 @@ Lead quizzes are a reliable way to collect relevant contacts for your sales or m
 
 <Steps>
   <Step title="Switch to Quiz mode">
-    Open an existing form or create a [new one](https://build.fillout.com/home/quizzes). From the Fillout dashboard `+ Make a Fillout`. Go to the **Settings** tab of your form followed by `Quiz mode` and enable this.
+    Open an existing form or create a [new one](https://build.fillout.com/home/quizzes). Click <Icon icon="gear-complex" /> on the upper right area.
 
-    <Frame>
-      ![PDF Viewer](/images/guides/image-35.png)
-    </Frame>
-    Make sure to turn off `Show correct answers after each page` to ensure results are only accessible via respondent emails and custom end pages.
+    <img
+      src="/images/Screenshot2025-10-15at4.55.39PM.png"
+      alt="Screenshot 2025-10-15 at 4.55.39 PM.png"
+      title="Screenshot 2025-10-15 at 4.55.39 PM.png"
+      style={{ width:"34%" }}
+    />
+
+    Click `Quiz mode` in the left-hand panel to toggle the `Quiz mode enabled` switch.
+
+    ![Screenshot 2025-10-15 at 4.55.53 PM.png](/images/Screenshot2025-10-15at4.55.53PM.png)
+
+    <Warning>
+      Disable the **Show correct answers after each page** feature to ensure results are only accessible via respondent emails and custom end pages.
+    </Warning>
   </Step>
   <Step title="Add an email field and quiz questions">
-    Back in the **Edit** tab of the form, scroll down to click `Email input` from the left-hand panel. Then, add your preferred quiz question fields.
+    Go back to the form editor and add an `Email input` field followed by your preferred quiz question fields.
 
-    <Frame>
-      ![PDF Viewer](/images/guides/image-36.png)
-    </Frame>
+    ![Screenshot 2025-10-15 at 5.32.47 PM.png](/images/Screenshot2025-10-15at5.32.47PM.png)
+
     <Tip>
-      **Tip:** Rename each page as you add fields to make it easier to find them when setting up conditions.
+      Rename each page as you add fields to make it easier to find them when setting up conditions by clicking <Icon icon="ellipsis-vertical" />.
     </Tip>
   </Step>
   <Step title="Choose correct answers and score values">
-    After adding a quiz question or field to a page, click it followed by the `Quiz` icon to open the answer key window.
+    After adding a quiz question or field to a page, click it followed by <Icon icon="graduation-cap" iconType="solid" /> to open the answer key window.
 
-    <Frame>
-      ![PDF Viewer](/images/guides/image-37.png)
-    </Frame>
-    Add a checkmark next to each correct answer and provide a **Score** value.
+    ![Screenshot 2025-10-15 at 5.38.31 PM.png](/images/Screenshot2025-10-15at5.38.31PM.png)
 
-    <Frame>
-      ![PDF Viewer](/images/guides/image-38.png)
-    </Frame>
+    Add a **✓** next to each correct answer and provide a **Score** value.
+
+    <img
+      src="/images/Screenshot2025-10-15at5.01.31PM.png"
+      alt="Screenshot 2025-10-15 at 5.01.31 PM.png"
+      title="Screenshot 2025-10-15 at 5.01.31 PM.png"
+      style={{ width:"57%" }}
+    />
   </Step>
   <Step title="Customize a quiz’s ending page(s)">
-    By default, [ending pages](/ending-page) for quizzes will calculate and display each respondent’s total score. To hide this, go to your ending page from bottom of the screen. Click the score field, and turn off `Show quiz score` from the right-hand settings menu.
+    By default, [ending pages](/ending-page) for quizzes will calculate and display each respondent’s total score. To hide this, click GEAR and disable `Show quiz score`.
 
-    <Frame>
-      ![PDF Viewer](/images/guides/image-39.png)
-    </Frame>
-    For lead quizzes that don’t have correct/incorrect answers (e.g. Find out which workout routine is best for your body type), add text and media that is shown only when specific answers were provided throughout the quiz.
-
-    Click on any field on an ending page followed by the **Logic** settings in the right-hand panel. Choose the `Show when` option, and click `Edit conditional logic` to configure when text or media should be shown or hidden.
-
-    <Frame>
-      ![PDF Viewer](/images/guides/image-40.png)
-    </Frame>
-  </Step>
-  <Step title="Add more ending pages (Optional)">
-    Sometimes, multiple ending pages are easier to manage than one with too many hidden fields.
-
-    Click `+ Add page` at the bottom to add more **Ending** pages, and set up conditions that lead to these pages by opening `Logic`. Click the `+` icon and drag the connector to the corresponding end page.
-
-    <Frame>
-      ![PDF Viewer](/images/guides/image-41.png)
-    </Frame>
+    ![Screenshot 2025-10-15 at 5.40.16 PM.png](/images/Screenshot2025-10-15at5.40.16PM.png)
   </Step>
 </Steps>
+
+### Show custom messages
+
+For quizzes without right or wrong answers (e.g. "Which product is right for you?"), you can show specific text or media based on the respondent's answers.
+
+![Screenshot 2025-10-15 at 5.21.46 PM.png](/images/Screenshot2025-10-15at5.21.46PM.png)
+
+Click a field on the ending page, followed by its <Icon icon="gear" iconType="solid" />. Under **Logic**, set when to show or hide content based on answers.
+
+### Show custom ending pages
+
+Sometimes, multiple ending pages are easier to manage than one with too many hidden fields.
+
+![Screenshot 2025-10-15 at 5.24.14 PM.png](/images/Screenshot2025-10-15at5.24.14PM.png)
+
+Click `+ Add page` at the bottom to add more ending pages. Then, open [page logic](page-logic). Click <Icon icon="circle-plus" iconType="solid" /> and drag the connector to the corresponding end page to set your conditions.
 
 ## Set up custom respondent emails
 
