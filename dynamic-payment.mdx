@@ -1,6 +1,6 @@
 ---
 title: "Create a dynamic payment page"
-description: "Make a checkout page where the product section and price automatically update for each customer based on their order."
+description: "Make a checkout page where the product selection and price automatically update for each customer based on their order."
 icon: "cart-shopping"
 sidebarTitle: "Dynamic Payment Page"
 ---
@@ -8,34 +8,36 @@ sidebarTitle: "Dynamic Payment Page"
 ## How to make your payment page dynamic
 
 <Steps>
-  <Step title="Navigate to Logic">
-    First, open an existing form or create a new one. Next, click `Logic` on the bottom right corner to add your **Calculations**. Check out this [quick guide](/calculations#9969fe70824745d4bd3b8ca72efcf0af).
+  <Step title="Create calculations">
+    First, click `Logic` on the bottom right corner to add your **Calculations**. Check out this [quick guide](https://www.fillout.com/help/calculations#add-a-calculation).
+  </Step>
+  <Step title="Edit payment details">
+    Go to your form’s [**Payment**](/payment-page) [page](/payment-page) or make one if you haven’t yet. Add `Your product here` and its description if you prefer.
 
-    Then, go to your form’s [**Payment**](/payment-page) [page](/payment-page) or make one if you haven’t yet. Add `Your product here` and its description if you prefer.
-
-    <Frame>
-      ![PDF Viewer](/images/guides/image-29.png)
-    </Frame>
+    ![Screenshot 2025-10-16 at 5.50.50 PM.png](/images/Screenshot2025-10-16at5.50.50PM.png)
   </Step>
   <Step title="Reference a product">
-    Under **Product name**, type `@` or click the `+` icon, then select the question or field where you ask customers to choose products or services.
+    Under **Product name**, type **@** or click <Icon icon="square-plus" iconType="solid" />, then select the question or field where you ask customers to choose products or services.
 
-    <Frame>
-      ![PDF Viewer](/images/guides/image-30.png)
-    </Frame>
+    <img
+      src="/images/Screenshot2025-10-16at5.51.54PM.png"
+      alt="Screenshot 2025-10-16 at 5.51.54 PM.png"
+      title="Screenshot 2025-10-16 at 5.51.54 PM.png"
+      style={{ width:"82%" }}
+    />
   </Step>
   <Step title="Reference price">
-    Do the same for the **Price**, but this time, click `Calculations` to select the appropriate field.
+    Do the same for the **Price**, but this time, click <Icon icon="calculator" iconType="solid" /> to select the appropriate field.
 
-    <Frame>
-      ![PDF Viewer](/images/guides/image-31.png)
-    </Frame>
+    ![Screenshot 2025-10-16 at 5.55.21 PM.png](/images/Screenshot2025-10-16at5.55.21PM.png)
   </Step>
   <Step title="Publish and share">
-    `Preview` your form through the upper right corner to test it, then `Publish` and share the link or embed on your website. That’s it\! Now, every time someone places an order, the **Product name** and **Price** will change depending on their choices.
+    `Preview` your form through the upper right corner to test it, then `Publish` and share the link or embed on your website.
+
+    That’s it! Now, every time someone places an order, the **Product name** and **Price** will change depending on their choices.
 
     <Tip>
-      **Good to know:** You can test your live form without getting charged. Create a 100% off coupon in Stripe, then enable the "[Discount Codes](https://www.fillout.com/help/payment-page#add-discount-codes)" option to apply it during checkout. Once testing is done, just toggle the discount codes back off.
+      You can test your live form without getting charged. Create a 100% off coupon in Stripe, then enable the "[Discount Codes](https://www.fillout.com/help/payment-page#add-discount-codes)" option to apply it during checkout. Once testing is done, just toggle the discount codes back off.
     </Tip>
   </Step>
 </Steps>
@@ -43,10 +45,10 @@ sidebarTitle: "Dynamic Payment Page"
 ## Related articles
 
 <CardGroup cols={3}>
-  <Card title="Payment Page" icon="credit-card" iconType="regular" color="#FFC738" href="/payment-page">
-    Collect payments via credit card, US bank account, Affirm, and Stripe.
+  <Card title="Payment page" icon="credit-card" iconType="regular" color="#FFC738">
+    Collect payments via card, US bank account, Affirm, and Stripe.
   </Card>
   <Card title="Calculations and variables" icon="calculator-simple" iconType="regular" color="#FFC738" href="/calculations">
-    Calculate prices for order forms, compute quiz scores, and more.
+    Calculate prices, compute scores, and more.
   </Card>
 </CardGroup>

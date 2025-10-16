@@ -1,7 +1,7 @@
 ---
 title: "Improve the accessibility of your forms"
 description: "Optimize your forms to ensure they are clear and easy to navigate for all members of your audience."
-sidebarTitle: Improve Accessibility
+sidebarTitle: "Improve Accessibility"
 icon: "ear"
 ---
 
@@ -23,17 +23,13 @@ Only use [multi-column form layouts](/multi-column-forms) when all fields in a s
 
 Another important structural change is to opt for multi-page forms that group questions by category. Minimizing the number of questions on each page drastically simplifies navigation for screen reader and keyboard-only users. It also creates opportunities to further streamline your form by incorporating [page logic](/page-logic) that skips unnecessary pages based on responses.
 
-<Frame>
-  ![Multi-column form layouts](/images/guides/image-86.png)
-</Frame>
+![Multi-column form layouts](/images/guides/image-86.png)
 
 WCAG requires that the contrast ratio between text color and background color is at least 4.5:1 (you can check yours with this [color contrast tool](https://webaim.org/resources/contrastchecker/)). Similarly, color should never be the sole means of communicating instructions, errors, or other information that blind and low-vision users would be unable to recognize.
 
 Click the **Theme** button in the upper left corner of your form canvas to [style your form](/styling) and apply WCAG-compliant color contrast ratios. Fillout’s default Plain theme meets WCAG AAA contrast ratio requirements with field labels formatted in a dark navy blue (#374151) and field answers formatted in a slightly lighter navy blue (#4B5563), both contrasted by a pure white background (#FFFFFF), for 10.3:1 and 7.55:1 contrast ratios, respectively. Our Coral, Neon, and Dark themes have similarly high-contrast color formatting.
 
-<Frame style={{ width: '624px' , height: '309px' }}>
-  ![Theme button](/images/guides/image-87.png)
-</Frame>
+![Theme button](/images/guides/image-87.png)
 
 When [adding an image to your form](/image-gif), place a caption beneath it that reads “Above:” followed by a detailed description of the image (Harvard’s [alt text guide](https://accessibility.huit.harvard.edu/describe-content-images) is an excellent reference). Without the caption, screen readers will have no way to convey information to the user about what the image contains. For embedded videos, always make sure there is a way to turn on subtitles to support anyone with hearing impairments.
 
@@ -41,9 +37,7 @@ Finally, on your [ending page](/ending-page), let users know that they have succ
 
 ## How to write more accessible form questions and instructions
 
-<Frame>
-  ![Add a heading to the top of every form page to tell users what questions to expect](/images/guides/image-88.png)
-</Frame>
+![Add a heading to the top of every form page to tell users what questions to expect](/images/guides/image-88.png)
 
 [Add a heading](/heading) to the top of every form page to tell users what questions to expect. This will reduce the overall cognitive load and provide critical context for those who use a screen reader to understand what’s on the page.
 
@@ -51,9 +45,7 @@ Below your page heading, add a paragraph field with succinct, helpful instructio
 
 Screen reader users often navigate the page by element, sometimes skipping from one link to the next without reading the text between them. Ensure that users can always discern where a link leads based on the link text alone (e.g., [here](http://badlinktext/) is unclear, [accessibility checklist](https://webaim.org/standards/wcag/checklist) is not).
 
-<Frame style={{ width: '624px' , height: '267px' }}>
-  ![Add a heading to the top of every form page to tell users what questions to expect](/images/guides/image-89.png)
-</Frame>
+![Add a heading to the top of every form page to tell users what questions to expect](/images/guides/image-89.png)
 
 When writing questions, describe everything the field requires in the field label (e.g., “First and Last Name” is more precise than “Name”). It’s also a good idea to use bold text wherever possible and increase font sizes so instructions and questions are easier to read for people with low vision.
 
@@ -61,17 +53,19 @@ Use consistent phrasing throughout the page (e.g., “What’s your name?” and
 
 **Caption** and **Placeholder** text is always formatted in a smaller light-gray font that can be harder to read. For the best visibility, keep essential instructions, such as formatting requirements, in the field label. When a response needs to meet certain criteria, make sure to write a [custom error message](/input-validation#38a6f86713b2474ea11a6328c4077f8b) that begins with “Error:” and provides more details regarding validation requirements, including an example of an acceptable response.
 
-<Frame style={{ width: '624px' , height: '302px' }}>
-  ![Add a heading to the top of every form page to tell users what questions to expect](/images/guides/image-90.png)
-</Frame>
+  <img
+    src="/images/guides/image-90.png"
+    alt="Add a heading to the top of every form page to tell users what questions to expect"
+    style={{ width:"87%" }}
+  />
 
-When asking Yes-or-No questions, restate what the user is saying yes or no to in the choices (e.g. “Yes, *I want to receive a quote from \[Company\]*”). And, in many cases, adding an “I’m not sure” option is helpful for users who struggle to interact with or understand everything included in the form.
+When asking Yes-or-No questions, restate what the user is saying yes or no to in the choices (e.g. “Yes, _I want to receive a quote from [Company]_”). And, in many cases, adding an “I’m not sure” option is helpful for users who struggle to interact with or understand everything included in the form.
 
 Watch out for double-barreled or compound questions that ask for two responses but only provide one field. For example, “Will you attend the sessions on Friday or Saturday?” (there should be a Yes/No field for each day).
 
-<Frame style={{ width: '624px' , height: '312px' }}>
+
   ![Add a heading to the top of every form page to tell users what questions to expect](/images/guides/image-91.png)
-</Frame>
+
 
 You can also improve form accessibility by choosing the best field type for the question. For example, **Multiple Choice** fields work best when there are fewer than five choices, while **Dropdown** fields are better for five or more choices.
 
