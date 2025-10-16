@@ -1,53 +1,67 @@
 ---
 title: "Enable auto jump on your form"
-description: "Use Fillout's auto jump feature to let respondents answer your form more quickly. Enhance user experience and increase your form’s conversion rate."
+description: "Instantly take users to the next page after they select an option. Boost completion rates and streamline your form with Fillout’s auto jump."
 icon: "rabbit"
 sidebarTitle: "Auto Jump"
 ---
 
+## Overview
+
 By default, when respondents finish answering a page, they have to click a button to go to the next page. With **auto jump**, the respondent is automatically redirected to the next page after making a selection, without having to click a button.
 
-<Frame>
-  ![PDF Viewer](/images/guides/image-32.gif)
-</Frame>
+<img
+  src="/images/guides/image-32.gif"
+  alt="PDF Viewer"
+  style={{ width:"95%" }}
+/>
 
-<Check>
-  **Important:** Respondents still need to click the **submit** button at the last form page to complete the form.
-</Check>
+<Warning>
+  Respondents still need to click the **submit** button at the last form page to complete the form.
+</Warning>
 
 ## How to enable auto jump
 
-Go to your form's **Settings**, then click `Form Behavior` on the left side. Toggle `Auto-jump to the next page`.
+Open your form settings by clicking <Icon icon="gear-complex" /> on the upper right area.
 
-<Frame>
-  ![PDF Viewer](/images/guides/image-33.png)
-</Frame>
+<img
+  src="/images/Screenshot2025-10-15at12.59.02PM.png"
+  alt="Screenshot 2025-10-15 at 12.59.02 PM.png"
+  title="Screenshot 2025-10-15 at 12.59.02 PM.png"
+  style={{ width:"37%" }}
+/>
 
-<Note>
-  **Note:** This works for form pages with a single question. The following fields are supported: Dropdown, Multiple choice, Picture choice, Opinion scale, and Star rating.
-</Note>
+On the left side, choose `Form behavior` to toggle `Auto-jump to the next page`.
 
-That's it\! `Publish` your form. Now, respondents will no longer need to click a button to proceed to the next page.
+![Screenshot 2025-10-16 at 2.34.33 PM.png](/images/Screenshot2025-10-16at2.34.33PM.png)
 
-### Hide buttons
+<Warning>
+  This only works for form pages with a single question. The following fields are supported: Dropdown, Multiple choice, Picture choice, Opinion scale, and Star rating.
+</Warning>
 
-You can also create forms without buttons if you want respondents to focus only on answering. Click the `button` followed by the `settings icon` to open the right panel. Under **Logic**, toggle `Hide always`.
+Remember to`Publish` your form to reflect the changes. Now, respondents will no longer need to click a button to proceed to the next page.
 
-<Frame>
-  ![PDF Viewer](/images/guides/image-34.png)
-</Frame>
+## Hide buttons
 
-<Check>
-  **Important:** You still need to make the button at the last page visible so that respondents can submit your form.
-</Check>
+You can also create forms without buttons if you want respondents to focus only on answering. Click the button followed by its <Icon icon="gear" iconType="solid" /> to open the right panel. Under **Logic**, toggle `Hide always`.
+
+<img
+  src="/images/Screenshot2025-10-16at2.41.15PM.png"
+  alt="Screenshot 2025-10-16 at 2.41.15 PM.png"
+  title="Screenshot 2025-10-16 at 2.41.15 PM.png"
+  style={{ width:"79%" }}
+/>
+
+<Warning>
+  You still need to make the button at the last page visible so that respondents can submit your form.
+</Warning>
 
 ## Other features to enhance UX
 
 <CardGroup cols={3}>
-  <Card title="Progress bar" icon="bars-progress" iconType="regular" color="#FFC738" href="/progress-bar">
+  <Card title="Progress bar" icon="bars-progress" iconType="solid" color="#FFC738" href="/progress-bar">
     Customize the default progress bar that shows up when respondents answer.
   </Card>
-  <Card title="Pre-fill fields" icon="fill" iconType="regular" color="#FFC738" href="/prefill-fields">
+  <Card title="Pre-fill fields" icon="fill" iconType="solid" color="#FFC738" href="/prefill-fields">
     Pre-populate form fields based on previous inputs, URL parameters, and more.
   </Card>
   <Card title="Email notifications" icon="envelope-dot" iconType="regular" color="#FFC738" href="/email-notifications">
