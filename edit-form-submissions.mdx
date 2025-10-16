@@ -5,74 +5,55 @@ icon: "file-pen"
 sidebarTitle: "Let Respondents Edit"
 ---
 
-Fillout lets you make updatable forms. Let your respondents edit their answers anytime, ensuring you always have the most current information.
-
 ## When do I need an editable form?
 
-Making your forms editable improves the accuracy of the data you collect and reduces back-and-forth with your users. Common use cases includes:
+Making your forms editable improves the accuracy of the data you collect and reduces back-and-forth with your users. Common use cases include:
 
-- When collecting RSVPs for an event, let respondents change their response if their plans change.
-- If conducting a survey, let respondents update their answers if they have new information.
-- Let users change their notification preferences down the line on a newsletter signup form.
+- Event RSVPs — let respondents update their answers if plans change.
+- Surveys — allow edits when users have new information to share.
+- Newsletter signups — let users adjust their notification preferences later.
 
-There are a few ways to enable form edits in Fillout, depending on your needs.
+There are different ways to enable form edits in Fillout, depending on your needs.
 
-## Option 1: Edit link sent by email
+## Option 1: Automated edit link notification
 
-If you want every respondent to receive an edit link, this is the best approach. First, head to **Settings** from the top menu and enable `Respondent notifications`. Make sure to toggle `Include a link to edit submission`.
+If you want all respondents to receive an edit link by default, use this approach. First, quickly enable [respondent notifications](/respondent-emails). Make sure to toggle `Include a link to edit submission`.
 
-<Frame style={{ width: '576px' , height: '318px' }}>
-  ![PDF Viewer](/images/guides/image-8.png)
-</Frame>
+![Screenshot2025-10-07at3.19.35PM.png.avif](/images/Screenshot2025-10-07at3.19.35PM.png.avif)
 
-When the respondent submits the form, they’ll receive an email with a clear button to `Edit submission`.
+Upon submissions, respondents will receive an email with a clear button to `Edit submission`.
 
-<Frame>
-  ![PDF Viewer](/images/guides/image-9.png)
-</Frame>
-
-Learn more about respondent notifications [here](/respondent-emails).
+![PDF Viewer](/images/guides/image-9.png)
 
 ## Option 2: Send response field type
 
-If you want to make the respondent notification opt-in, use this approach instead. On your form’s [ending page](/ending-page), drag-and-drop or click on the `Send response` field type in the left-hand panel.
+If you want to make the respondent opt-in, use this approach instead. On your form’s [ending page](/ending-page), drag-and-drop the `Send response` field type from the left-hand panel.
 
-When users submit your form, they’ll now see an option to enter their email address to receive a summary of their responses.
+Click <Icon icon="gear" iconType="solid" /> to `Include edit link` in the right-hand panel.
 
-<Frame style={{ width: '576px' , height: '186px' }}>
-  ![PDF Viewer](/images/guides/image-10.png)
-</Frame>
+![Screenshot 2025-10-16 at 3.31.10 PM.png](/images/Screenshot2025-10-16at3.31.10PM.png)
 
-To include a form edit link, toggle the `Include edit link` switch in the right-hand panel. That’s it!
+## Option 3: Manual edit link sharing
 
-<Frame style={{ width: '288px' , height: '227px' }}>
-  ![PDF Viewer](/images/guides/image-11.png)
-</Frame>
+First, head to the `Results` tab on your form and [open the submission in question](https://www.fillout.com/help/view-responses#view-individual-submissions). Click <Icon icon="ellipsis-vertical" /> followed by `Edit`. A new tab will open with the filled submission. Copy the link and share it.
 
-## Option 3: Send an edit link manually
-
-First, head to the **Results** tab on your form and open the submission in question. Click `⋮` or the vertical ellipsis symbol followed by `Edit`. A new tab will open with the filled submission. Copy the link and share it.
-
-<Frame style={{ width: '528px' , height: '451px' }}>
-  ![PDF Viewer](/images/guides/image-12.png)
-</Frame>
+![PDF Viewer](/images/guides/image-12.png)
 
 ## Updating integrations
 
-With both the approaches described above, your connected 3rd-party integrations will automatically be updated whenever someone submits the edit link. For example, if your form is connected to Airtable, re-submitting the form from a respondent notification link will update the record in Airtable.
+With the approaches described above, your connected 3rd-party integrations will automatically be updated whenever someone submits the edit link. For example, if your form is connected to Airtable, re-submitting the form from a respondent notification link will update the record in Airtable.
 
 You can also set up edit links for specific integrations. See these guides or follow the same instructions for other integrations, like SmartSuite or Monday.com.
 
 <CardGroup cols={3}>
-  <Card title="Update existing Airtable records" href="/airtable-update-form" icon="arrow-rotate-right" iconType="regular" color="#FFC738">
- Edit existing records from Airtable and pre-fill fields.
+  <Card title="Update existing Airtable records" icon="arrow-rotate-right" iconType="regular" color="#FFC738" href="/airtable-update-form">
+    Edit existing records from Airtable and pre-fill fields.
   </Card>
-  <Card title="Update existing Notion pages" href="/notion-update-form" icon="arrow-rotate-right" iconType="regular" color="#FFC738">
- Edit existing Notion pages and pre-fill fields.
+  <Card title="Update existing Notion pages" icon="arrow-rotate-right" iconType="regular" color="#FFC738" href="/notion-update-form">
+    Edit existing Notion pages and pre-fill fields.
   </Card>
 </CardGroup>
 
-
 ## Closing the form
 
-If you’ve sent out an edit link but no longer want to accept submissions, you can always [close your form](/manage-form-access) to new submissions and edits.
+If you’ve sent out an edit link but no longer want to accept submissions, you can always [close your form](https://www.fillout.com/help/manage-form-access#close-form) to new submissions and edits.
