@@ -556,6 +556,11 @@
             "group": "Guides",
             "icon": "book-open",
             "pages": ["zite/guides/google-sheets","zite/guides/fillout"]
+          },
+          {
+            "group": "Other",
+            "icon": "gift",
+            "pages": ["zite/other/affiliate"]
           }
         ]
       },
