@@ -555,7 +555,7 @@
           {
             "group": "Guides",
             "icon": "book-open",
-            "pages": ["zite/guides/google-sheets"]
+            "pages": ["zite/guides/google-sheets","zite/guides/fillout"]
           }
         ]
       },
