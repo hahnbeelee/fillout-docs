@@ -13,6 +13,10 @@
     {
       "url": "https://eu-tables.fillout.com/api/v1",
       "description": "EU server"
+    },
+    {
+      "url": "https://39c3232fedc6.ngrok-free.app/api/v1",
+      "description": "Development server"
     }
   ],
   "security": [
@@ -22,6 +26,30 @@
   ],
   "paths": {
     "/bases": {
+      "get": {
+        "summary": "Get databases",
+        "description": "Lists all databases for your organization",
+        "operationId": "getDatabases",
+        "tags": ["Databases"],
+        "responses": {
+          "200": {
+            "description": "List of databases",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DatabaseWithTables"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      },
       "post": {
         "summary": "Create database",
         "description": "Creates a new database with tables and fields",
@@ -750,23 +778,28 @@
         "properties": {
           "id": {
             "type": "string",
-            "description": "Unique identifier for the database"
+            "format": "uuid",
+            "description": "Unique UUID identifier for the database",
+            "example": "bad4b276-f604-47ad-86e5-d2ae4f60968f"
           },
-          "name": {
+          "organizationId": {
+            "type": "integer",
+            "description": "Organization ID that owns this database",
+            "example": 109
+          },
+          "basePublicId": {
             "type": "string",
-            "description": "Name of the database"
-          }
-        },
-        "required": ["id", "name"]
-      },
-      "DatabaseWithTables": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Database"
+            "description": "Public identifier for the database",
+            "example": "abd6478f18b71637"
           },
-          {
+          "metadata": {
             "type": "object",
             "properties": {
+              "version": {
+                "type": "integer",
+                "description": "Metadata version",
+                "example": 1
+              },
               "tables": {
                 "type": "array",
                 "items": {
@@ -775,9 +808,32 @@
                 "description": "List of tables in the database"
               }
             },
-            "required": ["tables"]
+            "required": ["version", "tables"]
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO timestamp of when the database was created",
+            "example": "2025-10-18T02:08:14.784Z"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO timestamp of when the database was last updated",
+            "example": "2025-10-18T02:08:14.784Z"
           }
+        },
+        "required": [
+          "id",
+          "organizationId",
+          "basePublicId",
+          "metadata",
+          "createdAt",
+          "updatedAt"
         ]
+      },
+      "DatabaseWithTables": {
+        "$ref": "#/components/schemas/Database"
       },
       "Table": {
         "type": "object",
