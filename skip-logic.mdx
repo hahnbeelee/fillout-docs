@@ -11,31 +11,25 @@ sidebarTitle: "Use Skip Logic"
   <Step title="Navigate to Logic">
     On your form builder, go to `Logic`. For example, let’s ask respondents which specific services they would like to avail.
 
-    <Frame>
-      ![PDF Viewer](/images/guides/image-25.png)
-    </Frame>
+    ![Screenshot 2025-10-20 at 3.38.35 PM.png](/images/Screenshot2025-10-20at3.38.35PM.png)
   </Step>
-  <Step title="Connect pages">
+  <Step title="Create branches">
     By default, each page connects to a single page, until the **Ending page**. We want to create a dynamic form that will only show pages relevant to previous answers.
 
-    First, drag and drop the `+` connector of the page containing the question to the connector of the relevant page. Then, `Set condition`.
+    First, drag and drop the <Icon icon="circle-plus" iconType="solid" /> connector of the page containing the question to the connector of the relevant page.
 
-    <Frame>
-      ![PDF Viewer](/images/guides/image-26.png)
-    </Frame>
+    ![PDF Viewer](/images/guides/image-26.png)
   </Step>
   <Step title="Set conditions">
-    Say, the respondent selects Solutions and Training only. In this case, we’ll have them skip the page(/s) that come before it, Consultation.
+    Say, the respondent selects "Solutions" and "Training" only. In this case, we’ll have them skip the page(/s) that come before it, "Consultation".
 
-    <Frame>
-      ![PDF Viewer](/images/guides/image-27.png)
-    </Frame>
-    Now, let’s make a path for when they select only one option like Solutions. We’ll add `+ Add branch` to skip the page(/s) after it, Training.
+    ![PDF Viewer](/images/guides/image-27.png)
 
-    <Frame>
-      ![PDF Viewer](/images/guides/image-28.png)
-    </Frame>
-    For the remaining options, `+ Add branch` and repeat the same process. Configure the branches as you see fit.
+    Now, let’s make a path for when they select only one option like "Solutions". We’ll add a branch to skip the page(/s) after it, "Training".
+
+    ![PDF Viewer](/images/guides/image-28.png)
+
+    For the remaining options, add branches and repeat the same process. Configure the conditions as you see fit.
   </Step>
 </Steps>
 
@@ -46,6 +40,6 @@ sidebarTitle: "Use Skip Logic"
     Hide or show certain pages or custom endings based on respondent input.
   </Card>
   <Card title="Condition groups" icon="table-tree" iconType="regular" color="#FFC738" href="/condition-logic-groups">
-    Use nested logic to show, hide and validate fields based on multiple conditions.
+    Show/hide and validate fields based on multiple conditions at once.
   </Card>
 </CardGroup>
