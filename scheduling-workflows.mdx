@@ -7,59 +7,83 @@ icon: "circle-calendar"
 
 ## How to send event reminders
 
-On the Fillout dashboard, click [**Workflows**](/workflows) in the top menu. Select your preferred **Scheduling** workflow template.
+In the [Workflows page](https://www.fillout.com/help/workflows#how-to-create-a-workflow), select your preferred **Scheduling**  template.
 
-<Frame>
-  ![Fillout Workflows](/images/workflows/image-28.png)
-</Frame>
+![Screenshot 2025-10-23 at 6.57.29 PM.png](/images/Screenshot2025-10-23at6.57.29PM.png)
 
-Choose whether you want an **Event email reminder to host**, a **Slack reminder before calls** to yourself, or an **Event email reminder to invitee**.
 
-`Create workflow` and select which form you’d like to apply this workflow to. Alternatively, you may open an existing form and do the same in the **Integrate** page.
+
+## Types of scheduling actions
 
 ### **Event email reminder to host**
 
 Send reminders to yourself before a meeting takes place. By default, reminders are sent 30 minutes before a calendar event. To change this, `Edit` how soon you prefer to send it **Before event starts**.
 
-<Frame>
-  ![Fillout Workflows](/images/workflows/image-29.png)
-</Frame>
 
-Reminders are sent to the email linked with your Fillout account by default. Send this to a different email or add another email for backup (or if there are multiple hosts) by clicking `Edit` under **Send email**, then `Recipients`. Simply type the email addresses under **Send to**.
+  <img
+    src="/images/workflows/image-29.png"
+    alt="Fillout Workflows"
+    style={{ width:"61%" }}
+  />
 
-<Frame>
-  ![Fillout Workflows](/images/workflows/image-30.png)
-</Frame>
+
+By default, reminders are sent to the email linked to your Fillout account. To send them to another or additional email (e.g. for multiple hosts), `Edit` your email and toggle `Self-email`.
+
+<img
+  src="/images/Screenshot2025-10-23at7.04.40PM.png"
+  alt="Screenshot 2025-10-23 at 7.04.40 PM.png"
+  title="Screenshot 2025-10-23 at 7.04.40 PM.png"
+  style={{ width:"68%" }}
+/>
+
 
 ### **Slack reminder before calls**
 
 Send a Slack reminder 5 minutes before an event occurs. `Edit` this default time to how soon you would like to send it **Before event starts**.
 
-<Frame>
-  ![Fillout Workflows](/images/workflows/image-31.png)
-</Frame>
 
-Connect to **Slack** by clicking `Edit` and selecting the **Channel** you would like to send it to. You edit the message and add other preferred form fields by simply typing `@` and selecting them from the dropdown menu.
+  <img
+    src="/images/workflows/image-31.png"
+    alt="Fillout Workflows"
+    style={{ width:"62%" }}
+  />
 
-<Frame>
-  ![Fillout Workflows](/images/workflows/image-32.png)
-</Frame>
+
+Connect to **Slack** by clicking `Edit` and selecting the **Channel** you would like to send it to. Edit the message and reference answers by simply hovering and clicking <Icon icon="square-plus" iconType="solid" /> or typing **@** and selecting the corresponding fields or questions.
+
+<img
+  src="/images/Screenshot2025-10-23at7.10.41PM.png"
+  alt="Screenshot 2025-10-23 at 7.10.41 PM.png"
+  title="Screenshot 2025-10-23 at 7.10.41 PM.png"
+  style={{ width:"67%" }}
+/>
+
+
 
 ### **Event email reminder to invitees**
 
 Remind invitees to attend calls before they occur via email. By default, this is sent 30 minutes before a call. Click `Edit` to change this to how soon you would like to send it **Before event starts**.
 
-<Frame>
-  ![Fillout Workflows](/images/workflows/image-33.png)
-</Frame>
 
-Setup invitees emails by clicking `Edit` in **Send email**. Make sure to turn off the `Self-email` switch in the upper right corner.
+  <img
+    src="/images/workflows/image-33.png"
+    alt="Fillout Workflows"
+    style={{ width:"62%" }}
+  />
 
-<Frame>
-  ![Fillout Workflows](/images/workflows/image-34.png)
-</Frame>
 
-Under **Send to**, pick an email field in your form. You can change the **Subject**, add **Attachments**, and more under **Advanced.** To change the look of your email, check out this [quick guide](/custom-emails).
+Setup invitees emails by clicking `Edit` in **Send email**. 
+
+<img
+  src="/images/Screenshot2025-10-23at7.12.43PM.png"
+  alt="Screenshot 2025-10-23 at 7.12.43 PM.png"
+  title="Screenshot 2025-10-23 at 7.12.43 PM.png"
+  style={{ width:"68%" }}
+/>
+
+
+
+You can edit the contenst of your email and more under **Advanced.** To change the look of your email, check out this [quick guide](/custom-emails).
 
 Remember to `Test` you workflow first through the upper right corner, and `Publish` it to enable the changes.
 
@@ -67,9 +91,9 @@ Remember to `Test` you workflow first through the upper right corner, and `Publi
 
 <CardGroup cols={3}>
   <Card title="Workflows" icon="code-branch" iconType="regular" color="#FFC738" href="/workflows">
-    Simplify task flows with native multi-step automations, triggered by forms.
+    Simplify tasks with native multi-step automations, triggered by forms.
   </Card>
-  <Card title="Custom email notifications" icon="envelope-open-text" iconType="regular" color="#FFC738" href="/custom-emails">
+  <Card title="Custom emails" icon="envelope-open-text" iconType="regular" color="#FFC738" href="/custom-emails">
     Automate sending, pipe previous answers, and style your email.
   </Card>
   <Card title="Filter and Branch" icon="filter" iconType="regular" color="#FFC738" href="/filter-branch-workflows">
