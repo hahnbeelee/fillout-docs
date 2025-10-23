@@ -33,14 +33,19 @@ Common use cases include automatic meeting reminders, follow-up emails, 3rd part
 
 <Steps>
   <Step title="Start with a blank workflow">
-    **Open an existing form first or create a new one**, then navigate to the **Integrate** tab at the top menu followed by `Workflows` to createa a `+ Blank workflow`.
+    **Open an existing form first or create a new one**, then navigate to the `Integrate` tab from the top menu followed by `Workflows` to createa a `+ Blank workflow`.
+
+    ![Screenshot 2025-10-23 at 6.17.13 PM.png](/images/Screenshot2025-10-23at6.17.13PM.png)
   </Step>
   <Step title="Choose a trigger">
-    Select a **trigger**. 
+    Select a **trigger**.
 
-    <Frame>
-      ![Fillout Workflow](/images/workflows/image-1.png)
-    </Frame>
+    <img
+      src="/images/workflows/image-1.png"
+      alt="Fillout Workflow"
+      style={{ width:"100%" }}
+    />
+
     **Workflow triggers**
 
     A trigger refers to a condition that starts a specific action or series of actions. Examples are:
@@ -64,11 +69,10 @@ Common use cases include automatic meeting reminders, follow-up emails, 3rd part
     </CardGroup>
   </Step>
   <Step title="Choose an action">
-    Select an **action** and `Edit` it according to your preferences. To add more actions, press the `+` icon.
+    Select an **action** and `Edit` it according to your preferences. To add more actions, click <Icon icon="circle-plus" />.
 
-    <Frame>
-      ![Fillout Workflows](/images/workflows/image-2.png)
-    </Frame>
+    ![Fillout Workflows](/images/workflows/image-2.png)
+
     **Workflow actions**
 
     Actions are the tasks or steps that are automatically carried out after a trigger occurs. Examples are:
@@ -97,53 +101,50 @@ Common use cases include automatic meeting reminders, follow-up emails, 3rd part
       </Card>
     </CardGroup>
   </Step>
+  <Step title="Publish and share">
+    `Test` your workflow first to ensure everything's running. Then, `Publish` and `Share` it.
+  </Step>
 </Steps>
 
 ## Edit an existing workflow
 
-Go to **Integrate** from the top menu of your form, and click `Workflows`. Select a workflow to edit it.
+Click `Integrate` from the top menu of your form, and click `Workflows`. Simply select a workflow to edit it.
 
-<Frame>
-  ![Fillout Workflows](/images/workflows/image-3.png)
-</Frame>
+![Screenshot 2025-10-23 at 6.21.59 PM.png](/images/Screenshot2025-10-23at6.21.59PM.png)
 
 ## Test workflows with prior submissions
 
 Test your workflows without waiting for triggers or creating demo submissions.
 
-<Frame>
-  <video playsinline controls preload="metadata" src="https://prod-files-secure.s3.us-west-2.amazonaws.com/2a7ed980-5add-4b51-82ab-889415f57134/440f1939-5f54-4b69-bc27-27769f0947bc/testworkflow.mp4" title="video" width="100%" height="420" />
-</Frame>
+<video controls className="w-full aspect-video rounded-xl" src="https://prod-files-secure.s3.us-west-2.amazonaws.com/2a7ed980-5add-4b51-82ab-889415f57134/440f1939-5f54-4b69-bc27-27769f0947bc/testworkflow.mp4" />
 
 ## 1-click automations with templates
 
 The fastest way to get started with workflows is from a [template](https://build.fillout.com/home/workflows). These are common use cases for Fillout Workflows.
 
-<Frame>
-  ![Fillout Workflow](/images/workflows/image-4.png)
-</Frame>
+![Fillout Workflow](/images/workflows/image-4.png)
 
 ## Monitor workflows in one place
 
-Easily track email notifications and other workflows, with full visibility of what happened when. To view workflow runs, open your form and go to **Integrate** from the top menu. Click the `clock icon`.
+Easily track email notifications and other workflows, with full visibility of what happened when. To view workflow runs, open your form and go to `Integrate` from the top menu. Click <Icon icon="clock" />.
 
-<Frame>
-  ![Screenshot 2025-06-02 at 6.29.01 PM.png](/images/Screenshot2025-06-02at6.29.01PM.png)
-</Frame>
+![Screenshot 2025-10-23 at 6.42.53 PM.png](/images/Screenshot2025-10-23at6.42.53PM.png)
 
-You can also [view a single form submission](/view-responses#3adbe1475f90474fb6b76d367700bb55) and click on the `Workflows` tab. The workflow run history shows when each step occurred and if there were any issues.
+You can also [view an individual form submission](https://www.fillout.com/help/view-responses#view-individual-submissions) and scroll down to see the workflow run history.
+
+![Screenshot 2025-10-23 at 6.41.49 PM.png](/images/Screenshot2025-10-23at6.41.49PM.png)
 
 <Check>
-  **Good to know:** You can have up to 5 workflows per form for unverified organizations, and up to 20 workflows for verified organizations. To request verification, submit this [form](https://main.fillout.com/verify-your-fillout-account).
+  You can have up to 5 workflows per form for unverified organizations, and up to 20 workflows for verified organizations. To request verification, submit this [form](https://main.fillout.com/verify-your-fillout-account).
 </Check>
 
 ## Related articles
 
 <CardGroup cols={3}>
   <Card title="AI Actions" icon="robot" iconType="regular" color="#FFC738" href="/ai-workflows">
-    Use AI to summarize, classify or extract insights from your form submissions.
+    Use AI to summarize, classify or extract insights from submissions.
   </Card>
-  <Card title="Custom email notifications" icon="envelope-open-text" iconType="regular" color="#FFC738" href="/custom-emails">
+  <Card title="Custom emails" icon="envelope-open-text" iconType="regular" color="#FFC738" href="/custom-emails">
     Automate sending, pipe previous answers, and style your email.
   </Card>
   <Card title="Scheduling actions" icon="circle-calendar" iconType="regular" color="#FFC738" href="/scheduling-workflows">
