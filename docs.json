@@ -316,7 +316,6 @@
                 "group": "Guides",
                 "icon": "book-open",
                 "pages": [
-                  "how-to-create-scheduling-form",
                   "customize-fillout-scheduling",
                   "fillout-google-calendar",
                   "fillout-scheduling-availability",
