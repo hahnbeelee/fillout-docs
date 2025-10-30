@@ -559,7 +559,7 @@
           {
             "group": "Other",
             "icon": "gift",
-            "pages": ["zite/other/affiliate"]
+            "pages": ["affiliate-program"]
           }
         ]
       },
