@@ -554,8 +554,8 @@
           {
             "group": "Marketplace",
             "pages": [
-              "zite/designing/create-templates",
-              "zite/designing/clone-templates"
+              "zite/marketplace/create-templates",
+              "zite/marketplace/clone-templates"
             ]
           },
           {
