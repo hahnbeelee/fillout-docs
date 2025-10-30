@@ -134,8 +134,8 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "Database deleted successfully"
+          "200": {
+            "$ref": "#/components/responses/DeleteSuccess"
           },
           "401": {
             "$ref": "#/components/responses/Unauthorized"
@@ -280,8 +280,8 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "Table deleted successfully"
+          "200": {
+            "$ref": "#/components/responses/DeleteSuccess"
           },
           "401": {
             "$ref": "#/components/responses/Unauthorized"
@@ -453,8 +453,8 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "Field deleted successfully"
+          "200": {
+            "$ref": "#/components/responses/DeleteSuccess"
           },
           "401": {
             "$ref": "#/components/responses/Unauthorized"
@@ -744,8 +744,8 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "Record deleted successfully"
+          "200": {
+            "$ref": "#/components/responses/DeleteSuccess"
           },
           "400": {
             "$ref": "#/components/responses/BadRequest"
@@ -1396,6 +1396,23 @@
                 "code": "INTERNAL_SERVER_ERROR",
                 "message": "Server-side error occurred"
               }
+            }
+          }
+        }
+      },
+      "DeleteSuccess": {
+        "description": "Resource deleted successfully",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "deleted": {
+                  "type": "boolean",
+                  "example": true
+                }
+              },
+              "required": ["deleted"]
             }
           }
         }

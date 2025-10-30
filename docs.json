@@ -552,15 +552,22 @@
             ]
           },
           {
-            "group": "Designing",
+            "group": "Marketplace",
             "pages": [
-              "zite/designing/create-templates","zite/designing/clone-templates"
+              "zite/designing/create-templates",
+              "zite/designing/clone-templates"
             ]
           },
           {
             "group": "Guides",
             "icon": "book-open",
-            "pages": ["zite/guides/google-sheets","zite/guides/airtable","zite/guides/fillout","zite/guides/slack","zite/guides/openai"]
+            "pages": [
+              "zite/guides/google-sheets",
+              "zite/guides/airtable",
+              "zite/guides/fillout",
+              "zite/guides/slack",
+              "zite/guides/openai"
+            ]
           },
           {
             "group": "Other",
