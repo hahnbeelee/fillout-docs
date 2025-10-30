@@ -552,6 +552,12 @@
             ]
           },
           {
+            "group": "Designing",
+            "pages": [
+              "zite/designing/create-templates"
+            ]
+          },
+          {
             "group": "Guides",
             "icon": "book-open",
             "pages": ["zite/guides/google-sheets","zite/guides/airtable","zite/guides/fillout","zite/guides/slack","zite/guides/openai"]
