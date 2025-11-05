@@ -1,6 +1,6 @@
 ---
 title: "Track conversion data in Google Ads"
-description: "Easily track and upload form conversions and use enhanced conversion in Google Ads with Fillout. Upload address, phone number, GCLID and email to let Google Ads optimize Ad bidding."
+description: "Easily track and upload form conversions and use enhanced conversion in Google Ads with Fillout. Upload phone number, GCLID and email to let Google Ads optimize Ad bidding."
 sidebarTitle: "Google Ads"
 icon: "google-plus-g"
 ---
@@ -13,61 +13,94 @@ icon: "google-plus-g"
 
 Uploading form submission conversion data to Google Ads lets you measure the effectiveness of your ad campaigns in driving desired user actions, such as lead generation for specific ad clicks. Furthermore, with enhanced conversions, you can improve **conversion measurement accuracy**, providing more data for optimizing your ad strategies automatically.
 
-<Note>
-  **Note:** The Google Ads integration is part of the conversion kit paid add-on. Learn more and get started [here](https://www.fillout.com/conversion-kit).
-</Note>
+<Warning>
+  The Google Ads integration is part of the conversion kit paid add-on. Learn more and get started [here](https://www.fillout.com/conversion-kit).
+</Warning>
 
 ## Enable Google Ads tracking for your form
 
-First, head to **Settings**. Click `Conversion Kit` on the left side followed by **Google Ads** to enable tracking. This will start collecting the **GCLID** identifier whenever someone submits your form from a Google Ad.
-
-<Frame>
-  ![Google Ads tracking](/images/conversion-kit/image-3.png)
-</Frame>
-
-## How to upload conversion data to Google Ads
-
 <Steps>
-  <Step title="Choose a conversion name and value">
-   `Start upload`. Enter the **conversion name** of the event you would like to register in Google Ads. Also, choose a **conversion value** (in USD) reflecting how much you would like Google Ads to count this conversion as.
+  <Step title="Open form settings">
+    Click <Icon icon="gear-complex" /> on the upper right area followed by `Conversion kit` in the left-hand panel.
 
-<Check>
-  **Important:** Make sure that the conversion name you type matches a Conversion Action name (case sensitive) that is defined in your Google Ads account.
-</Check>
-
-<Frame>
-  ![Google Ads tracking](/images/conversion-kit/image-4.png)
-</Frame> 
+    <img
+      src="/images/formsettings.png"
+      alt="form settings.png"
+      title="form settings.png"
+      style={{ width:"43%" }}
+    />
   </Step>
-  <Step title="Add enhanced conversions (Optional)">
-   Enhanced conversions is a feature that can improve the accuracy of your conversion measurement and unlock more powerful bidding. Learn more [here.](https://support.google.com/google-ads/answer/9888656?hl=en)
+  <Step title="Track Google Ads">
+    Click **Google Ads** followed by `Enable Google Ads tracking`. This will start collecting the **GCLID** identifier whenever someone submits your form from a Google Ad.
 
-Toggle the `Enhanced conversions` switch. Then, select the question you wish to pull data from for Address, Phone Number and Email fields.
-
-<Frame>
-  ![Google Ads tracking](/images/conversion-kit/image-5.png)
-</Frame>
- 
+    ![Screenshot 2025-11-05 at 2.43.52 PM.png](/images/Screenshot2025-11-05at2.43.52PM.png)
   </Step>
-  <Step title="Upload conversion data to Google Ads">
-   `Download CSV` to download a pre-formatted file with all the necessary conversion data.
-
-<Frame>
-  ![Google Ads tracking](/images/conversion-kit/image-6.png)
-</Frame>
-
-Then, `Upload CSV` and select your Google Ads account in the Google Ads dashboard.
-
-Click the blue `+` button and choose **Upload a file** as the source. Select the file you just downloaded and choose **Unhashed private customer data**.
-
-<Frame>
-  ![Google Ads tracking](/images/conversion-kit/image-7.png)
-</Frame>
-
-You’ve now successfully uploaded conversion data to Google Ads. 
+  <Step title="Publish and share">
+    That's it! `Publish` your form to reflect the recent change.
   </Step>
 </Steps>
 
+## Upload conversion data to Google Ads
+
+You can use enhanced conversions for leads by updating Google Ads with your latest submission data to improve tracking and campaign outcomes.
+
+<Steps>
+  <Step title="Enable uploading">
+    After following the steps above and enabling tracking, `Start upload`.
+
+    ![Screenshot 2025-11-05 at 2.55.48 PM.png](/images/Screenshot2025-11-05at2.55.48PM.png)
+  </Step>
+  <Step title="Choose a conversion name and value">
+    Enter the details below.
+
+    <img
+      src="/images/Screenshot2025-11-05at3.02.35PM.png"
+      alt="Screenshot 2025-11-05 at 3.02.35 PM.png"
+      title="Screenshot 2025-11-05 at 3.02.35 PM.png"
+      style={{ width:"73%" }}
+    />
+
+    <Warning>
+      Make sure that the conversion name you type matches a Conversion Action name (case sensitive) that is defined in your Google Ads account.
+    </Warning>
+  </Step>
+  <Step title="Enable enhanced conversions (Optional)">
+    Enhanced conversions can give you more accurate tracking and better bidding results. Learn more [here.](https://support.google.com/google-ads/answer/9888656?hl=en)
+
+    Toggle the `Enhanced conversions` switch. Then, select the question you wish to pull data from for Phone Number and Email fields.
+
+    <img
+      src="/images/Screenshot2025-11-05at3.06.34PM.png"
+      alt="Screenshot 2025-11-05 at 3.06.34 PM.png"
+      title="Screenshot 2025-11-05 at 3.06.34 PM.png"
+      style={{ width:"77%" }}
+    />
+  </Step>
+  <Step title="Export CSV">
+    `Download CSV` to export a pre-formatted file with all the necessary conversion data. 
+
+    <img
+      src="/images/Screenshot2025-11-05at3.09.27PM.png"
+      alt="Screenshot 2025-11-05 at 3.09.27 PM.png"
+      title="Screenshot 2025-11-05 at 3.09.27 PM.png"
+      style={{ width:"79%" }}
+    />
+  </Step>
+  <Step title="Upload CSV to Google Ads">
+    Then, `Upload CSV` and select your Google Ads account in the Google Ads dashboard. On the left-hand panel, go to `Goals` . Then, click `Uploads` followed by <Icon icon="circle-plus" iconType="solid" />.
+
+    ![Screenshot 2025-11-05 at 3.19.27 PM.png](/images/Screenshot2025-11-05at3.19.27PM.png)
+
+    Choose `Upload a file` as the source. Select the file you just downloaded and choose **Unhashed private customer data**.
+
+    ![Screenshot 2025-11-05 at 3.28.04 PM.png](/images/Screenshot2025-11-05at3.28.04PM.png)
+
+    That's it! You’ve now successfully uploaded conversion data to Google Ads.
+  </Step>
+  <Step title="Publish and share">
+    Remember to `Publish` your form to reflect the latest change.
+  </Step>
+</Steps>
 
 ## Automatic uploads to Google Ads
 
