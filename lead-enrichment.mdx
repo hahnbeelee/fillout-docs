@@ -1,43 +1,40 @@
 ---
 title: "Lead enrichment"
-description: "Enrich emails with Clearbit. Conditionally route leads to different pages based on company size, industry, company type and more. Auto-fill or auto-hide fields based on available enrichment data."
+description: "Enrich emails with Apollo. Conditionally route leads to different pages based on company size, industry, company type and more. Auto-fill or auto-hide fields based on available enrichment data."
 icon: "circle-up"
 sidebarTitle: "Lead Enrichment"
 ---
 
 ## Video overview
 
-<Frame>
-  <iframe class="notion-asset-object-fit" src="https://www.loom.com/embed/08f91f725a7a4aff95ae2a14d6928608" title="iframe video" frameborder="0" allowfullscreen loading="lazy" scrolling="auto" width="100%" height="540" />
-</Frame>
+<iframe class="notion-asset-object-fit" src="https://www.loom.com/embed/08f91f725a7a4aff95ae2a14d6928608" title="iframe video" frameborder="0" allowfullscreen loading="lazy" scrolling="auto" width="100%" height="540" />
 
-<Note>
-  **Note:** Lead enrichment is part of the conversion kit paid add-on. Fillout covers the costs for external APIs like Clearbit and Google Maps - **no API key needed**. Get started [here](https://www.fillout.com/conversion-kit).
-</Note>
+<Warning>
+  Lead enrichment is part of the conversion kit paid add-on. Fillout covers the costs for external APIs like Clearbit and Google Maps - **no API key needed**. Get started [here](https://www.fillout.com/conversion-kit).
+</Warning>
 
 ## Enriching leads and conditional routing
 
-If you enable `Enrich with Clearbit` in the right-hand panel, you’ll receive access to the following properties after a respondent fills out their email:
+If you enable `Enrich with Apollo` in the right-hand panel, you’ll receive access to the following properties after a respondent fills out their email:
 
 - **Employee count** - total number of employees that work at the company
 - **Employment name** - name of the company the person works for
 - **Employment domain** - domain of the company the person works for
 - **Employment role** - a person’s standardized role at the company they work for based on their title. [See all possible values](https://docs.google.com/spreadsheets/d/1erIdqoy60JwLAnpb91EfoJV5YrXDnbwSaA-aqcBlw48/edit#gid=1522926464).
-- **Company traffic rank** - a company’s standing in a global rank of company website traffic as calculated by Clearbit. [See all possible values](https://docs.google.com/spreadsheets/d/1erIdqoy60JwLAnpb91EfoJV5YrXDnbwSaA-aqcBlw48/edit#gid=281531467).
+- **Company traffic rank** - a company’s standing in a global rank of company website traffic as calculated by Apollo. [See all possible values](https://docs.google.com/spreadsheets/d/1erIdqoy60JwLAnpb91EfoJV5YrXDnbwSaA-aqcBlw48/edit#gid=281531467).
 - **Company employee range** - number of employees that work at the company by range. Useful for segmenting companies by size. [See all possible values](https://docs.google.com/spreadsheets/d/1erIdqoy60JwLAnpb91EfoJV5YrXDnbwSaA-aqcBlw48/edit#gid=1202347353).
 - **Company estimated annual revenue** - estimate of the company’s annual revenue by range. [See all possible values](https://docs.google.com/spreadsheets/d/1erIdqoy60JwLAnpb91EfoJV5YrXDnbwSaA-aqcBlw48/edit#gid=462196649).
 
-With [page logic](/page-logic), you can conditionally route leads based on company size, industry, job title and more based on the data obtained from the email field.
+Common use cases include:
 
-<Frame>
-  ![Lead enrichment](/images/conversion-kit/image-15.png)
-</Frame>
+- Routing leads with over x employees to a [scheduling page](/scheduling-page) with your enterprise team
+- Creating multiple scheduling pages to route leads based on region, industry or company size
 
-<Info>
-  **Common use case:** Route leads with over x employees to a [scheduling page](/scheduling-page) with your enterprise team. Or, create multiple scheduling pages to route leads based on region, industry or company size.
-</Info>
+With [page logic](/page-logic), you can conditionally route leads based on the data obtained from the email field.
 
-Lastly, you can send enriched data to [any integration]() by setting up additional mappings on the **Integrations** tab.
+![Lead enrichment](/images/conversion-kit/image-15.png)
+
+Lastly, you can send enriched data to [any integration]() by setting up [additional mappings](https://www.fillout.com/help/additional-integration-mappings) on the `Integrations` tab.
 
 ## Related articles
 
