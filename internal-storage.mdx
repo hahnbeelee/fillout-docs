@@ -11,44 +11,54 @@ sidebarTitle: "Internal Storage"
 
 This option may be useful for organizations with strict data residency, compliance, or privacy requirements that prohibit storing data on third-party servers, such as those in regulated industries or handling highly sensitive information.
 
-
-<Note>
-  **Note:** This feature is available on the **[Enterprise Tier 2 Plan](https://www.fillout.com/enterprise)**. If you're interested, please fill out **[this form](https://main.fillout.com/enterprise)** to speak directly to someone on our sales team.
-</Note>
+<Info>
+  This feature is available on the [**Enterprise Tier 2 Plan**](https://www.fillout.com/enterprise). If you're interested, please fill out [**this form**](https://main.fillout.com/enterprise) to speak directly to someone on our sales team.
+</Info>
 
 ## Limitations
 
 Disabling internal storage will limit access to several features that rely on Fillout's servers to temporarily hold or process data:
 
-- **[Results page](/results):** Completed submissions in Fillout cannot be viewed.
-- **[Partial submissions](/partial-submissions):** Partially completed responses won’t be tracked or saved.
-- **[PDF generation](/pdfs):** PDFs cannot be created.
-- **[Fillout Scheduling](/scheduling):** Features related to scheduling (e.g., [time slot availability](/fillout-scheduling-availability) and calendar syncing) will be unavailable.
-- **[Approvals](/approval-workflows):** Approval workflows and status tracking will be disabled.
+- [**Results page**](/results) - completed submissions can't be recorded in Fillout
+- [**Partial submissions**](/partial-submissions) - partially completed responses can't be tracked or saved
+- [**PDF generation**](/pdfs) - PDFs can't be created
+- [**Fillout Scheduling**](/scheduling) - features related to scheduling (e.g., [time slot availability](/fillout-scheduling-availability) and calendar syncing) will be unavailable
+- [**Approvals**](/approval-workflows) - approval workflows and status tracking will be disabled
 
 ## **How to use this feature**
 
-Open your form and click **Settings** on top. Next, click `Form behavior` on the left side to untoggle the `Only use external storage` switch.
+<Steps>
+  <Step title="Open form settings">
+    Click <Icon icon="gear-complex" /> on the upper right area.
 
-<Frame>
-  ![](/images/account/image-30.png)
-</Frame>
+    <img
+      src="/images/formsettings.png"
+      alt="form settings.png"
+      title="form settings.png"
+      style={{ width:"49%" }}
+    />
+  </Step>
+  <Step title="Use external storage">
+    Go to `Form behavior` and toggle the `Only use external storage` switch.
+
+    ![Screenshot 2025-11-06 at 7.08.26 PM.png](/images/Screenshot2025-11-06at7.08.26PM.png)
+  </Step>
+</Steps>
 
 <Check>
-  **Important:** File uploads are still stored on AWS S3 as many of Fillout's 3rd party integrations require an external link to uploaded files.
+  File uploads are still stored on AWS S3 as many of Fillout's 3rd party integrations require an external link to uploaded files.
 </Check>
 
 ## Related articles
 
 <CardGroup cols={3}>
-    <Card title="Results" icon="clipboard" iconType="regular" color="#FFC738" href="/results">
-    Review individual submissions and gain access to analytics, along with a summary.
+  <Card title="Results" icon="clipboard" iconType="regular" color="#FFC738" href="/results">
+    Review individual submissions, summary, and analytics.
   </Card>
-
   <Card title="Fillout Scheduling" icon="calendar" iconType="regular" color="#FFC738" href="/scheduling">
-    Book meetings on your Google or Outlook calendars right from a Fillout form for free.
+    Book meetings on your Google or Outlook calendars a with form.
   </Card>
   <Card title="Approvals" icon="badge-check" iconType="regular" color="#FFC738" href="/approval-workflows">
-    Automate project approvals, HR requests, job applications, and others.
+    Automate approvals, requests, applications, and others.
   </Card>
 </CardGroup>
