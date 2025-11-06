@@ -1,12 +1,12 @@
 ---
-title: Fillout REST API
-description: Interact with Fillout via a REST API. Access your forms and form submissions from outside the Fillout site.
-icon: circle-info
-sidebarTitle: Overview
+title: "Fillout REST API"
+description: "Interact with Fillout via a REST API. Access your forms and form submissions from outside the Fillout site."
+icon: "circle-info"
+sidebarTitle: "Overview"
 ---
 
 <Tip>
-  **Tip:** Using Node.js, Deno or Bun? Take a look at our JavaScript SDK: [https://npmjs.com/package/@fillout/api](https://www.npmjs.com/package/@fillout/api)
+  Using Node.js, Deno or Bun? Take a look at our JavaScript SDK: [https://npmjs.com/package/@fillout/api](https://www.npmjs.com/package/@fillout/api)
 </Tip>
 
 ### What is REST API
@@ -15,17 +15,20 @@ A **REST API** simplifies interaction with your form data, allowing for automati
 
 ### Introduction
 
-The **Fillout API** lets you access information about your Fillout account programmatically, without using the Fillout site. The Fillout API is primarily for Fillout users and for 3rd party developers that want to build services on top of Fillout or access their submission data.
+The **Fillout API** lets you access information about your Fillout account programmatically, without using the Fillout site. It is primarily for Fillout users and for 3rd party developers that want to build services on top of Fillout or access their submission data.
 
 You can access a list of all your forms and the submissions for each form via the API.
 
 ### Authentication
 
-Generate and view your API key in the `Developer` [settings tab of your account](https://build.fillout.com/home/settings/developer). You can revoke or regenerate your API key at any time via the dashboard.
+Generate and view your API key in the `Developer` [settings tab of your account](https://build.fillout.com/home/settings/developer). You can revoke or `Regenerate` your API key at any time via the dashboard.
 
-<Frame>
-  ![Screenshot of the Developer tab of a form](/images/advanced/image-1.png)
-</Frame>
+<img
+  src="/images/Screenshot2025-11-06at4.07.30PM.png"
+  alt="Screenshot 2025-11-06 at 4.07.30 PM.png"
+  title="Screenshot 2025-11-06 at 4.07.30 PM.png"
+  style={{ width:"60%" }}
+/>
 
 To authenticate your requests, you need to provide your API key in the `Authorization` header in the following format:
 
@@ -35,16 +38,15 @@ Authorization: Bearer <your-api-key>
 
 Replace `<your-api-key>` with the **API key** obtained from your Fillout account.
 
+<Note>
+  If you’re self-hosting Fillout or using the EU agent, a different URL will appear in the dashboard.
+</Note>
+
 You can obtain your API base URL in the API dashboard. Typically, it will be [https://api.fillout.com](https://api.fillout.com/).
 
 <Check>
-  **Important:** If you’re self-hosting Fillout or using the EU agent, a different URL will appear in the dashboard.
+  You can also use access tokens granted via a Fillout 3rd party integration. If you’re looking to build an integration, see [this article](/oauth-applications).
 </Check>
-
-<Info>
-  **Note:** you can also use access tokens granted via a Fillout 3rd party integration. If you’re looking to build an integration, see [this article](/oauth-applications).
-</Info>
-
 
 ## Rate limits
 
@@ -53,7 +55,7 @@ All endpoints above are limited to being called no more than 5 times per second,
 ## Related articles
 
 <CardGroup cols={3}>
-     <Card title="Create Fillout 3rd Party Apps" icon="grid-2-plus" iconType="regular" color="#FFC738" href="/oauth-applications">
-    Create applications to connect Fillout to 3rd party applications.
+  <Card title="Create Fillout 3rd Party Apps" icon="grid-2-plus" iconType="regular" color="#FFC738" href="/oauth-applications">
+    Build integrations that link Fillout with 3rd party platforms and tools.
   </Card>
 </CardGroup>
