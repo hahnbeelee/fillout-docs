@@ -9,52 +9,60 @@ icon: "files-medical"
 
 Below is a tutorial video on how to create new [Airtable records](https://www.airtable.com/guides/build/connect-data-with-linked-records) from a linked record picker in Fillout.
 
-<Frame>
-  <iframe class="notion-asset-object-fit" src="https://www.loom.com/embed/5000bc8b87c74acca5fe5cd96fecf3e4" title="iframe video" frameborder="0" allowfullscreen loading="lazy" scrolling="auto" width="100%" height="420" />
-</Frame>
+<iframe class="notion-asset-object-fit" src="https://www.loom.com/embed/5000bc8b87c74acca5fe5cd96fecf3e4" title="iframe video" frameborder="0" allowfullscreen loading="lazy" scrolling="auto" width="100%" height="420" />
 
-## How to create new linked records
+## Create new linked records
 
-Add a `record picker` to your form. In the right-hand panel, enable `Can create new records?`.
+<Steps>
+  <Step title="Add a record picker">
+    Add a `Record picker` field directly from Fillout and map it to the corresponding Airtable field.
 
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/Screenshot2025-02-11at5.28.43PM.png)
-</Frame>
+    <img
+      src="/images/Screenshot2025-11-10at2.50.31PM.png"
+      alt="Screenshot 2025-11-10 at 2.50.31 PM.png"
+      title="Screenshot 2025-11-10 at 2.50.31 PM.png"
+      style={{ width:"38%" }}
+    />
 
-If you'd like to customize the record creation form (e.g. to mark fields as required), click `Edit record creation form`.
+    Alternatively, connect to Airtable first so your `Link to another record` field there automatically appears in Fillout. No manual mapping needed.
 
-That's it! Your users can now click `Create new` to open up a form that lets them make a new record (associated with the linked record).
+    <img
+      src="/images/Screenshot2025-11-10at2.49.39PM.png"
+      alt="Screenshot 2025-11-10 at 2.49.39 PM.png"
+      title="Screenshot 2025-11-10 at 2.49.39 PM.png"
+      style={{ width:"39%" }}
+    />
+  </Step>
+  <Step title="Enable create records option">
+    Click the field's <Icon icon="gear-complex" iconType="solid" /> to enable `Can create new records?`.
 
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/maform.png)
-</Frame>
+    ![Screenshot 2025-11-10 at 3.21.07 PM.png](/images/Screenshot2025-11-10at3.21.07PM.png)
 
-## Modify the record creation form
+    In the right-hand panel, you can also:
 
-Click on the `Edit record creation form` button to open and modify the form that’s used for adding new records.
+    - **Edit record creation form** - modify the subform used for creating new records
+    - **Only show new records **- let respondents create new records, but not select existing records
+    - **Pass information to subform** - specify fields or info from your main form to the subform
 
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/Screenshot2025-05-15at7.48.05PM.png)
-</Frame>
-
-## Allow creating new records, but not selecting existing records
-
-Enable the `Only show new records` to let users create new records only. When enabled, clicking the linked record picker opens the child form directly.
-
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/Screenshot2025-05-15at7.48.11PM.png)
-</Frame>
+    <Warning>
+      You have to register URL parameters in your subform first. Check out [this short guide](https://www.fillout.com/help/url-parameters#how-to-add-a-url-parameter-or-hidden-field).
+    </Warning>
+  </Step>
+  <Step title="Publish and share">
+    When everything's set, click `Publish` to make the changes reflect.
+  </Step>
+</Steps>
 
 ## Airtable specific guides
 
 <CardGroup cols={3}>
   <Card title="Update existing Airtable records" icon="arrow-rotate-right" iconType="regular" color="#FFC738" href="/airtable-update-form">
-    Edit existing records from Airtable and pre-fill fields.
+    Edit existing records and pre-fill fields.
   </Card>
   <Card title="Update linked records" icon="file-plus-minus" iconType="regular" color="#FFC738" href="/linked-record-update">
-Let respondents update linked records in databases.
+    Let respondents update linked records in databases.
   </Card>
   <Card title="Working with linked record pickers" icon="folder-medical" iconType="regular" color="#FFC738" href="/record-pickers">
-    Set pre-fills, reference fields from the chosen record, and more.
+    Set pre-fills, reference fields, and more.
   </Card>
 </CardGroup>
