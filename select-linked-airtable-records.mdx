@@ -1,52 +1,78 @@
 ---
-title: "How to select and filter Airtable linked records in a dropdown"
+title: "Select and filter Airtable linked records in a dropdown"
 description: "Make a linked record picker in Fillout. Optionally filter records based on prior inputs."
-icon: folder
+icon: "folder"
 sidebarTitle: "Select Linked Records"
 ---
 
 ## Video tutorial
 
-In Fillout, you can even filter which records a user is choosing from. Here's how.
+In Fillout, you can even filter which records a respondent is choosing from. Here's how.
 
-<Frame>
-  <iframe width="100%" height="420" src="https://www.loom.com/embed/0b693e23011647ff880973b55489a16b" title="Select & Filter Airtable Linked Records in a Dropdown" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</Frame>
+<iframe width="100%" height="420" src="https://www.loom.com/embed/0b693e23011647ff880973b55489a16b" title="Select & Filter Airtable Linked Records in a Dropdown" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />
 
-## **Let users choose from a filtered set of Airtable records**
+## Enable dropdown filtering
 
-To get started, click `+` followed by `Link to another record` field in your Airtable table that you plan to write or update.
+<Steps>
+  <Step title="Create a linked record picker field">
+    On the Airtable base you plan to write or update, click `+` followed by `Link to another record`.
 
-<Frame style={{ width: '288px', height: '262px' }}>
-  ![Screenshot of the Form designer tab of a form](/images/Screenshot2025-05-15at7.56.56PM.png)
-</Frame>
+    <img
+      src="/images/Screenshot2025-11-10at11.19.37AM.png"
+      alt="Screenshot 2025-11-10 at 11.19.37 AM.png"
+      title="Screenshot 2025-11-10 at 11.19.37 AM.png"
+      style={{ width:"52%" }}
+    />
+  </Step>
+  <Step title="Connect to Airtable">
+    Click `Integrate` on the top menu followed by `Airtable`. Then, choose your **base** and **table**.
+  </Step>
+  <Step title="Add the field to your form">
+    On the left-hand panel, drag and drop the linked record picker field onto your form. You'll immediately be able to pick from records in that associated table.
 
-Now, go ahead and drag and drop that field into the Fillout form editor, and you'll immediately be able to pick from records in that associated table.
+    <img
+      src="/images/Screenshot2025-05-15at7.57.06PM.png"
+      alt="Screenshot of the Form designer tab of a form"
+      style={{ width:"75%" }}
+    />
+  </Step>
+  <Step title="Add filters">
+    Click the field's <Icon icon="gear-complex" iconType="solid" /> to open the right-hand panel. Scroll down to **Advanced** to `+ Add filters`.
 
-<Frame style={{ width: '576px', height: '407px' }}>
-  ![Screenshot of the Form designer tab of a form](/images/Screenshot2025-05-15at7.57.06PM.png)
-</Frame>
+    <img
+      src="/images/Screenshot2025-11-10at11.54.52AM.png"
+      alt="Screenshot 2025-11-10 at 11.54.52 AM.png"
+      title="Screenshot 2025-11-10 at 11.54.52 AM.png"
+      style={{ width:"30%" }}
+    />
+  </Step>
+  <Step title="Publish and share">
+    `Publish` your form to make the changes reflect.
+  </Step>
+</Steps>
+
+## Additional custom options
 
 Now, you can customize this field with many options like:
 
-- Allow users to create new entries in a new (customizable) form
+- Allow respondents to create new entries in a new (customizable) form
 - Allow selecting multiple linked records
-- Select which fields to show (can show images\!)
+- Select which fields to show (can show images!)
 - Limit to a view
 - Pick which field to search by
 - Filter which records to show based on form inputs or dynamic data
-- And many more\!
+- And many more!
 
 ## Related articles
 
 <CardGroup cols={3}>
-  <Card title="Create new linked records" href="/create-new-linked-records" icon="files-medical" iconType="regular" color="#FFC738">
-    Let users create new records from your form's record picker.
+  <Card title="Create new linked records" icon="files-medical" iconType="regular" color="#FFC738" href="/create-new-linked-records">
+    Let respondents create records from your form.
   </Card>
-    <Card title="Update existing Airtable records" href="/airtable-update-form" icon="arrow-rotate-right" iconType="regular" color="#FFC738">
-    Edit existing records from Airtable and pre-fill fields.
+  <Card title="Update existing Airtable records" icon="arrow-rotate-right" iconType="regular" color="#FFC738" href="/airtable-update-form">
+    Edit existing records and pre-fill fields.
   </Card>
   <Card title="Working with linked record pickers" icon="folder-medical" iconType="regular" color="#FFC738" href="/record-pickers">
-    Set pre-fills, reference fields from the chosen record, and more.
+    Set pre-fills, reference fields, and more.
   </Card>
 </CardGroup>
