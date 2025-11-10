@@ -9,73 +9,67 @@ icon: "arrow-rotate-right"
 
 Check out [Gareth](https://www.garethpronovost.com/)’s tutorial on using Fillout to update existing Airtable records.
 
-<Frame>
-  <iframe width="720" height="420" src="https://www.youtube.com/embed/mvDQBif-sbE" title="Updating Airtable records with advanced Fillout forms" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />
-</Frame>
+<iframe width="720" height="420" src="https://www.youtube.com/embed/mvDQBif-sbE" title="Updating Airtable records with advanced Fillout forms" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />
 
 ## How it works
 
 <Steps>
-  <Step title="Switch your form to update mode">
-    First, choose `Airtable` on the **Integrate** tab.
+  <Step title="Switch to update mode">
+    Open your [Airtable form](https://www.fillout.com/help/airtable). Click `Integrate` on the top menu followed by `Airtable`.
 
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/Screenshot2025-02-11at4.24.42PM.png)
-</Frame>
+    ![Screenshot 2025-11-10 at 10.47.05 AM.png](/images/Screenshot2025-11-10at10.47.05AM.png)
 
-Then specify that you want to `Update record`.
+    Then specify that you want to `Update record`.
 
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/updateairtableinventory.png)
-</Frame>
+    ![Screenshot of the Form designer tab of a form](/images/updateairtableinventory.png)
   </Step>
-  <Step title="Use a formula to specify the record to update">
-   You'll now get a formula that defines a **unique link** for every record in your table.
+  <Step title="Use a formula">
+    You'll now get a formula that defines a **unique link** for every record in your table.
 
-Create a new `formula` field and copy the formula Fillout provides on the **Integrate** page.
+    Create a new `formula` field and copy the formula Fillout provides on the `Integrate` page.
 
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/uat2.png)
-</Frame> 
+    <img
+      src="/images/uat2.png"
+      alt="Screenshot of the Form designer tab of a form"
+      style={{ width:"67%" }}
+    />
   </Step>
   <Step title="Preview your form">
-   That's it\! `Finish setup`. Try out your form in `Preview` mode, or click one of your unique links to update a record after you’ve published your form\!
+    That's it! Click `Update` in the upper right corner. Then, Try out your form in `Preview` mode, or click one of your unique links to update a record after you’ve published your form!
 
-Your form is **automatically pre-filled** for whichever record it is updating. This can be changed in the top left area.
+    Your form is **automatically pre-filled** for whichever record it is updating. This can be changed in the top right area.
 
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/uat3.png)
-</Frame>
+    ![Screenshot 2025-11-10 at 10.55.06 AM.png](/images/Screenshot2025-11-10at10.55.06AM.png)
 
-<Note>
-  **Note:** If you don’t provide an **id** in the unique URL, the form will create a new record instead.
-</Note> 
+    <Note>
+      If you don’t provide an **id** in the unique URL, the form will create a new record instead.
+    </Note>
   </Step>
 </Steps>
 
-## Let users choose a record to update
+## Let respondents choose a record to update
 
-Use [this approach](/choose-record-to-update) if you prefer to let users choose (in Fillout) which record they’d like to update.
+Use [this approach](/choose-record-to-update) if you prefer to let respondents choose (in Fillout) which record they’d like to update.
 
 ## Advanced next steps (Optional)
 
 You can use update forms in combination with products like Airtable interfaces, Softr, or Stacker. For example, instead of adding a formula in Step 2 above, we could add a `Button` field.
 
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/uat4.png)
-</Frame>
+<img
+  src="/images/uat4.png"
+  alt="Screenshot of the Form designer tab of a form"
+  style={{ width:"63%" }}
+/>
 
 Then, we can display this button in an Airtable interface, for users to easily edit the record.
 
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/uat5.png)
-</Frame>
+![Screenshot of the Form designer tab of a form](/images/uat5.png)
 
 ## Airtable specific guides
 
 <CardGroup cols={3}>
   <Card title="Create new linked records" icon="files-medical" iconType="regular" color="#FFC738" href="/create-new-linked-records">
-    Let users create new records from a record picker in your form.
+    Let respondents create records from your form.
   </Card>
   <Card title="Choose a record to update" icon="files" iconType="regular" color="#FFC738" href="/choose-record-to-update">
     Let users choose the record they want to update in a form.
