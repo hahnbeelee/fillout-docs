@@ -441,7 +441,8 @@
                   "prefill-fields",
                   "pre-fill-dates",
                   "dynamic-form-dropdowns",
-                  "url-parameters"
+                  "url-parameters",
+                  "url-parameters-between-forms"
                 ]
               },
               {
