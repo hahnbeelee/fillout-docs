@@ -1,0 +1,56 @@
+---
+title: "Send data between forms using URL parameters"
+description: "Send data from one form to another with Fillout's URL parameters."
+sidebarTitle: "Form Parameters"
+icon: "file-brackets-curly"
+---
+
+## Overview
+
+When embedding a [subform](https://www.fillout.com/help/subforms#subforms) within a main form, you can pass field answers or values (e.g., name, email, and order ID) from the main form to the subform using URL parameters.
+
+This removes the need for users to re-enter information. For example, you can:
+
+- Pass a user’s name or email for additional details in a subform
+- Transfer order or project IDs for tracking submissions
+- Pre-fill contact info in follow-up or feedback subforms
+
+## How to send data
+
+<Steps>
+  <Step title="Add a URL parameter in your subform">
+    Open your subform and follow the steps above. In our example, we have the order form as the main form and a subform for selecting products.
+  </Step>
+  <Step title="Connect the parameter to your main form">
+    Click the subform field's <Icon icon="gear-complex" iconType="solid" />. Scroll down to \*\*Advanced \*\*and `Configure` the information you'd like to pass to your subform.
+
+    ![Screenshot 2025-11-10 at 5.30.14 PM.png](/images/Screenshot2025-11-10at5.30.14PM.png)
+
+    To add a new subform field, check out [this short guide](https://www.fillout.com/help/subforms).
+
+    Click `+ Add new` and select the URL parameter from your subform in the left. Then, map this to corresponding field in your main form.
+
+    <img
+      src="/images/Screenshot2025-11-10at5.47.58PM.png"
+      alt="Screenshot 2025-11-10 at 5.47.58 PM.png"
+      title="Screenshot 2025-11-10 at 5.47.58 PM.png"
+      style={{ width:"59%" }}
+    />
+  </Step>
+  <Step title="Publish and share">
+    That's it! The field where you set the URL parameter as the default value will now be pre-filled automatically.
+
+    `Preview` your form first to ensure it's working as you intended it to. Then, click `Publish` and share or embed your form.
+  </Step>
+</Steps>
+
+## Related articles
+
+<CardGroup cols={3}>
+  <Card title="URL parameters" icon="brackets-curly" iconType="regular" color="#FFC738">
+    Pass information to a form to support pre-filling.
+  </Card>
+  <Card title="Subforms" icon="diagram-nested" iconType="regular" color="#FFC738" href="/subforms">
+    Collect repeated data with compact nested forms.
+  </Card>
+</CardGroup>
