@@ -9,45 +9,43 @@ sidebarTitle: "Update Records"
 
 <Steps>
   <Step title="Switch your form to update mode">
-    Open an existing form. Select `Monday` from the **Integrate** tab in the top menu.
+    Open your [Monday form](https://www.fillout.com/help/monday). Click `Integrate` on the top menu followed by `Monday`.
 
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-10at1.45.55PM.png)
-</Frame>
+    ![Screenshot 2025-11-11 at 3.35.57 PM.png](/images/Screenshot2025-11-11at3.35.57PM.png)
 
-Then, click `Update item`.
+    Then, click `Update item`.
 
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-10at1.46.22PM.png)
-</Frame>
+    ![Screenshot 2025-11-11 at 3.38.22 PM.png](/images/Screenshot2025-11-11at3.38.22PM.png)
   </Step>
-  <Step title="Use a formula to specify the record to update">
-    In your Monday table, click `+` to add an `Item ID` column. Add another column, and select `Formula` this time. Copy and paste the formula provided on the Fillout integrations page, then click `Set formula`.
+  <Step title="Use a formula">
+    Go to your Monday table and click <Icon icon="plus-large" size={14} /> on the rightmost side to add an `Item ID column`. Add another column for the `Formula` where you'll paste the formula provided on the Fillout page. Click `Set formula` after.
 
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-10at1.47.12PM.png)
-</Frame>
+    <img
+      src="/images/Screenshot2025-02-10at1.47.12PM.png"
+      alt="Screenshot of the Integrate tab of a form"
+      style={{ width:"63%" }}
+    />
 
-You'll now get a formula that defines a **unique link** for every item in your table.
+    You'll now get a formula that defines a **unique link** for every item in your table.
   </Step>
-  <Step title="Publish and share your form">
-    That's it\! Click `Update` on the upper right corner. Then, `Publish` your form and **share** the link.
+  <Step title="Publish and share">
+    That's it! Click `Update` on the upper right corner. Then, `Publish` your form to reflect the changes.
 
-Your form is automatically pre-filled for whichever record it is updating. Go to `Preview` and select a **Record to update** on the top right of your form.
+    Your form is automatically pre-filled for whichever record it is updating. In `Preview` mode, you can change this on the top right area.
 
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-11at12.44.09PM.png)
-</Frame>
+    ![Screenshot 2025-11-11 at 3.49.33 PM.png](/images/Screenshot2025-11-11at3.49.33PM.png)
   </Step>
 </Steps>
 
 ## Use a custom link to update an item
 
-By default, items get updated by their unique ID. By toggling the `Custom link` switch, you will be able to choose another way to update your columns on Monday with [URL parameters](/url-parameters). For example, through Email input.
+By default, items get updated by their unique ID. By toggling the `Custom link` switch, you will be able to choose another way to update your columns on Monday with [URL parameters](/url-parameters) (e.g., email input).
 
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-11at1.03.13PM.png)
-</Frame>
+<img
+  src="/images/Screenshot2025-02-11at1.03.13PM.png"
+  alt="Screenshot of the Integrate tab of a form"
+  style={{ width:"96%" }}
+/>
 
 ## Specify a condition
 
@@ -56,13 +54,13 @@ You can run your integration only when a specific condition is met. Check out th
 ## Related articles
 
 <CardGroup cols={3}>
-  <Card title="Sync form responses to Monday" icon="columns-3" iconType="regular" color="#FFC738" href="/monday">
-    Create leads, orders, projects and custom objects in Monday.
+  <Card title="Sync responses to Monday" icon="columns-3" iconType="regular" color="#FFC738" href="/monday">
+    Use a form to create leads, orders, and more.
   </Card>
-  <Card title="Conditional integration logic" icon="gear-complex" iconType="regular" color="#FFC738" href="/conditional-integration">
+  <Card title="Integration logic" icon="gear-complex" iconType="regular" color="#FFC738" href="/conditional-integration">
     Perform an integration only when a certain condition is met.
   </Card>
   <Card title="URL Parameters" icon="brackets-curly" iconType="regular" color="#FFC738" href="/url-parameters">
-    Pass information to a form to support pre-filling and personalizing of the form.
+    Pass information to a form to support pre-filling.
   </Card>
 </CardGroup>
