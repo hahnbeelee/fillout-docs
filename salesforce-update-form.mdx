@@ -5,69 +5,69 @@ sidebarTitle: "Update Records"
 icon: "arrow-rotate-right"
 ---
 
-If you don’t already have a Fillout account, you can [create one here](https://build.fillout.com/signup). Then, create a form and connect your Salesforce account.
-
 ## How it works
 
 <Steps>
   <Step title="Set your form to update mode">
-    First, navigate to the **Integrate** tab and select `Salesforce`.
+    Open your [Salesforce-connected form](https://www.fillout.com/help/salesforce) and navigate to the `Integrate` tab and select `Salesforce`.
 
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-12at5.22.38PM.png)
-</Frame>
+    ![Screenshot 2025-11-11 at 5.03.58 PM.png](/images/Screenshot2025-11-11at5.03.58PM.png)
 
-Then, click `Update record`.
+    Then, click `Update record`.
 
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/sfra.png)
-</Frame>
+    ![Screenshot of the Integrate tab of a form](/images/sfra.png)
+
+    <Info>
+      The Salesforce integration is available on the **Enterprise Tier 1 and 2** plans. Learn more [here](https://www.fillout.com/enterprise).
+    </Info>
   </Step>
-  <Step title="Create a custom update link per record">
+  <Step title="Use the provided formula">
     You'll now get a formula that defines a unique link for every record in your object. Add this new formula to your Salesforce object.
 
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/sfra2.png)
-</Frame>
+    <img
+      src="/images/sfra2.png"
+      alt="Screenshot of the Integrate tab of a form"
+      style={{ width:"53%" }}
+    />
 
-Go to your Salesforce dashboard and click the `settings icon` on the upper right side followed by `Open Advanced Setup`.
+    Go to your Salesforce dashboard and click the `settings icon` on the upper right side followed by `Open Advanced Setup`.
 
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/sfra3.png)
-</Frame>
+    <img
+      src="/images/sfra3.png"
+      alt="Screenshot of the Integrate tab of a form"
+      style={{ width:"52%" }}
+    />
 
-Using **Quick Find** on the left-panel, search for `Object Manager`. Click your `object`. In our example, we used Contact.
+    Using **Quick Find** on the left-panel, search for `Object Manager`. Click your `object`. In our example, we used Contact.
 
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/ScreenShot2024-04-15at3.42.34PM.png)
-</Frame>
+    <img
+      src="/images/ScreenShot2024-04-15at3.42.34PM.png"
+      alt="Screenshot of the Integrate tab of a form"
+      style={{ width:"59%" }}
+    />
 
-Go to `Fields & Relationships` and create a `New` field.
+    Go to `Fields & Relationships` and create a `New` field.
 
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-12at5.38.18PM.png)
-</Frame>
+    ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-12at5.38.18PM.png)
 
-Select **Formula** from the list. Then, copy and paste the formula from your Fillout form into Salesforce.
+    Select **Formula** from the list. Then, paste provied formula on Fillout into Salesforce.
   </Step>
-  <Step title="Preview your form">
-   Complete your setup by clicking `Finish setup`. You can test your form in `Preview` mode or use one of the unique links to update a record once your form is live.
+  <Step title="Publish and share">
+    Complete your setup by clicking `Finish setup`. You can test your form in `Preview` mode or use one of the unique links to update a record once your form is live.
 
-Your form will **automatically pre-fill** the data for the record it is updating.
+    Your form will **automatically pre-fill** the data for the record it is updating.
 
-<Note>
-  **Note:** If you don’t provide an **id** in the unique URL, the form will create a new record instead.
-</Note> 
+    ![Screenshot 2025-11-11 at 5.21.44 PM.png](/images/Screenshot2025-11-11at5.21.44PM.png)
+
+    <Note>
+      If you don’t provide an **id** in the unique URL, the form will create a new record instead.
+    </Note>
   </Step>
 </Steps>
 
-<Note>
-  **Note:** The Salesforce integration is available on the **Enterprise Tier 1 and 2** plans. Learn more [here](https://www.fillout.com/enterprise).
-</Note>
-
 ## Advanced next steps (optional)
 
-You can also enhance your update forms by integrating them with platforms like Salesforce App Builder or Lightning Experience. Instead of the formula in Step 3, you might consider using a `Button` field.
+Enhance your update forms by integrating them with platforms like Salesforce App Builder or Lightning Experience. Instead of the formula in Step 3, you might consider using a `Button` field.
 
 This button can then be embedded within Salesforce interfaces for users to easily manage records.
 
@@ -79,9 +79,9 @@ You can run your integration only when a specific condition is met. Check out th
 
 <CardGroup cols={3}>
   <Card title="Create a Salesforce form" icon="cloud" iconType="solid" color="#FFC738" href="/salesforce">
-    Add or update your Salesforce records with a Fillout form.
+    Add or update records with a form.
   </Card>
-  <Card title="Conditional integration logic" icon="gear-complex" iconType="regular" color="#FFC738" href="/conditional-integration">
+  <Card title="Integration logic" icon="gear-complex" iconType="regular" color="#FFC738" href="/conditional-integration">
     Perform an integration only when a certain condition is met.
   </Card>
 </CardGroup>
