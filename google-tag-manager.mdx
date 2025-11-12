@@ -5,7 +5,7 @@ sidebarTitle: "Tag Manager"
 icon: "tags"
 ---
 
-## What is Tag Manager
+## What is Tag Manager?
 
 [Google Tag Manager](https://tagmanager.google.com/?ref=fillout-forms-help-article) is a free tool that allows you to manage and deploy marketing tags on your website without editing the code. It simplifies tracking and analytics for better insights and optimization.
 
@@ -13,48 +13,39 @@ icon: "tags"
 
 <Steps>
   <Step title="Link your Fillout form to Tag Manager">
-    First, open your Fillout form or create a new one. Then, navigate to **Integrate** and look for `Tag Manager`.
+    First, open your Fillout form or create a new one. Then, navigate to `Integrate` from the top menu and look for `Tag Manager`.
 
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-18at2.18.58PM.png)
-</Frame>
+    ![Screenshot 2025-11-12 at 3.52.44 PM.png](/images/Screenshot2025-11-12at3.52.44PM.png)
 
-`Connect a custom domain` to get started. Follow the quick instructions in the next screen to enter your **Google Tag Manager container ID**.
+    `Connect a custom domain` to get started. Follow the quick instructions in the next screen to enter your **Google Tag Manager container ID**.
 
-<Note>
-  **Note:** Only admins will be able to add a custom domain.
-</Note>
-
+    <Warning>
+      Only [admins](https://www.fillout.com/help/granular-permissions#admin-vs-non-admins) will be able to add a custom domain.
+    </Warning>
   </Step>
   <Step title="Add triggers">
-   In your Tag Manager **Workspace**, head over to `Variables` from the left panel and click `Configure`.
+    In your Tag Manager **Workspace**, head over to `Variables` from the left panel and click `Configure`.
 
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-18at2.21.34PM.png)
-</Frame>
+    ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-18at2.21.34PM.png)
 
-`Tick` all variables under **Clicks** and **Forms**.
+    Scroll down and \*\*tick \*\*all variables under **Clicks** and **Forms**.
 
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/Screenshot2024-08-28at5.08.24PM.png)
-</Frame>
+    ![Screenshot of the Integrate tab of a form](/images/Screenshot2024-08-28at5.08.24PM.png)
 
-Then, go back to your **Workspace**. Click `Tags` in the left panel followed by `New`. In **Tag Configuration**, we’ll choose Google Analytics. Copy and paste the [**Measurement ID**](https://support.google.com/analytics/answer/12270356?hl=en) and enter an **Event Name**.
+    Then, go back to your **Workspace**. Click `Tags` in the left panel followed by `New`.
 
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/Screenshot2024-08-28at5.28.05PM.png)
-</Frame>
+    In **Tag Configuration**, we’ll choose `Google Analytics`. Copy and paste the [**Measurement ID**](https://support.google.com/analytics/answer/12270356?hl=en) and enter an **Event Name**.
 
-Click `Save` in the upper right corner, then `Add Trigger`. Click `+` on the right corner and set your preferences. In our example, we’ll fire the trigger when respondents click the submit button in the Fillout form.
+    ![Screenshot of the Integrate tab of a form](/images/Screenshot2024-08-28at5.28.05PM.png)
 
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/Screenshot2024-08-28at5.41.45PM.png)
-</Frame>
+    Click `Save` in the upper right corner, then `Add Trigger`. Click **\+** on the right corner and set your preferences. In our example, we’ll fire the trigger when respondents click the submit button in the Fillout form.
 
-`Preview` the setup in your Google Tag Manager. Once everything’s good, click `Submit`. Then, go back to your Fillout form and `Publish` it. 
+    ![Screenshot of the Integrate tab of a form](/images/Screenshot2024-08-28at5.41.45PM.png)
+
+    `Preview` the setup on Google Tag Manager. Once everything’s good, click `Submit`.
   </Step>
-  <Step title="Publish and share your form.">
- Once you’re done click `Finish setup` and `Publish your form`.   
+  <Step title="Publish and share">
+    Go back to your Fillout form to `Finish setup` and `Publish`.
   </Step>
 </Steps>
 
@@ -62,6 +53,6 @@ Click `Save` in the upper right corner, then `Add Trigger`. Click `+` on the rig
 
 <CardGroup cols={3}>
   <Card title="Track conversion data in Google Ads" icon="google-plus-g" iconType="regular" color="#FFC738" href="/google-ads-conversions">
-    Use address, phone number, GCLID and email.
+    Use email, GCLID, and more.
   </Card>
 </CardGroup>
