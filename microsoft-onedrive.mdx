@@ -5,7 +5,7 @@ sidebarTitle: "OneDrive"
 icon: "cloud-arrow-up"
 ---
 
-### **What is OneDrive**
+### **What is OneDrive?**
 
 [Microsoft OneDrive](https://www.microsoft.com/en-us/microsoft-365/onedrive/onedrive-for-business?ref=filloutforms-helparticle) is a cloud storage service that allows users to store, share, and access files from anywhere. With seamless integration across devices and robust security features, it provides a convenient solution for storing and collaborating on documents, photos, and more.
 
@@ -13,53 +13,59 @@ icon: "cloud-arrow-up"
 
 <Steps>
   <Step title="Connect your Fillout form to OneDrive">
-  Go to **Integrate** and select `OneDrive`.
+    Click `Integrate` from the top menu followed by `OneDrive`.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-14at4.22.56PM.png)
-</Frame>
+    ![Screenshot 2025-11-12 at 4.53.42 PM.png](/images/Screenshot2025-11-12at4.53.42PM.png)
 
-`Connect to OneDrive` and enter the login credentials of your Microsoft account. Choose a `Folder` you would like respondents to upload their files to.
+    `Connect to OneDrive` and enter the login credentials of your Microsoft account. Choose a `Folder` you would like respondents to upload their files to.
 
-<Note>
-  **Note:** This integration can only be linked to Microsoft organizations, work and school accounts, not personal accounts.
-</Note>  
+    <Warning>
+      This integration can only be linked to Microsoft organizations, work and school accounts, not personal accounts.
+    </Warning>
   </Step>
   <Step title="Map your form fields on Fillout">
     Under **Upload fields**, click `+ Add new` followed by a file uploader, voice recording, or PDF field.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-14at4.28.49PM.png)
-</Frame>
+    <img
+      src="/images/Screenshot2025-02-14at4.28.49PM.png"
+      alt="Screenshot of the Fillout form creation page"
+      style={{ width:"55%" }}
+    />
   </Step>
   <Step title="Publish and share">
- Click `Finish setup` followed by `Publish` on the upper right corner, and you're all set\!   
+    Click `Finish setup` followed by `Publish` on the upper right corner, and you're all set!
   </Step>
 </Steps>
 
 ## Add a dynamic file path
 
-You can categorize file uploads into folders based on your respondents’ answers. Toggle the `Custom subfolder and file name?` switch, then enter a name or click the `+` icon to reference a field as the **Subfolder name**.
+You can categorize file uploads into folders based on your respondents’ answers. Toggle the `Custom subfolder and file name?` switch, then enter a name or click <Icon icon="square-plus" iconType="solid" /> to reference a field as the **Subfolder name**.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-14at4.32.29PM.png)
-</Frame>
+<img
+  src="/images/Screenshot2025-02-14at4.32.29PM.png"
+  alt="Screenshot of the Fillout form creation page"
+  style={{ width:"53%" }}
+/>
 
 ## Add subfolders
 
-You can add a subfolder by typing `/` followed by your chosen subfolder name.
+You can add a subfolder by typing `/` followed by your chosen subfolder name or clicking <Icon icon="square-plus" iconType="solid" /> to reference a form field.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-14at4.32.48PM.png)
-</Frame>
+<img
+  src="/images/Screenshot2025-02-14at4.32.48PM.png"
+  alt="Screenshot of the Fillout form creation page"
+  style={{ width:"54%" }}
+/>
 
 ## Enter a custom filename prefix
 
-You can enter a **Filename prefix** to add specific characters at the beginning of each file name upon form submission or click `+` to reference a form field.
+You can enter a **Filename prefix** to add specific characters at the beginning of each file name upon form submission or click <Icon icon="square-plus" iconType="solid" /> to reference a form field.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-14at4.33.42PM.png)
-</Frame>
+<img
+  src="/images/Screenshot2025-02-14at4.33.42PM.png"
+  alt="Screenshot of the Fillout form creation page"
+  style={{ width:"54%" }}
+/>
 
 ## Specify a condition
 
@@ -69,12 +75,12 @@ You can run your integration only when a specific condition is met. Check out th
 
 <CardGroup cols={3}>
   <Card title="Upload files to Google Drive" icon="google-drive" iconType="regular" color="#FFC738" href="/google-drive">
-    Allow respondents upload files in a folder with a form.
+    Automatically upload files with a form.
   </Card>
   <Card title="Sync file uploads to Dropbox" icon="dropbox" iconType="regular" color="#FFC738" href="/dropbox">
-    Upload file submissions automatically to a folder with a form.
+    Automatically upload files with a form.
   </Card>
   <Card title="Sync file uploads to Amazon S3" icon="amazon" iconType="regular" color="#FFC738" href="/amazon-s3">
-    Upload file submissions automatically to an Amazon S3 bucket.
+    Automatically upload files with a form.
   </Card>
 </CardGroup>
