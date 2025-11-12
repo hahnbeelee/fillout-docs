@@ -9,42 +9,41 @@ icon: "arrow-rotate-right"
 
 <Steps>
   <Step title="Switch your form to update mode">
-    First, choose `Notion` in the **Integrate** page.
+    Open your [Notion-connected form](https://www.fillout.com/help/notion). Click `Integrate` on the top menu followed by `Notion`.
 
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/Screenshot2025-02-12at4.40.20PM.png)
-</Frame>
+    ![Screenshot 2025-11-12 at 2.36.27 PM.png](/images/Screenshot2025-11-12at2.36.27PM.png)
 
-Then specify that you want to `Update page`.
+    Then specify that you want to `Update page`.
 
-<Frame style={{ width: '624px', height: '133px' }}>
-  ![Screenshot of the Form designer tab of a form](/images/notionupdate.png)
-</Frame>
+    ![Screenshot 2025-11-12 at 2.53.23 PM.png](/images/Screenshot2025-11-12at2.53.23PM.png)
+
+    You'll now get a formula in Fillout that defines a **unique link** for every page in your table.
   </Step>
-  <Step title="Use a formula to specify the page to update">
-   You'll now get a formula in Fillout that defines a **unique link** for every page in your table. Create a new `formula`property in Notion and copy the formula provided by Fillout.
+  <Step title="Paste the provided formula">
+    Create + a new `formula`property in Notion and paste the formula from Fillout.
 
-<Frame style={{ width: '624px', height: '166px' }}>
-  ![Screenshot of the Form designer tab of a form](/images/notionupdate2.png)
-</Frame>
+    ![Screenshot of the Form designer tab of a form](/images/notionupdate2.png)
 
-Adding a formula property is mostly for your convenience. If you already know the page ID of the page that you want to update, you can pass it into the URL yourself\!
-
-<Note>
-  **Note:** If you don’t provide an **id** in the unique URL, the form will create a new page instead.
-</Note>
- 
+    <Note>
+      If you don’t provide an **id** in the unique URL, the form will create a new page instead.
+    </Note>
   </Step>
-  <Step title="Preview your form">
-   That's it\! Click `Finish setup`. Preview your form or use a unique link to update a page. The form auto-fills for the page it's updating, and you can select the **Record to update** in the top left.
+  <Step title="Publish and share">
+    That's it!  Click `Update` on the upper right corner and `Publish` your form.
 
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/notionupdate3.png)
-</Frame>
+    To update a Notion page, click `Preview` and select a **Record to update** or click one of the unique links from your Notion formula column.
 
-<Note>
-  **Note:** In Notion, the formulas with the links to update the records are most easily clickable when using a Table view.
-</Note> 
+    <img
+      src="/images/Screenshot2025-11-12at2.55.33PM.png"
+      alt="Screenshot 2025-11-12 at 2.55.33 PM.png"
+      style={{ width:"99%" }}
+    />
+
+    Your form will **automatically pre-fill** the data for the record it is updating.
+
+    <Note>
+      In Notion, the formulas with the links to update the records are most easily clickable when using a Table view.
+    </Note>
   </Step>
 </Steps>
 
@@ -52,12 +51,12 @@ Adding a formula property is mostly for your convenience. If you already know th
 
 <CardGroup cols={3}>
   <Card title="Add contents to a Notion page" icon="file-waveform" iconType="regular" color="#FFC738" href="/notion-add-page-content">
-    Use a Fillout form to add styled content to the page.
+    Use a Fillout form to add styled content.
   </Card>
   <Card title="Embed forms on Notion" icon="memo" iconType="regular" color="#FFC738" href="/notion-embed">
     Include surveys, questionnaires, and more in your pages.
   </Card>
   <Card title="Create a Notion form" icon="cube" iconType="regular" color="#FFC738" href="/notion">
-    Create or update existing Notion databases and embed your forms anywhere.
+    Create or update existing Notion databases.
   </Card>
 </CardGroup>
