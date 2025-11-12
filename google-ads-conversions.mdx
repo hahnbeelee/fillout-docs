@@ -31,9 +31,14 @@ Uploading form submission conversion data to Google Ads lets you measure the eff
     />
   </Step>
   <Step title="Track Google Ads">
-    Click **Google Ads** followed by `Enable Google Ads tracking`. This will start collecting the **GCLID** identifier whenever someone submits your form from a Google Ad.
+    Click **Google Ads** followed by `Enable Google Ads tracking`. This collects the **GCLID** parameter from the landing page URL when someone submits your form after clicking a Google Ad.
 
     ![Screenshot 2025-11-05 at 2.43.52 PM.png](/images/Screenshot2025-11-05at2.43.52PM.png)
+
+    <Warning>
+      The GCLID isn’t saved from cookies. If someone leaves the landing page and comes back later, it won’t be captured with their form submission.
+    </Warning>
+    
   </Step>
   <Step title="Publish and share">
     That's it! `Publish` your form to reflect the recent change.
