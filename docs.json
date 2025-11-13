@@ -471,6 +471,7 @@
                   "reset-password",
                   "delete-user-account",
                   "billing-and-payments",
+                  "team-plan",
                   "pricing-discounts",
                   "2fa"
                 ]
