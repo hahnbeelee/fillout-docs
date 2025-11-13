@@ -13,10 +13,6 @@
     {
       "url": "https://eu-tables.fillout.com/api/v1",
       "description": "EU server"
-    },
-    {
-      "url": "https://2dfe3827a38d.ngrok-free.app/api/v1",
-      "description": "Ngrok tunnel"
     }
   ],
   "security": [
