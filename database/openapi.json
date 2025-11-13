@@ -802,6 +802,10 @@
             "description": "Unique UUID identifier for the database",
             "example": "bad4b276-f604-47ad-86e5-d2ae4f60968f"
           },
+          "name": {
+            "type": "string",
+            "description": "Name of the database"
+          },
           "tables": {
             "type": "array",
             "items": {
@@ -826,7 +830,7 @@
             "description": "Workspace ID that owns this database"
           }
         },
-        "required": ["id", "tables", "createdAt", "updatedAt"]
+        "required": ["id", "name", "tables", "createdAt", "updatedAt"]
       },
       "DatabaseWithTables": {
         "$ref": "#/components/schemas/Database"
@@ -1223,10 +1227,6 @@
             "default": 0,
             "description": "Integer-based offset - Number of records to skip for pagination"
           },
-          "cursor": {
-            "type": "string",
-            "description": "String-based cursor - Opaque pagination cursor for fetching the next page of results"
-          },
           "filters": {
             "type": "object",
             "additionalProperties": true,
@@ -1257,11 +1257,6 @@
           "total": {
             "type": "integer",
             "description": "Total number of records matching the filter criteria"
-          },
-          "cursor": {
-            "type": "string",
-            "nullable": true,
-            "description": "String-based cursor for the next page of results, or null if no more pages"
           },
           "hasMore": {
             "type": "boolean",
