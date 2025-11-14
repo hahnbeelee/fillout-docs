@@ -579,7 +579,7 @@
           {
             "group": "Other",
             "icon": "gift",
-            "pages": ["affiliate-program","zite/subscription"]
+            "pages": ["affiliate-program","zite/subscription", "zite/delete-account"]
           }
         ]
       },
