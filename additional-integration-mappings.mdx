@@ -1,30 +1,72 @@
 ---
 title: "Map Fillout fields to integrations"
-description: "Configure form fields and values to send to Notion, Airtable, and other database integrations."
+description: "Set form fields and values to send to Notion, Airtable, and other integrations."
 sidebarTitle: "Map Fillout fields"
 icon: "right-left"
 ---
 
-One of the most important parts of connecting to a database is connecting your form fields to actually be sent to your database when the form is submitted.
+## Overview
 
-## How to map fields
+One of the most important parts of connecting to a database or integration is connecting your form fields so they’re actually sent to your database or tool when the form is submitted.
+
+## Automatic field mapping
+
+Fillout automatically pulls in the columns or fields from your database or integration and turns them into form fields. Once you link an integration, those **connected fields appear in the left-hand panel**, ready for you to drag and drop into your form.
+
+![Screenshot 2025-11-14 at 11.40.08 AM.png](/images/Screenshot2025-11-14at11.40.08AM.png)
+
+When someone fills out the form, their responses go straight into the matching row or field in the connected integration.
+
+![Screenshot 2025-11-14 at 3.24.14 PM.png](/images/Screenshot2025-11-14at3.24.14PM.png)
+
+## How to map fields manually
+
+Follow this if you made a Fillout form with fields before connecting to an integration, or if you want to map newly added fields after connecting to one.
 
 <Steps>
-  <Step title="Connect a database"> 
-Head to **Integrate** and connect your form to [Airtable](/airtable), [Notion](/notion), [HubSpot](/hubspot), or [other databases](/integrations).  
+  <Step title="Link your Fillout form to an integration">
+    If you haven't already, click `Integrate` from the top menu and connect your form to [Airtable](/airtable), [Notion](/notion), [HubSpot](/hubspot), or [other integrations](/integrations).
   </Step>
-  <Step title="Drag and drop synced columns">
-  Go back to **Edit** in the top menu. In the left-hand panel, you'll see columns from your database automatically synced. Drag and drop these to your form.
+  <Step title="Map form fields">
+    In **Mappings**, `+ Add new` integration field on the left and select the corresponding Fillout field on the right.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-14at12.04.48PM.png)
-</Frame>  
+    ![Screenshot 2025-11-14 at 2.30.48 PM.png](/images/Screenshot2025-11-14at2.30.48PM.png)
+
+    **or Connect fields**
+
+    Click a field's <Icon icon="gear-complex" iconType="solid" /> to open the right-hand panel where you'll connect it to a column in your database or a field in your integration.
+
+    <img
+      src="/images/Screenshot2025-11-14at2.34.20PM.png"
+      alt="Screenshot 2025-11-14 at 2.34.20 PM.png"
+      title="Screenshot 2025-11-14 at 2.34.20 PM.png"
+      style={{ width:"97%" }}
+    />
+  </Step>
+  <Step title="Publish and share">
+    Once you've mapped the necessary fields, click `Publish` on the upper right corner, then share or embed your form.
   </Step>
 </Steps>
 
-## Mappings
+## Updating fields and options
 
-You might want to send additional information to Airtable, Notion or other databases when a respondent submits your form, other than your form fields. For example, you might want to save:
+If you’ve edited connected fields, added or deleted options, added more fields, or made any changes to your integration, simply click <Icon icon="arrows-rotate" iconType="solid" size={13} /> to relect the changes on Fillout.
+
+**On the left-hand panel**
+
+<img
+  src="/images/Screenshot2025-11-14at3.50.53PM.png"
+  alt="Screenshot 2025-11-14 at 3.50.53 PM.png"
+  title="Screenshot 2025-11-14 at 3.50.53 PM.png"
+  style={{ width:"31%" }}
+/>
+**On the Integrate page**
+
+![Screenshot 2025-11-14 at 3.49.59 PM.png](/images/Screenshot2025-11-14at3.49.59PM.png)
+
+## Other Mappings
+
+You might want to send additional information to Airtable, Notion or other integrations when a respondent submits your form, other than your form fields. For example, you might want to save:
 
 - [URL parameters](/url-parameters)
 - [Static values](/integration-static-values)
@@ -32,22 +74,34 @@ You might want to send additional information to Airtable, Notion or other datab
 - [Fields from the record returned after logging in](/login-page)
 - [Fields from a pre-fetched record](/pre-fetch-data)
 
-You can create a field, [pre-fill](/prefill-fields) it with a value, and connect it to Airtable or Notion through the **Connected** menu in the right-hand panel.
+You can create a field, and  [pre-fill](/prefill-fields) it with a value, then connect to your integration.
 
-**Mappings** in the **Integrate** page also lets you do this directly. For example, let's connect a URL parameter. `+ Add new`and pick a field in Airtable, and then any referenceable value in Fillout\!
+Click `Integrate` on the top menu and follow **step 2** above. For example, let's connect a URL parameter. We'll select the relevant Notion column on the left followed by the email parameter on the right.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-14at12.08.30PM.png)
-</Frame>
+<img
+  src="/images/Screenshot2025-11-14at3.45.00PM.png"
+  alt="Screenshot 2025-11-14 at 3.45.00 PM.png"
+  title="Screenshot 2025-11-14 at 3.45.00 PM.png"
+  style={{ width:"98%" }}
+/>
 
-## **Related articles**
+Fillout lets you map:
+
+- <Icon icon="file-lines" iconType="solid" /> - form fields in different pages
+- <Icon icon="link" iconType="solid" /> - URL parameters
+- <Icon icon="calculator" iconType="solid" /> - calculations
+- <Icon icon="calendar" iconType="solid" /> - dates
+- <Icon icon="user" iconType="solid" /> - enriched emails with company informations
+- <Icon icon="pen-to-square" iconType="solid" /> - static values
+
+## Related articles
 
 <CardGroup cols={3}>
-  <Card title="Pre-fill fields" icon="fill" iconType="regular" color="#FFC738" href="/prefill-fields">
-    Pre-populate form fields based on previous inputs, URL parameters, and more.
+  <Card title="Pre-fill fields" icon="fill" iconType="solid" color="#FFC738" href="/prefill-fields">
+    Pre-populate fields based on previous inputs and more.
   </Card>
   <Card title="Login page" icon="key" iconType="regular" color="#FFC738" href="/login-page">
-    Require respondents to verify their email, enter a password, or use Single Sign-On.
+    Require respondents to verify their email, key in a password, or use SSO.
   </Card>
   <Card title="Pre-fetch dynamic data" icon="arrow-turn-down-right" iconType="regular" color="#FFC738" href="/pre-fetch-data">
     Fetch information from Airtable or any service before your form loads.
