@@ -206,6 +206,11 @@
                     "icon": "table-list",
                     "pages": ["smartsuite", "update-smartsuite"]
                   },
+                  {
+                    "group": "Hubspot",
+                    "icon": "hubspot",
+                    "pages": ["hubspot", "HubSpot-companies-deals"]
+                  },
                   "clickup",
                   "trello",
                   "twilio",
@@ -214,7 +219,6 @@
                   "relay-app",
                   "discord",
                   "pdfs",
-                  "smartsuite",
                   "slack",
                   "attio",
                   "amazon-s3",
