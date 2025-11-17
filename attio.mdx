@@ -5,7 +5,7 @@ sidebarTitle: "Attio"
 icon: "address-book"
 ---
 
-## What Attio is
+## What is Attio?
 
 [**Attio**](https://attio.com/?ref=fillout) is a CRM platform that adapts to different business needs, effectively managing sales, customer relationships, and data. It stands out for its ease of use, strong data integration, and focus on security.
 
@@ -13,72 +13,59 @@ icon: "address-book"
 
 <Steps>
   <Step title="Link your Fillout form to Attio">
-  Open the Fillout form you want to connect with Attio, then go to **Integrate** in the top menu. Click `Attio` to link your form to an object.
+    Open the Fillout form you want to connect with Attio, then go to `Integrate` in the top menu. Click `Attio` to link your form to an object.
 
-<Frame>
-  ![Screenshot of the Attio form creation page](/images/Screenshot2025-02-12at3.21.29PM.png)
-</Frame>
+    ![Screenshot 2025-11-17 at 2.47.11 PM.png](/images/Screenshot2025-11-17at2.47.11PM.png)
 
-Enter a `Name` for your Attio connection, and click `Connect to Attio`. You will be prompted to grant access to a workspace of your choice.
+    Enter a `Name` for your Attio connection, then `Connect to Attio`. You will be prompted to grant access to a workspace of your choice.
 
-Lastly, select an **Object** you’d like to sync form responses to.
+    Next, select an **Object** you’d like to sync form responses to.
 
-<Frame style={{ width: '624px', height: '262px' }}>
-  ![Screenshot of the Attio form creation page](/images/Screenshot2025-02-12at3.21.59PM.png)
-</Frame>
-
-<Note>
-  **Note:** You can connect your Attio form to any object in your workspace.
-</Note>  
+    ![Screenshot of the Attio form creation page](/images/Screenshot2025-02-12at3.21.59PM.png)
   </Step>
-  <Step title="Map your form fields on Fillout">
-  You can map your Fillout fields to your Attio attributes either by dragging them from the left-hand side when editing your form.
+  <Step title="Map form fields">
+    Attio attributes will automatically show up as form fields on the left-hand panel. Simply drag them onto your form.
 
-<Frame>
-  ![Screenshot of the Attio form creation page](/images/Screenshot2025-02-12at3.24.09PM.png)
-</Frame>
+    <Frame>
+      ![Screenshot of the Attio form creation page](/images/Screenshot2025-02-12at3.24.09PM.png)
+    </Frame>
+    Alternatively, you can [manually map](https://www.fillout.com/help/additional-integration-mappings#how-to-map-fields-manually) them in the `Integrate` page. Select the Attio attributes in the left and map it to the relevant Fillout field in the right.
 
-Alternatively, you can click `Edit` on your Attio connection in the **Integrate** page and do **Mappings** there. `+ Add new` and match the fields in your Fillout form to the corresponding attributes in your Attio object.
+    ![Screenshot of the Attio form creation page](/images/Screenshot2025-02-12at3.24.22PM.png)
 
-<Frame style={{ width: '624px', height: '119px' }}>
-  ![Screenshot of the Attio form creation page](/images/Screenshot2025-02-12at3.24.22PM.png)
-</Frame>
-
-Select the Attio attributes in the left dropdown and map it to the relevant Fillout field or question in the right dropwdown.
-
-<Tip>
-  **Tip:** You can click the **refresh** icon on the right side to have the most recent changes reflect in **Mappings**.
-</Tip>  
+    <Tip>
+      Click <Icon icon="rotate-reverse" iconType="solid" size={12} /> on the right side to have the [reflect recent changes](https://www.fillout.com/help/additional-integration-mappings#updating-fields-and-options).
+    </Tip>
   </Step>
   <Step title="Publish and share">
-  `Publish` your form. Now, answers to matched fields will appear in the attributes of your record on Attio.  
+    `Publish` your form. Now, answers to matched fields will appear in the attributes of your record on Attio.
   </Step>
-  
 </Steps>
 
 ## Updating existing records
 
-If you’d like to update existing records that already exist, just toggle `Update if record already exists?`. Then choose which attribute you’d like to use to determine the record to update.
+If you’d like to update existing records that already exist, just toggle `Update if record already exists?` under **Mappings**. Then, choose which attribute you’d like to use to determine the record to update.
 
-<Frame style={{ width: '336px', height: '113px' }}>
-  ![Screenshot of the Attio form creation page](/images/Screenshot2025-02-12at3.22.56PM.png)
-</Frame>
+<img
+  src="/images/Screenshot2025-02-12at3.22.56PM.png"
+  alt="Screenshot of the Attio form creation page"
+  style={{ width:"60%" }}
+/>
 
 ## Specify a condition
 
 You can run your integration only when a specific condition is met. Check out this [guide](/conditional-integration).
 
-
-## **Other similar integrations**
+## Other similar integrations
 
 <CardGroup cols={3}>
   <Card title="Create a HubSpot form" icon="hubspot" iconType="regular" color="#FFC738" href="/hubspot">
-    Create or update existing HubSpot contacts and embed your forms anywhere.
+    Create or update contacts with a form.
   </Card>
   <Card title="Create a Notion form" icon="cube" iconType="regular" color="#FFC738" href="/notion">
-    Create or update existing Notion databases and embed your forms anywhere.
+    Use a form to create or update Notion databases.
   </Card>
   <Card title="Update existing Airtable records" icon="arrow-rotate-right" iconType="regular" color="#FFC738" href="/airtable-update-form">
-    Edit existing records from Airtable and pre-fill fields.
+    Edit existing records and pre-fill fields.
   </Card>
 </CardGroup>
