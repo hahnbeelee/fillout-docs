@@ -495,7 +495,7 @@
               {
                 "group": "Partners",
                 "icon": "handshake",
-                "pages": ["affiliate-program", "startup-discount"]
+                "pages": ["affiliate-program"]
               }
             ]
           },
