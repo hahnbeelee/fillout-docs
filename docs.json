@@ -204,12 +204,12 @@
                   {
                     "group": "Smartsuite",
                     "icon": "table-list",
-                    "pages": ["smartsuite", "update-smartsuite"]
+                    "pages": ["smartsuite", "smartsuite-update"]
                   },
                   {
                     "group": "Hubspot",
                     "icon": "hubspot",
-                    "pages": ["hubspot", "HubSpot-companies-deals"]
+                    "pages": ["hubspot", "hubspot-companies-deals"]
                   },
                   "clickup",
                   "trello",
