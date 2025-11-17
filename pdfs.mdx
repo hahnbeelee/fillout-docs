@@ -7,115 +7,105 @@ icon: "file-pdf"
 
 ## Video tutorial
 
-  <iframe class="notion-asset-object-fit" src="https://www.youtube.com/embed/417PJJ8DJHU" title="iframe video" frameborder="0" allowfullscreen loading="lazy" scrolling="auto" width="100%" height="420" />
+<iframe class="notion-asset-object-fit" src="https://www.youtube.com/embed/417PJJ8DJHU" title="iframe video" frameborder="0" allowfullscreen loading="lazy" scrolling="auto" width="100%" height="420" />
 
 ## How it works
 
 <Steps>
   <Step title="Create an autofill PDF or document">
-    Open the form you would like to link with a PDF or document and head over to the **Integrate** tab. Look for `Generate PDF`.
+    Open the form you would like to link with a PDF or document and head over to the `Integrate` tab. Look for `Generate PDF`.
 
-    <Frame>
-      ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-10at1.05.02PM.png)
-    </Frame>
-    Drag and drop your PDF or document file. You can **generate multiple documents** if needed.
+    ![Screenshot 2025-11-17 at 1.40.43 PM.png](/images/Screenshot2025-11-17at1.40.43PM.png)
+
+    Drag and drop your PDF or document file.
+
+    <Check>
+      You can **generate multiple documents** if needed.
+    </Check>
   </Step>
   <Step title="Map fields to your document">
-    If your PDF has recognizable form fields, Fillout will automatically detect them and add fields to the document, in amber color. If not, click `+ Add field` and drag/resize fields as necessary wherever you would like to insert text on your PDF.
+    If your PDF contains recognizable form fields, Fillout will automatically detect them and add those fields to the document in amber. If not, click `+ Add field` and drag/resize fields as necessary wherever you would like to insert text on your PDF.
 
-    Choose any **field** to open the right-hand panel and choose the appropriate **Connected fields**.
+    ![Screenshot 2025-11-17 at 2.04.56 PM.png](/images/Screenshot2025-11-17at2.04.56PM.png)
 
-    <Frame>
-      ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-10at1.00.00PM.png)
-    </Frame>
-    You can also change the **Font settings** used for respondent input.
+    Then, choose the appropriate **Connected fields** in the right-hand panel. You can also change the **Font settings** used for respondent input.
 
-    <Frame>
-      ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-10at1.00.55PM.png)
-    </Frame>
     For **Choice** fields or questions, click `+ Add option` to insert multiple fields corresponding to each possible form option.
 
-    <Frame>
-      ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-10at1.02.44PM.png)
-    </Frame>
+    ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-10at1.02.44PM.png)
   </Step>
-  <Step title="Preview and publish your document">
+  <Step title="Preview and publish">
     Click `Preview` to generate a document using your mappings and the latest submission from your form. Once you’re happy with the result, click `Publish` in the upper right corner to finalize the document.
-  </Step>
-  <Step title="Set up your preferred workflow">
-    Now that your document mappings are configured, there are several ways to use your generated document.
-
-    <Frame>
-      ![Screenshot of the Integrate tab of a form](/images/preferred-workflow.png)
-    </Frame>
-    By default, every time a new form submission is received, you can download the latest document in the **Results** tab. Look for the **Generated documents** column.
   </Step>
 </Steps>
 
-## Customize PDF file names
+## Set up your preferred workflow (Optional)
 
-You can automatically rename PDFs by referencing answers from your form, such as name, ID number, or any other collected data. Simply click `⋮` followed by `Rename document`. 
+Now that your document mappings are configured, there are several ways to use your generated document.
 
-<img
-  src="/images/Screenshot2025-09-08at6.36.02PM.png"
-  alt="Screenshot 2025-09-08 at 6.36.02 PM.png"
-  title="Screenshot 2025-09-08 at 6.36.02 PM.png"
-  style={{ width:"91%" }}
-/>
+![Screenshot 2025-11-17 at 2.09.28 PM.png](/images/Screenshot2025-11-17at2.09.28PM.png)
 
-Then hover over the field and type `@` or click `+` to choose the question or field you want to use.
+By default, every time a new form submission is received, you can download the latest document in the `Results` tab. Look for the **Generated documents** column.
 
-<img
-  src="/images/Screenshot2025-09-08at6.36.39PM.png"
-  alt="Screenshot 2025-09-08 at 6.36.39 PM.png"
-  title="Screenshot 2025-09-08 at 6.36.39 PM.png"
-  style={{ width:"47%" }}
-/>
+### Send PDF in email
 
-Now, each generated PDF will include the respondent’s answer in the file name. For example, if you select "Name", the PDF will be saved with their name as the file name.
+Email autofilled PDFs to respondents. Click this feature or [open form settings](https://www.fillout.com/help/respondent-emails). Then, enable `Respondent notifications` and `Attach generated documents/PDFs`.
 
-## Send autofilled PDFs to respondents
+![Screenshot of the Integrate tab of a form](/images/upload-email.png)
 
-Go to your form's **Settings**, and turn on the `Respondent notifications` switch. Next, toggle the switch to `Attach generated documents or PDFs`. Alternatively, you can also do this with [custom emails](/respondent-emails) as well.
+Alternatively, you can also do this with [custom emails](/respondent-emails) as well.
 
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/upload-email.png)
-</Frame>
+### Send PDF to 3rd party integration
 
-## **Upload filled PDFs to 3rd party apps**
+You can upload autofilled PDFs to 3rd party apps, like Airtable, Notion, SmartSuite, GoogleSheets, Dropbox, and more. Connect your form to your preferred app in the `Integrate` page.
 
-You can upload generated documents to 3rd party apps, like Airtable, Notion, SmartSuite, GoogleSheets, Dropbox, and more. Connect your form to your preferred app under **Integrate**.
+Under [**Mappings**](https://www.fillout.com/help/additional-integration-mappings#how-to-map-fields-manually), link a file upload field (from your 3rd party app) to the appropriate `Document` you created.
 
-In your integration **Mappings**, map a file upload field (from your 3rd party app) to the appropriate `Document` you created.
+![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-10at1.11.40PM.png)
 
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-10at1.11.40PM.png)
-</Frame>
+When you receive a submission, you will see an **integration link** in your form's `Results` page that will take you to the uploaded file in your chosen app.
 
-When you receive a submission, you will see an **integration link** in your form's **Results** page that will take you to the uploaded file in your chosen app.
+![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-10at1.13.41PM.png)
 
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-10at1.13.41PM.png)
-</Frame>
-
-## Let users download the PDF upon form completion
+### Let users download a copy
 
 Lastly, you can add a `Download PDF` button from the left-hand panel to any [ending page](/ending-page) to let your respondents download the generated document once they complete a form.
 
 <Frame>
-  ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-10at1.14.35PM.png)
+  <img
+    src="/images/Screenshot2025-02-10at1.14.35PM.png"
+    alt="Screenshot of the Integrate tab of a form"
+    style={{ width:"54%" }}
+  />
 </Frame>
 
-## **Related articles**
+## Personalized PDF file names
+
+You can automatically rename PDFs by referencing answers from your form, such as name, ID number, or any other collected data. Simply click <Icon icon="ellipsis-vertical" iconType="solid" /> followed by `Rename document`.
+
+![Screenshot 2025-11-17 at 2.14.51 PM.png](/images/Screenshot2025-11-17at2.14.51PM.png)
+
+Then hover over the field and type **@** or click <Icon icon="square-plus" iconType="solid" /> to choose the question or field you want to use. In our example, we'll reference their "Name".
+
+<img
+  src="/images/Screenshot2025-11-17at2.17.52PM.png"
+  alt="Screenshot 2025-11-17 at 2.17.52 PM.png"
+  title="Screenshot 2025-11-17 at 2.17.52 PM.png"
+  style={{ width:"57%" }}
+/>
+
+Now, each generated PDF will be labelled with the respondent's name. For example, "Clark Kent.pdf".
+
+## Related articles
 
 <CardGroup cols={3}>
-  <Card title="Respondent notification email" icon="bell" iconType="regular" color="#FFC738" href="/respondent-emails">
+  <Card title="Respondent emails" icon="bell" iconType="regular" color="#FFC738" href="/respondent-emails">
     Email respondents a copy of their answers that can be edited.
   </Card>
   <Card title="Create an Airtable form" icon="table-layout" iconType="regular" color="#FFC738" href="/airtable">
     Make new or update existing Airtable bases with a custom form.
   </Card>
   <Card title="Ending page" icon="party-bell" iconType="regular" color="#FFC738" href="/ending-page">
-    Show a thank you page, redirect to another site or form, or allow repeat responses.
+    Show a thank you page, redirect, or allow re-submission.
   </Card>
 </CardGroup>
