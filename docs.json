@@ -173,7 +173,7 @@
                   },
                   {
                     "group": "Salesforce",
-                    "icon": "cloud",
+                    "icon": "salesforce",
                     "pages": ["salesforce", "salesforce-update-form"]
                   },
                   {
