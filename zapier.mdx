@@ -5,36 +5,58 @@ sidebarTitle: "Zapier"
 icon: "bolt"
 ---
 
-## What is Zapier
+## What is Zapier?
 
-[Zapier](https://zapier.com/apps/fillout/integrations) lets you connect an app to 2,000\+ other web services. Automated connections called **Zaps**, set up in minutes with no coding, can automate your day-to-day tasks and build workflows between apps that otherwise wouldn't be possible.
-
-Each Zap has one app as the **Trigger**, where your information comes from and which causes one or more **Actions** in other apps, where your data gets sent automatically.
+[Zapier](https://zapier.com/apps/fillout/integrations) lets you connect an app to 2,000+ other web services. **Zaps** (set up in minutes with no coding) are workflows that automate your day-to-day tasks between apps. Each Zap has one app as the **Trigger**, where your information comes from and which causes one or more **Actions** in other apps, where your data gets sent automatically.
 
 ## How it works
 
 <Steps>
   <Step title="Link Fillout to Zapier">
-  First, log in to your [Zapier account](https://zapier.com/sign-up) or create a new account. Then, hover over the left-hand panel and click `Apps`.
+    First, log in to your [Zapier account](https://zapier.com/sign-up) or create a new account. Then, hover over the left-hand panel and click `App Connections` followed by `+ Add connection`.
 
-<Frame>
-  ![Screenshot of the Zapier apps page](/images/Screenshot2025-02-14at12.26.48PM.png)
-</Frame>
+    ![Screenshot 2025-11-18 at 4.11.29 PM.png](/images/Screenshot2025-11-18at4.11.29PM.png)
 
-Click `+ Add connection` in the upper right area then search for Fillout.
-
-<Frame>
-  ![Screenshot of the Zapier apps page](/images/Screenshot2025-02-14at12.27.22PM.png)
-</Frame>  
+    Then, search for **Fillout Forms**.
   </Step>
   <Step title="Create a Zap">
-   Once that's done you can start creating an automation\! Use a **pre-made Zap** or create your own with the **Zap Editor**. Hover over the left-hand panel, and click `+ Create` followed by `Zaps`.
+    Use a pre-made Zap or create your own. Hover over the left-hand panel, and click `+ Create` followed by `Zaps`.
 
-<Frame>
-  ![Screenshot of the Zapier apps page](/images/Screenshot2025-02-14at12.28.01PM.png)
-</Frame>
+    <img
+      src="/images/Screenshot2025-11-18at4.15.15PM.png"
+      alt="Screenshot 2025-11-18 at 4.15.15 PM.png"
+      title="Screenshot 2025-11-18 at 4.15.15 PM.png"
+      style={{ width:"37%" }}
+    />
 
-Creating a **Zap** requires no coding knowledge and you'll be walked step-by-step throughout the setup. Check out the guide [here](https://help.zapier.com/hc/en-us/articles/8496309697421-Create-Zaps#h_01H91E3WYASC9QK5YCBT16B4V4). 
+    \
+    Let's select `Fillout Forms` as the **trigger** app. By default, the automation will start after receiving `New submissions`.
+
+    ![Screenshot 2025-11-18 at 4.17.38 PM.png](/images/Screenshot2025-11-18at4.17.38PM.png)
+
+    Then, click `Continue` to choose a \*\*Form \*\*from your Fillout account.
+
+    For our next app, we'll choose `Slack` and `Send Channel Message` as the **Action event** from the right side.
+
+    ![Screenshot 2025-11-18 at 4.27.39 PM.png](/images/Screenshot2025-11-18at4.27.39PM.png)
+
+    Then, click `Continue` to select a Slack **Channel** and configure other settings.
+  </Step>
+  <Step title="Edit Message Text">
+    You can send the same fixed message (e.g., New ticket received) for submissions received or send each respondent's answers. To do this, map fields by clicking <Icon icon="square-plus" iconType="solid" /> and selecting them in the left dropdown.
+
+    <img
+      src="/images/Screenshot2025-11-18at4.41.55PM.png"
+      alt="Screenshot 2025-11-18 at 4.41.55 PM.png"
+      title="Screenshot 2025-11-18 at 4.41.55 PM.png"
+      style={{ width:"64%" }}
+    />
+  </Step>
+  <Step title="Test your automation">
+    Click `Test run` on the upper right corner to make sure everything's working as intended.
+  </Step>
+  <Step title="Publish">
+    Once everything's set click `Publish` on the upper right corner. Now, all new submissions will be sent to the Slack channel.
   </Step>
 </Steps>
 
