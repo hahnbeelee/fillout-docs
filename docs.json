@@ -29,6 +29,10 @@
     {
       "source": "/zite/guides/import-data",
       "destination": "/database/import-data"
+    },
+    {
+      "source": "/update-smartsuite",
+      "destination": "/smartsuite-update"
     }
   ],
   "navigation": {
@@ -495,10 +499,7 @@
               {
                 "group": "Partners",
                 "icon": "handshake",
-                "pages": [
-                  "affiliate-program",
-                  "startup-discount"
-                ]
+                "pages": ["affiliate-program", "startup-discount"]
               }
             ]
           },
@@ -582,7 +583,11 @@
           {
             "group": "Other",
             "icon": "gift",
-            "pages": ["affiliate-program","zite/subscription","zite/cancel-account"]
+            "pages": [
+              "affiliate-program",
+              "zite/subscription",
+              "zite/cancel-account"
+            ]
           }
         ]
       },
