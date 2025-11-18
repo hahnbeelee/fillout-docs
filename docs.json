@@ -178,7 +178,7 @@
                   },
                   {
                     "group": "Notion",
-                    "icon": "cube",
+                    "icon": "notion",
                     "pages": [
                       "notion",
                       "notion-update-form",
