@@ -2,10 +2,11 @@
 title: "Connect your form to ActiveCampaign"
 description: "Add new and update existing ActiveCampaign contacts from a Fillout form to grow your newsletter audience. Add tags to contacts based on conditions in your form."
 sidebarTitle: "ActiveCampaign"
-icon: "greater-than"
+icon: "square-chevron-right"
+iconType: "solid"
 ---
 
-## What ActiveCampaign is
+## What is ActiveCampaign?
 
 [**ActiveCampaign**](https://www.fillout.com/integrations/activecampaign) is a platform for email marketing and lead nurturing, enabling businesses to automate personalized communications and targeted campaigns for effective customer engagement and conversion optimization.
 
@@ -13,29 +14,30 @@ icon: "greater-than"
 
 <Steps>
   <Step title="Link your Fillout form to ActiveCampaign">
-   Open the form you want to **Integrate** with ActiveCampaign.
+    Open the form you want to `Integrate` with ActiveCampaign.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-18at12.16.35PM.png)
-</Frame>
+    ![Screenshot 2025-11-18 at 1.54.04 PM copy.png](/images/Screenshot2025-11-18at1.54.04PMcopy.png)
 
-<Check>
-  **Important:** When creating your form, make sure to set the email, name, and other fields you would like to link to your ActiveCampaign list to **required**.
-</Check>
-
-Enter your **API URL** and **API Key** from ActiveCampaign into Fillout. Go to the link in the banner to learn how to find these. Then, select a **List** in ActiveCampaign you’d like to connect to. 
+    <Warning>
+      When creating your form, make sure to set the email, name, and other fields you would like to link to your ActiveCampaign list to **required**.
+    </Warning>
+    Enter your **API URL** and **API Key** from ActiveCampaign into Fillout. Go to the link in the banner to learn how to find these. Then, select a **List** in ActiveCampaign you’d like to connect to.
   </Step>
   <Step title="Map your form fields">
-   Match the fields in your Fillout form to the corresponding fields in your ActiveCampaign list. For example, link the email address to its respective field.
+    [Match the fields](https://www.fillout.com/help/additional-integration-mappings#how-to-map-fields-manually) in your Fillout form to the corresponding fields in your ActiveCampaign list. For example, link the email address to its respective field.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-18at12.32.57PM.png)
-</Frame>
+    ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-18at12.32.57PM.png)
 
-You can use other **Fields**, such as name, number, and more in your form to update your contacts' details. 
+    You can use other **Fields**, such as name, number, and more in your form to update your contacts' details.
   </Step>
   <Step title="Publish and share">
-  Once everything is set, click `Finish setup` on the upper right corner. After publishing, answers to mapped fields from new submissions will appear in your ActiveCampaign list. If a contact with the provided email address already exists, Fillout will automatically update the existing contact's information.  
+    Once everything is set, click `Finish setup` on the upper right corner followed by `Publish`.
+
+    That's it! Answers to mapped fields from new submissions will now appear in your ActiveCampaign list.
+
+    <Check>
+      If a contact with the provided email address already exists, Fillout will automatically update the existing contact's information.
+    </Check>
   </Step>
 </Steps>
 
@@ -43,11 +45,13 @@ You can use other **Fields**, such as name, number, and more in your form to upd
 
 You can add ActiveCampaign tags to new contacts automatically to help group your newsletter audiences. `+ Add tag` and choose from the dropdown.
 
-<Frame style={{ width: '336px', height: '193px' }}>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-18at12.34.09PM.png)
-</Frame>
+<img
+  src="/images/Screenshot2025-02-18at12.34.09PM.png"
+  alt="Screenshot of the Fillout form creation page"
+  style={{ width:"59%" }}
+/>
 
-To add a tag to specific contacts, toggle the `Add contionally?` switch. `Set conditional logic` and choose when to apply it. For example, we'll add the New tag when a customer hasn't been part of our waitlist before.
+To add a tag to specific contacts, toggle the `Add contionally?` switch. `Set conditional logic` and choose when to apply it. For example, we'll add the "New" tag when a customer hasn't been part of our waitlist before.
 
 Remember to click `Publish` after making any changes to the integration.
 
@@ -58,13 +62,13 @@ You can run your integration only when a specific condition is met. More info [h
 ## Related articles
 
 <CardGroup cols={3}>
-  <Card title="Conditional integration logic" icon="gear-complex" iconType="regular" color="#FFC738" href="/conditional-integration">
+  <Card title="Integration logic" icon="gear-complex" iconType="regular" color="#FFC738" href="/conditional-integration">
     Perform an integration only when a certain condition is met.
   </Card>
   <Card title="Condition groups" icon="table-tree" iconType="regular" color="#FFC738" href="/condition-logic-groups">
-    Use nested logic to show, hide and validate fields based on multiple conditions.
+    Show or hide fields based on multiple conditions at once.
   </Card>
-  <Card title="Map Fillout fields to integrations" icon="right-left" iconType="regular" color="#FFC738" href="/additional-integration-mappings">
-    Configure form fields and values to send to database integrations.
+  <Card title="Map fields" icon="right-left" iconType="regular" color="#FFC738" href="/additional-integration-mappings">
+    Configure form fields and values to send to integrations.
   </Card>
 </CardGroup>
