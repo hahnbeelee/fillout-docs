@@ -412,7 +412,8 @@
                   "duplicate-fields",
                   "embed-fillout-softr",
                   "embed-pdfs",
-                  "skip-logic"
+                  "skip-logic",
+                  "cookie-banner"
                 ]
               }
             ]
@@ -492,6 +493,7 @@
                   "organizations",
                   "workspaces",
                   "invite-collaborators",
+                  "manage-members",
                   "granular-permissions",
                   "comment"
                 ]
