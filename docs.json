@@ -602,6 +602,15 @@
             "pages": ["database/overview"]
           },
           {
+            "group": "Guides",
+            "icon": "book-open",
+            "pages": [
+              "database/build-apps",
+              "database/sync-form-results",
+              "database/import-data"
+            ]
+          },
+          {
             "group": "API Reference",
             "icon": "code",
             "pages": [
@@ -647,11 +656,6 @@
                 ]
               }
             ]
-          },
-          {
-            "group": "Guides",
-            "icon": "book-open",
-            "pages": ["database/import-data"]
           }
         ]
       },
