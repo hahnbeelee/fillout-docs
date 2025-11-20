@@ -1,8 +1,56 @@
 ---
 title: "Sync form results to a database"
-description: Connect Fillout forms to Zite Database.
+description: Store form responses in Zite Database to add multiple tables, custom fields, views, and more.
 sidebarTitle: "Sync form results"
 icon: "arrow-right-to-bracket"
 ---
 
-Coming soon
+<Steps>
+  <Step title="Connect Zite Database">
+    Open your form and click the `Integrate` tab at the top. Select **Zite Database** from the list of integrations.
+
+    <img
+      src="/images/linktodb.png"
+      alt="linktodb.png"
+      title="linktodb.png"
+    />
+  </Step>
+  <Step title="Choose database option">
+    Pick **New database** to create a fresh database for this form, or **Existing database**.
+
+    If you choose an existing database, a new table will be created specifically for this form's responses.
+
+    <img
+      src="/images/linktodbsuccess.png"
+      alt="linktodbsuccess.png"
+      title="linktodbsuccess.png"
+    />
+  </Step>
+  <Step title="View your data">
+    Your form is now linked to a database! You can view responses in two places:
+
+    - **From your form**: Click the `Results` tab at the top
+    - **From the database**: Navigate to your database and click the `Forms` tab to see all linked forms
+
+    <img
+      src="/images/zitedbtabs.png"
+      alt="zitedbtabs.png"
+      title="zitedbtabs.png"
+    />
+
+    New responses will sync automatically to your database in real-time.
+  </Step>
+</Steps>
+
+## What happens next
+
+Once linked, every form submission creates a new record in your database. You can:
+
+- View and edit responses directly in the database
+- Add custom fields to store additional data
+- Build apps on top of your form data
+- Use the REST API to access your responses programmatically
+
+<Note>
+Form responses sync instantly to your database. Any changes you make in the database won't affect the original form submission.
+</Note>
