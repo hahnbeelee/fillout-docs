@@ -605,7 +605,8 @@
             "group": "Getting Started",
             "icon": "circle-play",
             "pages": [
-              "database/getting-started/make-database"
+              "database/getting-started/make-database",
+              "database/getting-started/overview"
             ]
           },
           {
