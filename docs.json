@@ -614,14 +614,7 @@
             "pages": [
               "database/build-apps",
               "database/sync-form-results",
-              "database/import-data",
-            ]
-          },
-           {
-            "group": "Getting Started",
-            "icon": "circle-play",
-            "pages": [
-              "database/getting-started/make-database"
+              "database/import-data"
             ]
           },
           {
