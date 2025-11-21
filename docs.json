@@ -617,6 +617,13 @@
               "database/import-data",
             ]
           },
+           {
+            "group": "Getting Started",
+            "icon": "circle-play",
+            "pages": [
+              "database/getting-started/make-database"
+            ]
+          },
           {
             "group": "API Reference",
             "icon": "code",
