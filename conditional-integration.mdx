@@ -5,38 +5,46 @@ sidebarTitle: "Integration Logic"
 icon: "gear-complex"
 ---
 
-## What is conditional logic
+## What is conditional logic?
 
 **Conditional** [**logic**]() allows you to make forms that adapt to a respondent's answers. Fillout lets you `Set conditional logic` based on:
 
-- Previous form inputs
-- URL parameters
-- Calculations
-- Quiz scores
+- <Icon icon="file-lines" iconType="solid" /> - [previous form inputs](/answer-piping)
+- <Icon icon="link" iconType="solid" /> - [URL parameters](/url-parameters)
+- <Icon icon="calculator" iconType="solid" /> - [calculations](https://www.fillout.com/help/calculations#pre-fill-fields-with-a-calculation)
+- <Icon icon="calendar" iconType="solid" /> - [custom dates](/pre-fill-dates)
+- <Icon icon="user" iconType="solid" /> - [enriched emails](https://www.fillout.com/help/lead-enrichment#how-to-enrich-emails) with company information
+- <Icon icon="graduation-cap" iconType="solid" /> - [quiz scores](https://www.fillout.com/help/make-a-free-quiz#advanced-quiz-features)
 
 ## How to specify a condition
 
 <Steps>
   <Step title="Open the integration">
-   Head to **Integrate** and click your existing **connection**.
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/logic/image-1.png)
-</Frame> 
+    Head to `Integrate` and click your **existing** **connection** or connect to a new tool.
+
+    ![Screenshot of the Integrate tab of a form](/images/logic/image-1.png)
   </Step>
   <Step title="Set a condition">
-  At the bottom, click the `condition symbol`.
-<Frame style={{ width: '528px' , height: '111px' }}>
-  ![Screenshot of the Integrate tab of a form](/images/logic/image-2.png)
-</Frame>
-  In this example, we'll only add contacts to our [Klaviyo](/klaviyo) newsletter if they will attend the movie screening. Click `+ Add condition`. Choose the field or question followed by the relevant option.
-<Frame style={{ width: '528px' , height: '135px' }}>
-  ![Screenshot of the Integrate tab of a form](/images/logic/image-3.png)
-</Frame>
-That's it! Now, newsletters will only be sent to those who will attend the screening. Note that you can do this for any integration type, like [Airtable](/airtable), [HubSpot](/hubspot) and [many more](/integrations).
+    At the bottom, click <Icon icon="code-pull-request" />.
 
-<Check>
-  **Important:** Remember to **publish** your form to make the latest changes reflect.
-</Check>  
+    <img
+      src="/images/logic/image-2.png"
+      alt="Screenshot of the Integrate tab of a form"
+      style={{ width:"90%" }}
+    />
+
+    In this example, we'll only add contacts to our [Klaviyo](/klaviyo) newsletter if they will attend the movie screening. Click `+ Add condition`. Choose the field or question on the left followed by the relevant option on the right.
+
+    <img
+      src="/images/logic/image-3.png"
+      alt="Screenshot of the Integrate tab of a form"
+      style={{ width:"73%" }}
+    />
+
+    That's it! Now, newsletters will only be sent to those who will attend the screening. Note that you can do this for any integration type, like [Airtable](/airtable), [HubSpot](/hubspot) and [many more](/integrations).
+  </Step>
+  <Step title="Publish and share">
+    Remember to `Publish` your form to make the latest changes reflect.
   </Step>
 </Steps>
 
@@ -44,12 +52,12 @@ That's it! Now, newsletters will only be sent to those who will attend the scree
 
 <CardGroup cols={3}>
   <Card title="Hide fields" icon="eye-slash" iconType="regular" color="#FFC738" href="/conditional-hiding">
-    Hide or show fields based on prior inputs, URL parameters or external data.
+    Hide or show fields based on answers, URL parameters or data.
   </Card>
-  <Card title="Calculations and variables" icon="calculator-simple" iconType="regular" color="#FFC738" href="/calculations">
+  <Card title="Calculations" icon="calculator-simple" iconType="regular" color="#FFC738" href="/calculations">
     Calculate prices for order forms, compute quiz scores, and more.
   </Card>
   <Card title="Condition groups" icon="table-tree" iconType="regular" color="#FFC738" href="/condition-logic-groups">
-    Use nested logic to show, hide and validate fields based on multiple conditions.
+    Show or hide fields based on multiple conditions at once.
   </Card>
 </CardGroup>
