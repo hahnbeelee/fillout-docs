@@ -5,28 +5,29 @@ sidebarTitle: "Webhook"
 icon: "webhook"
 ---
 
-## What is a webhook
+## What is a webhook?
 
-A **webhook** is a way for one system (like **Fillout**) to send real-time data to another system (like the 3rd party tools you use) as soon as an event occurs. Under the hood, a webhook is an **HTTP callback** and can be a GET, PUT, POST or DELETE request.
+A **webhook** is a way for one system (like Fillout) to send real-time data to another system (like the 3rd party tools you use) as soon as an event occurs. Under the hood, a webhook is an **HTTP callback** and can be any of these requests:
+
+- **GET **- fetch something 
+- **POST** - create something new
+- **PUT** - update something that already exists
+- **DELETE** - remove something
 
 ## Connect your form to a webhook
 
 <Steps>
   <Step title="Link your Fillout form to a webhook">
-   Go to **Integrate**, and click `Webhook`.
+    Click `Integrate` on top followed by `Webhook`.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-10at12.49.44PM.png)
-</Frame>
+    ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-10at12.49.44PM.png)
 
-Enter your **Webhook URL**, and `Test` it. When you're good with it, click `Finish setup`.
+    Enter your **Webhook URL**, and `Test` it. When you're good with it, click `Finish setup`.
 
-<Frame style={{ width: '576px', height: '231px' }}>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-10at12.51.28PM.png)
-</Frame> 
+    ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-10at12.51.28PM.png)
   </Step>
-  <Step title="Publish and share your form">
-  Thats it\! You have all you need to configure a webhook when the form submits. `Publish` it and share the link.  
+  <Step title="Publish and share">
+    Thats it! You have all you need to configure a webhook when the form submits. `Publish` it and share the link.
   </Step>
 </Steps>
 
@@ -34,46 +35,43 @@ Enter your **Webhook URL**, and `Test` it. When you're good with it, click `Fini
 
 Toggle the `Advanced view` switch to set up your webhook with any of the parameters or arguments you need.
 
-<Frame style={{ width: '576px', height: '300px' }}>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-10at12.52.00PM.png)
-</Frame>
+![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-10at12.52.00PM.png)
 
-For these examples, let's assume your URL is something like:
+For these examples, let's assume your URL is something like: https://hooks.zapier.com/hooks/catch/12475312/abc/
 
-https://hooks.zapier.com/hooks/catch/12475312/abc/
-
-Each of the sections in the **Webhook** integration do the following:
-
-**URL parameters**
-
-- These get added to the URL at the end.
-- The left-hand side is the **key**, and the right-hand side is the **value** from your form or from anything else you can reference in **Fillout**.
-- For example, if you add, on the left hand side, **source**, and then on the right hand side, **pick reference** of some short answer in your form, then your webhook will send:
-  - [https://hooks.zapier.com/hooks/catch/12475312/abc/?source=answer](https://hooks.zapier.com/hooks/catch/12475312/abc/?source=%3Canswer) to the short answer
-  - So if someone answered Facebook in the form, you will send: https://hooks.zapier.com/hooks/catch/12475312/abc/?source=facebook
+Each of the sections in the Webhook integration do the following:
 
 **Body**
 
 - This is used if you're sending a **POST** request. Most of the time, services like Zapier and Make will accept either **GET** or **POST**, and you can send information in the body of the message if you prefer instead.
 - If using fields in the body of the message, make sure to process these correctly in Zapier/Make to make sure that they're coming in the body and not the URL.
 
+**URL parameters**
+
+- These get added to the URL at the end.
+- The left-hand side is the **key**, and the right-hand side is the **value** from your form or from anything else you can reference in Fillout.
+- For example, if you add, on the left hand side, **source**, and then on the right hand side,**reference**  the field or question about this in your form, then your webhook will send:
+  - [https://hooks.zapier.com/hooks/catch/12475312/abc/?source=answer](https://hooks.zapier.com/hooks/catch/12475312/abc/?source=%3Canswer) to the short answer
+  - So if someone answered Facebook in the form, you will send: https://hooks.zapier.com/hooks/catch/12475312/abc/?source=facebook
+
 **Headers (optional)**
 
 - Most users will not need to use this section. This is typically if you have an advanced webhook setup which requires sending extra headers
 - The most typical use case for headers is if you have some verification required for your endpoint, and you have a special key you want to send, which will look something like:
-- Authorization --\> Bearer \<secret_token\>
+
+  Authorization --\> Bearer \<secret_token\>
 
 **Cookies (optional)**
 
 - Similar to headers, most users will not need to send any here.
 
-## **Related articles**
+## Related articles
 
 <CardGroup cols={3}>
-  <Card title="Connect Fillout to hundreds of other apps with Zapier" icon="bolt" iconType="regular" color="#FFC738" href="/zapier">
-    Add automations to your form.
+  <Card title="Automate with Zapier" icon="bolt" iconType="regular" color="#FFC738" href="/zapier">
+    Connect your Fillout form to hundreds of apps.
   </Card>
   <Card title="Populate dropdowns with a webhook" icon="list-dropdown" iconType="regular" color="#FFC738" href="/dynamic-form-dropdowns">
-    Dynamically populate options from a REST API endpoint.
+    Load options from a REST API.
   </Card>
 </CardGroup>

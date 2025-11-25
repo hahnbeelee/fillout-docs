@@ -1,73 +1,72 @@
 ---
 title: "Use dynamic data in a form"
-description: "Fetch data from tools like Airtable, Notion or any service with an API. Display dynamic content in your form and use it to hide, validate and pre-fill fields."
+description: "Fetch data from tools like Airtable, Notion or any service with an API. Display dynamic content in your form and use it to hide, validate, and pre-fill fields."
 sidebarTitle: "Dynamic Data"
 icon: "arrow-down-right"
 ---
 
-## **Get the data you need**
+## Get the data you need
 
-To display dynamic data, you first need to get the data from Airtable, Notion or another source into your form.
+To display dynamic data, first pull the data from Airtable, Notion, or another source into your form. There are several options for doing this, depending on your use case:
 
-There are several options for doing this, depending on your use case:
+- [Login page](/login-page) - gives you access to the full user record of whoever logs in
+- [URL parameters](/url-parameters) - to pass any arbitrary information to your form (e.g., from Stacker, [Softr](/embed-fillout-softr), or other portals
+- **Record picker** field type - to access any field in the record that is chosen. (You can also [pre-fill record pickers](https://www.fillout.com/help/record-pickers#how-to-pre-fill-a-record-picker).)
+- [Pre-fetch records](/pre-fetch-data) - to fetch information from Airtable or Notion before your form loads
 
-- Use a [login page](/login-page). This will automatically give you access to the entire user record who logs in.
-- Use [URL parameters](/url-parameters) to pass any arbitrary information to your form, e.g. from Stacker, [Softr](/embed-fillout-softr), or other portals.
-- Use a **Record picker** field type. You'll then be able to access any field in the record that is chosen. Note that you can also pre-fill record pickers.
-- Use the [Pre-fetch records](/pre-fetch-data) feature to fetch information from Airtable or Notion before your form loads.
+## Reference the data in your form
 
-## **Reference the data in your form**
-
-In Fillout, you can **display data almost anywhere**: in labels for questions, in alerts, in logic for hiding or validating questions, and more. In this example, we'll use a Text field type, which lets us display uneditable, formatted text.
+In Fillout, you can **display data almost anywhere**: in question labels, alerts, logic for hiding or validating questions, and more. In this example, we'll use a Text field type, which lets us display uneditable, formatted text.
 
 <Steps>
   <Step title="Add a Heading field">
- First, drag and drop the Heading field from the left-hand panel to your form. In this example, we have a record picker (Choose a manufacturer) that we want to display more information from.
+    First, drag and drop the Heading field from the left-hand panel to your form. In this example, we have a record picker (Choose a manufacturer) that we want to display more information from.
 
-<Frame style={{ width: '624px', height: '208px' }}>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-13at2.38.50PM.png)
-</Frame>   
+    <img
+      src="/images/Screenshot2025-02-13at2.38.50PM.png"
+      alt="Screenshot of the Fillout form creation page"
+      style={{ width:"81%" }}
+    />
   </Step>
   <Step title="Reference a field">
-  Type `@` in the heading field (in the center of the form), to open a menu for picking references to previous form inputs. In the reference picker, navigate to the field you want to display.
+    Type **@** in the heading field to open a menu for picking references to previous form inputs. In the reference picker, click field you want to display.
 
-<Frame style={{ width: '480px', height: '332px' }}>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-13at2.42.15PM.png)
-</Frame>  
+    <img
+      src="/images/Screenshot2025-02-13at2.42.15PM.png"
+      alt="Screenshot of the Fillout form creation page"
+      style={{ width:"81%" }}
+    />
   </Step>
-  <Step title="Publish and share your form">
-   That's it\! The blue bubbles in the center indicate the fields we are referencing. This text will now automatically change whenever you pick a new value in the record picker. Test your form in `Preview` mode to see it in action. `Publish` it once all is set. 
+  <Step title="Publish and share">
+    That's it! The blue bubbles in the center indicate the fields we are referencing. This text will now automatically change whenever you pick a new value in the record picker.
+
+    <CardGroup>
+      ![Screenshot of the Fillout form creation page](/images/publish-form.png)
+
+      ![Screenshot of the Fillout form creation page](/images/sfml.png)
+    </CardGroup>
+    Test your form in `Preview` mode to see it in action. `Publish` it once all is set.
   </Step>
 </Steps>
 
-<CardGroup>
-<Frame style={{ width: '336px', height: '90px' }}>
-  ![Screenshot of the Fillout form creation page](/images/publish-form.png)
-</Frame>
+## Other places to reference data
 
-<Frame style={{ width: '301px', height: '151px' }}>
-  ![Screenshot of the Fillout form creation page](/images/sfml.png)
-</Frame>
-</CardGroup>
+You can also reference the result of the integration step in [show/hide](/conditional-hiding) and [validation](/input-validation) conditions to customize your form and prevent input errors. Click a field's <Icon icon="gear-complex" iconType="solid" /> to open the right-hand panel.
 
-## **Other places to reference data**
+For example, let's show a warning when a field is missing in a record.
 
-You can also reference the result of the integration step in [show/hide](/conditional-hiding) and [validation](/input-validation) conditions to customize your form and prevent input errors. For example, show a warning when a field is missing in a record.
-
-<Frame style={{ width: '576px', height: '181px' }}>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-13at2.46.55PM.png)
-</Frame>
+![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-13at2.46.55PM.png)
 
 Reference data in the **Default value** to pre-fill fields. More info [here](/prefill-fields).
 
-## **Other similar integrations**
+## Related articles
 
 <CardGroup cols={3}>
   <Card title="Login page" icon="key" iconType="regular" color="#FFC738" href="/login-page">
-    Require respondents to verify their email, enter a password, or use Single sign-on (SSO).
+    Require respondents to verify their email, key in a password, or use SSO.
   </Card>
   <Card title="URL Parameters" icon="brackets-curly" iconType="regular" color="#FFC738" href="/url-parameters">
-    Pass information to a Fillout form to support pre-filling and personalizing.
+    Pass information to a form to support pre-filling.
   </Card>
   <Card title="Pre-fetch dynamic data" icon="arrow-turn-down-right" iconType="regular" color="#FFC738" href="/pre-fetch-data">
     Fetch information from Airtable, Notion or any service.
