@@ -7,85 +7,110 @@ icon: "calculator-simple"
 
 ## Video tutorial
 
-<Frame>
-  <iframe width="720" height="420" src="https://www.youtube.com/embed/51JXFjaZF6k" title="How to add calculations to your form" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />
-</Frame>
+<iframe width="720" height="420" src="https://www.youtube.com/embed/51JXFjaZF6k" title="How to add calculations to your form" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />
 
 ## Add a calculation
 
 <Steps>
-  <Step title="Create a new calculation">
-    Open the `Logic` modal in the bottom-right of your form editor.
+  <Step title="Open Logic">
+    Click the `Logic` modal in the bottom-right of your form editor.
 
-    <Frame>
-      ![Screenshot of the Logic tab of a form](/images/logic/image-8.png)
-    </Frame>
-    Click `Calculations` followed by `+ New calculation`. Here, you'll be able to add, edit, and delete calculations in your form.
+    ![Screenshot 2025-11-25 at 6.32.40 PM.png](/images/Screenshot2025-11-25at6.32.40PM.png)
 
-    <Frame>
-      ![Screenshot of the Logic tab of a form](/images/logic/image-9.png)
-    </Frame>
+    In the popup, click `Calculations` on top followed by `+ Add new calculation`. Enter a **Name** or label and choose the **Type**, which can be:
+
+    - **Number** - for numerical results like price or score
+    - **Text** - for dynamic text based on responses
+    - **Duration** - for intervals between dates, like age or term
+
+    <img
+      src="/images/image.png"
+      alt="image.png"
+      title="image.png"
+      style={{ width:"81%" }}
+    />
+
+    For example, let's compute the price for multiple orders of our mozarella sticks dish. This would use the `number` type.
   </Step>
-  <Step title="Enter the necessary details">
-    Add your calculation by giving it a **Name** and **Type**. The name refers to how you'll refer to it in-app, whereas the type can either be one of these:
+  <Step title="Enter initial value">
+    Type the value you'd like to start with. Some common examples:
 
-    - **Number** - if you want to compute some numerical result, like a price or a score
-    - **Text** - if you want to compute some dynamic text, e.g. some text that depends on a user's selections in the form.
-    - **Duration** - if you want to compute the interval between two dates, e.g. age or term period
+    - **0** - to add to a price variable as options are selected
+    - **100** - to deduct points from a quiz
+    - **Any arbitrary text** - for a **text** calculation, or leave empty
 
-    Then, provide an **Initial value** for your calculation.
+    In our example, we'll start with the quantity. Let's reference this by clicking <Icon icon="square-plus" iconType="solid" /> and selecting the field.
 
-    Every calculation has some value that it starts with, e.g. defining what a variable starts out as. Some common examples:
-
-    - **0** - if you want to add to a price variable over time as the respondent picks options
-    - **100** - if you want to deduct points for wrong answers on a quiz from 100
-    - **Any arbitrary text** - for a **text** calculation (or leaving it empty)
+    ![Screenshot 2025-11-25 at 6.45.52 PM.png](/images/Screenshot2025-11-25at6.45.52PM.png)
   </Step>
   <Step title="Define rules">
-    Specify the rules that determine how the calculated value changes.
+    Click `+ New rule` to determine how the initial value will change. A rule is made up of 3 main parts:
 
-    <Frame>
-      ![Screenshot of the Logic tab of a form](/images/logic/image-10.png)
-    </Frame>
-    A rule is made up of 3 main parts:
+    - **Condition** - a parameter, than when true, performs the calculation
 
-    - **Operation** - this is what you want to do to your calculation, e.g. Add a number to it
-    - **Operation value** - this is the value that interacts with the operation, e.g. Add whatever number you provide
-    - **Condition** - this defines **when** you should perform that operation. This is similar to how you might [hide/show a question depending on user input](/conditional-hiding)
+      (e.g. add x amount when a respondents selects "yes" to a previous question)
+    - **Operation** - what to do to the calculation (e.g. add, subtract, multiply, divide)
+    - **Operation value** - the value used with the operation (e.g. add x amount to your initial value)
 
-    You can **drag and drop conditions** using the handle on the right-hand side to reorder them. Rules will take effect in the order that they appear on this screen. For example, you can add 5, and then multiply by 2, instead of doing it vice versa.
+    ![Screenshot 2025-11-25 at 7.36.33 PM.png](/images/Screenshot2025-11-25at7.36.33PM.png)
+
+    First, click `Set conditional logic` followed by `+ Add condition`. Select the question or field on the left, qualifier in the middle, and choice on the right.
+
+    ![Screenshot 2025-11-25 at 7.17.23 PM.png](/images/Screenshot2025-11-25at7.17.23PM.png)
+
+    In our example, we'll choose the "Appetizer" field. The calculation will start when "Mozarella sticks" is selected. Since we want customers to be able to add other appetizers if they prefer, we'll choose "has any" as the qualifier.
+
+    ![Screenshot 2025-11-25 at 7.40.27 PM.png](/images/Screenshot2025-11-25at7.40.27PM.png)
+
+    Our operation will be multiplying the quantity (initial value) by the price of the dish, which is "\$6".
+
+    <Warning>
+      Rules are applied in the order they appear. For example, the first rule adds 5, the second multiplies by 2. To change the order, just drag and drop.
+    </Warning>
+  </Step>
+  <Step title="Test your calculation">
+    Exit Logic and click `Preview` on the upper right corner to check that it works as intended.
+  </Step>
+  <Step title="Publish and share">
+    Once everything's set, `Publish` and share or embed your form.
   </Step>
 </Steps>
 
 ## Common ways to use your calculations effectively
 
-**Set the price for your Payment page**
+**Make the price dynamic**
 
-After adding a payment page, type `@` or click the `+` icon to reference a calculation instead of a static price for your payment page.
+After adding a [payment page](https://www.fillout.com/help/payment-page), type **@** or click <Icon icon="square-plus" iconType="solid" /> to reference a calculation. Now, the price will change depending on the customer's order.
 
-<Frame>
-  ![Screenshot of the Logic tab of a form](/images/logic/image-11.png)
-</Frame>
-
-Now, the price will change depending on the customer's order.
+<img
+  src="/images/logic/image-11.png"
+  alt="Screenshot of the Logic tab of a form"
+  style={{ width:"68%" }}
+/>
 
 **Display the calculation in your form**
 
-Anywhere in Fillout, you can type `@` to [reference previous answers or calculations](/answer-piping). You can [style this text](/themes) by highlighting it and changing the font size, weight, or color.
+Anywhere in Fillout, you can type **@** to [reference previous answers or calculations](/answer-piping).
 
-<Frame>
-  ![Screenshot of the Logic tab of a form](/images/logic/image-12.png)
-</Frame>
+<img
+  src="/images/logic/image-12.png"
+  alt="Screenshot of the Logic tab of a form"
+  style={{ width:"73%" }}
+/>
+
+You can [style this text](/themes) by highlighting it and changing the font size, weight, or color.
 
 **Determine age, trip duration, warranty validity, and more**
 
-When making a new calculation, choose `duration` as the type. Select **Start** and **End** dates in your calculation followed by the measurement for **Units**.
+When making a new calculation, choose `duration` as the type and make your selections in the dropdown menus.
 
-<Frame>
-  ![Screenshot of the Logic tab of a form](/images/logic/image-13.png)
-</Frame>
+<img
+  src="/images/logic/image-13.png"
+  alt="Screenshot of the Logic tab of a form"
+  style={{ width:"81%" }}
+/>
 
-### Pre-fill fields with a calculation
+## Pre-fill fields with a calculation
 
 Much like how fields are [pre-filled](/prefill-fields) elsewhere in Fillout, you can reference calculations there as well.
 
@@ -93,12 +118,12 @@ Much like how fields are [pre-filled](/prefill-fields) elsewhere in Fillout, you
 
 <CardGroup cols={3}>
   <Card title="Answer piping" icon="wand-magic-sparkles" iconType="regular" color="#FFC738" href="/answer-piping">
-    Insert respondents' prior input into fields for a personalized experience.
+    Insert previous answers into upcoming questions or fields.
   </Card>
-  <Card title="Pre-fill fields" icon="fill" iconType="regular" color="#FFC738" href="/prefill-fields">
-    Set a default value based on previous inputs, URL parameters, and more.
+  <Card title="Pre-fill fields" icon="fill" iconType="solid" color="#FFC738" href="/prefill-fields">
+    Pre-populate fields based on previous inputs and more.
   </Card>
-  <Card title="Conditional integration logic" icon="gear-complex" iconType="regular" color="#FFC738" href="/conditional-integration">
+  <Card title="Integration logic" icon="gear-complex" iconType="regular" color="#FFC738" href="/conditional-integration">
     Perform an integration only when a certain condition is met.
   </Card>
 </CardGroup>

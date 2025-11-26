@@ -1,59 +1,55 @@
 ---
 title: "Page logic"
-description: "Build forms with multiple pages and branching logic. Conditionally show certain pages or show custom endings with Fillout."
+description: "Build forms with multiple pages and branching logic. Conditionally show certain pages or custom endings with Fillout."
 icon: "diagram-project"
 sidebarTitle: "Page Logic"
 ---
 
 ## Overview
 
-**Conditional** [**logic**](/conditional-hiding) lets your forms adapt to respondents' answers. By default, forms follow a linear path with a next-page button. With page logic and conditional steps, you can control how pages connect, creating a more interactive and personalized experience.
+**Conditional** [**logic**](/conditional-hiding) lets your forms adapt to respondents' answers. By default, forms follow a linear path with a next-page button. With page logic and conditional steps, you can control how pages connect (e.g., skipping a page for respondents who choose a certain option), creating a more interactive and personalized experience.
 
 ## Video tutorial
 
-<Frame>
-  <iframe class="notion-asset-object-fit" src="https://www.loom.com/embed/221e4df32658448caa83f0a2b5e73efb" title="iframe video" frameborder="0" allowfullscreen loading="lazy" scrolling="auto" width="100%" height="420px" />
-</Frame>
+<iframe class="notion-asset-object-fit" src="https://www.loom.com/embed/221e4df32658448caa83f0a2b5e73efb" title="iframe video" frameborder="0" allowfullscreen loading="lazy" scrolling="auto" width="100%" height="420px" />
 
 ## Edit page branching
 
 <Steps>
-  <Step title="Modify your form's flow">
+  <Step title="Open Logic">
     After adding the necessary pages to your form, click `Logic`.
 
-    <Frame>
-      ![Screenshot of the Logic tab of a form](/images/logic/image-4.png)
-    </Frame>
-    Let's say you want to go to different pages depending on the result of a respondent's input. For example, we'll ask respondents what kind of company they work at.
+    ![Screenshot of the Logic tab of a form](/images/logic/image-4.png)
+
+    Let's say you want respondents to go to different pages depending on their answers. For example, we'll ask respondents what kind of company they work at.
 
     In this example, we want respondents to see different pages based on discount eligibility. With this, we’ll create two different **ending** pages (accepted and rejected). If they work at a non-profit, they'll also have to describe the organization.
 
     What we want to do is:
 
-    - If they qualify for a discount right away (e.g. student), show them the accepted ending page
-    - If they work at a non-profit, show them the non-profit page
-    - If they don’t qualify (e.g. private company), show them the rejected ending page
+    - If they qualify for a discount right away (e.g., student) <Icon icon="arrow-right-long" /> show them the accepted ending page
+    - If they work at a non-profit <Icon icon="arrow-right-long" /> show them the non-profit page
+    - If they don’t qualify (e.g., private company) <Icon icon="arrow-right-long" /> show them the rejected ending page
 
-    <Frame>
       ![Screenshot of the Logic tab of a form](/images/logic/image-5.png)
-    </Frame>
   </Step>
   <Step title="Connect pages">
-    First, click and drag from the `+` symbol on the right side of the page you want to connect, then drop it onto the target page. For example, we'll click the plus symbol on **Info** and route it to **Rejected**.
+    First, click and drag from the <Icon icon="circle-plus" iconType="solid" /> connector of the page you want to connect, then drop it onto the target page. For example, we'll click connector "Info" and route it to "Rejected".
 
-    `Set condition` to define when it will redirect to **Rejected**. In this case, if it’s a **private company**.
+    `Set condition` to define when it will redirect to "Rejected". In this case, if it’s a "Private company".
 
-    <Frame>
-      ![Screenshot of the Logic tab of a form](/images/logic/image-6.png)
-    </Frame>
-  </Step>
-  <Step title="Repeat step 2 for other scenarios">
+    ![Screenshot of the Logic tab of a form](/images/logic/image-6.png)
+
+    **Repeat step 2 for other scenarios **
+
     Finally, we also want to route respondents to the success page right away if they’re a student. `+ Add branch` to `Set condition`.
 
-    <Frame>
-      ![Screenshot of the Logic tab of a form](/images/logic/image-7.png)
-    </Frame>
-    We’re done\! Now, respondents will get redirected to different pages depending on their answer.
+    ![Screenshot of the Logic tab of a form](/images/logic/image-7.png)
+
+    We’re done! Now, respondents will get redirected to different pages depending on their answer.
+  </Step>
+  <Step title="Publish and share">
+    `Publish` your form to make the changes reflect and share or embed this.
   </Step>
 </Steps>
 
@@ -61,12 +57,12 @@ sidebarTitle: "Page Logic"
 
 <CardGroup cols={3}>
   <Card title="Page logic" icon="diagram-project" iconType="regular" color="#FFC738" href="/page-logic">
-    Hide or show certain pages or custom endings based on respondent input.
+    Hide or show pages or custom endings based on respondent input.
   </Card>
   <Card title="Ending page" icon="party-bell" iconType="regular" color="#FFC738" href="/ending-page">
-    Show a thank you page, redirect to another site or form, or allow repeat responses.
+    Show a thank you page, redirect, or allow re-submission.
   </Card>
   <Card title="Condition groups" icon="table-tree" iconType="regular" color="#FFC738" href="/condition-logic-groups">
-    Use nested logic to show, hide and validate fields based on multiple conditions.
+    Show or hide fields based on multiple conditions at once.
   </Card>
 </CardGroup>
