@@ -1,21 +1,37 @@
 ---
-title: "Create new linked records in a Salesforce form"
-description: "Let respondents create new Salesforce records from a record picker in your Fillout form by filling out a child form. The new record will be automatically selected."
+title: "Create new linked records in Salesforce"
+description: "Let respondents create new Salesforce records directly from your Fillout form through a child (sub)form."
 sidebarTitle: "Create Linked Records"
 icon: "files-medical"
 ---
 
-## [**Video tutorial** ]
+## Overview
 
-Below is a tutorial video on how to create new [Airtable records](https://www.airtable.com/guides/build/connect-data-with-linked-records) from a linked record picker in Fillout.
+Connecting a Fillout form to Salesforce enables users to automatically sync form responses into a Salesforce object. Existing fields are [mapped automatically](https://www.fillout.com/help/salesforce#how-it-works), however you can still made edits and updates with manual mapping.
 
-<iframe class="notion-asset-object-fit" src="https://www.loom.com/embed/5000bc8b87c74acca5fe5cd96fecf3e4" title="iframe video" frameborder="0" allowfullscreen loading="lazy" scrolling="auto" width="100%" height="420" />
+Fillout also lets you **create multiple objects from a single form** using linked records. A **linked record** connects one Salesforce record to another. When you add this to your form, respondents can fill out a child form (a.k.a. subform) to create related records, adding as many as needed.
 
-## Create new linked records
+## How to set up
 
 <Steps>
+  <Step title="Create a custom child object">
+    You must first make an object that will hold the responses for your child form before linking it to the main (parent) object.
+
+    Navigate to `Object Manager` to `+ Create New Object`.
+
+    For example, let’s create child forms for different restaurants that customers can fill out, then link them to a parent order form in a single submission.
+  </Step>
+  <Step title="Create a lookup field">
+    Click `Fields & Relationships` followed by `New`. Choose **Lookup Relationship** in the next window.
+
+    Then, choose the **related object**. In our example, we'll link it to the Order object.
+
+    Make any changes to the default labels or selections in the next steps if necessary.
+  </Step>
   <Step title="Add a record picker">
-    Add a `Record picker` field directly from Fillout and map it to the corresponding Airtable field.
+    Once you have finished the steps in Salesforce, go back to your Fillout form. [Connect to Salesforce](https://www.fillout.com/help/salesforce#how-it-works) if you haven't already.
+
+    On your [Salesforce-connected form](https://www.fillout.com/help/salesforce#how-it-works), click the `Record picker` field (called Lookup in Salesforce) from your obect in the left-hand panel.
 
     <img
       src="/images/Screenshot2025-11-10at2.50.31PM.png"
