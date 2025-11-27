@@ -1,58 +1,46 @@
 ---
 title: "Answer piping"
-description: "Base logic in form fields on previous answers or use them to personalize your Fillout form with answer piping. Display read only fields."
+description: "Use previous answers or inputs to control logic, personalize your form, or show read-only fields."
 icon: "wand-magic-sparkles"
 sidebarTitle: "Answer Piping"
 ---
 
-## Overview
+## What is answer piping?
 
-Make your Fillout forms more dynamic with **answer piping**, which inserts a respondent's previous answers into later questions or text fields for a more personalized and interactive experience.
+**Answer piping** inserts a respondent's previous form inputs into later questions or text fields for a more personalized and interactive experience. Fillout lets you reference:
 
-For example, you can create references to:
+- <Icon icon="file-lines" iconType="solid" /> - [previous answers](/answer-piping)
+- <Icon icon="link" iconType="solid" /> - [URL parameters](/url-parameters)
+- <Icon icon="calculator" iconType="solid" /> - [calculations](https://www.fillout.com/help/calculations#pre-fill-fields-with-a-calculation)
+- <Icon icon="calendar" iconType="solid" /> - [custom dates](/pre-fill-dates) (e.g., today, a month from now, etc.)
+- <Icon icon="user" iconType="solid" /> - [enriched emails](https://www.fillout.com/help/lead-enrichment#how-to-enrich-emails) with company information
 
-- Previous form inputs
-- [URL parameters](/url-parameters)
-- Dates (e.g. today, a month from now, etc.)
-- [Dynamic data from integrations](/fetch-dynamic-data)
-- [Calculations and variables](/calculations)
+## Reference in field labels
 
-## **Referencing in field labels**
+To reference previous form inputs in headings, paragraphs, and banners, type **@**. Then, select the field or question, or simply search for it.
 
-To reference previous form inputs in plain text in the form, type `@` in a form field to show the reference menu.
+![Screenshot of the Form designer tab of a form](/images/logic/image-19.png)
 
-<Frame style={{ width: '576px' , height: '429px' }}>
-  ![Screenshot of the Form designer tab of a form](/images/logic/image-19.png)
-</Frame>
+Test your form by clicking `Preview` in the upper right corner.
 
-Select the field or question, or simply search for it. Test your form by clicking `Preview` in the upper right corner.
+![Screenshot of the Form designer tab of a form](/images/logic/image-20.png)
 
-<Frame style={{ width: '480px' , height: '397px' }}>
-  ![Screenshot of the Form designer tab of a form](/images/logic/image-20.png)
-</Frame>
+## Reference in answer fields
 
-<Note>
-  **Note:** You can only reference fields on the current page or on previous form pages.
-</Note>
+Reference inputs in answer text fields and choice fields by [pre-filling](https://www.fillout.com/help/prefill-fields).
 
-## **Referencing in field logic**
-
-To base **show/hide logic** for fields on previous form inputs, click its `settings` icon to open the right-hand panel. Under **Logic**, `Set conditional logic`. Click [here](/conditional-hiding) for more details.
-
-<Frame style={{ width: '288px' , height: '223px' }}>
-  ![Screenshot of the Form designer tab of a form](/images/logic/image-21.png)
-</Frame>
+Fillout also let's you show or a hide a question or field based on previous form inputs via Logic in the right-hand panel. Check out this [quick guide](https://www.fillout.com/help/conditional-hiding#hide-a-question-based-on-a-condition).
 
 ## Related articles
 
 <CardGroup cols={3}>
+  <Card title="Hide fields" icon="eye-slash" iconType="regular" color="#FFC738" href="/conditional-hiding">
+    Hide or show fields based on answers, URL parameters or data.
+  </Card>
   <Card title="Use dynamic data" icon="arrow-down-right" iconType="regular" color="#FFC738" href="/fetch-dynamic-data">
-    Display dynamic content to hide, validate, and pre-fill  fields.
+    Display content to hide, validate and pre-fill fields.
   </Card>
   <Card title="Placeholders" icon="input-text" iconType="regular" color="#FFC738" href="/placeholder">
-Add text to where your respondents type their answers or choose options.
-    </Card>
-  <Card title="Conditional integration logic" icon="gear-complex" iconType="regular" color="#FFC738" href="/conditional-integration">
-    Perform an integration only when a certain condition is met.
+    Add text to guide respondents’ answers or choices.
   </Card>
 </CardGroup>
