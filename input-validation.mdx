@@ -1,65 +1,67 @@
 ---
-title: Form validation
+title: "Form validation"
 description: "Collect accurate information from your respondents by validating form inputs. Define validation rules using logic conditions, regular expressions or out-of-the-box validation rules."
-icon: square-check
-sidebarTitle: Form Validation
+icon: "square-check"
+sidebarTitle: "Form Validation"
 ---
 
-## What is form validation
+## What is form validation?
 
 **Data validation** in form building or simply **form validation** ensures that the responses matches certain predefined criteria before the form is submitted. This maintains the accuracy of the data and enhances security by avoiding the submission of incorrect, incomplete or harmful data.
 
 ## Set a validation rule
 
-Click on the question or field followed by its `settings icon` to open the right-hand panel. Open the **Validation** dropdown and choose a `Validation pattern`.
+Click on the question or field's <Icon icon="gear-complex" iconType="solid" /> to open the right-hand panel. The **Validation** section lets you set the ff:
 
-<Frame style={{ width: '672px' , height: '245px' }}>
-  ![Screenshot of the Form designer tab of a form](/images/logic/image-14.png)
-</Frame>
+- **Min length** - enter a minimum no. of allowed characters for text fields
+- **Max length** - enter a maximum no. of allowed characters for text fields
+- **Error message** - customize the default warning shown when validation rules are not met
+- **Validation pattern** - set a criteria to ensure response meets a certain requirement
 
-### Validate with Regular Expressions
+<img
+  src="/images/Screenshot2025-11-27at4.58.08PM.png"
+  alt="Screenshot 2025-11-27 at 4.58.08 PM.png"
+  title="Screenshot 2025-11-27 at 4.58.08 PM.png"
+  style={{ width:"83%" }}
+/>
 
-Choose **Regex** validate a form input with a regular expression, which definse a rule for the type of input you want to accept. See [here](https://digitalfortress.tech/tips/top-15-commonly-used-regex/) for a list of popular regular expressions. Here are some examples:
+You can choose between two validation patterns, **Regex** and **Condition**.
 
-| Purpose | Regular expression |
-| --- | --- |
-| Whole numbers | ^\\d+$ |
-| Alphanumeric without space | ^\[a-zA-Z0-9\]\*$ |
-| Alphanumeric with space | ^\[a-zA-Z0-9 \]\*$ |
-| URL | https?:\\/\\/(www\\.)?\[-a-zA-Z0-9@:%.*\\+~#=\]{2,256}\\.\[a-z\]{2,6}\\b(\[-a-zA-Z0-9@:%*\\+.~#()?&//=\]\*) |
-| Decimal numbers | ^\\d\*\\.\\d+$ |
-| Whole and decimal numbers | ^\\d\*(\\.\\d+)?$ |
+### Regular Expressions (Regex)
 
-Copy and paste one of the regular expressions above into the **Regex** field. Test your form using the `Preview` mode!
+Choose `Regex` to validate a response with a pattern or formula used to check text. This lets you set rules for the type of response you want to accept.
 
-<Frame style={{ width: '240px' , height: '139px' }}>
-  ![Screenshot of the Form designer tab of a form](/images/logic/image-15.png)
-</Frame>
+See [here](https://digitalfortress.tech/tips/top-15-commonly-used-regex/) for a list of popular regular expressions. Here are some examples:
 
-### Validate with logic
+| Purpose                    | Regex                                                                                     |
+| -------------------------- | ----------------------------------------------------------------------------------------- |
+| Whole numbers              | ^\\d+\$                                                                                   |
+| Alphanumeric without space | ^[a-zA-Z0-9]\*\$                                                                          |
+| Alphanumeric with space    | ^[a-zA-Z0-9 ]\*\$                                                                         |
+| URL                        | https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]\\.[a-z]\\b([-a-zA-Z0-9@:%_\\+.~#()?&//=]\*) |
+| Decimal numbers            | ^\\d\*\\.\\d+\$                                                                           |
+| Whole and decimal numbers  | ^\\d\*(\\.\\d+)?\$                                                                        |
 
-Choose the **Condition** validation pattern to validate a form input based on an arbitrary condition. Click `Set conditional logic`. For example, we only want to accept gmail or yahoo emails.
+Copy and paste your **Regex**. For example, for an "Account ID" with no spaces or special characters, use `^[a-zA-Z0-9]*$` to allow only letters and numbers.
 
-<Frame style={{ width: '576px' , height: '299px' }}>
-  ![Screenshot of the Form designer tab of a form](/images/logic/image-16.png)
-</Frame>
+<img
+  src="/images/Screenshot2025-11-27at4.45.15PM.png"
+  alt="Screenshot 2025-11-27 at 4.45.15 PM.png"
+  title="Screenshot 2025-11-27 at 4.45.15 PM.png"
+  style={{ width:"79%" }}
+/>
 
-## Validate text length
+### Condition
 
-Use the **min** and **max length** validation rules to specify the accepted length of text inputs.
+Choose `Condition` to validate a response based on an arbitrary condition. `Set conditional logic` and `+ Add condition`.
 
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/logic/image-17.png)
-</Frame>
+For example, we only want to accept "gmail or yahoo emails".
 
-## Custom error messages
+<img
+  src="/images/Screenshot2025-11-27at5.01.33PM.png"
+  alt="Screenshot 2025-11-27 at 5.01.33 PM.png"
+  title="Screenshot 2025-11-27 at 5.01.33 PM.png"
+  style={{ width:"82%" }}
+/>
 
-Provide an **Error message** through the right-hand side settings to override the default warning message.
-
-<Frame style={{ width: '480px' , height: '101px' }}>
-  ![Screenshot of the Form designer tab of a form](/images/logic/image-18.png)
-</Frame>
-
-### Testing validation logic
-
-Go to `Preview` mode and click on the `Next` or `Submit` button. You’ll see a warning message appear if your inputs don’t match your validation rules.
+Test your validation logic by clicking `Preview` on the upper right of your form editor. Enter a response and click the `Next` or `Submit` button. You’ll see a warning message appear if your inputs don’t match your validation rules.
