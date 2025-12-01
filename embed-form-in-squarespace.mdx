@@ -5,47 +5,43 @@ icon: "scribble"
 sidebarTitle: "Squarespace"
 ---
 
-## What is Squarespace
+## What is Squarespace?
 
 [Squarespace](https://www.squarespace.com/) is a popular website builder for online portfolios, blogs, and eCommerce shops.  The platform includes some built-in form functionality, especially for newsletter signup and product checkout forms, but design options are limited and there are no advanced logic or multi-page options.
 
 ## Video tutorial
 
-<Frame>
-  <iframe class="notion-asset-object-fit" src="https://www.loom.com/embed/eb07f1f17c2b4d92afc4096960d7b212" title="iframe video" frameborder="0" allowfullscreen loading="lazy" scrolling="auto" width="100%" height="540px" />
-</Frame>
+<iframe class="notion-asset-object-fit" src="https://www.loom.com/embed/eb07f1f17c2b4d92afc4096960d7b212" title="iframe video" frameborder="0" allowfullscreen loading="lazy" scrolling="auto" width="100%" height="540px" />
 
-## How to embed your form in Squarespace
+## How to embed your form
 
 <Steps>
   <Step title="Choose an embed style">
-    Start by clicking `Publish` in the upper right corner of the Fillout form editor. Next, open the **Share** tab from the top menu. Select your preferred embed style and click `Use this embed`. 
+    Start by clicking `Publish` in the upper right corner of the Fillout form editor. A popup will show up where you can pick an **embed style**.
 
-    <Frame>
-      ![Screenshot of the Share tab of a form](/images/sharing-and-embedding/image-6.png)
-    </Frame>
-    Adjust your embed style settings to fit your use case (more info [here]()) and click `Get the code`.
+    ![image.png](/images/image.png)
+
+    If you've already published your form, click `Share` in the top middle or top right. Adjust your embed style settings to fit your use case. Then, `Get the code`
   </Step>
   <Step title="Add an embed block">
     Inside the Squarespace drag-and-drop editor, hover your mouse over the section where you want to embed your form and click `+ Add Block`. Scroll to or search for the `Embed` block and click and drag it onto the page.
 
-    <Frame>
-      ![Screenshot of the Embed block in Squarespace](/images/sharing-and-embedding/image-7.png)
-    </Frame>
+    ![Screenshot of the Embed block in Squarespace](/images/sharing-and-embedding/image-7.png)
   </Step>
   <Step title="Paste Fillout embed code">
     Double-click the `Embed` block, open the **Code Snippet** tab from the block editor, and click the `Embed data` button. Paste your Fillout **embed code** into the code editor and click `Back`.
 
-    <Frame>
-      ![Screenshot of the Embed block in Squarespace](/images/sharing-and-embedding/image-8.png)
-    </Frame>
+    <img
+      src="/images/sharing-and-embedding/image-8.png"
+      alt="Screenshot of the Embed block in Squarespace"
+      style={{ width:"71%" }}
+    />
   </Step>
   <Step title="Save and preview">
-    Hit `Save` in the upper left corner of the page editor and press Ctrl \+ Shift \+ P to preview the updated page (or click the `↗` button from the site’s Home Menu).
+    Hit `Save` in the upper left corner of the page editor and press Ctrl + Shift + P to preview the updated page (or click the  <Icon icon="arrow-up-right" size={12} /> button from the site’s Home Menu).
 
-    <Frame>
-      ![Screenshot of the Embed block in Squarespace](/images/sharing-and-embedding/image-9.png)
-    </Frame>
+    ![Screenshot of the Embed block in Squarespace](/images/sharing-and-embedding/image-9.png)
+
     You can also paste your Fillout **embed code** into a **Code** block if you’re on a Squarespace Business plan or higher.
   </Step>
 </Steps>
@@ -56,18 +52,14 @@ If you’re adding a **Full screen** Fillout embed to a Squarespace site, you ma
 
 <Steps>
   <Step title="Create a blank page">
-    From your site’s Home Menu, open the **Website** tab. Click the `+` icon next to either **Main Navigation** or **Not Linked** and choose `Blank Page`.
+    From your site’s Home Menu, open the **Website** tab. Click + next to either **Main Navigation** or **Not Linked** and choose `Blank Page`.
 
-    <Frame>
-      ![Screenshot of the Embed block in Squarespace](/images/sharing-and-embedding/image-10.png)
-    </Frame>
+    ![Screenshot of the Embed block in Squarespace](/images/sharing-and-embedding/image-10.png)
   </Step>
   <Step title="Remove header and footer">
-    After giving the page a name, click the `gear icon` next to it and open the **Advanced** tab. Paste `<style>.header, #footer-sections {display:none!important;}</style>` into the **Page Header Code Injection** textbox and click `Save`.
+    After giving the page a name, click <Icon icon="gear-complex" /> next to it and open the **Advanced** tab. Paste `<style>.header, #footer-sections {display:none!important;}</style>` into the **Page Header Code Injection** textbox and click `Save`.
 
-    <Frame>
-      ![Screenshot of the Embed block in Squarespace](/images/sharing-and-embedding/image-11.png)
-    </Frame>
+    ![Screenshot of the Embed block in Squarespace](/images/sharing-and-embedding/image-11.png)
   </Step>
   <Step title="Paste Fillout embed code">
     Now that the header and footer are removed, add a **blank section** to the page, then add an `Embed` block with your **Full screen embed code,** anywhere on the page.
@@ -77,7 +69,7 @@ If you’re adding a **Full screen** Fillout embed to a Squarespace site, you ma
 ## Related article
 
 <CardGroup cols={3}>
-  <Card title="Share & embed" icon="up-right-from-square" iconType="regular" color="#FFC738" href="/sharing">
-    Share your forms via link, embed, or QR code, and across accounts.
+  <Card title="Share & embed" icon="arrow-up-right-from-square" iconType="regular" color="#FFC738" href="/sharing">
+    Share your forms via link, embed, or QR code.
   </Card>
 </CardGroup>

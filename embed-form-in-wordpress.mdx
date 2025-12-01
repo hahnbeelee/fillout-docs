@@ -19,53 +19,54 @@ There are three basic ways to embed a Fillout form in WordPress:
 
 <Steps>
   <Step title="Copy form link">
-    First, `Publish` your form and then head to the **Share** tab. Copy the URL from the `Form Link` field.
+    First, `Publish` your form and `Copy` the link. Alternatively, you can go to the `Share` tab.
 
-    <Frame>
-      ![](/images/sharing-and-embedding/image-18.png)
-    </Frame>
+    <img
+      src="/images/Screenshot2025-12-01at5.53.03PMcopy2.png"
+      alt="Screenshot 2025-12-01 at 5.53.03 PM copy 2.png"
+      title="Screenshot 2025-12-01 at 5.53.03 PM copy 2.png"
+      style={{ width:"41%" }}
+    />
   </Step>
   <Step title="Add an embed block">
-    In WordPress, open the page where you want to embed the form. Click the `+` symbol in the upper left corner of the page editor to open the **Block Inserter** in the left side (or press Ctrl \+ Alt \+ Y to insert a block below your cursor’s current position) and search for the `Embed` block.
+    In WordPress, open the page where you want to embed the form. Click `+` in the upper left corner of the page editor to open the **Block Inserter** in the left side (or press Ctrl + Alt + Y to insert a block below your cursor’s current position) and search for the `Embed` block.
 
-    <Frame>
-      ![](/images/sharing-and-embedding/image-19.png)
-    </Frame>
+    ![](/images/sharing-and-embedding/image-19.png)
   </Step>
-  <Step title="Embed form link">
-    Paste the `Form Link` from your Form’s **Share** tab into the block’s text field and click `Embed`.
+  <Step title="Paste form link">
+    Paste the `Form Link` into the block’s text field and click `Embed`.
 
-    <Frame>
-      ![](/images/sharing-and-embedding/image-20.gif)
-    </Frame>
+    <img
+      src="/images/sharing-and-embedding/image-20.gif"
+      alt=""
+      style={{ width:"85%" }}
+    />
   </Step>
 </Steps>
 
-This is the quickest and easiest way to embed a Fillout form in a WordPress website. But it’s also the most limited in terms of design and layout. You have limited control over the block’s size and positioning on the page.
+This is the quickest way to embed a Fillout form in WordPress, but it offers limited design and layout control, including the block’s size and positioning.
 
-## Add a Fillout embed code to a Custom HTML block (recommended)
+## Add a Fillout embed code to a Custom HTML block (Recommended)
 
 The best way to add a Fillout form to your WordPress website is by using one of the embed codes since it gives you more control over the layout and often looks better on the page than using the `Form Link`.
 
 <Steps>
   <Step title="Choose an embed style">
-    After publishing your form, open the **Share** tab. Select your preferred embed style (Standard, Full screen, Popup, or Slider) and click `Use this embed`. 
-<Frame>
-      ![Screenshot of the Share tab of a form](/images/sharing-and-embedding/image-6.png)
-    </Frame>
-    Then, adjust your embed style settings to fit your use case (more info [here]()) and click `Get the code`.
+    Start by clicking `Publish` in the upper right corner of the Fillout form editor. A popup will show up where you can pick an **embed style**.
+
+    ![image.png](/images/image.png)
+
+    If you've already published your form, click `Share` in the top middle or top right. Adjust your embed style settings to fit your use case. Then, `Get the code`
   </Step>
   <Step title="Add a custom HTML block">
-    On the WordPress page where you want to embed the form, click the `+` symbol in the upper left corner of the page editor to open the **Block Inserter** in the left side (or press Ctrl \+ Alt \+ Y to insert a block below your cursor’s current position) and search for the `Custom HTML` block.
+    On the WordPress page where you want to embed the form, click `+` in the upper left corner of the page editor to open the **Block Inserter** in the left side (or press Ctrl + Alt + Y to insert a block below your cursor’s current position) and search for the `Custom HTML` block.
 
-    <Frame>
-      ![](/images/sharing-and-embedding/image-21.png)
-    </Frame>
-    Paste the embed code from your Form’s **Share** tab into the block’s text field and click `Update`.
+    ![](/images/sharing-and-embedding/image-21.png)
+  </Step>
+  <Step title="Paste embed code">
+    Paste the embed code from Fillout into the block’s text field and click `Update`.
 
-    <Frame>
-      ![](/images/sharing-and-embedding/image-22.png)
-    </Frame>
+    ![](/images/sharing-and-embedding/image-22.png)
   </Step>
 </Steps>
 
@@ -73,24 +74,35 @@ The best way to add a Fillout form to your WordPress website is by using one of 
 
 If you want or need to see all of a page’s HTML before adding your embed code, you need to switch to WordPress’s **Code editor**. This will help you make granular adjustments or troubleshoot code or style-related issues.
 
-After publishing your form, open the **Share** tab. Select your preferred embed style (Standard, Full screen, Popup, or Slider) and click `Use this embed`. Adjust your embed style settings to fit your use case (more info [here]()) and click `Get the code`.
+<Steps>
+  <Step title="Choose an embed style">
+    Start by clicking `Publish` in the upper right corner of the Fillout form editor. A popup will show up where you can pick an **embed style**.
 
-<Frame>
-  ![](/images/sharing-and-embedding/image-23.png)
-</Frame>
+    ![image.png](/images/image.png)
 
-In WordPress, use the visual editor to open the page where you want to embed your form. Click the three vertical dots in the upper right corner of the screen, followed by `Code Editor` (or press Ctrl\+Shift\+Alt\+M from anywhere in the visual editor).
+    If you've already published your form, click `Share` in the top middle or top right. Adjust your embed style settings to fit your use case. Then, `Get the code`
+  </Step>
+  <Step title="Navigate to code editor">
+    In WordPress, use the visual editor first to open the page where you want to embed your form. Then, click <Icon icon="ellipsis-vertical" /> in the upper right corner of the screen, followed by `Code Editor` (or press Ctrl+Shift+Alt+M from anywhere in the visual editor).
 
-<Frame>
-  ![](/images/sharing-and-embedding/image-24.png)
-</Frame>
-
-Paste the embed code from your Form’s **Share** tab into the block’s text field and click `Update`.
+    <img
+      src="/images/sharing-and-embedding/image-23.png"
+      alt={true}
+      style={{ width:"27%" }}
+    />
+  </Step>
+  <Step title="Paste embed code">
+    Paste the embed code from Fillout into the block’s text field and click `Update`. 
+  
+    <img src="/images/sharing-and-embedding/image-24.png" alt="" />
+    
+  </Step>
+</Steps>
 
 ## Related article
 
 <CardGroup cols={3}>
-  <Card title="Share & embed" icon="up-right-from-square" iconType="regular" color="#FFC738" href="/sharing">
-    Share your forms via link, embed, or QR code, and across accounts.
+  <Card title="Share & embed" icon="arrow-up-right-from-square" iconType="regular" color="#FFC738" href="/sharing">
+    Share your forms via link, embed, or QR code.
   </Card>
 </CardGroup>

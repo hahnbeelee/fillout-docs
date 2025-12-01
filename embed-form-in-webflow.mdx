@@ -11,39 +11,38 @@ While [Webflow](https://webflow.com) has some built-in form features, they have 
 
 ## Video tutorial
 
-<Frame>
-  <iframe class="notion-asset-object-fit" src="https://www.loom.com/embed/615d4eab46b8400aaecfccd057ed3c96" title="iframe video" frameborder="0" allowfullscreen loading="lazy" scrolling="auto" width="100%" height="540" />
-</Frame>
+<iframe class="notion-asset-object-fit" src="https://www.loom.com/embed/615d4eab46b8400aaecfccd057ed3c96" title="iframe video" frameborder="0" allowfullscreen loading="lazy" scrolling="auto" width="100%" height="540" />
 
-## How to embed your form in Webflow
+## How to embed your form
 
 <Steps>
   <Step title="Choose an embed style">
-    Start by clicking `Publish` in the upper right corner of the Fillout form editor. Next, open the **Share** tab from the top menu.
+    Start by clicking `Publish` in the upper right corner of the Fillout form editor. A popup will show up where you can pick an **embed style**.
 
-    <Frame>
-      ![](/images/sharing-and-embedding/image-25.png)
-    </Frame>
-    Select your preferred embed style and click `Use this embed`. Adjust your embed style settings to fit your use case (more info [here]()) and click `Get the code`.
+    ![image.png](/images/image.png)
+
+    If you've already published your form, click `Share` in the top middle or top right. Adjust your embed style settings to fit your use case. Then, `Get the code`
   </Step>
   <Step title="Add elements">
-    Open your Webflow visual editor, click the `+` symbol on the upper left corner (or press `A`) to open the **Add Elements** sidebar.
+    Open your Webflow visual editor, click `+` on the upper left corner (or press `A`) to open the **Add Elements** sidebar.
 
     Select the **Elements** tab, scroll to the **Advanced** section at the bottom of the list, and drag and drop the `Embed` to a spot on the page.
 
-    <Frame>
-      ![](/images/sharing-and-embedding/image-26.png)
-    </Frame>
+    ![](/images/sharing-and-embedding/image-26.png)
   </Step>
-  <Step title="Paste Fillout embed code">
+  <Step title="Paste embed code">
     Paste your **embed code** from Fillout into the code editor and click `Save & Close`.
 
-    <Frame>
-      ![](/images/sharing-and-embedding/image-27.png)
-    </Frame>
+    <img
+      src="/images/sharing-and-embedding/image-27.png"
+      alt=""
+      style={{ width:"85%" }}
+    />
   </Step>
   <Step title="Publish and preview">
-    The Webflow visual editor doesn’t display scripts, so you need to open the **Publish** menu in the upper right corner of the screen and click `Publish to selected domains`. After publishing the changes, click the `external link icon` next to your site URL (an arrow pointing to the upper right corner) to confirm that the embed works as intended.
+    The Webflow visual editor doesn't display scripts, so you need to open the **Publish** menu in the upper right corner of the screen and click `Publish to selected domains`. 
+
+    After publishing the changes, click <Icon icon="arrow-up-right-from-square" /> next to your site URL to confirm that the embed works as intended.
   </Step>
 </Steps>
 
@@ -51,17 +50,13 @@ While [Webflow](https://webflow.com) has some built-in form features, they have 
 
 **Narrow embeds**
 
-<Frame>
-  ![](/images/sharing-and-embedding/image-28.png)
-</Frame>
+![](/images/sharing-and-embedding/image-28.png)
 
 Sometimes, design settings applied in Fillout cause the embed to show up as too narrow on the page. To fix this manually, select the `Embed` in the visual editor, then open the **Size** menu from the right **Style** sidebar.
 
 Increase the `Min W` value, publish the changes, and keep adjusting until you find a value you like (500px is a good starting point).
 
-<Frame>
-  ![](/images/sharing-and-embedding/image-29.png)
-</Frame>
+![](/images/sharing-and-embedding/image-29.png)
 
 **Out of place floating buttons**
 
@@ -74,7 +69,7 @@ Then, click on every `Slide` element on the page and select `Static` from the **
 ## Related article
 
 <CardGroup cols={3}>
-  <Card title="Share & embed" icon="up-right-from-square" iconType="regular" color="#FFC738" href="/sharing">
-    Share your forms via link, embed, or QR code, and across accounts.
+  <Card title="Share & embed" icon="arrow-up-right-from-square" iconType="regular" color="#FFC738" href="/sharing">
+    Share your forms via link, embed, or QR code.
   </Card>
 </CardGroup>

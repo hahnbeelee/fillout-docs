@@ -12,46 +12,49 @@ Passing data to your embedded Fillout form can be used to:
 - Personalize text on your form [via answer piping](/answer-piping)
 - Track UTM campaigns
 - [Update user information based on an ID](/update-forms)
-- Much more\!
+- Much more!
 
-## Pass dynamic URL parameters (hidden fields) to your embed
+## Pass dynamic URL parameters
 
 <Steps>
-  <Step title="Register URL parameters, if you haven’t yet">
-    Add your parameter in the **Settings** page of your form. More information [here](/url-parameters).
+  <Step title="Register URL parameters (if you haven’t yet)">
+    Add your parameter in the `Settings` page of your form. More information [here](/url-parameters).
 
-<Frame>
-  ![](/images/sharing-and-embedding/image-3.png)
-</Frame>
+    <img
+      src="/images/Screenshot2025-12-01at6.03.03PM.png"
+      alt="Screenshot 2025-12-01 at 6.03.03 PM.png"
+      title="Screenshot 2025-12-01 at 6.03.03 PM.png"
+      style={{ width:"62%" }}
+    />
+
   </Step>
   <Step title="Paste the code">
-   Select one of the **Embed options** followed by `Get the code`. Then paste into your site.
+    Click `Share` on top and select one of the **Embed options** followed by `Get the code` in the popup. Then paste into your website builder or HTML.
 
-<Frame>
-  ![](/images/sharing-and-embedding/image-4.png)
-</Frame>
+    ![image.png](/images/image.png)
 
-You can optionally customize how the embed and button will look.
+    You can optionally customize how the embed and button will look.
 
-<Frame>
-  ![](/images/sharing-and-embedding/image-5.png)
-</Frame>
- 
+    <img
+      src="/images/Screenshot2025-12-01at6.06.43PM.png"
+      alt="Screenshot 2025-12-01 at 6.06.43 PM.png"
+      title="Screenshot 2025-12-01 at 6.06.43 PM.png"
+      style={{ width:"52%" }}
+    />
   </Step>
-  <Step title="In the Embed code, add data attributes for each URL parameter">
-  For example, if you’re embedding this form on your site which is a Facebook-related campaign, and you have a URL parameter of `ref`, you can use `data-ref="Facebook"`. Your embedding code will look something like this:
+  <Step title="Add data attributes">
+    In the Embed code, add data attributes for each URL parameter. For example, if you’re embedding this form on your site which is a Facebook-related campaign, and you have a URL parameter of `ref`, you can use `data-ref="Facebook"`. Your embedding code will look something like this:
 
-```html
-<div data-fillout-id="cwb3NdqFmJus" data-fillout-embed-type="standard" style="width:100%;height:500px;" data-fillout-inherit-parameters data-fillout-dynamic-resize data-ref="Facebook"></div><script src="https://server.fillout.com/embed/v1/"></script>
-```
+    ```html
+    <div data-fillout-id="cwb3NdqFmJus" data-fillout-embed-type="standard" style="width:100%;height:500px;" data-fillout-inherit-parameters data-fillout-dynamic-resize data-ref="Facebook"></div><script src="https://server.fillout.com/embed/v1/"></script>
+    ```
 
-<Note>
-  **Note:** Embeds will automatically inherit URL parameters from the parent page that they’re on, so if your main site already has these, you simply need to register the parameter in your form to use it.
-</Note>
-  
+    <Note>
+      Embeds will automatically inherit URL parameters from the parent page that they’re on, so if your main site already has these, you simply need to register the parameter in your form to use it.
+    </Note>
   </Step>
-  <Step title="Share your form link">
-   Once everything is set, click `Publish` in the upper right corner and share your form. 
+  <Step title="Publish">
+    Once everything is set, click `Publish` in the upper right corner.
   </Step>
 </Steps>
 
@@ -59,12 +62,12 @@ You can optionally customize how the embed and button will look.
 
 <CardGroup cols={3}>
   <Card title="URL Parameters" icon="brackets-curly" iconType="regular" color="#FFC738" href="/url-parameters">
-    Pass information to a form to support pre-filling and personalizing of the form.
+    Pass URL parameters to your embeds to track data.
   </Card>
   <Card title="Update existing Airtable records" icon="arrow-rotate-right" iconType="regular" color="#FFC738" href="/airtable-update-form">
-    Edit existing records in Airtable and pre-fill fields.
+    Edit existing records and pre-fill fields.
   </Card>
   <Card title="Update existing Notion pages" icon="arrow-rotate-right" iconType="regular" color="#FFC738" href="/notion-update-form">
-    Edit existing Notion pages and pre-fill fields.
+    Edit existing pages and pre-fill fields.
   </Card>
 </CardGroup>
