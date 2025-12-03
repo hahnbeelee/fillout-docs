@@ -6,10 +6,53 @@ icon: "wrench"
 
 ## Quick fix
 
-Zite uses AI to help you build fully functional apps without coding, but even advanced tools can run into the occasional hiccup. Here’s how to quickly sort out general issues.
+Zite uses AI to help you build fully functional apps without coding, but even advanced tools can run into the occasional hiccup. Here’s how to quickly sort out general issues:
 
-**Fix issue button**
+**Fix or retry button**
 
-**Ask Zite**
+When Zite detects a problem, it lists the cause in the chat and shows a toast notification with a `Retry build` or `Fix it for me` button.  
 
-**Debugging**
+<Warning>
+  Rebuilding or fixing uses credits. If you’re unsure or want to avoid repeated rebuilds, try **chat mode** instead.
+</Warning>
+
+**Chat mode**
+
+Build mode is the default, but if issues persist, switch to chat mode by clicking <Icon icon="message-dots" iconType="solid" /> on the bottom right. This lets you ask AI what’s going wrong without making further changes.
+
+**Recover feature**
+
+If recent changes cause issues, restore an older version of your app. More info [here](https://www.fillout.com/help/zite/history).
+
+## Common issues
+
+Here’s a list of common problems and how to fix them:
+
+**User Interface**
+
+- Upload a screenshot or relevant image in the chat and describe what you want to do.
+- You can also use selective edits to highlight a specific element and make changes manually or with AI. More info [here](https://www.fillout.com/help/zite/selective-edits).
+
+**Partial generation**
+
+- The AI may struggle with multiple requests in a single message (e.g., listing 7+ tasks). Break your requests into 3 or fewer per message for best results.
+
+**Failed App creation ("No app created yet")**
+
+- This usually happens due to a temporary connection issue. Refreshing the page.
+- Alternatively, go back to your dashboard and re-open the app.
+
+**Rate limits or tool errors (“Too many requests” or "Timeout")**
+
+- This usually happens when too many changes are requested in a short time. Exit and re-open the app after a few minutes.
+- Check error messages to see if the issue comes from Zite or an [external integration](https://www.fillout.com/help/zite/integrations).
+- We recommend using Zite’s built-in database to help the AI understand your data better and reduce integration errors.
+
+## Tips
+
+Follow these tips for a smoother app-building experience:
+
+1. Write clear, descriptive prompts. Avoid vague requests.
+2. Include specific details and examples. Images work great.
+3. Limit requests to a maximum of 3 per message.
+4. Avoid contradictory instructions. Put them in separate messages.
