@@ -583,6 +583,11 @@
             ]
           },
           {
+            "group": "Tips",
+            "icon": "lightbulb",
+            "pages": ["zite/tips/troubleshooting"]
+          },
+          {
             "group": "Other",
             "icon": "gift",
             "pages": [
