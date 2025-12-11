@@ -573,7 +573,6 @@
           },
           {
             "group": "Guides",
-            "icon": "book-open",
             "pages": [
               "zite/guides/google-sheets",
               "zite/guides/airtable",
@@ -584,7 +583,6 @@
           },
           {
             "group": "Tips",
-            "icon": "lightbulb",
             "pages": ["zite/tips/troubleshooting"]
           },
           {
