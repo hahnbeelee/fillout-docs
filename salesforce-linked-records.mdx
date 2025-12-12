@@ -1,6 +1,6 @@
 ---
-title: "Create new linked records in Salesforce"
-description: "Let respondents create new Salesforce records directly from your Fillout form through a child (sub)form."
+title: "Create records on multiple Salesforce objects"
+description: "Let respondents create new Salesforce records from your main form and subform at the same time."
 sidebarTitle: "Create Linked Records"
 icon: "files-medical"
 ---
@@ -9,16 +9,30 @@ icon: "files-medical"
 
 Connecting a Fillout form to Salesforce enables users to automatically sync form responses into a Salesforce object. Existing fields are [mapped automatically](https://www.fillout.com/help/salesforce#how-it-works), however you can still made edits and updates with [manual mapping](https://www.fillout.com/help/additional-integration-mappings#how-to-map-fields-manually).
 
-Fillout also lets you **create records on multiple objects with a single form** using relationships. A **relationship** links one Salesforce record to another. When you add this to your form, respondents can fill out a child form (a.k.a. subform) to create related records, adding as many as needed.
+Fillout also lets you **create records on multiple objects with a single form** using master-detail relationships. A **master-detail relationship** creates a parent–child connection between two Salesforce records. Add this to your form to let respondents fill out a parent form and a subform to create related records, adding as many as needed.
 
 ## How to set up
 
 <Steps>
   <Step title="Add a relationship field">
-    On your Salesforce-connected form, add a `Relationship field`. These are marked by <Icon icon="file-magnifying-glass" iconType="solid" size={22} />.
+    On your [Salesforce-connected form](https://www.fillout.com/help/salesforce#how-it-works), add a `Relationship field` from the left-hand panel. These are marked by <Icon icon="file-magnifying-glass" iconType="solid" size={22} />.
+
+    <img
+      src="/images/Screenshot2025-12-12at7.16.29PM.png"
+      alt="Screenshot 2025-12-12 at 7.16.29 PM.png"
+      title="Screenshot 2025-12-12 at 7.16.29 PM.png"
+      style={{ width:"34%" }}
+    />
+
+    <Warning>
+      Objects must be linked via a master-detail relationship, not a lookup relationship.
+    </Warning>
+    For example, let's link our Fillout form to the Contact object. For the relationship field, we'll pick Individual ID. When a respondent adds a new record, a small popup form (subform) will open for entering the related information.
   </Step>
   <Step title="Enable record creation">
     Click the field's <Icon icon="gear-complex" iconType="solid" /> to enable `Can create new records?`.
+
+    ![Screenshot 2025-12-12 at 5.04.20 PM copy.png](/images/Screenshot2025-12-12at5.04.20PMcopy.png)
 
     In the right-hand panel, you can also:
 
@@ -32,61 +46,18 @@ Fillout also lets you **create records on multiple objects with a single form** 
   </Step>
   <Step title="Publish and share">
     When everything's set, click `Publish` to make the changes reflect. That's it! Every form submission will now be created as records on both Salesforce objects.
+
+    ![Screenshot 2025-12-12 at 5.09.32 PM.png](/images/Screenshot2025-12-12at5.09.32PM.png)
   </Step>
 </Steps>
 
-<Steps>
-  <Step title="Create a custom child object">
-    You must first make an object that will hold the responses for your child form before linking it to the main (parent) object.
+## Salesforce guides
 
-    Navigate to `Object Manager` to `+ Create New Object`.
-
-    For example, let’s create child forms for different restaurants that customers can fill out, then link them to a parent order form in a single submission.
-  </Step>
-  <Step title="Create a lookup field">
-    Click `Fields & Relationships` followed by `New`. Choose **Lookup Relationship** in the next window.
-
-    Then, choose the **related object**. In our example, we'll link it to the Order object.
-
-    Make any changes to the default labels or selections in the next steps if necessary.
-  </Step>
-  <Step title="Add a record picker">
-    Once you have finished the steps in Salesforce, go back to your Fillout form. [Connect to Salesforce](https://www.fillout.com/help/salesforce#how-it-works) if you haven't already.
-
-    On your [Salesforce-connected form](https://www.fillout.com/help/salesforce#how-it-works), click the `Record picker` field (called Lookup in Salesforce) from your obect in the left-hand panel.
-
-    <img
-      src="/images/Screenshot2025-11-10at2.50.31PM.png"
-      alt="Screenshot 2025-11-10 at 2.50.31 PM.png"
-      title="Screenshot 2025-11-10 at 2.50.31 PM.png"
-      style={{ width:"38%" }}
-    />
-
-    Alternatively, connect to Airtable first so your `Link to another record` field there automatically appears in Fillout. No manual mapping needed.
-
-    <img
-      src="/images/Screenshot2025-11-10at2.49.39PM.png"
-      alt="Screenshot 2025-11-10 at 2.49.39 PM.png"
-      title="Screenshot 2025-11-10 at 2.49.39 PM.png"
-      style={{ width:"39%" }}
-    />
-  </Step>
-  <Step title="Enable create records option">
-    Click the field's <Icon icon="gear-complex" iconType="solid" /> to enable `Can create new records?`.
-
-    ![Screenshot 2025-11-10 at 3.21.07 PM.png](/images/Screenshot2025-11-10at3.21.07PM.png)
-
-    In the right-hand panel, you can also:
-
-    - **Edit record creation form** - modify the subform used for creating new records
-    - **Only show new records** - let respondents create new records, but not select existing records
-    - **Pass information to subform** - specify fields or info from your main form to the subform
-
-    <Warning>
-      You have to register URL parameters in your subform first. Check out [this short guide](https://www.fillout.com/help/url-parameters#how-to-add-a-url-parameter-or-hidden-field).
-    </Warning>
-  </Step>
-  <Step title="Publish and share">
-    When everything's set, click `Publish` to make the changes reflect.
-  </Step>
-</Steps>
+<CardGroup cols={3}>
+  <Card title="Create a Salesforce form" icon="salesforce" iconType="solid" color="#FFC738">
+    Add or update records with a form.
+  </Card>
+  <Card title="Update Salesforce records" icon="arrow-rotate-right" iconType="solid" color="#FFC738" href="/salesforce-update-form">
+    Edit existing records and pre-fill fields.
+  </Card>
+</CardGroup>
