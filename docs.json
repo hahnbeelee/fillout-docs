@@ -475,7 +475,7 @@
             "pages": [
               "account",
               {
-                "group": "Account Management",
+                "group": "Your Account",
                 "icon": "user-gear",
                 "pages": [
                   "reset-password",
