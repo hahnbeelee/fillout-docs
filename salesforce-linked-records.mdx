@@ -7,11 +7,33 @@ icon: "files-medical"
 
 ## Overview
 
-Connecting a Fillout form to Salesforce enables users to automatically sync form responses into a Salesforce object. Existing fields are [mapped automatically](https://www.fillout.com/help/salesforce#how-it-works), however you can still made edits and updates with manual mapping.
+Connecting a Fillout form to Salesforce enables users to automatically sync form responses into a Salesforce object. Existing fields are [mapped automatically](https://www.fillout.com/help/salesforce#how-it-works), however you can still made edits and updates with [manual mapping](https://www.fillout.com/help/additional-integration-mappings#how-to-map-fields-manually).
 
-Fillout also lets you **create multiple objects from a single form** using linked records. A **linked record** connects one Salesforce record to another. When you add this to your form, respondents can fill out a child form (a.k.a. subform) to create related records, adding as many as needed.
+Fillout also lets you **create records on multiple objects with a single form** using relationships. A **relationship** links one Salesforce record to another. When you add this to your form, respondents can fill out a child form (a.k.a. subform) to create related records, adding as many as needed.
 
 ## How to set up
+
+<Steps>
+  <Step title="Add a relationship field">
+    On your Salesforce-connected form, add a `Relationship field`. These are marked by <Icon icon="file-magnifying-glass" iconType="solid" size={22} />.
+  </Step>
+  <Step title="Enable record creation">
+    Click the field's <Icon icon="gear-complex" iconType="solid" /> to enable `Can create new records?`.
+
+    In the right-hand panel, you can also:
+
+    - **Edit record creation form** - modify the subform used for creating new records
+    - **Only show new records** - let respondents create new records, but not select existing records
+    - **Pass information to subform** - specify fields or info from your main form to the subform
+
+    <Warning>
+      You have to register URL parameters in your subform first. Check out [this short guide](https://www.fillout.com/help/url-parameters#how-to-add-a-url-parameter-or-hidden-field).
+    </Warning>
+  </Step>
+  <Step title="Publish and share">
+    When everything's set, click `Publish` to make the changes reflect. That's it! Every form submission will now be created as records on both Salesforce objects.
+  </Step>
+</Steps>
 
 <Steps>
   <Step title="Create a custom child object">
