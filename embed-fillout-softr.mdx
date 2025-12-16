@@ -5,21 +5,21 @@ sidebarTitle: "Embed on Softr"
 icon: "shapes"
 ---
 
-## What Softr is
+## What is Softr?
 
-[Softr](https://www.softr.io/) lets you build powerful applications that connect to databases like Airtable, but sometimes you could use the help of more powerful form applications that allow for things like:
+[Softr](https://www.softr.io/) lets you build powerful applications that connect to databases like Airtable, but sometimes you could use the help of more powerful form applications that allow things like:
 
-- [Filtering linked record pickers](/select-linked-airtable-records) to only show relevant results
+- [Filtering linked record pickers](https://www.fillout.com/help/select-linked-airtable-records#enable-dropdown-filtering) to only show relevant results
 - Creating multiple pages on the forms
 - [Referencing previous answers](/answer-piping)
-- [Hiding elements conditionally](/conditional-hiding) based on previous answers or the user data
+- [Hiding elements conditionally](https://www.fillout.com/help/conditional-hiding#hide-based-on-a-condition) based on previous answers or the user data
 
-## Method 1: Embed in list details block
+## Embed in list details block
 
 Embedding a Fillout form in a Softr **list details block** lets you define different embedded forms for different records you’re displaying.
 
 <Note>
-  **Note:** If you aren’t using a list details block, skip ahead to Method 2.
+  If you aren’t using a list details block, skip ahead to custom code block.
 </Note>
 
 <Steps>
@@ -71,62 +71,62 @@ Embedding a Fillout form in a Softr **list details block** lets you define diffe
   </Step>
 </Steps>
 
-## Method 2: Custom code block
+## Custom code block
 
 <Note>
-  **Note:** You’ll need a paid Softr account to use this method.
+  You’ll need a paid Softr account to use this method.
 </Note>
 
 <Steps>
-  <Step title="Create a custom code block">
-    In Softr, Add a custom code block.
+  <Step title="Choose an embed style">
+    Start by clicking `Publish` in the upper right corner of the Fillout form editor. A popup will show up where you can pick an **embed style**.
 
-    <Frame>
-      ![In Softr, create a custom code block](/images/guides/image-79.png)
-    </Frame>
+    ![image.png](/images/image.png)
+
+    If you've already published your form, click `Share` in the top middle or top right. Adjust your embed style settings to fit your use case. Then, `Get the code`
+  </Step>
+  <Step title="Create a custom code block">
+    In Softr, Add a **Custom code block**.
+
+    <img
+      src="/images/Screenshot2025-12-16at5.09.34PM.png"
+      alt="Screenshot 2025-12-16 at 5.09.34 PM.png"
+      title="Screenshot 2025-12-16 at 5.09.34 PM.png"
+      style={{ width:"49%" }}
+    />
+
     For more details, click [here](https://docs.softr.io/basic-building-blocks/faLmrJmdo6e3EsGyNHYQ6V/custom-code-block-overview/6XNrxFopUEiwbWipq81Eq1) to view Softr's documentation.
   </Step>
-  <Step title="Copy an embed snippet for a Fillout form">
-    You can get embedding options for Fillout forms in the **Share** tab for your form. Choose an embed option and click `Use this embed`.
+  <Step title="Paste Fillout embed code">
+    You'll see a `Embed your custom code here` text. Paste the code there.
 
-    <Frame>
-      ![Copy an embed snippet for a Fillout form](/images/guides/image-80.png)
-    </Frame>
-    <Check>
-      **Important:** You should publish your Fillout form before trying it in Softr.
-    </Check>
-  </Step>
-  <Step title="Paste the embed snippet into the Softr code block">
-    <Frame>
-      ![Paste the embed snippet into the Softr code block](/images/guides/image-81.png)
-    </Frame>
+    <img
+      src="/images/Screenshot2025-12-16at5.17.06PM.png"
+      alt="Screenshot 2025-12-16 at 5.17.06 PM.png"
+      title="Screenshot 2025-12-16 at 5.17.06 PM.png"
+      style={{ width:"50%" }}
+    />
   </Step>
   <Step title="Publish your Softr app">
     That’s it! Publish your Softr application and try your Fillout form! At this point, you should be ready to try your embed! See below for more advanced instructions.
   </Step>
 </Steps>
 
-## Advanced: filtering records and accessing the logged in Softr user
-
-### Video tutorial
+## Advanced: Filtering records and access the logged in Softr user
 
 Watch Dan Leeman from [Automation Helpers](https://www.automationhelpers.com/templates/build-filtered-forms-with-softr-and-fillout) build a filtered Fillout form, embedded in Softr.
 
-<Frame>
-  <iframe width="100%" height="420" src="https://www.youtube.com/embed/8iNqptGxO4U" title="Build Filtered Forms with Softr and Fillout" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />
-</Frame>
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/8iNqptGxO4U" title="Build Filtered Forms with Softr and Fillout" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />
 
 ## Update forms
 
-You can embed complex forms like forms to [update an existing user’s profile](/airtable-update-form) based on the current logged in user. For example, a form that opens in a pop-up, to allow a logged in student to update their courses.
+You can embed complex forms that [allow logged in users to update their profile](/airtable-update-form). For example, a form that opens in a pop-up, to allow a logged in student to update their courses.
 
-<Frame>
-  ![Update forms](/images/guides/image-82.webp)
-</Frame>
+![Update forms](/images/guides/image-82.webp)
 
 The styling of your embed can be adjusted to match your brand in Softr.
 
-## How to access the logged in Softr user in Fillout forms
+## Access the logged in Softr user in Fillout forms
 
 ### For custom code blocks
 
@@ -149,9 +149,9 @@ You can use the following code snippet:
 
 Right below the line to `Paste your embed code here`, you can paste in the embed code you copied from **Fillout**’s **Share** page for your form. That’s it!
 
-<Check>
-  **Important:** Make sure to remove the first  line in the code block, when pasting in your embed snippet (we’ve moved it over to later in the snippet, above).
-</Check>
+<Warning>
+  Make sure to remove the first  line in the code block, when pasting in your embed snippet (we’ve moved it over to later in the snippet, above).
+</Warning>
 
 You may also prefer using a simple custom embedding method as opposed to our built-in embedding snippets. Here’s an example snippet for passing in the email, full name, and record ID of the user that is logged in, using a custom **iframe** embedding method (if you need more customization):
 
@@ -194,26 +194,26 @@ As mentioned above, if you used a `formula` field to insert your embedding snipp
 
 Remember to wrap the values you’re passing into the embedding snippet in quotation marks.
 
-### Accessing the URL parameters/hidden fields in Fillout
+### Access the URL parameters/hidden fields in Fillout
 
-You can access the **email**, **name**, and **ID URL parameters** much like any other URL parameters in **Fillout** if using the above methods to pass those in from Softr. Click [here](/url-parameters) for more information about URL parameters in Fillout forms.
+You can access the **email**, **name**, and **ID URL parameters** much like any other URL parameters in **Fillout** if using the above methods to pass those in from Softr. Click [here](/url-parameters) for more information.
 
 <Note>
-  **Note:** Your URL parameters aren’t required to be called **email**, **name**, nor **ID**. You can rename these in Fillout when registered, but the snippets above will need to adjusted to replace the names with your desired names.
+  Your URL parameters aren’t required to be called **email**, **name**, nor **ID**. You can rename these in Fillout when registered, but the snippets above will need to be adjusted to replace the names with your desired names.
 </Note>
 
-**Fillout** forms also automatically inherit URL parameters from your Softr pages. If you have any page that has a **recordID** URL parameter, as long as you have that registered as a URL parameter in your Fillout form, it will automatically get passed in!
+Fillout forms also automatically inherit URL parameters from your Softr pages. If you have any page that has a **recordID** URL parameter, as long as you have that registered as a URL parameter in your Fillout form, it will automatically get passed in!
 
 ## Related articles
 
 <CardGroup cols={3}>
-  <Card title="Pick Airtable linked records in a dropdown" icon="square-caret-down" iconType="regular" color="#FFC738" href="/select-linked-airtable-records">
-    Make a linked record picker in Fillout and filter records.
+  <Card title="Pick from linked records" icon="folder" iconType="regular" color="#FFC738" href="/select-linked-airtable-records">
+    Let respondents select linked records.
   </Card>
-  <Card title="Use URL parameters in embeds" icon="brackets-square" iconType="regular" color="#FFC738" href="/embedded-url-parameters">
+  <Card title="Embed parameters" icon="brackets-square" iconType="regular" color="#FFC738" href="/embedded-url-parameters">
     Pass URL parameters to your embeds to track data.
   </Card>
   <Card title="Answer piping" icon="wand-magic-sparkles" iconType="regular" color="#FFC738" href="/answer-piping">
-    Insert respondents' prior input into fields for a personalized experience.
+    Insert previous answers into upcoming questions or fields.
   </Card>
 </CardGroup>
