@@ -41,6 +41,34 @@ You can obtain your API base URL in the API dashboard. Typically, it will be [ht
   **Note:** The same API key used for Fillout forms also works with Zite DB endpoints.
 </Info>
 
+## Finding Database and Table IDs
+
+When working with the Zite Database API, you'll need to provide database IDs and table IDs in your API requests. Here's how to find them:
+
+<Steps>
+  <Step title="Open your database">
+  Click the database from the home page [dashboard](https://build.fillout.com/home).
+  </Step>
+  <Step title="Get IDs from the URL">
+    Look at the URL in your browser. It follows this format:
+    
+    ```
+    build.fillout.com/database/{databaseId}/{tableId}/...
+    ```
+    
+    For example, in this URL:
+    ```
+    build.fillout.com/database/67ef4d500c50cce9/t7nUTgYUjzF/vkuDPV6ZqBb
+    ```
+    
+    - **Database ID**: `67ef4d500c50cce9`
+    - **Table ID**: `t7nUTgYUjzF`
+  </Step>
+</Steps>
+
+<Warning>
+  **Important:** If you're accessing a database from within a Zite app, make sure to open the database separately and use that URL, not the Zite editor URL itself.
+</Warning>
 
 ## Rate limits
 

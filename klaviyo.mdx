@@ -2,10 +2,11 @@
 title: "Connect your form to Klaviyo"
 description: "Add new Klaviyo contacts and update existing ones from a Fillout form to grow your email and SMS audience. Set fields based on conditions in your form."
 sidebarTitle: "Klaviyo"
-icon: "bookmark"
+icon: "flag-swallowtail"
+iconType: "solid"
 ---
 
-## What Klaviyo is
+## What is Klaviyo?
 
 [Klaviyo](https://www.klaviyo.com/) is an e-commerce marketing platform that helps businesses manage and optimize their email and SMS marketing efforts to drive sales and customer engagement.
 
@@ -13,23 +14,29 @@ icon: "bookmark"
 
 <Steps>
   <Step title="Link your Fillout form to Klaviyo">
-    Open your form, then go to **Integrate** and click `Klaviyo`.
+    Open your form, then go to `Integrate` and click `Klaviyo`.
+
+    ![Screenshot 2025-11-18 at 3.47.39 PM.png](/images/Screenshot2025-11-18at3.47.39PM.png)
 
     <Frame>
-      ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.08.07PM.png)
+      
     </Frame>
     <Check>
-      **Important:** When creating your form, make sure to set the email, name, and other fields you would like to link to your Klaviyo list to **required**.
+      When creating your form, make sure to set the email, name, and other fields you would like to link to your Klaviyo list to **required**.
     </Check>
-    Enter your **Private API Key**. Click the link in the banner to get redirected to the page containing the key. `Create Private API Key` in the new tab. Enter a **name** and choose `Full Access Key`.
+    Enter your **Private API Key**. Click the link in the banner shown to get redirected to the page containing the key. `Create Private API Key` in the new tab. Enter a **name** and choose `Full Access Key`.
 
     <Frame>
-      ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.15.17PM.png)
+      <img
+        src="/images/Screenshot2025-02-17at1.15.17PM.png"
+        alt="Screenshot of the Fillout form creation page"
+        style={{ width:"56%" }}
+      />
     </Frame>
-    Then, select a **List** in Klaviyo you’d like to connect to.
+    Then, select a **List** in Klaviyo you’d like to connect your form to.
   </Step>
-  <Step title="Map your form fields on Fillout">
-    Match the fields in your Fillout form to the corresponding fields in your Klaviyo audience. For example, link the email address to its respective field.
+  <Step title="Map your form fields">
+    [Match the fields](https://www.fillout.com/help/additional-integration-mappings#how-to-map-fields-manually) in your Fillout form to the corresponding fields in your Klaviyo audience. For example, link the email address to its respective field.
 
     <Frame>
       ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.17.34PM.png)
@@ -37,13 +44,19 @@ icon: "bookmark"
     You can use other **Fields**, such as name, number, address, and more in your form to update your contacts' details.
   </Step>
   <Step title="Publish and share">
-    Once everything is set, click `Finish setup`. After publishing, answers to mapped fields from new submissions will appear in your Klaviyo audience list. If a contact with the provided email address already exists, Fillout will automatically update the existing contact's information.
+    Once everything is set, click `Finish setup` on the upper right corner followed by `Publish`.
+
+    That's it! Answers to mapped fields from new submissions will now appear in your Klaviyo audience list. 
+
+    <Check>
+      If a contact with the provided email address already exists, Fillout will automatically update the existing contact's information.
+    </Check>
   </Step>
 </Steps>
 
 ## Add custom properties
 
-You can add extra metadata using other fields in your form using the same steps above. For example, we'll match Special diet to the Do you or any of your guests have dietary preferences?
+You can add extra metadata using other fields in your form using the same steps above. For example, we'll match "Special diet" to "Do you or any of your guests have dietary preferences?"
 
 <Frame>
   ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.19.16PM.png)
@@ -58,13 +71,13 @@ You can run your integration only when a specific condition is met. Check out th
 ## Related articles
 
 <CardGroup cols={3}>
-  <Card title="Conditional integration logic" icon="gear-complex" iconType="regular" color="#FFC738" href="/conditional-integration">
+  <Card title="Integration logic" icon="gear-complex" iconType="regular" color="#FFC738" href="/conditional-integration">
     Perform an integration only when a certain condition is met.
   </Card>
   <Card title="Condition groups" icon="table-tree" iconType="regular" color="#FFC738" href="/condition-logic-groups">
-    Use nested logic to show, hide and validate fields based on multiple conditions.
+    Show or hide fields based on multiple conditions at once.
   </Card>
-  <Card title="Calculations and variables" icon="calculator-simple" iconType="regular" color="#FFC738" href="/calculations">
+  <Card title="Calculations" icon="calculator-simple" iconType="regular" color="#FFC738" href="/calculations">
     Calculate prices for order forms, compute quiz scores, and more.
   </Card>
 </CardGroup>

@@ -1,61 +1,60 @@
 ---
 title: "Combine and repeat forms"
-description: "Connect separate forms together or allow users to re-submit a form with Fillout."
+description: "Connect separate forms together or allow respondents to re-submit a form with Fillout."
 icon: "repeat"
 sidebarTitle: "Combine Forms"
 ---
 
 ## Video tutorial
 
-<Frame>
-  <iframe src="https://www.loom.com/embed/294b87e92afa4de78e005a30ee29d41b" title="iframe video" frameborder="0" allowfullscreen loading="lazy" scrolling="auto" width="100%" height="540px" />
-</Frame>
+<iframe src="https://www.loom.com/embed/294b87e92afa4de78e005a30ee29d41b" title="iframe video" frameborder="0" allowfullscreen loading="lazy" scrolling="auto" width="100%" height="540px" />
 
-## Automatically redirect to any form
+## Auto-redirect to another form
 
-Go to your form's [**Ending page**](/ending-page) and choose the `New form` on the left-hand panel. Then, select the new form you want to redirect users to in the drop-down.
+Go to your form's [**Ending page**](/ending-page) and click `New form` in the left-hand panel. Then, select the new form you want to redirect respondents to in the dropdown.
 
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/logic/image-22.png)
-</Frame>
+![Screenshot 2025-11-27 at 5.59.26 PM.png](/images/Screenshot2025-11-27at5.59.26PM.png)
 
-## Pass data between forms with URL parameters
+### Pass data between forms with URL parameters
 
-First, make sure you've registered the allowed URL parameters in the form you are sending users to. Details [here](/url-parameters). Go to **Settings** followed by `URL parameters`.
+Optionally `Set URL parameters` to pre-fill data in the new form. For example, a respondent’s email from the current form can automatically appear in the new form so they don’t have to type it again.
 
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/logic/image-23.png)
-</Frame>
+<img
+  src="/images/Screenshot2025-11-27at6.18.29PM.png"
+  alt="Screenshot 2025-11-27 at 6.18.29 PM.png"
+  title="Screenshot 2025-11-27 at 6.18.29 PM.png"
+  style={{ width:"71%" }}
+/>
 
-Next, `Set URL parameters` through the left side of the form and map fields.
+First, make sure you've registered the URL parameter in new form to redirect to. Check out to the steps [here](/url-parameters). Then, click `+ Add new` in the popup to set a URL parameter.
 
-<Frame style={{ width: '528px' , height: '255px' }}>
- ![Screenshot of the Form designer tab of a form](/images/logic/image-24.png)
-</Frame>
+That's it! Make sure to `Publish` both forms when you're ready to go live.
 
-That's it\! Make sure to `Publish` both forms when you're ready to go live.
+## Allow re-submission
 
-## **Let users re-submit a form**
+On your form's [**Ending page**](/ending-page) , drag and drop a `Fill again` button from the left-hand panel.
 
-Go to your form's **Ending**, and drag and drop a `Fill again` button from the left side.
+<img
+  src="/images/logic/image-25.png"
+  alt="Screenshot of the Form designer tab of a form"
+  style={{ width:"46%" }}
+/>
 
-<Frame style={{ width: '288px' , height: '124px' }}>
- ![Screenshot of the Form designer tab of a form](/images/logic/image-25.png)
-</Frame>
+By default, the form will restart from the first page. To change this, enable the `Start from page` switch in the right-hand panel.
 
-By default, the form will restart from the first step. Enable the `Start from page` switch in the right side to choose a specific page to restart from.
-
-<Frame style={{ width: '288px' , height: '226px' }}>
-  ![Screenshot of the Form designer tab of a form](/images/logic/image-26.png)
-</Frame>
+<img
+  src="/images/logic/image-26.png"
+  alt="Screenshot of the Form designer tab of a form"
+  style={{ width:"45%" }}
+/>
 
 ## Related articles
 
 <CardGroup cols={3}>
   <Card title="Ending page" icon="party-bell" iconType="regular" color="#FFC738" href="/ending-page">
-    Show a thank you page, redirect to another site or form, or allow repeat responses.
+    Show a thank you page, redirect, or allow re-submission.
   </Card>
   <Card title="URL Parameters" icon="brackets-curly" iconType="regular" color="#FFC738" href="/url-parameters">
-    Pass information to a form to support pre-filling and personalizing of the form.
+    Pass URL parameters to your embeds to track data.
   </Card>
 </CardGroup>

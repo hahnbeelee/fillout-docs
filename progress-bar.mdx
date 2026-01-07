@@ -3,72 +3,82 @@ title: "Progress bar"
 description: "Customize the default progress bar that shows up when respondents answer your Fillout form."
 sidebarTitle: "Progress Bar"
 icon: "bars-progress"
+iconType: "solid"
 ---
 
-## What is a progress bar
+## What is a progress bar?
 
 A **progress bar** lets respondents know how much of the form have been completed and how much remains. By default, respondents will see a progress bar at top of the form.
 
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/Screenshot2025-02-25at4.57.47PM.png)
-</Frame>
+![Screenshot of the Form designer tab of a form](/images/Screenshot2025-02-25at4.57.47PM.png)
 
-## How to change the color of the standard progress bar
+## How to change the color
 
-Click `Theme` in the upper left area to open the **Form designer**.
+Click `Theme` to open the **Form designer**. Then, change the `Primary` color.
 
-<Frame style={{ width: '384px' , height: '221px' }}>
-  ![Screenshot of the Form designer tab of a form](/images/Screenshot2025-02-25at4.49.16PM.png)
-</Frame>
+![Screenshot 2025-12-01 at 11.31.12 AM.png](/images/Screenshot2025-12-01at11.31.12AM.png)
 
-Click the `Primary` color picker to choose your desired color.
+<Note>
+  Changing the primary color will also update your button color. If you want your button to stay the same, adjust it directly in its settings. More info [here](https://www.fillout.com/help/button-types#customize-button).
+</Note>
 
-<Frame style={{ width: '288px' , height: '417px' }}>
-  ![Screenshot of the Form designer tab of a form](/images/Screenshot2025-02-25at5.00.34PM.png)
-</Frame>
-
-## How to add a multi-step progress bar
+## Use a multi-step progress bar
 
 <Steps>
   <Step title="Add a progress bar field">
     On the left-hand panel of your form, click `Progress bar`.
 
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/Screenshot2025-02-25at4.53.04PM.png)
-</Frame>
+    ![Screenshot 2025-12-01 at 12.22.12 PM.png](/images/Screenshot2025-12-01at12.22.12PM.png)
   </Step>
   <Step title="Customize your progress bar">
-    Click the **progress bar** field to customize it. This will open the right-hand panel where you can change its color, rename the current steps, and add new steps. You can add up to five steps.
+    Click the **progress bar** to customize it. This will open the right-hand panel where you can configure its settings.
 
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/Screenshot2025-02-25at4.53.51PM.png)
-</Frame>
+    <img
+      src="/images/Screenshot2025-12-01at12.32.14PM.png"
+      alt="Screenshot 2025-12-01 at 12.32.14 PM.png"
+      title="Screenshot 2025-12-01 at 12.32.14 PM.png"
+      style={{ width:"88%" }}
+    />
+
+    Your progress bar will default to 3 steps. You can edit their names and `+ Add new steps` if needed.
   </Step>
-  <Step title="Reference pages">
-    Under **Current page progress**, choose which step each page should go into. Simply go to any page (except Cover and Ending) and match it to a step.
+  <Step title="Reference steps">
+    Navigate to each page (except Cover and Ending) and choose which step they should go into in **Current page progress**.
 
-That's it\! `Publish` your form and share the link.
+    <img
+      src="/images/Screenshot2025-12-01at12.30.42PM.png"
+      alt="Screenshot 2025-12-01 at 12.30.42 PM.png"
+      title="Screenshot 2025-12-01 at 12.30.42 PM.png"
+      style={{ width:"89%" }}
+    />
   </Step>
 </Steps>
 
-## How to remove the progress bar
+## Remove the progress bar
 
-Click **Settings** in the top menu followed by `Form behavior` in the left side. Untoggle the `Show progress bar` switch.
+If you used a multi-step progress bar, you remove it in the right-hand panel. Either way, you can click form settings on the upper right area.
 
-<Frame style={{ width: '576px' , height: '262px' }}>
-  ![Screenshot of the Form designer tab of a form](/images/Screenshot2025-02-25at4.50.39PM.png)
-</Frame>
+<img
+  src="/images/formsettings.png"
+  alt="form settings.png"
+  title="form settings.png"
+  style={{ width:"35%" }}
+/>
+
+Navigate to `Form behavior` and untoggle the `Show progress bar` switch.
+
+![Screenshot 2025-12-01 at 12.39.44 PM.png](/images/Screenshot2025-12-01at12.39.44PM.png)
 
 ## **Related articles**
 
 <CardGroup cols={3}>
   <Card title="Themes" icon="palette" iconType="regular" color="#FFC738" href="/themes">
-    Select from hundreds of customizable themes or create your own.
+    Select from hundreds of themes or create your own.
   </Card>
   <Card title="Page layout" icon="rectangles-mixed" iconType="regular" color="#FFC738" href="/layout">
-    Customize the position of your form's headings, questions, and background image.
+    Edit the position of your form's fields and background image.
   </Card>
   <Card title="Auto jump" icon="rabbit" iconType="regular" color="#FFC738" href="/auto-jump">
-    Automatically redirect respondents to the next page after making a selection.
+    Auto-redirect to the next page after making a selection.
   </Card>
 </CardGroup>

@@ -5,80 +5,71 @@ sidebarTitle: "Dropbox"
 icon: "dropbox"
 ---
 
-## What Dropbox is
+## What is Dropbox?
 
 [Dropbox](https://www.dropbox.com/) allows users to store documents, photos, videos, and more in your personal cloud storage space, eliminating the need for physical storage devices.
 
 ## Video tutorial
 
-<Frame>
-  <iframe src="https://www.youtube.com/embed/9btbb2SAtY0?feature=oembed" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" scrolling="auto" width="100%" height="420" />
-</Frame>
+<iframe src="https://www.youtube.com/embed/9btbb2SAtY0?feature=oembed" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" scrolling="auto" width="100%" height="420" />
 
 ## How it works
 
 <Steps>
   <Step title="Link your Fillout form to Dropbox">
-   Go to **Integrate** and click `Dropbox`.
+    Go to `Integrate` from the top menu and click `Dropbox`.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-05-15at4.42.27PM.png)
-</Frame>
+    ![Screenshot 2025-11-17 at 3.14.06 PM.png](/images/Screenshot2025-11-17at3.14.06PM.png)
 
-<Check>
-  **Important:** This integration is only applicable to **file uploads**. When creating your form, make sure you have at least one file upload field.
-</Check>
-
-Add a name for your connection, then click `Connect to Dropbox`. Enter your log-in details in the pop-up window that appears, then click `Allow`. 
+    <Warning>
+      This integration is only applicable to **file uploads**. When creating your form, make sure you have at least one file upload field.
+    </Warning>
+    Add a name for your connection, then `Connect to Dropbox`.
   </Step>
-  <Step title="Map your form fields on Fillout">
-   Choose which **Folder** you would like to store the files in. Under **upload fields**, `+ Add new` and select a the field from your form.
+  <Step title="Map form fields">
+    Choose which **Folder** you would like to store the files in. Under **upload fields**, `+ Add new` and select a **file upload field** from your form.
 
-<Frame style={{ width: '576px', height: '315px' }}>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at11.17.43AM.png)
-</Frame> 
+    ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at11.17.43AM.png)
   </Step>
   <Step title="Publish and share">
-   Once everything is set, click `Finish setup` on the upper right corner. That's it\! Your form's good to go. Simply `Publish`and share the link. 
+    Once everything is set, click `Finish setup` on the upper right corner. That's it! Your form's good to go. `Publish` to reflect changes and share the link.
   </Step>
 </Steps>
 
 ## Add a dynamic file path
 
-You can set a dynamic file path to categorize file uploads into folders that are based on user input. Toggle the `Custom subfolder and file name?` switch, then select a **Folder path fragment**. Enter a name or click `+` to map a field in your form.
+Categorize file uploads into folders based on respondent input. Toggle the `Custom subfolder and file name?` switch, then select a **Folder path fragment**. Enter text or click <Icon icon="square-plus" iconType="solid" /> to [map a field](https://www.fillout.com/help/additional-integration-mappings#how-to-map-fields-manually) in your form. Let's choose "Name" for this example.
 
-<Frame style={{ width: '576px', height: '271px' }}>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at11.18.52AM.png)
-</Frame>
+![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at11.18.52AM.png)
 
 Now, when a respondent submits a form, their file upload will be stored in a folder under their Name. This means every respondent will have their own folder.
 
 ## Add subfolders
 
-You can add a subfolder by typing `/` followed by the subfolder name of your choice.
+You can add a subfolder by typing **/** followed by a name of your choice.
 
-<Frame style={{ width: '336px', height: '67px' }}>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at11.20.45AM.png)
-</Frame>
+<img
+  src="/images/Screenshot2025-02-17at11.20.45AM.png"
+  alt="Screenshot of the Fillout form creation page"
+  style={{ width:"58%" }}
+/>
 
-## Enter a personalized filename prefix
+## Personalized filename prefix
 
-You can also add a **Filename prefix**. Similar to the steps above, enter text or click `+` to reference a field.
+Similar to the steps above, enter text or click <Icon icon="square-plus" iconType="solid" /> to [reference a form field](https://www.fillout.com/help/additional-integration-mappings#how-to-map-fields-manually).
 
-<Frame style={{ width: '624px', height: '263px' }}>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at11.21.31AM.png)
-</Frame>
+![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at11.21.31AM.png)
 
 ## Related articles
 
 <CardGroup cols={3}>
   <Card title="Upload files to Google Drive" icon="google-drive" iconType="regular" color="#FFC738" href="/google-drive">
-    Automatically upload files in a Google Drive folder through a form.
+    Automatically upload files with a form.
   </Card>
   <Card title="Sync files to Microsoft OneDrive" icon="cloud-arrow-up" iconType="regular" color="#FFC738" href="/microsoft-onedrive">
-    Let respondents upload files to your OneDrive folder using a form.
+    Automatically upload files with a form.
   </Card>
   <Card title="Sync responses to Monday" icon="columns-3" iconType="regular" color="#FFC738" href="/monday">
-    Create leads, orders, projects and custom objects in Monday.
+    Use a form to create leads and more.
   </Card>
 </CardGroup>

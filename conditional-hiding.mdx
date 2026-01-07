@@ -5,55 +5,51 @@ icon: "eye-slash"
 sidebarTitle: "Hide Fields"
 ---
 
-## What is conditional logic
+## What is conditional logic?
 
 **Conditional logic** is a dynamic feature that adjusts form content based on responses, creating a personalized experience and improving data accuracy.
 
 ## Video tutorial
 
-<Frame>
-  <iframe class="notion-asset-object-fit" src="https://www.loom.com/embed/6d48f8de3d7d493d8a44cf66aaff4723" title="iframe video" frameborder="0" allowfullscreen loading="lazy" scrolling="auto" width="100%" height="540px" />
-</Frame>
+<iframe class="notion-asset-object-fit" src="https://www.loom.com/embed/6d48f8de3d7d493d8a44cf66aaff4723" title="iframe video" frameborder="0" allowfullscreen loading="lazy" scrolling="auto" width="100%" height="540px" />
 
-## Hide a question based on a condition
+## Hide based on a condition
 
-Click on the question you want to hide followed by its `settings icon`. Then, open the **Logic** section on the right-hand panel to `Set conditional logic`.
+Click the field's <Icon icon="gear-complex" iconType="solid" /> and open the **Logic** section on the right-hand panel to `Set conditional logic`.
 
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/logic/image-31.png)
-</Frame>
+![Screenshot of the Form designer tab of a form](/images/logic/image-31.png)
 
 Then, `+ Add condition`. You can make a condition based on:
 
 - Previous form inputs
-- URL parameters (e.g. source = Facebook or Google)
+- URL parameters (e.g., source = Facebook or Google)
 - Data from an integration
-- Date information (e.g. 5 days from today)
+- Date information (e.g., 5 days from today)
 
-For example, we’ll only ask users to specify if they need any special accommodations.
+For example, we’ll only ask users to specify if they "need any special accommodations".
 
-<Frame>
-  ![Screenshot of the Form designer tab of a form](/images/logic/image-32.png)
-</Frame>
+![Screenshot of the Form designer tab of a form](/images/logic/image-32.png)
 
 ## Hide always
 
-Toggle the `Hide always` switch to always hide a question or field. This is useful for [pre-filling questions](/prefill-fields) that you don’t want your users to change.
+Toggle the `Hide always` switch to always hide a question or field. This is useful for [pre-filling questions](/prefill-fields) that you don’t want your users to change (e.g., a referral code that tracks where a user came from).
 
-<Frame style={{ width: '240px' , height: '124px' }}>
- ![Screenshot of the Form designer tab of a form](/images/logic/image-33.png)
-</Frame>
+<img
+  src="/images/logic/image-33.png"
+  alt="Screenshot of the Form designer tab of a form"
+  style={{ width:"39%" }}
+/>
 
 ## Related articles
 
 <CardGroup cols={3}>
-  <Card title="Pre-fill fields" icon="fill" iconType="regular" color="#FFC738" href="/prefill-fields">
-    Set a default value based on previous inputs, URL parameters, and more.
+  <Card title="Pre-fill fields" icon="fill" iconType="solid" color="#FFC738" href="/prefill-fields">
+    Pre-populate fields based on previous inputs and more.
   </Card>
-  <Card title="Conditional integration logic" icon="gear-complex" iconType="regular" color="#FFC738" href="/conditional-integration">
+  <Card title="Integration logic" icon="gear-complex" iconType="regular" color="#FFC738" href="/conditional-integration">
     Perform an integration only when a certain condition is met.
   </Card>
   <Card title="URL Parameters" icon="brackets-curly" iconType="regular" color="#FFC738" href="/url-parameters">
-    Pass information to a form to support pre-filling and personalizing of the form.
+    Pass information to a form to support pre-filling.
   </Card>
 </CardGroup>

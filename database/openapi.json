@@ -13,10 +13,6 @@
     {
       "url": "https://eu-tables.fillout.com/api/v1",
       "description": "EU server"
-    },
-    {
-      "url": "https://1738ccac3a2d.ngrok-free.app/api/v1",
-      "description": "Development server"
     }
   ],
   "security": [
@@ -959,6 +955,30 @@
         },
         "required": ["id", "name"]
       },
+      "FieldType": {
+        "type": "string",
+        "enum": [
+          "single_line_text",
+          "long_text",
+          "email",
+          "url",
+          "phone_number",
+          "number",
+          "currency",
+          "percent",
+          "rating",
+          "duration",
+          "single_select",
+          "multiple_select",
+          "checkbox",
+          "date",
+          "datetime",
+          "attachment",
+          "linked_record",
+          "lookup"
+        ],
+        "description": "Field type - see [Field Types Reference](/database/field-types) for complete list of available types and their configurations"
+      },
       "Database": {
         "type": "object",
         "properties": {
@@ -968,33 +988,16 @@
             "description": "Unique UUID identifier for the database",
             "example": "bad4b276-f604-47ad-86e5-d2ae4f60968f"
           },
-          "organizationId": {
-            "type": "integer",
-            "description": "Organization ID that owns this database",
-            "example": 109
-          },
-          "basePublicId": {
+          "name": {
             "type": "string",
-            "description": "Public identifier for the database",
-            "example": "abd6478f18b71637"
+            "description": "Name of the database"
           },
-          "metadata": {
-            "type": "object",
-            "properties": {
-              "version": {
-                "type": "integer",
-                "description": "Metadata version",
-                "example": 1
-              },
-              "tables": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Table"
-                },
-                "description": "List of tables in the database"
-              }
+          "tables": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Table"
             },
-            "required": ["version", "tables"]
+            "description": "List of tables in the database"
           },
           "createdAt": {
             "type": "string",
@@ -1007,16 +1010,13 @@
             "format": "date-time",
             "description": "ISO timestamp of when the database was last updated",
             "example": "2025-10-18T02:08:14.784Z"
+          },
+          "workspaceId": {
+            "type": "string",
+            "description": "Workspace ID that owns this database"
           }
         },
-        "required": [
-          "id",
-          "organizationId",
-          "basePublicId",
-          "metadata",
-          "createdAt",
-          "updatedAt"
-        ]
+        "required": ["id", "name", "tables", "createdAt", "updatedAt"]
       },
       "DatabaseWithTables": {
         "$ref": "#/components/schemas/Database"
@@ -1069,8 +1069,7 @@
             "description": "Name of the field"
           },
           "type": {
-            "type": "string",
-            "description": "Field type - see [Field Types Reference](/help/database/field-types) for complete list of available types and their configurations"
+            "$ref": "#/components/schemas/FieldType"
           },
           "template": {
             "type": "object",
@@ -1148,6 +1147,16 @@
             "format": "uuid",
             "description": "Unique UUID identifier for the record"
           },
+          "data": {
+            "type": "object",
+            "additionalProperties": true,
+            "description": "Record data with field IDs as keys",
+            "example": {
+              "fwtJyga6dso": "John Doe",
+              "k8mNp2xQ9rL": "john.doe@newcompany.com",
+              "vB3zXc7Hf2w": "low"
+            }
+          },
           "fields": {
             "type": "object",
             "additionalProperties": true,
@@ -1156,16 +1165,6 @@
               "Name": "John Doe",
               "Email": "john.doe@newcompany.com",
               "Priority": "low"
-            }
-          },
-          "record": {
-            "type": "object",
-            "additionalProperties": true,
-            "description": "Record data with field IDs as keys",
-            "example": {
-              "fwtJyga6dso": "John Doe",
-              "k8mNp2xQ9rL": "john.doe@newcompany.com",
-              "vB3zXc7Hf2w": "low"
             }
           },
           "createdAt": {
@@ -1179,7 +1178,7 @@
             "description": "ISO timestamp of when the record was last updated"
           }
         },
-        "required": ["id", "fields", "record", "createdAt", "updatedAt"]
+        "required": ["id", "data", "fields", "createdAt", "updatedAt"]
       },
       "CreateDatabaseRequest": {
         "type": "object",
@@ -1223,8 +1222,7 @@
         "type": "object",
         "properties": {
           "type": {
-            "type": "string",
-            "description": "Field type"
+            "$ref": "#/components/schemas/FieldType"
           },
           "name": {
             "type": "string",
@@ -1272,8 +1270,7 @@
         "type": "object",
         "properties": {
           "type": {
-            "type": "string",
-            "description": "Field type - see [Field Types Reference](/help/database/field-types) for available options"
+            "$ref": "#/components/schemas/FieldType"
           },
           "name": {
             "type": "string",
@@ -1414,7 +1411,7 @@
             "type": "integer",
             "minimum": 0,
             "default": 0,
-            "description": "Number of records to skip for pagination"
+            "description": "Integer-based offset - Number of records to skip for pagination"
           },
           "sort": {
             "type": "array",
@@ -1471,19 +1468,19 @@
         "example": {
           "records": [
             {
-              "id": "rec_abc123",
+              "id": "d4b3c2a3-c46b-46a1-a8ec-81b664bb41cb",
+              "data": {
+                "f6JE46z2WoX": "",
+                "f5gMv8mk8CX": "",
+                "foEBBtqDY1F": false
+              },
               "fields": {
-                "Name": "John Doe",
-                "Email": "john.doe@newcompany.com",
-                "Priority": "low"
+                "Name": "",
+                "Notes": "",
+                "Active": false
               },
-              "record": {
-                "fwtJyga6dso": "John Doe",
-                "k8mNp2xQ9rL": "john.doe@newcompany.com",
-                "vB3zXc7Hf2w": "low"
-              },
-              "createdAt": "2024-01-01T00:00:00.000Z",
-              "updatedAt": "2024-01-01T00:00:00.000Z"
+              "createdAt": "2025-11-13T11:59:45.000Z",
+              "updatedAt": "2025-11-13T11:59:45.000Z"
             }
           ],
           "total": 1250,
@@ -1571,20 +1568,14 @@
           "in": {
             "type": "array",
             "items": {
-              "oneOf": [
-                { "type": "string" },
-                { "type": "number" }
-              ]
+              "oneOf": [{ "type": "string" }, { "type": "number" }]
             },
             "description": "Value is in array. Supported by: text, number, selection, linked record fields."
           },
           "not_in": {
             "type": "array",
             "items": {
-              "oneOf": [
-                { "type": "string" },
-                { "type": "number" }
-              ]
+              "oneOf": [{ "type": "string" }, { "type": "number" }]
             },
             "description": "Value is not in array. Supported by: text, number, selection, linked record fields."
           },

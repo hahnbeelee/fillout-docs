@@ -5,48 +5,83 @@ icon: "table-tree"
 sidebarTitle: "Condition Groups"
 ---
 
-## Show or hide a question based on a condition group
+## Show based on a condition group
 
-Click on the question or field you want to hide followed by its `settings icon` to open the right-hand panel. Under **Logic**, `Set conditional logic` to `+ Add condition group`.
+Click the question or field's <Icon icon="gear-complex" iconType="solid" /> to open the right-hand panel. Under **Logic**, `Set conditional logic` to `+ Add condition group`.
 
-<Frame style={{ width: '576px' , height: '122px' }}>
-  ![Screenshot of the Form designer tab of a form](/images/logic/image-27.png)
-</Frame>
+![Screenshot 2025-11-27 at 6.51.13 PM.png](/images/Screenshot2025-11-27at6.51.13PM.png)
+
+You can also hide based on a condition group. Simply switch to `Hide when`.
 
 ### And function
 
-Here's an example using the **and function**. Here all 3 conditions must be true in order for a field to be shown. Namely, the user must answer Yes when asked if they have an existing appointment, the Date must be on or before Tomorrow and only for Consultation reason.
+If you choose `and`, all conditions set must be true to show (default) or hide a field.
 
-<Frame style={{ width: '528px' , height: '192px' }}>
-  ![Screenshot of the Form designer tab of a form](/images/logic/image-28.png)
-</Frame>
+<img
+  src="/images/Screenshot2025-11-27at7.01.24PM.png"
+  alt="Screenshot 2025-11-27 at 7.01.24 PM.png"
+  title="Screenshot 2025-11-27 at 7.01.24 PM.png"
+  style={{ width:"81%" }}
+/>
+
+For example, the "Would you like to join our newsletter?" question above will only `Show when` the respondent:
+
+1. Answers "Yes, please" to "Do you like to get updates on our discounts and promotions?"
+
+   AND
+2. Is "18 years old and above"
+
+You can auto-compute for the Age using a birthday field. Learn how [here](https://www.fillout.com/help/calculations#compute-duration).
 
 ### Or function
 
-Now, let's use the **or function** in the example below. Here a question will be shown if the user answered with 1, 2, 3 OR 4 stars.
+Now, let's use `or`. With this, as long as one condition is true, a question or field can be shown or hidden.
 
-<Frame style={{ width: '528px' , height: '232px' }}>
- ![Screenshot of the Form designer tab of a form](/images/logic/image-29.png)
-</Frame>
+<img
+  src="/images/Screenshot2025-11-27at7.21.32PM.png"
+  alt="Screenshot 2025-11-27 at 7.21.32 PM.png"
+  style={{ width:"83%" }}
+/>
 
-## Nested conditions
+For example, we'll the "How can we improve?" field will `Show when` a customer:
 
-In the example below, a field will be shown if the city is Paris OR if the country is neither France nor England.
+- Rates "less than 5 stars" on "How would you rate our service?"
 
-<Frame style={{ width: '576px' , height: '202px' }}>
- ![Screenshot of the Form designer tab of a form](/images/logic/image-30.png)
-</Frame>
+  OR
+- Rates "less than 5 stars" on "How was your shopping experience?"
+
+### Nested conditions
+
+You can also create a condition group using both `and` and `or` functions.
+
+<img
+  src="/images/Screenshot2025-11-27at7.40.42PM.png"
+  alt="Screenshot 2025-11-27 at 7.40.42 PM.png"
+  title="Screenshot 2025-11-27 at 7.40.42 PM.png"
+  style={{ width:"95%" }}
+/>
+
+For example, we'll make the "Would you like to further discuss in a call?" `Show when` a customer:
+
+1. Rates "less than 2 stars" on "How would you rate our service?"
+
+   OR
+
+   Rates "less than 2 stars" on "How was your shopping experience?"
+
+   AND
+2. Opted to "be contacted"
 
 ## Related articles
 
 <CardGroup cols={3}>
   <Card title="Hide fields" icon="eye-slash" iconType="regular" color="#FFC738" href="/conditional-hiding">
-    Hide or show fields based on prior inputs, URL parameters or external data.
+    Hide or show fields based on answers, URL parameters or data.
   </Card>
-  <Card title="Calculations and variables" icon="calculator-simple" iconType="regular" color="#FFC738" href="/calculations">
+  <Card title="Calculations" icon="calculator-simple" iconType="regular" color="#FFC738" href="/calculations">
     Calculate prices for order forms, compute quiz scores, and more.
   </Card>
-  <Card title="Conditional integration logic" icon="gear-complex" iconType="regular" color="#FFC738" href="/conditional-integration">
+  <Card title="Integration logic" icon="gear-complex" iconType="regular" color="#FFC738" href="/conditional-integration">
     Perform an integration only when a certain condition is met.
   </Card>
 </CardGroup>

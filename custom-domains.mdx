@@ -1,41 +1,42 @@
 ---
 title: "Use custom domains"
-description: "Customize your form's URL to match and promote your brand using Fillout. Host your forms at forms.yourcompany.com or `<anything>.yourcompany.com` with custom domains."
+description: "Customize your form's URL to match and promote your brand using Fillout. Host your forms at forms.yourcompany.com or <anything>.yourcompany.com."
 sidebarTitle: "Custom Domains"
 icon: "globe"
 ---
 
-## What is a custom domain
+## What is a custom domain?
 
 A **custom domain** is a unique web address to replace your web form's default URL, enhancing brand visibility and trust. It adds professionalism, improves SEO, and ensures a seamless user experience.
 
 ## Video tutorial
 
-<Frame>
-  <iframe class="notion-asset-object-fit" src="https://www.loom.com/embed/2e59bfc897734511b849d1c97c7ab695" title="iframe video" frameborder="0" allowfullscreen loading="lazy" scrolling="auto" width="100%" height="540" />
-</Frame>
+<iframe class="notion-asset-object-fit" src="https://www.loom.com/embed/2e59bfc897734511b849d1c97c7ab695" title="iframe video" frameborder="0" allowfullscreen loading="lazy" scrolling="auto" width="100%" height="540" />
 
 ## How to add a custom domain
 
 <Steps>
-  <Step title="Go to the custom domain section">
-    On the **Share** page of your form, click `Custom domain`.
+  <Step title="Open account settings">
+    On the Fillout dashboard, click your `Account name` in the upper left corner followed by `Settings`.
 
-    <Frame>
-      ![Screenshot of the Share tab of a form](/images/ucd1.webp)
-    </Frame>
-    Alternatively, you can go to your account **Settings** from the homepage and click `Custom domains`. Enter a **subdomain** like [forms.mydomainname.com](http://forms.mydomainname.com) or [surveys.mydomainname.com](http://surveys.mydomainname.com).
+    <img
+      src="/images/Screenshot2025-12-01at4.31.12PM.png"
+      alt="Screenshot 2025-12-01 at 4.31.12 PM.png"
+      title="Screenshot 2025-12-01 at 4.31.12 PM.png"
+      style={{ width:"25%" }}
+    />
+  </Step>
+  <Step title="Add domain">
+    Navigate to `Custom domain` and enter a **domain** that you own. You can also use a **subdomain** like [forms.mydomainname.com](http://forms.mydomainname.com) or [surveys.mydomainname.com](http://surveys.mydomainname.com).
 
-    <Frame>
-      ![Screenshot of the Share tab of a form](/images/ucd2.webp)
-    </Frame>
-    <Note>
-      **Note:** This feature is available on **Business**, and **Enterprise** plans. Learn more about our pricing plans and advanced features [**here**](https://www.fillout.com/pricing).
-    </Note>
+    <img
+      src="/images/Screenshot2025-12-01at4.24.52PM.png"
+      alt="Screenshot 2025-12-01 at 4.24.52 PM.png"
+      title="Screenshot 2025-12-01 at 4.24.52 PM.png"
+      style={{ width:"75%" }}
+    />
   </Step>
   <Step title="Set up DNS record">
-    Log in to your domain provider, like Godaddy, Cloudflare, NameCheap, Netlify or another website where you bought your domain. Then, follow the instructions below.
-
     <Card title="How to add the DNS record:" icon="plus" iconType="solid" color="#000000">
       1. Log in to your domain provider.
       2. Add the CNAME record as instructed in the Fillout dashboard.
@@ -43,34 +44,28 @@ A **custom domain** is a unique web address to replace your web form's default U
     </Card>
     You'll know the setup is complete once you see a green checkmark icon <Icon icon="circle-check" iconType="regular" color="#27e82a" />.
 
-    <Frame>
-      ![Screenshot of the Share tab of a form](/images/ucd3.webp)
-    </Frame>
-    Now, all your form links will begin with your **domain name**. You can see this in the **Share** page.
+    ![image.png](/images/image.png)
 
-    <Frame>
-      ![Screenshot of the Share tab of a form](/images/ucd4.webp)
-    </Frame>
-  </Step>
-  <Step title="Customize link ending (Optional)">
-    You can also [edit the ending of your link](/custom-link).
+    That's it! Now, all your form links will begin with your **domain name**. You can see this in the `Share` page.
 
-    <Check>
-      **Good to know:** Fillout automatically provisions an SSL certificate for you, to ensure your forms stay secure.
-    </Check>
+    ![Screenshot 2025-12-01 at 4.26.23 PM.png](/images/Screenshot2025-12-01at4.26.23PM.png)
   </Step>
 </Steps>
 
-## **Related articles**
+## Customize the link ending
+
+You can also change the slug. Check out this quick guide.
+
+## Related articles
 
 <CardGroup cols={3}>
-  <Card title="Custom form links and share preview" icon="message-image" iconType="regular" color="#FFC738" href="/custom-link">
+  <Card title="Custom form links" icon="message-image" iconType="regular" color="#FFC738" href="/custom-link">
     Customize your form's share link, subdomain and URL ending.
   </Card>
   <Card title="Custom favicon" icon="icons" iconType="regular" color="#FFC738" href="/favicon">
-    Add your logo or icon to a browser tab and in shareable Fillout link previews.
+    Add your logo or icon to a browser tab and in link previews.
   </Card>
   <Card title="Remove Fillout branding" icon="delete-right" iconType="regular" color="#FFC738" href="/remove-fillout-branding">
-    Remove Fillout buttons on your ending pages or all pages.
+    Remove Fillout buttons on form pages.
   </Card>
 </CardGroup>

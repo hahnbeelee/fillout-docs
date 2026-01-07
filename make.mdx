@@ -2,47 +2,49 @@
 title: "Connect Fillout to thousands of apps with Make"
 description: "Use Make (formerly Integromat) to create automated tasks and workflows that seamlessly integrate with Fillout forms."
 sidebarTitle: "Make"
-icon: sketch
+icon: "lines-leaning"
 ---
 
-## What is Make
+## What is Make?
 
 [**Make**](https://www.make.com/) (formerly Integromat) is a robust platform that lets you create and automate a wide range of tasks and processes called **Scenarios**, spanning from individual tasks and workflows to integrating various apps and systems seamlessly.
 
-**Scenarios** start with a **Trigger**, an app where your information comes from, and which causes a series of predefined **Actions** to occur in other apps, where your data gets sent automatically.
+**Scenarios** start with a **Trigger**, an event that starts the automation, and which causes a series of predefined **Actions** to occur in other apps, where your data gets sent automatically.
 
 ## How it works
 
 <Steps>
   <Step title="Create a scenario">
-   Log in to your [Make account](https://www.make.com/register) or create a new account. Then, `+ Create a new scenario`.
+    Log in to your [Make account](https://www.make.com/register) or create a new account. Then, `+ Create a new scenario`.
 
-<Frame>
-  ![Screenshot of the Make scenario creation page](/images/Screenshot2025-02-17at12.56.15PM.png)
-</Frame>
+    ![Screenshot 2025-11-18 at 4.56.15 PM.png](/images/Screenshot2025-11-18at4.56.15PM.png)
 
-Click `+` to select a trigger and search for **Fillout** to watch new responses.
+    Click <Icon icon="circle-plus" iconType="solid" /> to select a trigger and search for **Fillout** to `Watch new responses`. Then, choose `My submission webhook`.
 
-<Frame style={{ width: '480px', height: '390px' }}>
-  ![Screenshot of the Make scenario creation page](/images/Screenshot2025-02-17at12.56.44PM.png)
-</Frame> 
+    <img
+      src="/images/Screenshot2025-02-17at12.56.44PM.png"
+      alt="Screenshot of the Make scenario creation page"
+      style={{ width:"64%" }}
+    />
+
+    Click **\+** beside the Fillout form bubble to select an **app** and **action**.
+
+    <img
+      src="/images/Screenshot2025-02-17at1.00.16PM.png"
+      alt="Screenshot of the Make scenario creation page"
+      style={{ width:"88%" }}
+    />
   </Step>
-  <Step title="Create a webhook">
-  Choose `My submission webhook`.
+  <Step title="Test your automation">
+    Click `Run once` and select a scenario to make sure everything's working as intended.
 
-<Frame style={{ width: '480px', height: '257px' }}>
-  ![Screenshot of the Make scenario creation page](/images/Screenshot2025-02-17at12.57.36PM.png)
-</Frame>  
+    ![Screenshot 2025-11-18 at 5.00.45 PM.png](/images/Screenshot2025-11-18at5.00.45PM.png)
   </Step>
-  <Step title="Add a module">
-   Click `+` to select an **app** and **action**.
+  <Step title="Activate scenario">
+    Click <Icon icon="floppy-disk" /> and toggle `Immediately as data arrives`. A popup will appear where you can change the frequency if preferred.
 
-<Frame style={{ width: '576px', height: '224px' }}>
-  ![Screenshot of the Make scenario creation page](/images/Screenshot2025-02-17at1.00.16PM.png)
-</Frame>
-
-Once that's done you can start creating an automation\! Coding knowledge isn't required and you'll be walked step-by-step throughout the setup. Check out the guide [here](https://www.make.com/en/help/scenarios/creating-a-scenario) to get started.
-
-Need inspiration? See everything that's possible with [Fillout and Make](https://www.make.com/en/integrations/fillout). 
+    ![Screenshot 2025-11-18 at 5.12.15 PM.png](/images/Screenshot2025-11-18at5.12.15PM.png)
   </Step>
 </Steps>
+
+Need inspiration? See everything that's possible with [Fillout and Make](https://www.make.com/en/integrations/fillout).

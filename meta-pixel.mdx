@@ -5,61 +5,57 @@ sidebarTitle: "Meta Pixel"
 icon: "facebook"
 ---
 
-## What is a Meta Pixel
+## What is a Meta Pixel?
 
-A [**Meta Pixel**](https://www.facebook.com/business/help/742478679120153?id=1205376682832142) lets you track user behavior, like when a user opens a webpage. You can add tracking pixels on Facebook business accounts, and then use them in your **Fillout** forms\!
+A [**Meta Pixel**](https://www.facebook.com/business/help/742478679120153?id=1205376682832142) lets you track user behavior, like when a user opens a webpage. You can add tracking pixels on Facebook business accounts, and then use them in your Fillout forms!
 
-<Note>
-  **Note:** This feature is available on **Business**, and **Enterprise** plans. Learn more about our pricing plans and advanced features [**here**](https://www.fillout.com/pricing).
-</Note>
+<Info>
+  This feature is available on **Business**, and **Enterprise** plans. Learn more about our pricing plans and advanced features [**here**](https://www.fillout.com/pricing).
+</Info>
 
 ## How to use pixels in your form
 
 <Steps>
-  <Step title="Link your Fillout form to Meta Business Manager (formerly Facebook Ads Manager)">
-   Head over to **Integrate**, and click `Facebook Pixel`.
+  <Step title="Link your Fillout form to Meta Business Suite">
+    Head over to `Integrate`, and click `Facebook Pixel`.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-13at2.13.04PM.png)
-</Frame>
+    ![Screenshot 2025-11-18 at 2.16.46 PM.png](/images/Screenshot2025-11-18at2.16.46PM.png)
 
-Input your **Pixel ID**. Follow the instructions below to find your ID. Then, click `Finish setup`.
+    Input your **Pixel ID**. Follow the instructions below to find your ID. Then, click `Finish setup`.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-13at2.15.07PM.png)
-</Frame> 
+    ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-13at2.15.07PM.png)
   </Step>
   <Step title="Publish and share your form">
-  That's it\! Click `Publish` in the upper right corner. When someone submits your form with your public form link, you will get events in your Events Manager, which look like the image below.  
+    That's it! Click `Publish` in the upper right corner.
+
+    When someone submits your form with your public form link, you will get events in your Events Manager, which look like the image below.
   </Step>
 </Steps>
 
 ## How to check event details
 
-If you click on one of the **Fillout events** which are generated, which would either be **Fillout.FormPageViewed** or **Fillout.FormSubmitted**, you will be able to `View details`.
+On Meta Business Suite, if you click on one of the generated **Fillout events** (**Fillout.FormPageViewed** or **Fillout.FormSubmitted**) you will be able to `View details`.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/eventdetails.png)
-</Frame>
+![Screenshot of the Fillout form creation page](/images/eventdetails.png)
 
-In **Recent activities**, you can see parameters that were passed to the pixel.
+In **Recent Activities**, you can see parameters that were passed to the pixel.
 
-- **content_category** - the form unique ID
-- **value** - the page ID that the user saw, which you can find in your editor in the URL at the top (e.g. https://app.fillout.com/editor/85jZPR1kPsus/edit/85jZPR1kPsus, means that the form ID is 85jZPR1kPsus, and the page you are looking at has an ID of 85jZPR1kPsus)
+- **content_category** - the form's unique ID
+- **value** - the page ID that the user saw found at the end of the URL (e.g., https://app.fillout.com/editor/85jZPR1kPsus/edit/85jZPR1kPsus)
 
 <Note>
-  **Note:** It can take up between 2 to 5 minutes for new events to show up in your Events Manager. So, if you're not seeing events from a newly connected form, wait for a little while and double-check that you're using the correct pixel id.
+  It can take up between 2 to 5 minutes for new events to show up in your Events Manager.
 </Note>
 
-If you need to be GDPR compliant, you will want to display a cookie banner on the form, which can be toggled in the form settings.
+If you need to be GDPR compliant, you will want to [display a cookie banner](https://www.fillout.com/help/cookie-consent) on the form, which can be toggled in the form settings.
 
 ## Other similar integrations
 
 <CardGroup cols={3}>
   <Card title="Track conversion data in Google Ads" icon="google-plus-g" iconType="regular" color="#FFC738" href="/google-ads-conversions">
-    Upload address, phone number, GCLID and email.
+    Use email, GCLID, address, and more.
   </Card>
   <Card title="Track data with Google Tag Manager" icon="tags" iconType="regular" color="#FFC738" href="/google-tag-manager">
-    Check conversions and ROI through responses in your site.
+    Check conversions and ROI through responses.
   </Card>
 </CardGroup>

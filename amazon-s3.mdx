@@ -5,11 +5,11 @@ sidebarTitle: "Amazon S3"
 icon: "amazon"
 ---
 
-## What is Amazon S3
+## What is Amazon S3?
 
-<Note>
-  **Note:** The Amazon S3 integration is available on the **Team** and **Enterprise** plans. Learn more about the [Team plan](/team-plan).
-</Note>
+<Info>
+  The Amazon S3 integration is available on the **Team** and **Enterprise** plans. Learn more about the [Team plan](/team-plan).
+</Info>
 
 [Amazon S3](https://aws.amazon.com/s3/) (Simple Storage Service) is a scalable cloud storage solution provided by AWS, designed to store and retrieve any amount of data with high availability and security. Ideal for businesses and developers, S3 offers cost-effective, reliable data storage for applications, backups, and content distribution, making it a top choice for cloud storage needs.
 
@@ -17,56 +17,56 @@ icon: "amazon"
 
 <Steps>
   <Step title="Link your Fillout form to Amazon S3">
-   Go to **Integrate**, and click `S3`. If you don’t already have an access key to AWS, you can create one under `Security Credentials`. More details [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey).
+    Click `Integrate` on top followed by `Amazon S3`. If you don’t already have an access key to AWS, you can create one under **Security Credentials**. More details [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey).
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-05-15at4.54.45PM.png)
-</Frame> 
+    ![Screenshot 2025-11-17 at 3.07.13 PM.png](/images/Screenshot2025-11-17at3.07.13PM.png)
+
+    <Warning>
+      This integration is only applicable to **file uploads**. When creating your form, make sure you have at least one file upload field.
+    </Warning>
   </Step>
-  <Step title="Map your form fields on Fillout">
-   Choose which **Bucket** you would like to store the files in. Under **Upload fields**, click `+ Add new`.
+  <Step title="Map form fields">
+    Choose which **Bucket** you would like to store the files in. Under **Upload fields**, click `+ Add new` to link a **file upload field**.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/s3.png)
-</Frame>
-
-<Check>
-  **Important:** This integration is only applicable to **file uploads**. When creating your form, make sure you have at least one file upload field.
-</Check> 
+    ![Screenshot of the Fillout form creation page](/images/s3.png)
   </Step>
   <Step title="Publish and share">
-   Once everything is set, click `Finish setup` on the upper right corner. That's it\! Your form's good to go. Simply `Publish`and share the link. 
+    Once everything is set, click `Finish setup` on the upper right corner. That's it! Your form's good to go. Simply `Publish`and share the link.
   </Step>
 </Steps>
 
 ## Add a dynamic folder path
 
-You can set a dynamic file path to categorize file uploads into folders, based on respondent input. Toggle the `Custom subfolder and file name?` switch, then enter a name for your **Folder path fragment** or type `@` to reference a field in your form.
+You can set a dynamic file path to categorize file uploads into folders, based on respondent input. Toggle the `Custom subfolder and file name?` switch, then type a name for your **Folder path fragment** or type **@** to [reference a field](https://www.fillout.com/help/additional-integration-mappings#how-to-map-fields-manually) in your form.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at11.55.51AM.png)
-</Frame>
+<img
+  src="/images/Screenshot2025-02-17at11.55.51AM.png"
+  alt="Screenshot of the Fillout form creation page"
+  style={{ width:"74%" }}
+/>
 
-You can also add a subfolder by typing `/` followed by the subfolder name of your choice.
+You can also add a subfolder by typing **/** followed by the subfolder name of your choice.
 
-## Enter a personalized filename prefix
+## Personalize filename prefix
 
-You can also add a **Filename prefix**. enter text or type `@` to reference a field in your form.
+You can also add a **Filename prefix**. Enter text or type **@** to [reference a field](https://www.fillout.com/help/additional-integration-mappings#how-to-map-fields-manually) in your form.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/s32.png)
-</Frame>
+<img
+  src="/images/s32.png"
+  alt="Screenshot of the Fillout form creation page"
+  style={{ width:"75%" }}
+/>
 
 ## Other similar integrations
 
 <CardGroup cols={3}>
   <Card title="Sync file uploads to Dropbox" icon="dropbox" iconType="regular" color="#FFC738" href="/dropbox">
-    Upload file submissions automatically to a folder with your form.
+    Automatically upload files with a form.
   </Card>
   <Card title="Upload files to Google Drive" icon="google-drive" iconType="regular" color="#FFC738" href="/google-drive">
-    Automatically upload files in a folder through a Fillout form.
+    Automatically upload files with a form.
   </Card>
   <Card title="Sync files to Microsoft OneDrive" icon="cloud-arrow-up" iconType="regular" color="#FFC738" href="/microsoft-onedrive">
-    Let respondents upload files to your OneDrive folder using a form.
+    Automatically upload files with a form.
   </Card>
 </CardGroup>

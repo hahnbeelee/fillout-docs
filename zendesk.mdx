@@ -2,10 +2,11 @@
 title: "Connect your form to Zendesk"
 description: "Create new tickets associated with new leads/contacts from a Fillout form, directly in Zendesk."
 sidebarTitle: "Zendesk"
-icon: "square-z"
+icon: "z"
+iconType: "solid"
 ---
 
-## What Zendesk is
+## What is Zendesk?
 
 [Zendesk](https://www.zendesk.com/) is a customer service software company that provides a cloud-based customer support platform. This platform enables businesses to manage customer interactions across phone, chat, email, social media, and any other channel you can imagine, all in one place.
 
@@ -13,25 +14,25 @@ icon: "square-z"
 
 <Steps>
   <Step title="Link your Fillout form to Zendesk">
-   Open the form you want to `Integrate` with Zendesk. Then, enter your **Zendesk** subdomain.
+    Open the form you want to `Integrate` with `Zendesk`.
 
-<Frame>
-  ![Screenshot of the Integrate page](/images/Screenshot2025-02-18at1.51.44PM.png)
-</Frame>
+    ![Screenshot 2025-11-18 at 5.23.32 PM.png](/images/Screenshot2025-11-18at5.23.32PM.png)
 
-More details on how to find your subdomain [here](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain-). 
+    Then, enter your **Zendesk** subdomain. More details on how to find your subdomain [here](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain-).
   </Step>
   <Step title="Map your form fields">
-   Match the fields in your Fillout form to the corresponding fields in Zendesk for the new message. Make sure to include the contact's email, name, subject, and the ticket description.
+    [Match the fields](https://www.fillout.com/help/additional-integration-mappings#how-to-map-fields-manually) in your Fillout form to the corresponding fields in Zendesk for the new message. Make sure to include the contact's **email**, **name**, **subject**, and the **ticket description**.
 
-<Frame style={{ width: '528px', height: '391px' }}>
-  ![Screenshot of the Integrate page](/images/zendesk2.png)
-</Frame> 
+    <img
+      src="/images/zendesk2.png"
+      alt="Screenshot of the Integrate page"
+      style={{ width:"80%" }}
+    />
   </Step>
   <Step title="Publish and share">
-  Once everything is set, click `Finish setup` on the upper right corner. New form submissions will now create tickets directly in your Zendesk\!
+    Once everything is set, click `Finish setup` on the upper right corner followed by `Publish`.
 
-Remember to click `Publish` after making any further changes to the integration.  
+    New form submissions will now create tickets directly in your Zendesk!
   </Step>
 </Steps>
 
@@ -42,13 +43,13 @@ You can run your integration only when a specific condition is met. Check out th
 ## Related articles
 
 <CardGroup cols={3}>
-  <Card title="Conditional integration logic" icon="gear-complex" iconType="regular" color="#FFC738" href="/conditional-integration">
+  <Card title="Integration logic" icon="gear-complex" iconType="regular" color="#FFC738" href="/conditional-integration">
     Perform an integration only when a certain condition is met.
   </Card>
-  <Card title="Connect your form to ActiveCampaign" icon="greater-than" iconType="regular" color="#FFC738" href="/activecampaign">
-    Add new and update and existing contacts from a form.
+  <Card title="Manage contacts on ActiveCampaign" icon="square-chevron-right" iconType="solid" color="#FFC738">
+Add and update contacts with a form.
   </Card>
-  <Card title="Connect your form to Intercom" icon="intercom" iconType="regular" color="#FFC738" href="/intercom">
-    Create new messages from a form, and create or update leads.
+  <Card title="Turn requests into Intercom tickets" icon="intercom" iconType="regular" color="#FFC738">
+Create new tickets and leads from a form.
   </Card>
 </CardGroup>

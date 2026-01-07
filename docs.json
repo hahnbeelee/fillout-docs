@@ -29,6 +29,10 @@
     {
       "source": "/zite/guides/import-data",
       "destination": "/database/import-data"
+    },
+    {
+      "source": "/update-smartsuite",
+      "destination": "/smartsuite-update"
     }
   ],
   "navigation": {
@@ -169,12 +173,16 @@
                   },
                   {
                     "group": "Salesforce",
-                    "icon": "cloud",
-                    "pages": ["salesforce", "salesforce-update-form"]
+                    "icon": "salesforce",
+                    "pages": [
+                      "salesforce",
+                      "salesforce-update-form",
+                      "salesforce-linked-records"
+                    ]
                   },
                   {
                     "group": "Notion",
-                    "icon": "cube",
+                    "icon": "notion",
                     "pages": [
                       "notion",
                       "notion-update-form",
@@ -204,7 +212,12 @@
                   {
                     "group": "Smartsuite",
                     "icon": "table-list",
-                    "pages": ["smartsuite", "update-smartsuite"]
+                    "pages": ["smartsuite", "smartsuite-update"]
+                  },
+                  {
+                    "group": "Hubspot",
+                    "icon": "hubspot",
+                    "pages": ["hubspot", "hubspot-companies-deals"]
                   },
                   "clickup",
                   "trello",
@@ -214,7 +227,6 @@
                   "relay-app",
                   "discord",
                   "pdfs",
-                  "smartsuite",
                   "slack",
                   "attio",
                   "amazon-s3",
@@ -245,7 +257,8 @@
                   "form-submission-id",
                   "integration-static-values",
                   "pre-fetch-data",
-                  "conditional-integration"
+                  "conditional-integration",
+                  "record-pickers"
                 ]
               }
             ]
@@ -403,7 +416,8 @@
                   "duplicate-fields",
                   "embed-fillout-softr",
                   "embed-pdfs",
-                  "skip-logic"
+                  "skip-logic",
+                  "cookie-banner"
                 ]
               }
             ]
@@ -465,7 +479,7 @@
             "pages": [
               "account",
               {
-                "group": "Account Management",
+                "group": "Your Account",
                 "icon": "user-gear",
                 "pages": [
                   "reset-password",
@@ -483,6 +497,7 @@
                   "organizations",
                   "workspaces",
                   "invite-collaborators",
+                  "manage-members",
                   "granular-permissions",
                   "comment"
                 ]
@@ -539,6 +554,7 @@
               "zite/getting-started",
               "zite/design",
               "zite/integrations",
+              "zite/credits",
               "zite/faq"
             ]
           },
@@ -562,7 +578,6 @@
           },
           {
             "group": "Guides",
-            "icon": "book-open",
             "pages": [
               "zite/guides/google-sheets",
               "zite/guides/airtable",
@@ -572,9 +587,20 @@
             ]
           },
           {
+            "group": "Tips",
+            "pages": [
+              "zite/tips/troubleshooting",
+              "zite/tips/credit-efficiency"
+            ]
+          },
+          {
             "group": "Other",
             "icon": "gift",
-            "pages": ["affiliate-program"]
+            "pages": [
+              "affiliate-program",
+              "zite/subscription",
+              "zite/cancel-account"
+            ]
           }
         ]
       },
@@ -585,6 +611,37 @@
           {
             "group": " ",
             "pages": ["database/overview"]
+          },
+          {
+            "group": "Guides",
+            "icon": "book-open",
+            "pages": [
+              "database/make-database",
+              "database/build-apps",
+              "database/sync-form-results",
+              "database/import-data",
+              "database/access",
+              {
+                "group": "Zite MCP",
+                "icon": "server",
+                "pages": [
+                  "database/mcp/mcp-overview",
+                  {
+                    "group": "Connecting to Zite MCP",
+                    "icon": "plug",
+                    "pages": [
+                      "database/mcp/connection-overview",
+                      "database/mcp/claude",
+                      "database/mcp/claude-code",
+                      "database/mcp/chatgpt",
+                      "database/mcp/cursor",
+                      "database/mcp/other-ai-tools"
+                    ]
+                  },
+                  "database/mcp/mcp-tools"
+                ]
+              }
+            ]
           },
           {
             "group": "API Reference",
@@ -642,11 +699,6 @@
                 ]
               }
             ]
-          },
-          {
-            "group": "Guides",
-            "icon": "book-open",
-            "pages": ["database/import-data"]
           }
         ]
       },

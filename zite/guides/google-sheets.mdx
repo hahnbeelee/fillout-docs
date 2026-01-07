@@ -2,153 +2,92 @@
 title: "Build an app with Google Sheets"
 sidebarTitle: "Build with Google Sheets"
 icon: "file-spreadsheet"
-description: "Create an app that enables you to store and monitor data effortlessly in Airtable. "
+description: "Create an app that enables you to store and monitor data effortlessly in Google Sheets. "
 ---
 
-## Build an app on Google Sheets
-
-Transform your Google Sheets data into a powerful app with Zite. This guide shows you how to create a CRM dashboard connected to Google Sheets as your database - no coding required.
+This guide shows you how to create a CRM dashboard connected to Google Sheets as your database - no coding required.
 
 <Info>
   **Time to complete:** 5 minutes\
   **Prerequisites:** A Google account with access to Google Sheets
 </Info>
 
-## What you'll build
-
-By the end of this guide, you'll have:
+**What you'll build**
 
 - A fully functional CRM app connected to Google Sheets
 - A customized interface with your branding
 - A shareable link for your team
 
+## How to build a CRM with Google Sheets
+
 <Steps>
-  <Step title="Start with a Prompt">
+  <Step title="Connect to Google Sheets">
     Open [Zite](https://zite.com) and describe your app idea in the chat. For this example, type:
 
     > "Build a CRM dashboard connected to Google Sheets"
 
-    Zite will understand your requirements and begin creating your app.
+    <img
+      src="/images/Quickstart-CRM1.png"
+      alt="Choose a form type"
+      style={{ width:"78%" }}
+    />
 
-    <Frame>
-      ![Choose a form type](/images/Quickstart-CRM1.png)
-    </Frame>
-  </Step>
-  <Step title="Connect to Google Sheets">
-    When prompted, click **Connect** to link your Google account. This allows Zite to:
+    When prompted, click `Connect` to link your Google account.
+
+    This allows Zite to:
 
     - Read and write data to your sheets
     - Create new sheets if needed
     - Sync data in real-time
 
-    <Frame>
-      ![Choose a form type](/images/Quickstart-CRM2.png)
-    </Frame>
+    <img
+      src="/images/Quickstart-CRM2.png"
+      alt="Choose a form type"
+      style={{ width:"62%" }}
+    />
   </Step>
   <Step title="Select or Create Your Data Source">
-    Choose how to set up your data:
+    Choose to set up with an **existing sheet** from your Google Drive or let Zite **create new sheet**.
 
-    - **Use existing sheet:** Select a sheet from your Google Drive
-    - **Create new sheet:** Let Zite create a structured sheet for your CRM
+    ![Choose a form type](/images/Quickstart-CRM4.png)
 
-    <Tip>
-      If creating a new sheet, Zite will automatically set up columns for common CRM fields like Name, Email, Company, Status, etc.
-    </Tip>
-    <Frame>
-      ![Choose a form type](/images/Quickstart-CRM4.png)
-    </Frame>
-    Once the app is connected to Google Sheets, click **Continue** in the chat to begin building your CRM app.
-
-    <Frame>
-      ![Choose a form type](/images/Quickstart-CRM5.png)
-    </Frame>
+    <Check>
+      When creating a new sheet, Zite will automatically set up columns for common CRM fields like Name, Email, Company, Status, etc.
+    </Check>
+    Once the app is connected to Google Sheets, click `Save` in the popup or `Continue` in the chat to begin building your CRM app.
   </Step>
-  <Step title="Watch Your App Come to Life">
-    Zite automatically:
-
-    - Creates forms for data entry
-    - Builds tables to display records
-    - Sets up filters and search functionality
-    - Generates an interactive preview
-
-    <Frame>
-      ![Choose a form type](/images/Quickstart-CRM6.png)
-    </Frame>
-  </Step>
-  <Step title="Customize Your Design">
-    Click **Edit** to personalize your app:
+  <Step title="Customize your design">
+    Click `Edit` to personalize your app with:
 
     - **Branding:** Add your logo and company colors
     - **Layout:** Rearrange components and sections
     - **Typography:** Choose fonts that match your brand
     - **Fields:** Add or remove data fields as needed
 
-    Click **Save** when you're satisfied with the design.
+    Click `Save` when you're satisfied with the design.
 
-    <Frame>
-      ![Choose a form type](/images/Quickstart-CRM7.png)
-    </Frame>
+    ![Choose a form type](/images/Quickstart-CRM7.png)
   </Step>
   <Step title="Add User Authentication">
-    Secure your CRM by typing in the chat:
+    Click **\+** or type:
 
     > "Add user login"
 
-    Zite includes enterprise-grade authentication with:
+    ![Screenshot 2025 12 17 At 3 37 17 PM](/images/Screenshot2025-12-17at3.37.17PM.png)
 
-    - Email/password login
-    - Password reset functionality
-    - Session management
-
-    <Frame>
-      ![Choose a form type](/images/Quickstart-CRM8.png)
-    </Frame>
-    Zite will build your user login and show a preview when it's completed.
-
-    <Frame>
-      ![Choose a form type](/images/Quickstart-CRM9.png)
-    </Frame>
+    Click `Edit` on the top right to [customize your login page](https://www.fillout.com/help/zite/add-user-login#customize-login-page).
   </Step>
-  <Step title="Customize Your Login Page">
-    Click **Edit** on the login page to:
+  <Step title="Configure access control">
+    Naviate to `Login` on the top menu and choose who can **Sign up**.
 
-    - Add your company logo
-    - Customize welcome messages
-    - Match your brand colors
-    - Set up login requirements
+    ![Screenshot 2025 12 17 At 3 46 28 PM](/images/Screenshot2025-12-17at3.46.28PM.png)
 
-    Click **Save** to apply changes.
-
-    <Frame>
-      ![Choose a form type](/images/Quickstart-CRM10.png)
-    </Frame>
+    For our CRM app, we only want zite.com company members to be able to access the CRM. Select `Only allowed domains`, add your domain, and then click `Save`.
   </Step>
-  <Step title="Configure Access Control">
-    Navigate to **Users → Settings** to set access permissions:
+  <Step title="Deploy and share">
+    Click `Share` on the upper right corner to get your live app URL. You can [send the link](https://www.fillout.com/help/zite/sharing) or [embed](https://www.fillout.com/help/zite/embedding) it in your website or company's internal tools.
 
-    **Access Options:**
-
-    - **Public:** Anyone can sign up
-    - **Invite-only:** Only invited users can access
-    - **Domain-restricted:** Limit to specific email domains
-
-    <Frame>
-      ![Choose a form type](/images/Quickstart-CRM12.png)
-    </Frame>
-    For our CRM app, we only want zite.com company members to be able to access the CRM. Select **Only Allowed Domains**, enter your domain, and then click **Save**.
-  </Step>
-  <Step title="Deploy and Share">
-    Click **Share** to get your live app URL. You can:
-
-    - Send the link directly to team members
-    - Embed the app in your website
-    - Add it to your company's internal tools
-
-    Your app is now live and syncing with Google Sheets in real-time!
-
-    <Frame>
-      ![Choose a form type](/images/Quickstart-CRM13.png)
-    </Frame>
+    That's it! Your app is now live and syncing with Google Sheets in real-time!
   </Step>
 </Steps>
 

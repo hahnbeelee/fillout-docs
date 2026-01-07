@@ -10,7 +10,7 @@ icon: "comments-question-check"
 With Fillout, you can easily create and customize your own **free quiz** that lets you:
 
 - Automatically score submissions
-- Show answers after each question or just at the end
+- Show answers after each question or list them at the end
 - Sends a notification whenever someone completes your quiz
 
 ## Try a demo quiz
@@ -91,12 +91,12 @@ Give the demo quiz below a try to get an idea of the types of quizzes you can ma
 
 **Display the respondent's current score**
 
-You can show the respondent's score at any point during the quiz. To reference, simply type `@` anywhere and select `Score`.
+You can show the respondent's score at any point during the quiz. To reference, simply type **@** anywhere and click <Icon icon="graduation-cap" iconType="solid" /> followed by `Score`.
 
 <img
   src="/images/guides/image-63.png"
   alt="Accessing the respondent’s score in the quiz"
-  style={{ width:"72%" }}
+  style={{ width:"57%" }}
 />
 
 **Show custom ending messages or pages**
@@ -104,6 +104,23 @@ You can show the respondent's score at any point during the quiz. To reference, 
 Display different ending messages depending on a respondent's score by using [hide/show logic](/conditional-hiding). To display different ending pages, set up [page logic](page-logic).
 
 ![Screenshot 2025-10-15 at 1.34.56 PM.png](/images/Screenshot2025-10-15at1.34.56PM.png)
+
+**Show a summary of answers on the ending page**
+
+Display a list of correct answers alongside the respondent’s answers. Reference their answers by typing **@** and selecting the relevant question.
+
+<img
+  src="/images/Screenshot2025-11-24at3.26.43PM.png"
+  alt="Screenshot 2025-11-24 at 3.26.43 PM.png"
+  title="Screenshot 2025-11-24 at 3.26.43 PM.png"
+  style={{ width:"70%" }}
+/>
+
+You can also use [logic](https://www.fillout.com/help/conditional-hiding#hide-a-question-based-on-a-condition) to show only the answers the respondent got wrong. Drag your mouse across the relevant fields. On the right-hand pane, `Set conditional logic`.
+
+![Screenshot 2025-11-24 at 3.43.29 PM.png](/images/Screenshot2025-11-24at3.43.29PM.png)
+
+In this example, we'll just show these info if their answer `does not equal` the correct answer.
 
 ## AI Quiz Maker
 

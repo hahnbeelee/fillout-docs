@@ -5,7 +5,7 @@ sidebarTitle: "SendGrid"
 icon: "game-board-simple"
 ---
 
-## What SendGrid is
+## What is SendGrid?
 
 [**SendGrid**](https://sendgrid.com/) is a service that helps websites and apps send emails to their users. It is handy for businesses and developers who want a reliable way to send emails, like signup confirmations or newsletters, to their users.
 
@@ -13,59 +13,52 @@ icon: "game-board-simple"
 
 <Steps>
   <Step title="Link your Fillout form to SendGrid">
-    Open your form. Go to **Integrate** and click `SendGrid`.
+    Open your form. Click `Integrate` from top followed by `SendGrid`.
 
-    <Frame>
-      ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.31.05PM.png)
-    </Frame>
-    Enter your **API Key** in Fillout. You can find this in the **Settings** section of your SendGrid dashboard. `Create API Key` on the upper right corner. Enter a **name**, then go with the default `Full Access` permission.
+    ![Screenshot 2025-11-17 at 4.48.40 PM.png](/images/Screenshot2025-11-17at4.48.40PM.png)
 
-    <Frame>
-      ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.35.31PM.png)
-    </Frame>
+    Enter your **API Key** in Fillout. You can find this in the **Settings** section of your SendGrid dashboard. `Create API Key` on the upper right corner. Enter a **Name**, then go with the default `Full Access` permission.
+
+    ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.35.31PM.png)
   </Step>
-  <Step title="Choose a template">
-    If you don’t have a template in SendGrid yet, select `Email API` on the left-hand panel followed by `Dynamic Templates`.
+  <Step title="Choose to send email with template">
+    If you don’t have a template on SendGrid yet, select `Email API` on the left-hand panel followed by `Dynamic Templates` and `Create Dynamic Template`.
 
-    <Frame>
-      ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.41.23PM.png)
-    </Frame>
+    ![Screenshot 2025-11-17 at 4.58.43 PM.png](/images/Screenshot2025-11-17at4.58.43PM.png)
+
     Click `Add Version` and start with a **blank template** or choose a **SendGrid Email Design**. Customize your email template as you see fit.
-  </Step>
-  <Step title="Map your form fields on Fillout">
-    Match the fields in your Fillout form to the corresponding fields in your SendGrid contacts. For example, link the email address to its respective field. Then, fill out the **Sender identity** section.
 
-    <Frame>
-      ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.45.33PM.png)
-    </Frame>
-    You can personalize emails, by inserting dynamic data under **Template variables**. For example, we want the name to change depending on the customer’s name. Once everything is set, click `Finish setup` on the upper right corner.
+    ![Screenshot 2025-11-17 at 5.00.32 PM.png](/images/Screenshot2025-11-17at5.00.32PM.png)
+  </Step>
+  <Step title="Map your form fields">
+    On Fillout, [link your form fields](https://www.fillout.com/help/additional-integration-mappings#how-to-map-fields-manually) to the corresponding fields in your SendGrid contacts. For example, link the email address to its respective field. Then, fill out the **Sender identity** section.
+
+    ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.45.33PM.png)
+
+    You can personalize emails, by inserting dynamic data under **Template variables**. For example, we want the "Name" to change depending on the customer’s name. Once everything is set, click `Finish setup`.
   </Step>
   <Step title="Publish and share">
-    Once you’ve finished creating your form, you’re ready to go\! Simply `Publish` and share the link. Respondents will now receive the email template.
+    Once you’ve finished creating your form, you’re ready to go! Simply `Publish` and share the link. Respondents will now receive the email template.
 
     <Check>
-      **Good to know:** SendGrid's Free plan lets you send up to 100 emails per day, while the Essentials paid plan lets you send up to 100,000 emails per month.
+      SendGrid's Free plan lets you send up to 100 emails per day, while the Essentials paid plan lets you send up to 50,000 emails per month.
     </Check>
   </Step>
 </Steps>
 
 ## Send a freeform email
 
-You can also send a plain custom-formatted email by choosing `Send email without template`.and entering the recipient and sender details. Reference form fields by clicking `+` or simply typing `@` to ensure each email is automatically tailored to every guest.
+You can also send a plain custom-formatted email by choosing `Send email without template` and entering the recipient and sender details. [Reference form fields](https://www.fillout.com/help/additional-integration-mappings#how-to-map-fields-manually) by clicking <Icon icon="square-plus" iconType="solid" /> or typing **@**.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.57.16PM.png)
-</Frame>
+![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.57.16PM.png)
 
-## **Add or update contact information**
+## Add or update contact information
 
-Skip sending an email and simply `Add or update contact`. Choose a **List** in your SendGrid account. Then, link the **Email address** and `+ Add new` **Contact fields** as you see fit. Map the SendGrid fields on the left to their respective Fillout fields on the right.
+Skip sending an email and simply `Add or update contact`. Choose a **List** in your SendGrid account. Then, link the **Email address field** and `+ Add new` **Contact fields** as you see fit. [Map](https://www.fillout.com/help/additional-integration-mappings#how-to-map-fields-manually) the SendGrid fields on the left to their respective Fillout fields on the right.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.58.32PM.png)
-</Frame>
+![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at1.58.32PM.png)
 
-## **Specify a condition**
+## Specify a condition
 
 If necessary, you can run your integration only when a specific condition is met. Click [here](/conditional-integration) to learn how to.
 
@@ -73,26 +66,22 @@ If necessary, you can run your integration only when a specific condition is met
 
 You can use **handlebars** in Sendgrid to [pipe a respondent's information](https://docs.sendgrid.com/for-developers/sending-email/using-handlebars) in the notification email. For example, we'll personalize the email by adding the respondent's name. Simply type `{{ name }}` anywhere on your email.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at2.02.23PM.png)
-</Frame>
+![Screenshot of the Fillout form creation page](/images/Screenshot2025-02-17at2.02.23PM.png)
 
 When a respondent completes your form, they will be receiving a personalized email like the one below.
 
-<Frame>
-  ![Screenshot of the Fillout form creation page](/images/ScreenShot2023-10-09at4.51.44PM.png)
-</Frame>
+![Screenshot of the Fillout form creation page](/images/ScreenShot2023-10-09at4.51.44PM.png)
 
 ## Related articles
 
 <CardGroup cols={3}>
-  <Card title="Conditional integration logic" icon="gear-complex" iconType="regular" color="#FFC738" href="/conditional-integration">
+  <Card title="Integration logic" icon="gear-complex" iconType="regular" color="#FFC738" href="/conditional-integration">
     Perform an integration only when a certain condition is met.
   </Card>
-  <Card title="Calculations and variables" icon="calculator-simple" iconType="regular" color="#FFC738" href="/calculations">
+  <Card title="Calculations" icon="calculator-simple" iconType="regular" color="#FFC738" href="/calculations">
     Calculate prices for order forms, compute quiz scores, and more.
   </Card>
   <Card title="Send messages with Twilio" icon="message-sms" iconType="regular" color="#FFC738" href="/twilio">
-    Automate SMS updates and notifications to respondents.
+    Automate SMS updates to customers.
   </Card>
 </CardGroup>

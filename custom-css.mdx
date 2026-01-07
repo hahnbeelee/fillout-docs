@@ -5,39 +5,36 @@ sidebarTitle: "Custom CSS"
 icon: "paint-roller"
 ---
 
-## What is Custom CSS
+## What is Custom CSS?
 
 **CSS** is the language used to style HTML content. By writing CSS code for your form, you can define the colors, fonts, and other visual properties of your form elements.
 
 Most parts of your form’s appearance can be modified without code using [themes](/themes). But if you need a more custom look, you can use **custom CSS** to make a fully custom look & feel.
 
-<Frame>
-  ![](/images/advanced/image-14.png)
-</Frame>
+![](/images/advanced/image-14.png)
 
-<Note>
-  **Note:** Custom CSS is available starting on the **Pro** plan. For more details on pricing, click [**here**](https://www.fillout.com/pricing).
-</Note>
+<Info>
+  Custom CSS is available starting on the **Pro** plan. For more details on pricing, click [**here**](https://www.fillout.com/pricing).
+</Info>
 
 ## How to add a custom CSS
 
-<Steps>
-  <Step title="Open the advanced designer">
-   Click `Theme` in the upper left side of your form and scroll down to `Advanced designer` in the left-hand panel.
+Click `Theme` in the upper left side of your form and scroll down to [Advanced designer](https://www.fillout.com/help/advanced-designer) in the left-hand panel. Then, `Add CSS`.
 
-<Frame>
-  ![](/images/advanced/image-15.png)
-</Frame>
- 
-  </Step>
-  <Step title="Add your CSS">
-   Once you click `Apply CSS`, you’ll see the CSS applied to your form. Go to **Preview** mode to confirm your form looks as you expect it to.
+<img
+  src="/images/Screenshot2025-12-01at4.10.15PM.png"
+  alt="Screenshot 2025-12-01 at 4.10.15 PM.png"
+  title="Screenshot 2025-12-01 at 4.10.15 PM.png"
+  style={{ width:"49%" }}
+/>
 
-<Frame>
-  ![](/images/advanced/image-16.png)
-</Frame> 
-  </Step>
-</Steps>
+Once you click `Apply CSS`, you’ll see the CSS applied to your form. Go to `Preview` mode to confirm your form looks as you expect it to.
+
+<img
+  src="/images/advanced/image-16.png"
+  alt=""
+  style={{ width:"73%" }}
+/>
 
 ## CSS classes you can use
 
@@ -54,15 +51,15 @@ These classes make it easier to target elements in your form. In general, these 
 | `.fillout-caption`                                                                          | All field captions                                                                | `// Change captions to red .fillout-caption p { color: red; }`                                                                                 |
 | `.fillout-field-text (Heading) or .fillout-field-paragraph (paragraph)`                     | Heading and paragraph fields                                                      | `// Make h1 size text in paragraph field have different font .fillout-field-paragraph h1 { font-family: 'Brush Script MT', cursive; }`         |
 | `input[type="text"]::placeholder`                                                           | Placeholder text                                                                  | `// Change placeholder color input[type="text"]::placeholder { color: gray; }`                                                                 |
-| `.fillout-edit-mode .fillout-live-mode`                                                     | Target edit or live (preview \+ published) mode of your forms                     | `// Hides all field labels in live mode of the form .fillout-live-mode .fillout-field-label p { display: none; }`                              |
+| `.fillout-edit-mode .fillout-live-mode`                                                     | Target edit or live (preview + published) mode of your forms                      | `// Hides all field labels in live mode of the form .fillout-live-mode .fillout-field-label p { display: none; }`                              |
 | `.fillout-required-asterisk`                                                                | Required asterisk \*                                                              | `// Only changes in preview/live mode, not in the editor .fillout-required-asterisk { color: black; }`                                         |
 | `.fillout-login-profile`                                                                    | The profile icon in the top right corner that lets users logout of “login” forms. | `.fillout-login-profile { display: none; }`                                                                                                    |
 | `.fillout-theme-logo`                                                                       | Your logo, added via theme                                                        | `.fillout-theme-logo { display: none; }`                                                                                                       |
 | `.fillout-error-validation-message`                                                         | Validation error message                                                          | `.fillout-error-validation-message { color: black; }`                                                                                          |
 
-<Check>
-  **Can’t find the class you need?** Let us know at [support@fillout.com](mailto:support@fillout.com) and we’ll add it\!
-</Check>
+<Note>
+  **Can’t find the class you need?** Let us know at [support@fillout.com](mailto:support@fillout.com) and we’ll add it!
+</Note>
 
 ## Adding multiple fonts with Custom CSS
 
@@ -95,10 +92,10 @@ To import the fonts into the form, you’ll need to use the [custom code feature
 If you want to add custom code to your form, like a JavaScript snippet or HTML div, there are two options:
 
 <CardGroup cols={3}>
-  <Card title="HTML and CSS form field" icon="display-code" iconType="regular" color="#FFC738" href="/html-css">
+  <Card title="HTML and CSS" icon="display-code" iconType="regular" color="#FFC738" href="/html-css">
     Display testimonials, banners, or any static object.
   </Card>
   <Card title="Custom code" icon="rectangle-code" iconType="regular" color="#FFC738" href="/custom-code">
-    Add custom code to inject analytics tracking scripts like Google Tag Manager.
+    Add custom code to inject analytics tracking scripts.
   </Card>
 </CardGroup>

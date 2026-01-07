@@ -5,7 +5,7 @@ sidebarTitle: "Twilio"
 icon: "message-sms"
 ---
 
-## What is Twilio
+## What is Twilio?
 
 [Twilio](https://www.twilio.com/) is a cloud communications platform that enables businesses to integrate SMS, voice calls, video conferencing, and email across multiple channels into their applications via APIs. It lets users create solutions for customer support, marketing, security notifications, and more.
 
@@ -13,29 +13,24 @@ icon: "message-sms"
 
 <Steps>
   <Step title="Link your Fillout form to Twilio">
-   On your form builder dashboard, head over to **Integrate** in the top menu, and look for `Twilio`.
+    Click `Integrate` in the top menu, and look for `Twilio`.
 
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-18at2.56.12PM.png)
-</Frame>
+    ![Screenshot 2025-11-14 at 4.14.57 PM.png](/images/Screenshot2025-11-14at4.14.57PM.png)
 
-<Note>
-  **Note:** You must set up a virtual phone number in Twilio to be able to send and receive SMS messages.
-</Note>
-
-Enter your **Twilio Account SID** and **Twilio Auth Token**. You will find both in your **Account Dashboard** under **Account Info**. Then, select a **Phone Number** from the dropdown menu. 
+    <Warning>
+      You must set up a virtual phone number in Twilio to be able to send and receive SMS messages.
+    </Warning>
+    Enter your **Twilio Account SID** and **Twilio Auth Token**. You will find both in your **Account Dashboard** under **Account Info**. Then, select a **Phone Number** from the dropdown menu.
   </Step>
-  <Step title="Map Fillout form fields">
-    Select the **Recipient phone number** field, and add your message. Reference contact details, order specifics, and other form fields by clicking `+` or simply typing `@`, and clicking the field.
+  <Step title="Reference form fields">
+    Select the **Recipient phone number** field, and add your message. Reference contact details, order specifics, and other form fields by clicking <Icon icon="square-plus" iconType="solid" /> or typing **@**.
 
-<Frame>
-  ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-18at2.59.26PM.png)
-</Frame>
+    ![Screenshot of the Integrate tab of a form](/images/Screenshot2025-02-18at2.59.26PM.png)
 
-`Finish setup` and test your form via `Preview` mode in the upper right corner.
+    `Finish setup` and test your form via `Preview` mode in the upper right corner.
   </Step>
   <Step title="Publish and share your form">
-    Once everything’s set `Publish` and share your form link or embed it on a website. That’s it\! Now, every time someone completes your form, a message will be sent to them.
+    Once everything’s set `Publish` and share your form link or embed it on a website. That’s it! Now, every time someone completes your form, a message will be sent to them.
   </Step>
 </Steps>
 
@@ -46,10 +41,10 @@ You can choose to send a message only under certain conditions. Read this quick 
 ## Related articles
 
 <CardGroup cols={3}>
-  <Card title="Conditional integration logic" icon="gear-complex" iconType="regular" color="#FFC738" href="/conditional-integration">
+  <Card title="Integration logic" icon="gear-complex" iconType="regular" color="#FFC738" href="/conditional-integration">
     Perform an integration only when a certain condition is met.
   </Card>
   <Card title="Notify using SendGrid" icon="game-board-simple" iconType="regular" color="#FFC738" href="/sendgrid">
-    Send customizable email notifications after respondents submit your form.
+    Send customizable emails after form submissions.
   </Card>
 </CardGroup>
