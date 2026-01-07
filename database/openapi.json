@@ -973,9 +973,11 @@
           "checkbox",
           "date",
           "datetime",
-          "attachment",
+          "attachments",
           "linked_record",
-          "lookup"
+          "lookup",
+          "autonumber",
+          "source"
         ],
         "description": "Field type - see [Field Types Reference](/database/field-types) for complete list of available types and their configurations"
       },
