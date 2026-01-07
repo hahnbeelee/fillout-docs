@@ -35,9 +35,19 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/DatabaseWithTables"
+                    "$ref": "#/components/schemas/DatabaseListItem"
                   }
-                }
+                },
+                "example": [
+                  {
+                    "id": "cd6ff4eff7845d96",
+                    "name": "Business Website Database"
+                  },
+                  {
+                    "id": "2f95d3fcbc961f90",
+                    "name": "Professional Business Website"
+                  }
+                ]
               }
             }
           },
@@ -583,6 +593,166 @@
         }
       }
     },
+    "/bases/{databaseId}/webhooks": {
+      "get": {
+        "summary": "List webhooks",
+        "description": "Lists all webhooks configured for a specific database",
+        "operationId": "listWebhooks",
+        "tags": ["Webhooks"],
+        "parameters": [
+          {
+            "name": "databaseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the database"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of webhooks",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "webhooks": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Webhook"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create webhook",
+        "description": "Creates a new webhook subscription for database events. Webhooks receive HTTP POST requests when specified events occur.",
+        "operationId": "createWebhook",
+        "tags": ["Webhooks"],
+        "parameters": [
+          {
+            "name": "databaseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the database"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateWebhookRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Webhook created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "description": "Unique identifier for the webhook"
+                    },
+                    "secret": {
+                      "type": "string",
+                      "description": "The webhook secret for HMAC signature verification. Store this securely - it is only returned once on creation."
+                    }
+                  },
+                  "required": ["id", "secret"]
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/bases/{databaseId}/webhooks/{webhookId}": {
+      "delete": {
+        "summary": "Delete webhook",
+        "description": "Permanently deletes a webhook subscription",
+        "operationId": "deleteWebhook",
+        "tags": ["Webhooks"],
+        "parameters": [
+          {
+            "name": "databaseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the database"
+          },
+          {
+            "name": "webhookId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "The unique identifier of the webhook"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Webhook deleted successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Webhook deleted successfully"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
     "/bases/{databaseId}/tables/{tableId}/records/{recordId}": {
       "get": {
         "summary": "Get record by ID",
@@ -769,6 +939,22 @@
       }
     },
     "schemas": {
+      "DatabaseListItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the database",
+            "example": "cd6ff4eff7845d96"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the database",
+            "example": "Business Website Database"
+          }
+        },
+        "required": ["id", "name"]
+      },
       "FieldType": {
         "type": "string",
         "enum": [
@@ -1219,7 +1405,7 @@
             "minimum": 1,
             "maximum": 2000,
             "default": 500,
-            "description": "Number of records to return (1-2000, default: 500)"
+            "description": "Number of records to return (default: 500, max: 2000)"
           },
           "offset": {
             "type": "integer",
@@ -1227,18 +1413,33 @@
             "default": 0,
             "description": "Integer-based offset - Number of records to skip for pagination"
           },
-          "filters": {
+          "sort": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SortObject"
+            },
+            "description": "Array of sort objects. When not provided, records are returned in ascending order by creation time (createdAt ASC). All queries include an internal tie-breaker to ensure deterministic ordering across paginated requests."
+          },
+          "filter": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Filter conditions using field IDs or field names as keys. Supports exact matches, operators (contains, not, in, notIn, lt, lte, gt, gte), and select field filtering"
+            "description": "Filter condition to query records. Supports nested AND/OR logic. Each condition requires `field` (field ID or name) and one operator (`equals`, `does_not_equal`, `contains`, `greater_than`, `in`, etc.). See [Filtering documentation](/database/list-records#filtering) for details.",
+            "example": {
+              "field": "Status",
+              "equals": "Active"
+            }
           }
         },
         "example": {
-          "filters": {
-            "Name": { "contains": "John" },
-            "Age": { "gte": 18, "lt": 65 },
-            "Status": { "in": ["Active", "Pending"] },
-            "Department": { "not": "Admin" }
+          "sort": [
+            { "fieldId": "name", "direction": "asc" },
+            { "fieldId": "createdAt", "direction": "desc" }
+          ],
+          "filter": {
+            "and": [
+              { "field": "Status", "equals": "Active" },
+              { "field": "Amount", "greater_than": 100 }
+            ]
           },
           "limit": 100,
           "offset": 0
@@ -1256,14 +1457,14 @@
           },
           "total": {
             "type": "integer",
-            "description": "Total number of records matching the filter criteria"
+            "description": "Total number of records matching the query"
           },
           "hasMore": {
             "type": "boolean",
             "description": "Whether there are more records available beyond this page"
           }
         },
-        "required": ["records", "total", "cursor", "hasMore"],
+        "required": ["records", "total", "hasMore"],
         "example": {
           "records": [
             {
@@ -1282,26 +1483,299 @@
               "updatedAt": "2025-11-13T11:59:45.000Z"
             }
           ],
-          "total": 3,
-          "cursor": "eyJ0aW1lc3RhbXAiOiIyMDI1LTExLTEzVDExOjU5OjQ1LjAwMFoiLCJpZCI6ImQ0YjNjMmEzLWM0NmItNDZhMS1hOGVjLTgxYjY2NGJiNDFjYiJ9",
+          "total": 1250,
           "hasMore": true
         }
       },
-      "SortOption": {
+      "SortObject": {
         "type": "object",
         "properties": {
-          "field": {
+          "fieldId": {
             "type": "string",
-            "description": "Field name to sort by"
+            "description": "Field ID or system field name (id, createdAt, updatedAt)"
           },
           "direction": {
             "type": "string",
             "enum": ["asc", "desc"],
             "default": "asc",
-            "description": "Sort direction"
+            "description": "Sort direction (default: asc)"
           }
         },
-        "required": ["field"]
+        "required": ["fieldId"]
+      },
+      "FilterCondition": {
+        "type": "object",
+        "description": "A filter condition that can be a single field condition or a logical group (and/or) of conditions. Each field condition requires a field name/ID and exactly one operator.",
+        "properties": {
+          "field": {
+            "type": "string",
+            "description": "Field ID or field name to filter on"
+          },
+          "and": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FilterCondition"
+            },
+            "description": "Array of conditions that must ALL match (logical AND)"
+          },
+          "or": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FilterCondition"
+            },
+            "description": "Array of conditions where ANY must match (logical OR)"
+          },
+          "equals": {
+            "description": "Exact match. Supported by: text, number, date, selection, checkbox fields.",
+            "oneOf": [
+              { "type": "string" },
+              { "type": "number" },
+              { "type": "boolean" }
+            ]
+          },
+          "does_not_equal": {
+            "description": "Not equal to value. Supported by: text, number, date, selection, checkbox fields.",
+            "oneOf": [
+              { "type": "string" },
+              { "type": "number" },
+              { "type": "boolean" }
+            ]
+          },
+          "contains": {
+            "type": "string",
+            "description": "Contains substring (text) or has value (multi-select, linked record). Supported by: text, selection, linked record fields."
+          },
+          "does_not_contain": {
+            "type": "string",
+            "description": "Does not contain substring or value. Supported by: text, selection, linked record fields."
+          },
+          "starts_with": {
+            "type": "string",
+            "description": "Starts with string. Supported by: text fields."
+          },
+          "ends_with": {
+            "type": "string",
+            "description": "Ends with string. Supported by: text fields."
+          },
+          "is_empty": {
+            "type": "boolean",
+            "description": "Field has no value (pass true). Supported by: all field types."
+          },
+          "is_not_empty": {
+            "type": "boolean",
+            "description": "Field has a value (pass true). Supported by: all field types."
+          },
+          "in": {
+            "type": "array",
+            "items": {
+              "oneOf": [{ "type": "string" }, { "type": "number" }]
+            },
+            "description": "Value is in array. Supported by: text, number, selection, linked record fields."
+          },
+          "not_in": {
+            "type": "array",
+            "items": {
+              "oneOf": [{ "type": "string" }, { "type": "number" }]
+            },
+            "description": "Value is not in array. Supported by: text, number, selection, linked record fields."
+          },
+          "greater_than": {
+            "description": "Greater than value. Supported by: number, date fields.",
+            "oneOf": [
+              { "type": "number" },
+              { "type": "string", "format": "date" }
+            ]
+          },
+          "greater_than_or_equal_to": {
+            "description": "Greater than or equal to value. Supported by: number, date fields.",
+            "oneOf": [
+              { "type": "number" },
+              { "type": "string", "format": "date" }
+            ]
+          },
+          "less_than": {
+            "description": "Less than value. Supported by: number, date fields.",
+            "oneOf": [
+              { "type": "number" },
+              { "type": "string", "format": "date" }
+            ]
+          },
+          "less_than_or_equal_to": {
+            "description": "Less than or equal to value. Supported by: number, date fields.",
+            "oneOf": [
+              { "type": "number" },
+              { "type": "string", "format": "date" }
+            ]
+          }
+        }
+      },
+      "WebhookEventType": {
+        "type": "string",
+        "enum": [
+          "record.created",
+          "record.updated",
+          "record.deleted",
+          "table.created",
+          "table.updated",
+          "table.deleted",
+          "field.created",
+          "field.updated",
+          "field.deleted"
+        ],
+        "description": "The type of database event that triggers the webhook"
+      },
+      "Webhook": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique identifier for the webhook"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "The URL that receives webhook POST requests"
+          },
+          "events": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/WebhookEventType"
+            },
+            "description": "Array of event types this webhook is subscribed to"
+          },
+          "tableIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true,
+            "description": "Table IDs this webhook is filtered to. Null means all tables."
+          },
+          "active": {
+            "type": "boolean",
+            "description": "Whether the webhook is currently active"
+          }
+        },
+        "required": ["id", "url", "events", "active"]
+      },
+      "WebhookWithSecret": {
+        "allOf": [
+          { "$ref": "#/components/schemas/Webhook" },
+          {
+            "type": "object",
+            "properties": {
+              "secret": {
+                "type": "string",
+                "description": "The webhook secret for HMAC signature verification. Only returned once on creation."
+              }
+            },
+            "required": ["secret"]
+          }
+        ]
+      },
+      "CreateWebhookRequest": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "maxLength": 2048,
+            "description": "The URL to receive webhook POST requests"
+          },
+          "events": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/WebhookEventType"
+            },
+            "minItems": 1,
+            "description": "Array of event types to subscribe to"
+          },
+          "tableId": {
+            "type": "string",
+            "description": "Optional table ID to filter events. Omit to receive events from all tables."
+          }
+        },
+        "required": ["url", "events"],
+        "example": {
+          "url": "https://your-server.com/webhooks/fillout",
+          "events": ["record.created", "record.updated", "record.deleted"],
+          "tableId": "tbl_abc123"
+        }
+      },
+      "WebhookPayload": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Unique event ID for idempotency"
+          },
+          "type": {
+            "$ref": "#/components/schemas/WebhookEventType"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO 8601 timestamp of when the event occurred"
+          },
+          "data": {
+            "type": "object",
+            "description": "Event-specific data (varies by event type)",
+            "additionalProperties": true
+          },
+          "metadata": {
+            "type": "object",
+            "properties": {
+              "webhookId": {
+                "type": "integer",
+                "description": "ID of the webhook that triggered this delivery"
+              },
+              "organizationId": {
+                "type": "integer",
+                "description": "Your organization ID"
+              },
+              "baseId": {
+                "type": "string",
+                "description": "The database ID"
+              },
+              "attempt": {
+                "type": "integer",
+                "description": "Delivery attempt number (1 for first attempt)"
+              },
+              "source": {
+                "type": "string",
+                "enum": ["ui", "public_api", "zapier", "make", "import"],
+                "description": "Where the triggering change originated"
+              }
+            }
+          }
+        },
+        "required": ["id", "type", "timestamp", "data", "metadata"],
+        "example": {
+          "id": "evt_a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+          "type": "record.created",
+          "timestamp": "2025-01-15T10:30:00.000Z",
+          "data": {
+            "tableId": "tbl_abc123",
+            "recordIds": ["rec_xyz789"],
+            "records": [
+              {
+                "id": "rec_xyz789",
+                "data": {
+                  "Name": "John Doe",
+                  "Email": "john@example.com"
+                }
+              }
+            ]
+          },
+          "metadata": {
+            "webhookId": 123,
+            "organizationId": 456,
+            "baseId": "base_def456",
+            "attempt": 1,
+            "source": "ui"
+          }
+        }
       },
       "ErrorResponse": {
         "type": "object",
@@ -1436,6 +1910,10 @@
     {
       "name": "Records",
       "description": "Operations for managing records within tables"
+    },
+    {
+      "name": "Webhooks",
+      "description": "Operations for managing webhook subscriptions to receive real-time notifications when database events occur"
     }
   ]
 }

@@ -687,6 +687,16 @@
                   "database/get-database-by-id",
                   "database/delete-database"
                 ]
+              },
+              {
+                "group": "Webhooks",
+                "icon": "code-simple",
+                "pages": [
+                  "database/webhooks",
+                  "database/create-webhook",
+                  "database/list-webhooks",
+                  "database/delete-webhook"
+                ]
               }
             ]
           }
