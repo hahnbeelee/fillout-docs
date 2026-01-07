@@ -13,6 +13,10 @@
     {
       "url": "https://eu-tables.fillout.com/api/v1",
       "description": "EU server"
+    },
+    {
+      "url": "https://1738ccac3a2d.ngrok-free.app/api/v1",
+      "description": "Development server"
     }
   ],
   "security": [
@@ -35,9 +39,19 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/DatabaseWithTables"
+                    "$ref": "#/components/schemas/DatabaseListItem"
                   }
-                }
+                },
+                "example": [
+                  {
+                    "id": "cd6ff4eff7845d96",
+                    "name": "Business Website Database"
+                  },
+                  {
+                    "id": "2f95d3fcbc961f90",
+                    "name": "Professional Business Website"
+                  }
+                ]
               }
             }
           },
@@ -929,6 +943,22 @@
       }
     },
     "schemas": {
+      "DatabaseListItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the database",
+            "example": "cd6ff4eff7845d96"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the database",
+            "example": "Business Website Database"
+          }
+        },
+        "required": ["id", "name"]
+      },
       "Database": {
         "type": "object",
         "properties": {
@@ -1378,7 +1408,7 @@
             "minimum": 1,
             "maximum": 2000,
             "default": 500,
-            "description": "Number of records to return (1-2000, default: 500)"
+            "description": "Number of records to return (default: 500, max: 2000)"
           },
           "offset": {
             "type": "integer",
@@ -1386,18 +1416,33 @@
             "default": 0,
             "description": "Number of records to skip for pagination"
           },
-          "filters": {
+          "sort": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SortObject"
+            },
+            "description": "Array of sort objects. When not provided, records are returned in ascending order by creation time (createdAt ASC). All queries include an internal tie-breaker to ensure deterministic ordering across paginated requests."
+          },
+          "filter": {
             "type": "object",
             "additionalProperties": true,
-            "description": "Filter conditions using field IDs or field names as keys. Supports exact matches, operators (contains, not, in, notIn, lt, lte, gt, gte), and select field filtering"
+            "description": "Filter condition to query records. Supports nested AND/OR logic. Each condition requires `field` (field ID or name) and one operator (`equals`, `does_not_equal`, `contains`, `greater_than`, `in`, etc.). See [Filtering documentation](/database/list-records#filtering) for details.",
+            "example": {
+              "field": "Status",
+              "equals": "Active"
+            }
           }
         },
         "example": {
-          "filters": {
-            "Name": { "contains": "John" },
-            "Age": { "gte": 18, "lt": 65 },
-            "Status": { "in": ["Active", "Pending"] },
-            "Department": { "not": "Admin" }
+          "sort": [
+            { "fieldId": "name", "direction": "asc" },
+            { "fieldId": "createdAt", "direction": "desc" }
+          ],
+          "filter": {
+            "and": [
+              { "field": "Status", "equals": "Active" },
+              { "field": "Amount", "greater_than": 100 }
+            ]
           },
           "limit": 100,
           "offset": 0
@@ -1413,17 +1458,16 @@
             },
             "description": "Array of records"
           },
+          "total": {
+            "type": "integer",
+            "description": "Total number of records matching the query"
+          },
           "hasMore": {
             "type": "boolean",
             "description": "Whether there are more records available beyond this page"
-          },
-          "offset": {
-            "type": "string",
-            "nullable": true,
-            "description": "Offset string for next page of results, or null if no more pages"
           }
         },
-        "required": ["records", "hasMore", "offset"],
+        "required": ["records", "total", "hasMore"],
         "example": {
           "records": [
             {
@@ -1442,25 +1486,137 @@
               "updatedAt": "2024-01-01T00:00:00.000Z"
             }
           ],
-          "hasMore": true,
-          "offset": "eyJpZCI6InJlY19hYmMxMjMifQ=="
+          "total": 1250,
+          "hasMore": true
         }
       },
-      "SortOption": {
+      "SortObject": {
         "type": "object",
         "properties": {
-          "field": {
+          "fieldId": {
             "type": "string",
-            "description": "Field name to sort by"
+            "description": "Field ID or system field name (id, createdAt, updatedAt)"
           },
           "direction": {
             "type": "string",
             "enum": ["asc", "desc"],
             "default": "asc",
-            "description": "Sort direction"
+            "description": "Sort direction (default: asc)"
           }
         },
-        "required": ["field"]
+        "required": ["fieldId"]
+      },
+      "FilterCondition": {
+        "type": "object",
+        "description": "A filter condition that can be a single field condition or a logical group (and/or) of conditions. Each field condition requires a field name/ID and exactly one operator.",
+        "properties": {
+          "field": {
+            "type": "string",
+            "description": "Field ID or field name to filter on"
+          },
+          "and": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FilterCondition"
+            },
+            "description": "Array of conditions that must ALL match (logical AND)"
+          },
+          "or": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FilterCondition"
+            },
+            "description": "Array of conditions where ANY must match (logical OR)"
+          },
+          "equals": {
+            "description": "Exact match. Supported by: text, number, date, selection, checkbox fields.",
+            "oneOf": [
+              { "type": "string" },
+              { "type": "number" },
+              { "type": "boolean" }
+            ]
+          },
+          "does_not_equal": {
+            "description": "Not equal to value. Supported by: text, number, date, selection, checkbox fields.",
+            "oneOf": [
+              { "type": "string" },
+              { "type": "number" },
+              { "type": "boolean" }
+            ]
+          },
+          "contains": {
+            "type": "string",
+            "description": "Contains substring (text) or has value (multi-select, linked record). Supported by: text, selection, linked record fields."
+          },
+          "does_not_contain": {
+            "type": "string",
+            "description": "Does not contain substring or value. Supported by: text, selection, linked record fields."
+          },
+          "starts_with": {
+            "type": "string",
+            "description": "Starts with string. Supported by: text fields."
+          },
+          "ends_with": {
+            "type": "string",
+            "description": "Ends with string. Supported by: text fields."
+          },
+          "is_empty": {
+            "type": "boolean",
+            "description": "Field has no value (pass true). Supported by: all field types."
+          },
+          "is_not_empty": {
+            "type": "boolean",
+            "description": "Field has a value (pass true). Supported by: all field types."
+          },
+          "in": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                { "type": "string" },
+                { "type": "number" }
+              ]
+            },
+            "description": "Value is in array. Supported by: text, number, selection, linked record fields."
+          },
+          "not_in": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                { "type": "string" },
+                { "type": "number" }
+              ]
+            },
+            "description": "Value is not in array. Supported by: text, number, selection, linked record fields."
+          },
+          "greater_than": {
+            "description": "Greater than value. Supported by: number, date fields.",
+            "oneOf": [
+              { "type": "number" },
+              { "type": "string", "format": "date" }
+            ]
+          },
+          "greater_than_or_equal_to": {
+            "description": "Greater than or equal to value. Supported by: number, date fields.",
+            "oneOf": [
+              { "type": "number" },
+              { "type": "string", "format": "date" }
+            ]
+          },
+          "less_than": {
+            "description": "Less than value. Supported by: number, date fields.",
+            "oneOf": [
+              { "type": "number" },
+              { "type": "string", "format": "date" }
+            ]
+          },
+          "less_than_or_equal_to": {
+            "description": "Less than or equal to value. Supported by: number, date fields.",
+            "oneOf": [
+              { "type": "number" },
+              { "type": "string", "format": "date" }
+            ]
+          }
+        }
       },
       "WebhookEventType": {
         "type": "string",
