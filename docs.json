@@ -251,7 +251,6 @@
                   "linked-record-update",
                   "fetch-dynamic-data",
                   "webhook",
-                  "update-database-schema",
                   "additional-integration-mappings",
                   "update-forms",
                   "form-submission-id",
