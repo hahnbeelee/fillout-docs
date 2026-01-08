@@ -662,7 +662,7 @@
                   },
                   "database/mcp/mcp-tools"
                 ]
-              }
+              },
           {
             "group": "API Reference",
             "icon": "code",
