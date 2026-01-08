@@ -621,26 +621,6 @@
               "database/sync-form-results",
               "database/import-data",
               "database/access",
-              {
-                "group": "Zite MCP",
-                "icon": "server",
-                "pages": [
-                  "database/mcp/mcp-overview",
-                  {
-                    "group": "Connecting to Zite MCP",
-                    "icon": "plug",
-                    "pages": [
-                      "database/mcp/connection-overview",
-                      "database/mcp/claude",
-                      "database/mcp/claude-code",
-                      "database/mcp/chatgpt",
-                      "database/mcp/cursor",
-                      "database/mcp/other-ai-tools"
-                    ]
-                  },
-                  "database/mcp/mcp-tools"
-                ]
-              }
             ]
           },
           {
