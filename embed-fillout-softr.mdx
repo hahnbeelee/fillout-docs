@@ -14,63 +14,6 @@ icon: "shapes"
 - [Referencing previous answers](/answer-piping)
 - [Hiding elements conditionally](https://www.fillout.com/help/conditional-hiding#hide-based-on-a-condition) based on previous answers or the user data
 
-## Embed in list details block
-
-Embedding a Fillout form in a Softr **list details block** lets you define different embedded forms for different records you’re displaying.
-
-<Note>
-  If you aren’t using a list details block, skip ahead to custom code block.
-</Note>
-
-<Steps>
-  <Step title="Create a list details block">
-    In Softr, choose a **List Details** block template.
-
-    <Frame>
-      ![In Softr, create a list details block](/images/guides/image-73.png)
-    </Frame>
-  </Step>
-  <Step title="Add an embed field">
-    In your **List Item Fields**, add an embed.
-
-    <Frame>
-      ![Add an embed field to your list item fields](/images/guides/image-74.png)
-    </Frame>
-  </Step>
-  <Step title=" Copy an embed snippet for a Fillout form">
-    You can get embedding options for Fillout forms in the **Share** tab for your form. Choose an embed option and click `Use this embed`.
-
-    <Frame>
-      ![Copy an embed snippet for a Fillout form](/images/guides/image-75.png)
-    </Frame>
-    <Check>
-      **Important:** You should publish your Fillout form before trying it in Softr.
-    </Check>
-  </Step>
-  <Step title="Paste the embed snippet into a new field in Airtable, and display it">
-    Create a new field in Airtable, which will contain the embedding snippets from Fillout. Paste your snippet (optionally customized) into that field. You can use a formula field, or simply a long text field.
-
-    <CardGroup cols={2}>
-      <Frame>
-        ![Paste the embed snippet into a new field in Airtable, and display it](/images/guides/image-76.png)
-      </Frame>
-      <Frame>
-        ![Paste the embed snippet into a new field in Airtable, and display it](/images/guides/image-77.png)
-      </Frame>
-    </CardGroup>
-    <Check>
-      **Good to know:** If you’re using a formula as the link to your Fillout form, you can pass in parameters to the form from Airtable. More details at the end of this article.
-    </Check>
-  </Step>
-  <Step title="Publish your app">
-    Publish your softr app and view your form.
-
-    <Frame>
-      ![That’s it! Publish your Softr app and view your form](/images/guides/image-78.png)
-    </Frame>
-  </Step>
-</Steps>
-
 ## Custom code block
 
 <Note>
@@ -112,7 +55,7 @@ Embedding a Fillout form in a Softr **list details block** lets you define diffe
   </Step>
 </Steps>
 
-## Advanced: Filtering records and access the logged in Softr user
+## Advanced: Filter records
 
 Watch Dan Leeman from [Automation Helpers](https://www.automationhelpers.com/templates/build-filtered-forms-with-softr-and-fillout) build a filtered Fillout form, embedded in Softr.
 
@@ -128,9 +71,7 @@ The styling of your embed can be adjusted to match your brand in Softr.
 
 ## Access the logged in Softr user in Fillout forms
 
-### For custom code blocks
-
-You can use the following code snippet:
+For custom code blocks, use the following code snippet:
 
 ```js
 <!-- PASTE YOUR EMBED CODE HERE -->
@@ -183,16 +124,6 @@ You may also prefer using a simple custom embedding method as opposed to our bui
 ```
 
 In this snippet, replace the **XXXXX** with the unique ending of your form URL that you can find in the **Share** tab of your form.
-
-### For list details blocks
-
-As mentioned above, if you used a `formula` field to insert your embedding snippet, you can pass in information into the embed as described [here](/embedded-url-parameters).
-
-<Frame>
-  ![For list details blocks](/images/guides/image-83.png)
-</Frame>
-
-Remember to wrap the values you’re passing into the embedding snippet in quotation marks.
 
 ### Access the URL parameters/hidden fields in Fillout
 
