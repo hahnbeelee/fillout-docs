@@ -568,7 +568,7 @@
               "zite/add-user-login",
               "zite/history",
               {
-                "group": "Editor modes",
+                "group": "Editor Modes",
                 "icon": "toggle-on",
                 "pages": [
                   "zite/editor-modes",
