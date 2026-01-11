@@ -574,7 +574,8 @@
                   "zite/editor-modes",
                   "zite/build-mode",
                   "zite/plan-mode",
-                  "zite/chat-mode"
+                  "zite/chat-mode",
+                  "zite/model-selection"
                 ]
               }
             ]
