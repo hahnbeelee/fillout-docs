@@ -567,6 +567,7 @@
               "zite/customize-links",
               "zite/add-user-login",
               "zite/history",
+              "zite/model-selection",
               {
                 "group": "Editor Modes",
                 "icon": "toggle-on",
@@ -574,8 +575,7 @@
                   "zite/editor-modes",
                   "zite/build-mode",
                   "zite/plan-mode",
-                  "zite/chat-mode",
-                  "zite/model-selection"
+                  "zite/chat-mode"                
                 ]
               }
             ]
