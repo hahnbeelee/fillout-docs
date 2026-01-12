@@ -9,53 +9,44 @@ icon: "brain"
 
 Zite offers three AI models, letting you choose the right balance of speed, intelligence, and cost for your tasks.
 
-| Model         | Speed   | Intelligence | Best for                           |
-| :------------ | :-----: | :----------: | :--------------------------------- |
-| **Zite Mini** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐          | Quick, simple tasks                |
-| **Zite Pro**  | ⭐⭐⭐⭐  | ⭐⭐⭐⭐         | Most tasks (default)               |
-| **Zite Max**  | ⭐⭐    | ⭐⭐⭐⭐⭐        | Complex work and persistent issues |
+| Model         | Speed | Intelligence | Credits Used | Best for                           |
+| :------------ | :---: | :----------: | ------------ | :--------------------------------- |
+| **Zite Mini** | ★★★★★ | ★★★☆☆        | ★☆☆☆☆        | Quick, simple tasks                |
+| **Zite Pro**  | ★★★★☆ | ★★★★☆        | ★★★☆☆        | Most tasks (default)               |
+| **Zite Max**  | ★★☆☆☆ | ★★★★★        | ★★★★☆        | Complex work and persistent issues |
 
+<Info>
+  Different models consume credits at different rates based on their underlying AI costs. For more details on credits and usage, check out the [Credits guide](/zite/credits).
+</Info>
 
-## Available models
-
-### Zite Mini
+**Zite Mini **(_Powered by Anthropic's Claude Haiku 4.5)_
 
 The **fastest and most cost-efficient** model. Great for quick, simple tasks like minor text changes, small style adjustments, and straightforward edits.
 
-*Powered by Anthropic's Claude Haiku 4.5*
-
-### Zite Pro
+**Zite Pro** (_Powered by Anthropic's Claude Sonnet 4.5)_
 
 The **default model** that offers the best balance of speed and intelligence. Recommended for most tasks, including adding features, fixing bugs, and updating designs.
 
-*Powered by Anthropic's Claude Sonnet 4.5*
-
-### Zite Max
+**Zite Max** (_Powered by Anthropic's Claude Opus 4.5)_
 
 The **most capable model** for maximum intelligence. Use Zite Max for complex work, multi-step reasoning, and persistent issues that other models struggle with.
 
-*Powered by Anthropic's Claude Opus 4.5*
-
 <Info>
-  Zite Max is available starting on the **Business** plan.
+  Zite Max is available starting on the Business plan. Click [here](https://www.zite.com/pricing) to see our pricing plans.
 </Info>
 
 ## How to switch models
 
-<Steps>
-  <Step title="Open the model selector">
-    In the chat input toolbar, click the **brain icon** (🧠) to open the model selector dropdown.
+In the chat box, click <Icon icon="brain" /> followed by your preferred model.
 
-    Alternatively, press `Cmd` + `/` (Mac) or `Ctrl` + `/` (Windows/Linux) to toggle the model selector.
+<img
+  src="/images/chooseModel.png.avif"
+  alt="Choose Model Png"
+  title="Choose Model Png"
+  style={{ width:"58%" }}
+/>
 
-<Frame>
-  ![Model selector dropdown showing Zite Mini, Zite Pro, and Zite Max options](/images/chooseModel.png)
-</Frame>
-  </Step>
-  <Step title="Choose your model">
-    Select **Zite Mini**, **Zite Pro**, or **Zite Max** depending on your needs.
-  </Step>
-</Steps>
+Alternatively, press `Cmd` + `/` or `Ctrl` + `/` on your keyboard to toggle the model selector.
 
 <Tip>
   Your model preference is saved automatically on your device.
@@ -63,36 +54,26 @@ The **most capable model** for maximum intelligence. Use Zite Max for complex wo
 
 ## Mode-based model behavior
 
-Certain editor modes automatically use **Zite Max** regardless of your selected model:
+Certain editor modes automatically use **Zite Max** regardless of your saved or selected model:
 
-| Mode           | Model used             |
-| -------------- | ---------------------- |
-| **Build mode** | Your selected model    |
-| **Plan mode**  | Always uses Zite Max   |
-| **Chat mode**  | Always uses Zite Max   |
+| Mode           | Model used           |
+| -------------- | -------------------- |
+| **Build mode** | Your selected model  |
+| **Plan mode**  | Always uses Zite Max |
+| **Chat mode**  | Always uses Zite Max |
 
 This ensures that planning and conversational tasks benefit from the highest level of reasoning.
-
-## Credit consumption
-
-Different models consume credits at different rates based on their underlying AI costs:
-
-- **Zite Mini**: Most cost-efficient (lowest credit usage per message)
-- **Zite Pro**: Moderate credit usage (balanced)
-- **Zite Max**: Higher credit usage (premium intelligence)
-
-For more details on credits and usage, check out the [Credits guide](/zite/credits).
 
 ## Related articles
 
 <CardGroup cols={3}>
   <Card title="Editor modes" icon="toggle-on" iconType="regular" color="#FFC738" href="/zite/editor-modes">
-    Learn about Build, Plan, and Chat modes.
+    An overview of Zite's Build, Plan, and Chat modes.
   </Card>
-  <Card title="Credits" icon="coin-blank" iconType="regular" color="#4FD1C5" href="/zite/credits">
-    Understand how credits work in Zite.
+  <Card title="Credits" icon="coin-blank" iconType="regular" color="#FFC738" href="/zite/credits">
+    Learn more about Zite usage and credit consumption.
   </Card>
-  <Card title="Subscription" icon="file-user" iconType="regular" color="#A78BFA" href="/zite/subscription">
-    Upgrade your plan to access Zite Max.
+  <Card title="Subscription" icon="file-user" iconType="regular" color="#FFC738" href="/zite/subscription">
+    Upgrade your plan or explore the Team plan to access Zite Max.
   </Card>
 </CardGroup>
