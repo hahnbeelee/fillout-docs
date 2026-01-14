@@ -581,6 +581,13 @@
             ]
           },
           {
+            "group": "Workflows",
+            "pages": [
+              "zite/workflows",
+              "zite/workflow-run-history"
+            ]
+          },
+          {
             "group": "Marketplace",
             "pages": [
               "zite/marketplace/create-templates",
