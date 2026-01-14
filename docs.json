@@ -575,17 +575,14 @@
                   "zite/editor-modes",
                   "zite/build-mode",
                   "zite/plan-mode",
-                  "zite/chat-mode"                
+                  "zite/chat-mode"
                 ]
               }
             ]
           },
           {
             "group": "Workflows",
-            "pages": [
-              "zite/workflows",
-              "zite/workflow-run-history"
-            ]
+            "pages": ["zite/workflows", "zite/workflow-run-history"]
           },
           {
             "group": "Marketplace",
