@@ -639,6 +639,15 @@
             ]
           },
           {
+            "group": "Automations",
+            "icon": "bolt",
+            "pages": [
+              "database/automations",
+              "database/zapier",
+              "database/relay"
+            ]
+          },
+          {
             "group": "Zite MCP",
             "icon": "server",
             "pages": [
