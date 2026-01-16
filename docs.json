@@ -43,7 +43,9 @@
         "groups": [
           {
             "group": " ",
-            "pages": ["index"]
+            "pages": [
+              "index"
+            ]
           },
           {
             "group": "Getting Started",
@@ -139,7 +141,10 @@
               {
                 "group": "Templates",
                 "icon": "folder-image",
-                "pages": ["form-templates", "make-a-form-template"]
+                "pages": [
+                  "form-templates",
+                  "make-a-form-template"
+                ]
               }
             ]
           },
@@ -169,7 +174,10 @@
                   {
                     "group": "Monday",
                     "icon": "columns-3",
-                    "pages": ["monday", "monday-update"]
+                    "pages": [
+                      "monday",
+                      "monday-update"
+                    ]
                   },
                   {
                     "group": "Salesforce",
@@ -212,12 +220,18 @@
                   {
                     "group": "Smartsuite",
                     "icon": "table-list",
-                    "pages": ["smartsuite", "smartsuite-update"]
+                    "pages": [
+                      "smartsuite",
+                      "smartsuite-update"
+                    ]
                   },
                   {
                     "group": "Hubspot",
                     "icon": "hubspot",
-                    "pages": ["hubspot", "hubspot-companies-deals"]
+                    "pages": [
+                      "hubspot",
+                      "hubspot-companies-deals"
+                    ]
                   },
                   "clickup",
                   "trello",
@@ -359,7 +373,10 @@
               {
                 "group": "Workflow Actions",
                 "icon": "bolt",
-                "pages": ["filter-branch-workflows", "delay-workflows"]
+                "pages": [
+                  "filter-branch-workflows",
+                  "delay-workflows"
+                ]
               }
             ]
           },
@@ -381,17 +398,26 @@
               {
                 "group": "Quizzes",
                 "icon": "pencil",
-                "pages": ["make-a-free-quiz", "create-a-lead-quiz"]
+                "pages": [
+                  "make-a-free-quiz",
+                  "create-a-lead-quiz"
+                ]
               },
               {
                 "group": "Partner Resources",
                 "icon": "book",
-                "pages": ["partner-made-resources"]
+                "pages": [
+                  "partner-made-resources"
+                ]
               },
               {
                 "group": "AI Builders",
                 "icon": "hat-wizard",
-                "pages": ["ai-forms", "ai-surveys", "ai-quizzes"]
+                "pages": [
+                  "ai-forms",
+                  "ai-surveys",
+                  "ai-quizzes"
+                ]
               },
               {
                 "group": "Tips & Tricks",
@@ -505,7 +531,10 @@
               {
                 "group": "Partners",
                 "icon": "handshake",
-                "pages": ["affiliate-program", "startup-discount"]
+                "pages": [
+                  "affiliate-program",
+                  "startup-discount"
+                ]
               }
             ]
           },
@@ -516,7 +545,12 @@
               {
                 "group": "Security",
                 "icon": "shield",
-                "pages": ["security", "encrypted-forms", "saml-sso", "gdpr"]
+                "pages": [
+                  "security",
+                  "encrypted-forms",
+                  "saml-sso",
+                  "gdpr"
+                ]
               },
               {
                 "group": "Legal",
@@ -546,7 +580,9 @@
         "groups": [
           {
             "group": " ",
-            "pages": ["zite/overview"]
+            "pages": [
+              "zite/overview"
+            ]
           },
           {
             "group": "Getting Started",
@@ -582,7 +618,10 @@
           },
           {
             "group": "Workflows",
-            "pages": ["zite/workflows", "zite/workflow-run-history"]
+            "pages": [
+              "zite/workflows",
+              "zite/workflow-run-history"
+            ]
           },
           {
             "group": "Marketplace",
@@ -625,7 +664,9 @@
         "groups": [
           {
             "group": " ",
-            "pages": ["database/overview"]
+            "pages": [
+              "database/overview"
+            ]
           },
           {
             "group": "Guides",
@@ -732,7 +773,9 @@
         "groups": [
           {
             "group": " ",
-            "pages": ["whats-new"]
+            "pages": [
+              "whats-new"
+            ]
           }
         ]
       }
