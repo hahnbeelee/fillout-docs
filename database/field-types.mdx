@@ -482,6 +482,63 @@ Lookup fields cannot be created during initial base setup. Add them later using 
 
 ---
 
+## Computed Fields
+
+### Formula
+
+Dynamically computed values based on other fields using formula expressions.
+
+<Note>
+Formula fields are read-only and automatically recalculate when referenced fields change. See the [Formulas guide](/database/formulas) for the complete list of supported functions.
+</Note>
+
+**Value**
+```typescript
+string | number | Date | boolean | any[]  // Based on resultType
+```
+
+**Type**
+```json
+"formula"
+```
+
+**Settings**
+```json
+{
+  "name": "Total Price",
+  "template": {
+    "expression": "SUM({Price}, {Tax})",
+    "resultType": "number",
+    "formatting": {
+      "numberDisplayType": "currency",
+      "decimalPlaces": 2
+    }
+  }
+}
+```
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `expression` | string | The [formula expression](/database/formulas), e.g. `"SUM({Price}, {Tax})"` |
+| `resultType` | string | The output type: `"text"`, `"number"`, `"date"`, `"boolean"`, or `"array"` |
+| `formatting` | object | Optional display formatting options (see below) |
+
+**Formatting Options**
+
+For numbers (`numberDisplayType`):
+- `"number"` - Plain number
+- `"currency"` - Currency display (use with `decimalPlaces`, `numberFormat`)
+- `"percent"` - Percentage display
+- `"duration"` - Time duration
+
+For dates:
+- `dateFormat` - Date format string
+- `timeFormat` - Time format (`"12h"` or `"24h"`)
+- `timezone` - Timezone for display
+- `displayTimeZone` - Whether to show timezone
+
+---
+
 ## System Fields
 
 ### Autonumber
@@ -559,6 +616,8 @@ The first field in each table becomes the **primary field** and must be one of t
 - `currency`
 - `percent`
 - `duration`
+- `autonumber`
+- `formula`
 
 ---
 
